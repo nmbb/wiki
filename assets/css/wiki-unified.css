@@ -303,3 +303,12 @@ aside.sidebar a.cur{font-weight:750}
 }
 /* Home/Sobre têm um cabeçalho editorial diferente mas a mesma escala de menu */
 .site-header nav a{font-size:13px!important;line-height:1.35;font-weight:650}
+
+/* Capturas documentais HA / Zigbee2MQTT */
+.ha-zigbee-figure{margin:1.25rem 0;overflow:hidden}
+.ha-zigbee-figure a{display:block}
+.ha-zigbee-figure img{display:block;width:100%;height:auto;max-height:500px;object-fit:contain;background:#e9f1ec}
+.ha-zigbee-figure figcaption{font-size:.88rem;line-height:1.55}
+.zigbee-doc{border-top:1px solid #d8e3db;margin-top:1.75rem;padding-top:1.25rem}
+.zigbee-doc h3{color:#172f2f}
+.image-related-link{font-size:.92rem}
