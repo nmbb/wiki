@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html lang="pt-PT"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Caso real: falha de arranque de containers Docker no Banana Pi M5 após reinício, diagnóstico de DHCP, systemd-networkd e Docker, correção e validação pendente." name="description"/><title>Banana Pi M5 — Docker não arrancava após falha de energia | Wiki técnica</title><link href="assets/css/wiki.css?v=20261107real" rel="stylesheet"/><link href="assets/css/wiki-unified.css?v=20261111-2" rel="stylesheet"/><link href="assets/css/archive-2026.css?v=20261113" rel="stylesheet"/><link href="assets/css/gallery-modal-20261113.css?v=global1" rel="stylesheet"/></head><body><header class="bar"><div class="wrap"><a class="brand" href="index.html">◈  ARQUIVO / WIKI</a><nav aria-label="Navegação principal"><a href="index.html">Início</a><details class="wiki-menu"><summary>Infraestrutura</summary><div class="wiki-submenu"><a href="homelab.html">Home Lab</a><a href="pfsense.html">pfSense</a><a href="cloudflare.html">Cloudflare e alojamento</a><a href="tailscale.html">Tailscale</a><a href="redes.html">Redes e VLANs</a><a href="proxmox.html">Proxmox</a><a aria-current="page" href="banana-pi-m5.html">Banana Pi M5</a><a href="home-assistant.html">Home Assistant</a><a href="homarr.html">Homarr</a><a href="monitorizacao.html">Monitorização</a></div></details><details class="wiki-menu"><summary>Laboratório</summary><div class="wiki-submenu"><a href="projetos.html">Visão geral</a><a href="projetos.html#retro">Windows NT / Retro</a><a href="projetos.html#pxe">PXE e iVentoy</a><a href="fog.html">FOG Project</a></div></details><a href="sobre.html">Sobre ↗</a><a href="linha-do-tempo.html">Timeline retro</a></nav><a class="cta" href="sobre.html">Sobre</a></div></header><div class="redesign-strip"><span class="strip-time">ESTAÇÃO 2026 / ARQUIVO DE EXPERIÊNCIAS</span><span>Redes · sistemas antigos · serviços · testes reais   <a href="linha-do-tempo.html">Explorar timeline ↗</a></span></div><div class="wiki-sheet"><div class="top"><div class="wrap"><p class="eyebrow">Incidente real · Banana Pi M5 · 13 novembro 2026</p><h1>Quando o Docker arrancou antes da rede</h1><div aria-label="Temas relacionados" class="article-taxonomy"><span class="article-topic-tag">Banana Pi M5</span><span class="article-topic-tag">Docker</span><span class="article-topic-tag">systemd</span><span class="article-topic-tag">DHCP</span><span class="article-topic-tag">Diagnóstico</span></div><p class="lead">O Banana Pi estava ligado. O Docker também. Mas cinco serviços continuavam inacessíveis: um caso prático de ordem de arranque, DHCP e publicação de portas.</p><div class="article-period">Registo técnico: 13 novembro 2026 · diagnóstico reproduzido em logs · validação de reboot pendente</div><div class="article-status"><span class="project-status status-com-limitacoes">Correção configurada · teste de arranque pendente</span></div><div class="quick"><a class="button" href="artigos.html">Índice da Wiki</a><a class="button alt" href="sobre.html">Sobre a Wiki</a></div></div></div><div class="wrap"><div class="breadcrumb"><a href="sobre.html">Sobre</a><span>›</span><a href="artigos.html">Wiki</a> <span>›</span> Banana Pi M5</div><div class="layout"><main class="content">
+<style>
+/* Apenas nesta página: mantém contraste, menus e estilo do tema global. */
+.incident-hero{background:#112b2b;color:#f4faf8;border-radius:18px;padding:clamp(19px,4vw,30px);margin:6px 0 26px;border:1px solid #285b53}
+.incident-hero .small{color:#a4e2d2;font-size:.75rem;letter-spacing:.12em;font-weight:800;text-transform:uppercase}
+.incident-hero h2{color:#fff!important;margin:10px 0;font-size:clamp(1.35rem,3vw,2rem);line-height:1.18}
+.incident-hero p{color:#e3f2ef!important;margin:0;max-width:70ch}
+.incident-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin:22px 0}
+.incident-tile{background:#f4f7f6;border:1px solid #c8d8d3;border-radius:12px;padding:15px;text-align:center}
+.incident-tile strong{display:block;color:#143d35;font-size:1.3rem;margin-bottom:4px}
+.incident-tile span{display:block;color:#415953;font-size:.86rem}
+.incident-toc{background:#eef5f2;border:1px solid #c9ddd5;padding:17px 21px;border-radius:14px;margin:22px 0}
+.incident-toc strong{color:#163f36;display:block;margin-bottom:8px}.incident-toc a{color:#175e4e}
+.incident-toc ol{margin:.35rem 0 .15rem;padding-left:1.4rem;columns:2;column-gap:2rem}
+.incident-toc li{break-inside:avoid;margin:.32rem 0}
+.incident-steps{list-style:none;margin:16px 0 24px;padding:0;display:grid;gap:12px}
+.incident-steps li{background:#f7f9f8;border-left:4px solid #297963;padding:13px 16px;border-radius:0 11px 11px 0;color:#1b3530}
+.incident-steps li strong{display:block;color:#0d493b;margin-bottom:3px}
+.incident-table{width:100%;border-collapse:collapse;font-size:.92rem;margin:16px 0 22px}
+.incident-table th{background:#17453a;color:white;text-align:left;padding:11px 12px}
+.incident-table td{color:#203c35;background:#fff;border-bottom:1px solid #d2ded8;padding:10px 12px;vertical-align:top}
+.incident-table tr:nth-child(even) td{background:#f0f5f2}
+.incident-code{background:#142b29!important;color:#eefbf5!important;border-radius:12px;padding:16px;overflow-x:auto;font-size:.81rem;line-height:1.6;white-space:pre;tab-size:2}
+.incident-code code{color:inherit!important;background:none!important;padding:0!important;white-space:inherit}
+.incident-alert{border-left:4px solid #c8832b;background:#fff7e8;color:#654519;padding:13px 17px;border-radius:0 10px 10px 0;margin:18px 0}
+.incident-good{border-left:4px solid #237b63;background:#eaf7f0;color:#164d3d;padding:13px 17px;border-radius:0 10px 10px 0;margin:18px 0}
+.incident-alert strong,.incident-good strong{color:inherit}
+.incident-caption{color:#4b625d;font-size:.89rem;margin-top:-5px}
+.incident-flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:18px 0}
+.incident-flow span{background:#f0f6f3;color:#1c493c;border:1px solid #c6ddd2;padding:9px 13px;border-radius:9px;font-weight:650}
+.incident-flow b{color:#496b60}
+.incident-section{margin-top:38px;scroll-margin-top:100px}
+.incident-section h2{color:#163f36!important;border-bottom:1px solid #d2e1da;padding-bottom:8px}
+.incident-section h3{color:#245c4c!important}
+.incident-section p,.incident-section li{color:#263c36}
+.incident-section code:not(pre code){background:#e5eeea;color:#184b3c;padding:1px 5px;border-radius:4px}
+@media(max-width:680px){.incident-toc ol{columns:1}.incident-table{font-size:.78rem}.incident-table th,.incident-table td{padding:8px}.incident-flow{flex-direction:column;align-items:stretch}.incident-flow b{text-align:center}}
+</style>
+<div class="incident-hero"><span class="small">Diário de uma avaria · Laboratório em produção</span><h2>O servidor estava online.<br/>Os serviços, não.</h2><p>Após uma interrupção elétrica e o posterior arranque do Banana Pi, o Docker aparecia como ativo, mas vários containers estavam parados. O erro não estava no disco cheio, no próprio Docker, nem obrigatoriamente nas aplicações. Faltava um detalhe: o endereço IPv4 ainda não existia quando o Docker tentou publicar algumas portas.</p></div>
+<div class="incident-grid"><div class="incident-tile"><strong>8</strong><span>containers identificados</span></div><div class="incident-tile"><strong>5</strong><span>serviços inicialmente parados</span></div><div class="incident-tile"><strong>255</strong><span>código de saída comum em vários</span></div><div class="incident-tile"><strong>90 s</strong><span>nova espera configurada para a rede</span></div></div>
+<nav aria-label="Índice do artigo" class="incident-toc"><strong>Neste artigo</strong><ol><li><a href="#inc-sintomas">Os sintomas</a></li><li><a href="#inc-investigacao">O diagnóstico</a></li><li><a href="#inc-causa">A causa provável</a></li><li><a href="#inc-recuperar">Recuperar os serviços</a></li><li><a href="#inc-correcao">A correção persistente</a></li><li><a href="#inc-confirmacao">O que foi confirmado</a></li><li><a href="#inc-pendentes">O que falta testar</a></li><li><a href="#inc-aprender">Lições aprendidas</a></li></ol></nav>
+<section class="incident-section" id="inc-sintomas"><h2>1. Um arranque aparentemente normal</h2>
+<p>O Banana Pi M5 é um servidor ARM com Armbian e Docker, ligado à rede de servidores (VLAN 40). Entre os serviços alojados estão <strong>Mosquitto</strong>, <strong>Zigbee2MQTT</strong>, <strong>Uptime Kuma</strong>, <strong>SmokePing</strong>, <strong>phpIPAM</strong> (web, cron e MariaDB) e <strong>Homarr</strong>. O Zigbee2MQTT comunica através da rede com um coordenador Zigbee noutra VLAN.</p>
+<p>Na madrugada de 13 de novembro de 2026, após perturbações no fornecimento elétrico e novos arranques, vários desses serviços não estavam disponíveis. Foi possível entrar por SSH no Banana Pi e verificar que o sistema operativo e o motor Docker estavam ativos.</p>
+<div aria-label="Cadeia dos componentes" class="incident-flow"><span>Energia / arranque</span><b>→</b><span>Armbian</span><b>→</b><span>Ethernet + DHCP</span><b>→</b><span>Docker</span><b>→</b><span>Containers</span></div>
+<p>A primeira verificação mostrou o sistema ligado há cerca de <strong>22 minutos</strong>, a partição principal de aproximadamente <strong>15 GB com 35% de utilização</strong> e o serviço Docker com estado <code>active</code> e arranque <code>enabled</code>. Portanto, nem falta de espaço nem Docker completamente desligado explicavam a falha.</p>
+<table class="incident-table"><thead><tr><th>Container</th><th>Resultado observado</th><th>Significado à data</th></tr></thead><tbody>
+<tr><td><strong>phpipam-web</strong></td><td>Exited (255)</td><td>Erro na publicação da porta 8083</td></tr>
+<tr><td><strong>smokeping</strong></td><td>Exited (255)</td><td>Erro na publicação da porta 8082</td></tr>
+<tr><td><strong>uptime-kuma</strong></td><td>Exited (255)</td><td>Erro na publicação da porta 3001</td></tr>
+<tr><td><strong>mosquitto</strong></td><td>Exited (255)</td><td>Parado no mesmo período; causa exata não demonstrada no log apresentado</td></tr>
+<tr><td><strong>zigbee2mqtt</strong></td><td>Exited (1) inicialmente</td><td>Falha separada; exige análise dos logs da aplicação</td></tr>
+<tr><td><strong>phpipam-cron</strong></td><td>Up</td><td>Em execução</td></tr>
+<tr><td><strong>phpipam-mariadb</strong></td><td>Up</td><td>Base de dados em execução</td></tr>
+<tr><td><strong>homarr</strong></td><td>Up</td><td>Interface acessível num binding genérico</td></tr>
+</tbody></table>
+<p class="incident-caption">Estado recolhido num momento específico. Posteriormente, alguns códigos de saída foram atualizados após novas tentativas de arranque/paragem.</p></section>
+<section class="incident-section" id="inc-investigacao"><h2>2. O diagnóstico começou pelos comandos mais simples</h2>
+<h3>Confirmar o sistema e os containers</h3>
+<pre class="incident-code"><code>uptime
+df -h
+systemctl is-active docker
+systemctl is-enabled docker
+docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"</code></pre>
+<p>Depois, verificaram-se as políticas de reinício:</p>
+<pre class="incident-code"><code>docker ps -aq | xargs -r docker inspect \
+  --format '{{.Name}} | restart={{.HostConfig.RestartPolicy.Name}}'</code></pre>
+<p><strong>Resultado:</strong> todos os oito containers apresentavam <code>restart=unless-stopped</code>. Isto é importante, mas não significa que todas as dependências externas já estejam disponíveis no instante em que são iniciados.</p>
+<h3>Consultar o erro gravado pelo Docker</h3>
+<pre class="incident-code"><code>docker ps -aq | xargs -r docker inspect \
+  --format '{{.Name}} | exit={{.State.ExitCode}} | error={{.State.Error}} | finished={{.State.FinishedAt}}'</code></pre>
+<p>Três containers mostravam praticamente o mesmo erro, mudando apenas o nome e a porta. Exemplo com o phpIPAM (endereço de publicação substituído para proteger a rede real):</p>
+<pre class="incident-code"><code>driver failed programming external connectivity on endpoint phpipam-web:
+Error starting userland proxy:
+listen tcp4 10.10.40.20:8083:
+bind: cannot assign requested address</code></pre>
+<div class="incident-alert"><strong>Não confundir dois erros diferentes:</strong> <code>cannot assign requested address</code> significa que o sistema não conseguia utilizar aquele endereço local no momento do bind. Não é o mesmo que <code>address already in use</code>, que normalmente indicaria uma porta ocupada por outro processo.</div>
+<h3>Verificar se o endereço existe e quem gere a rede</h3>
+<pre class="incident-code"><code>ip -br addr
+ip route
+systemctl is-active systemd-networkd
+systemctl is-active NetworkManager
+systemctl is-active systemd-networkd-wait-online
+networkctl status end0</code></pre>
+<p>O resultado foi esclarecedor: <strong>systemd-networkd</strong> estava ativo, <strong>NetworkManager</strong> inativo, e o <code>systemd-networkd-wait-online</code> tinha falhado. Mais tarde, a interface física <code>end0</code> já mostrava estado <code>routable (configured)</code>, online, 1 Gbps e o IP esperado obtido por DHCP a partir da firewall.</p>
+<p>Ou seja, a rede estava boa <em>na altura da inspeção</em>. O problema terá ocorrido mais cedo, durante o arranque.</p></section>
+<section class="incident-section" id="inc-causa"><h2>3. A causa provável: a rede chegou depois do Docker</h2>
+<p>O registo do serviço de espera mostrou que o Armbian estava a tentar aguardar pela rede durante <strong>20 segundos</strong>, mas terminou com falha. O Docker tinha, na sua unidade, as dependências <code>After=network-online.target</code> e <code>Wants=network-online.target</code>. Estas diretivas ajudam a ordenar o arranque; contudo, <strong>não obrigam o Docker a desistir se o serviço de espera pela rede falhar</strong>.</p>
+<pre class="incident-code"><code>systemd-networkd-wait-online --any --timeout=20
+# Resultado observado no primeiro arranque:
+# status=1/FAILURE</code></pre>
+<ol class="incident-steps"><li><strong>1 · Sistema inicia</strong>O Armbian começa a arrancar os serviços do sistema.</li><li><strong>2 · DHCP ainda não terminou</strong>A interface <code>end0</code> ainda não tem o IPv4 específico de que alguns containers precisam.</li><li><strong>3 · Espera pela rede falha</strong>O serviço de verificação esgota os 20 segundos previstos.</li><li><strong>4 · Docker tenta publicar portas</strong>Os containers com <code>10.10.40.20:PORTA</code> falham com <code>cannot assign requested address</code>.</li><li><strong>5 · Rede fica operacional mais tarde</strong>O endereço aparece na interface, mas os serviços que já falharam podem continuar parados.</li></ol>
+<p>Esta sequência é a <strong>explicação mais consistente com os registos recolhidos</strong>. Não foi capturada a cronologia completa de todos os eventos do boot, pelo que não se pode atribuir automaticamente o mesmo erro ao Zigbee2MQTT ou ao Mosquitto.</p>
+<h3>Porque é que o Homarr continuou a funcionar?</h3>
+<p>O Homarr tinha a porta publicada em <code>0.0.0.0:7575</code>, o endereço genérico que escuta nas interfaces disponíveis. Já o phpIPAM, o SmokePing e o Uptime Kuma estavam configurados com um <strong>endereço IP específico</strong>. Esta diferença ajuda a explicar os sintomas, embora não seja uma razão para expor indiscriminadamente todos os serviços em <code>0.0.0.0</code>.</p>
+<p>O facto de o endereço ser fornecido por DHCP com reserva na firewall ajuda a manter a numeração estável, mas <strong>não torna instantânea a atribuição do IP</strong> depois de um corte de energia. O switch, a firewall, a negociação Ethernet ou o próprio DHCP podem demorar a ficar disponíveis.</p></section>
+<section class="incident-section" id="inc-recuperar"><h2>4. Recuperação imediata, sem reinstalar nada</h2>
+<p>Uma vez que o IP tenha sido obtido, os containers podem ser iniciados individualmente e os seus registos analisados. Esta abordagem é preferível a apagar volumes, recriar imagens ou reiniciar a máquina repetidamente.</p>
+<pre class="incident-code"><code>ip -br addr
+# Confirmar que a interface física já possui o IPv4 pretendido
+
+docker start mosquitto
+docker logs --tail 30 mosquitto
+
+docker start zigbee2mqtt
+docker logs --tail 60 zigbee2mqtt
+
+docker start uptime-kuma smokeping phpipam-web
+
+docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"</code></pre>
+<div class="incident-alert"><strong>Separar o problema de rede do problema Zigbee:</strong> o Zigbee2MQTT também depende do broker MQTT e da ligação ao coordenador Zigbee, situado noutra VLAN. Mesmo que o Docker e o IP estejam corretos, a aplicação pode falhar se o coordenador ou o broker estiver indisponível. É necessário consultar <code>docker logs zigbee2mqtt</code> para confirmar.</div>
+<p>Estes comandos fazem parte do procedimento de recuperação recomendado. Os registos apresentados confirmam a identificação da causa de vários <em>bindings</em>, mas não constituem prova de que todos os containers tenham recuperado integralmente após esta sequência.</p></section>
+<section class="incident-section" id="inc-correcao"><h2>5. Alteração persistente: esperar pela rede certa</h2>
+<p>A solução foi preparada em duas camadas. Primeiro, corrigiu-se o serviço do Armbian que espera pela rede. Depois, acrescentou-se ao Docker uma verificação explícita do IPv4 antes de lançar o daemon.</p>
+<h3>Camada A · systemd-networkd-wait-online</h3>
+<p>Foi criado um <em>drop-in</em> em <code>/etc/systemd/system/systemd-networkd-wait-online.service.d/</code> para aguardar especificamente pela Ethernet <code>end0</code>, com IPv4 e um prazo de 90 segundos.</p>
+<pre class="incident-code"><code># Ficheiro: /etc/systemd/system/systemd-networkd-wait-online.service.d/zz-wait-end0.conf
+[Service]
+ExecStart=
+ExecStart=/lib/systemd/systemd-networkd-wait-online --interface=end0 --ipv4 --timeout=90</code></pre>
+<p>Um detalhe importante do caso: o Armbian já tinha outro ficheiro de configuração chamado <code>armbian-any-interface.conf</code>, que mantinha o comando <code>--any --timeout=20</code>. A primeira tentativa de criar <code>90-timeout.conf</code> não prevaleceu, devido à ordem alfabética dos ficheiros de substituição. A mudança para <code>zz-wait-end0.conf</code> fez com que a nossa diretiva fosse a última aplicada.</p>
+<pre class="incident-code"><code>systemctl daemon-reload
+systemctl show systemd-networkd-wait-online.service -p ExecStart --no-pager</code></pre>
+<div class="incident-good"><strong>Verificação efetivamente confirmada:</strong> a saída de <code>systemctl show</code> passou a mostrar <code>--interface=end0 --ipv4 --timeout=90</code>. Antes disso, ainda mostrava <code>--any --timeout=20</code>.</div>
+<h3>Camada B · bloquear o arranque do Docker até existir o IP</h3>
+<p>Foi criado um segundo <em>drop-in</em>, desta vez para <code>docker.service</code>. O Docker só tenta iniciar depois de encontrar o endereço IPv4 esperado em <code>end0</code>.</p>
+<p class="incident-caption"><strong>Nota de publicação:</strong> o IP seguinte é ilustrativo. Deve ser substituído pelo endereço real atribuído ao servidor antes de executar os comandos.</p>
+<pre class="incident-code"><code># Ficheiro: /etc/systemd/system/docker.service.d/20-wait-for-ip.conf
+[Service]
+ExecStartPre=/bin/sh -c 'until ip -4 -o addr show dev end0 | grep -q "inet 10.10.40.20/"; do sleep 2; done'
+TimeoutStartSec=120</code></pre>
+<p>O ciclo consulta os endereços IPv4 de <code>end0</code> de dois em dois segundos. Quando encontra o IP especificado, o processo termina com sucesso e deixa prosseguir o arranque do Docker. Se o IP não aparecer, o tempo de arranque do serviço limita a espera.</p>
+<pre class="incident-code"><code>systemctl daemon-reload
+systemctl cat docker.service | tail -20
+systemctl show docker.service -p ExecStartPre --no-pager</code></pre>
+<div class="incident-good"><strong>Verificação efetivamente confirmada:</strong> o <code>systemctl cat</code> listou o ficheiro <code>20-wait-for-ip.conf</code> e o <code>systemctl show</code> reconheceu a diretiva <code>ExecStartPre</code>. Não foi necessário reiniciar o Docker para validar que o systemd tinha carregado a definição.</div>
+<div class="incident-alert"><strong>Limite importante:</strong> se a rede não ficar pronta dentro do prazo, o arranque do Docker poderá falhar. A unidade tem política de reinício, mas <strong>a recuperação automática após expirar o <code>ExecStartPre</code> não foi ainda comprovada</strong>. É necessário verificar este comportamento num ensaio controlado. Nunca alterar uma configuração de arranque sem manter acesso local ao equipamento.</div>
+</section>
+<section class="incident-section" id="inc-confirmacao"><h2>6. O que ficou realmente confirmado</h2>
+<table class="incident-table"><thead><tr><th>Observação</th><th>Estado</th></tr></thead><tbody>
+<tr><td>Armbian arrancava e Docker estava <code>active/enabled</code></td><td><strong>Confirmado</strong></td></tr>
+<tr><td>Espaço de armazenamento disponível (≈35% usado)</td><td><strong>Confirmado</strong></td></tr>
+<tr><td>Todos os containers listados com <code>unless-stopped</code></td><td><strong>Confirmado</strong></td></tr>
+<tr><td>Falhas de binding de phpIPAM Web, SmokePing e Uptime Kuma por IP indisponível</td><td><strong>Confirmado nos logs</strong></td></tr>
+<tr><td><code>systemd-networkd-wait-online</code> falhou com espera de 20 segundos</td><td><strong>Confirmado</strong></td></tr>
+<tr><td><code>end0</code> passou a estar online com o IP esperado via DHCP</td><td><strong>Confirmado após o boot</strong></td></tr>
+<tr><td>Nova configuração de espera de 90 segundos reconhecida pelo systemd</td><td><strong>Confirmado</strong></td></tr>
+<tr><td><code>ExecStartPre</code> do Docker reconhecido pelo systemd</td><td><strong>Confirmado</strong></td></tr>
+<tr><td>Arranque automático de <strong>todos</strong> os serviços após nova falha de energia</td><td><strong>Pendente de teste</strong></td></tr>
+<tr><td>Correção definitiva do erro de Zigbee2MQTT</td><td><strong>Não comprovado</strong></td></tr>
+</tbody></table>
+</section>
+<section class="incident-section" id="inc-pendentes"><h2>7. Próximo passo: um teste de arranque controlado</h2>
+<p>As alterações foram carregadas pelo systemd, mas não houve ainda um reinício completo com observação contínua dos serviços. Antes de declarar a avaria resolvida, o procedimento de teste deverá incluir:</p>
+<ol><li>Confirmar que existe backup das configurações e acesso local ao Banana Pi.</li><li>Registar o estado dos oito containers com <code>docker ps -a</code>.</li><li>Num momento adequado, fazer um reinício controlado e medir quando <code>end0</code> recebe o IP.</li><li>Verificar <code>systemd-networkd-wait-online</code> e <code>docker.service</code> com <code>systemctl status</code> e <code>journalctl -b</code>.</li><li>Confirmar que os containers iniciam automaticamente e que os serviços respondem nas portas esperadas.</li><li>Validar separadamente o Mosquitto e a ligação entre Zigbee2MQTT e o coordenador.</li><li>Se o IP não for atribuído, verificar se o Docker volta a tentar ou permanece em falha.</li></ol>
+<pre class="incident-code"><code># Recolha de evidência depois do próximo arranque
+systemctl status systemd-networkd-wait-online docker --no-pager
+journalctl -b -u systemd-networkd-wait-online -u docker --no-pager -n 100
+networkctl status end0
+docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"</code></pre>
+<p>Se o servidor depender de uma firewall, de um switch ou de uma UPS, é especialmente útil observar um arranque em que esses equipamentos também precisem de recuperar. É precisamente nesse cenário que aparecem as diferenças entre “a rede está ligada” e “a rede está pronta para os serviços”.</p></section>
+<section class="incident-section" id="inc-aprender"><h2>8. Porque este caso é interessante para aprender redes</h2>
+<p>O incidente reúne vários assuntos frequentemente estudados em separado: <strong>DHCP, serviços Linux, systemd, redes Docker, publicação de portas, dependências, monitorização e recuperação após falha elétrica</strong>. Na prática, todos se encontraram no mesmo problema.</p>
+<div class="incident-grid"><div class="incident-tile"><strong>DHCP</strong><span>O IP fixo por reserva pode chegar tarde</span></div><div class="incident-tile"><strong>systemd</strong><span>Ordem de arranque não é sinónimo de disponibilidade</span></div><div class="incident-tile"><strong>Docker</strong><span>Um container pode falhar antes de executar a aplicação</span></div><div class="incident-tile"><strong>Logs</strong><span>A mensagem exata aponta para a causa</span></div></div>
+<p><strong>Lição essencial:</strong> quando vários serviços falham juntos, procurar primeiro aquilo que partilham — energia, rede, armazenamento, DNS ou dependências — costuma ser mais produtivo do que reinstalar cada aplicação. Aqui, a pista decisiva não foi o estado <code>Exited (255)</code> isoladamente, mas sim <code>bind: cannot assign requested address</code>.</p>
+<div class="incident-good"><strong>Estado do caso em 13/11/2026:</strong> causa muito provável identificada; configurações de espera pela rede e de pré-arranque do Docker aplicadas e reconhecidas pelo systemd; <strong>recuperação automática completa ainda por validar</strong> num próximo arranque.</div>
+<p><a href="banana-pi-m5.html">Voltar ao artigo principal do Banana Pi M5 →</a></p>
+</section>
+<div class="footer-nav"><a href="banana-pi-m5.html">← Banana Pi M5</a><a href="monitorizacao.html">Monitorização →</a></div>
+</main><aside aria-label="Navegação da Wiki" class="sidebar"><strong>Explorar a Wiki</strong><a href="artigos.html">Índice dos artigos</a><a href="homelab.html">Home Lab</a><a href="pfsense.html">pfSense</a><a href="cloudflare.html">Cloudflare e alojamento</a><a href="tailscale.html">Tailscale</a><a href="redes.html">Redes e VLANs</a><a href="proxmox.html">Proxmox</a><a class="cur" href="banana-pi-m5.html">Banana Pi M5</a><a href="home-assistant.html">Home Assistant</a><a href="homarr.html">Homarr</a><a href="monitorizacao.html">Monitorização</a><a href="projetos.html">Outros projetos</a><a href="projetos.html#retro">Laboratório retro · Windows NT</a><a href="projetos.html#pxe">PXE e iVentoy</a><a href="fog.html">FOG Project</a></aside></div></div></div><footer><div class="wrap"><span>© 2026 Nuno Brandão · Wiki pessoal e técnica</span><a href="artigos.html">Voltar à Wiki ↑</a></div></footer><script defer="True" src="assets/js/wiki-nav.js"></script><script defer="" src="assets/js/gallery-modal-20261113.js?v=global1"></script></body></html>
