@@ -1,0 +1,8 @@
+ATUALIZACAO INCREMENTAL WIKI — MS-DOS / TIMELINE
+
+Copiar estes ficheiros para a pasta /wiki/, preservando a estrutura.
+Adiciona dos.html (artigo dos tres DOS) e seis capturas WebP anonimizadas.
+Atualiza index.html, projetos.html, linha-do-tempo.html, artigos.html.
+Atualiza assets/css/archive-2026.css e adiciona assets/css/dos-retro.css.
+Nao altera outras paginas, menus ou Javascript.
+O erro de boot do Compaq mantem-se documentado e ilustrado. Os erros de troca de disquetes dos outros DOS foram simplificados, sem imagens de erro.

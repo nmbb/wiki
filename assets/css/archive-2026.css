@@ -67,3 +67,16 @@ footer,.footer{color:#9dadb4!important;border-color:#35434b!important}footer a{c
 .wiki-sheet .content .panel li,
 .wiki-sheet .content .note p,
 .wiki-sheet .content .card p {color:#dbe8e2 !important;}
+
+/* DOS timeline 1982–2009: smaller cards and headline */
+.home-hero h1{font-size:clamp(2.8rem,5.2vw,5.5rem);line-height:1.06;max-width:900px}
+.timeline-track{min-width:1140px;grid-template-columns:repeat(10,minmax(0,1fr));gap:7px}
+.time-col{min-height:418px;grid-template-rows:184px 39px 190px}
+.timeline-track:after{top:203px}
+.timeline-card{padding:10px 9px;min-height:126px;border-radius:10px}
+.timeline-card h3{font-size:12px;line-height:1.26;margin:6px 0}
+.timeline-card p{font-size:10.5px;line-height:1.35;margin:4px 0}
+.timeline-card small{font-size:9px}
+.timeline-card .os-icon{width:27px;height:27px;font-size:15px}
+.time-year span{font-size:12px}
+@media(max-width:700px){.home-hero h1{font-size:clamp(2.3rem,8vw,3.4rem)}}
