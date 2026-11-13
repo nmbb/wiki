@@ -1,8 +1,7 @@
-ATUALIZACAO INCREMENTAL WIKI — MS-DOS / TIMELINE
+Atualização incremental da Wiki — DOS (13/11/2026)
 
-Copiar estes ficheiros para a pasta /wiki/, preservando a estrutura.
-Adiciona dos.html (artigo dos tres DOS) e seis capturas WebP anonimizadas.
-Atualiza index.html, projetos.html, linha-do-tempo.html, artigos.html.
-Atualiza assets/css/archive-2026.css e adiciona assets/css/dos-retro.css.
-Nao altera outras paginas, menus ou Javascript.
-O erro de boot do Compaq mantem-se documentado e ilustrado. Os erros de troca de disquetes dos outros DOS foram simplificados, sem imagens de erro.
+Substituir dos.html, linha-do-tempo.html e projetos.html na pasta /wiki/.
+Copiar as duas novas capturas para /wiki/assets/img/wiki/.
+Não apagar as imagens existentes, porque o artigo continua a utilizá-las.
+
+Alterações: DOS 6.22 confirmado a arrancar pelo disco C:, nova captura; DOS 3.30 com captura do C:; timeline corrigida; removidos textos repetidos e referências antigas ao SuSE no artigo; só o erro real de compatibilidade da disquete Compaq permanece documentado.
