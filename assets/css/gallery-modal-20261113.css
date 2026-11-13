@@ -31,3 +31,13 @@
 .wiki-modal-caption{font-size:.9rem;text-align:center;max-width:950px;line-height:1.4;color:#d5e5df}
 .wiki-modal-close{position:absolute;right:6px;top:6px;border:1px solid #8baca6;color:white;background:#1a3138e8;border-radius:50%;width:42px;height:42px;font-size:25px;cursor:pointer}
 .wiki-modal-close:focus-visible,.figure a:focus-visible{outline:3px solid #80c2b1;outline-offset:2px}
+
+/* Ampliação universal das imagens editoriais. Não interfere com os ícones da interface. */
+main img:not(.no-lightbox), .content img:not(.no-lightbox), .wiki-sheet img:not(.no-lightbox) { cursor:zoom-in; }
+.wiki-image-modal {position:fixed;inset:0;margin:auto;z-index:99999;box-sizing:border-box;}
+.wiki-image-modal .wiki-modal-shell{padding:18px 12px 10px;box-sizing:border-box;}
+.wiki-image-modal .wiki-modal-close{z-index:2;right:14px;top:12px;}
+.wiki-image-modal .wiki-modal-caption{padding:4px 50px;}
+.wiki-modal-image:focus{outline:none}
+@media(max-width:620px){.wiki-image-modal .wiki-modal-shell{padding:52px 8px 10px}.wiki-modal-image{max-height:calc(90vh - 130px)}.wiki-modal-caption{font-size:.8rem}}
+@media(prefers-reduced-motion:reduce){.wiki-image-modal *{transition:none!important}}
