@@ -1,0 +1,11 @@
+/* Menu lateral unificado da Wiki — 13-11-2026 */
+.wiki-sheet .sidebar.wiki-sidebar-v2{align-self:start;min-width:0;box-sizing:border-box;background:#f7faf7;border:1px solid #d5e0d9;border-top:3px solid #3e8d77;border-radius:12px;padding:17px 13px;box-shadow:0 5px 22px rgba(16,42,35,.05);max-height:calc(100vh - 36px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;top:18px}
+.wiki-sidebar-v2 .wiki-side-heading{display:block;color:#23483b;font-size:14px;font-weight:800;letter-spacing:-.01em;margin:0 4px 14px;text-transform:none}
+.wiki-sidebar-v2 .wiki-side-group{display:block;margin:0 0 14px;padding:0 0 12px;border-bottom:1px solid #dfe9e2}
+.wiki-sidebar-v2 .wiki-side-group:last-child{margin-bottom:0;padding-bottom:0;border:0}
+.wiki-sidebar-v2 .wiki-side-title{display:block;color:#61766b;font-size:10px;font-weight:800;letter-spacing:.11em;margin:0 9px 6px;text-transform:uppercase}
+.wiki-sheet .sidebar.wiki-sidebar-v2 a{display:block;padding:7px 10px;margin:2px 0;border-radius:7px;color:#345a4c;font-size:12.5px!important;line-height:1.4!important;font-weight:550;text-decoration:none;white-space:normal;overflow-wrap:break-word;transition:background .15s,color .15s}
+.wiki-sheet .sidebar.wiki-sidebar-v2 a:hover,.wiki-sheet .sidebar.wiki-sidebar-v2 a:focus-visible{background:#e5f0e8;color:#1b4e39;outline-offset:2px}
+.wiki-sheet .sidebar.wiki-sidebar-v2 a.cur,.wiki-sheet .sidebar.wiki-sidebar-v2 a[aria-current="page"]{background:#d4e8db;color:#174937;font-weight:800;box-shadow:inset 3px 0 0 #368b6c}
+@media(max-width:900px){.wiki-sheet .sidebar.wiki-sidebar-v2{position:static;order:-1;max-height:none;overflow:visible;padding:14px}.wiki-sidebar-v2 .wiki-side-group{display:inline-block;vertical-align:top;width:calc(50% - 12px);margin-right:8px;border-bottom:0}.wiki-sidebar-v2 .wiki-side-heading{margin-bottom:12px}}
+@media(max-width:540px){.wiki-sidebar-v2 .wiki-side-group{display:block;width:100%;margin:0 0 12px;padding:0 0 10px;border-bottom:1px solid #dfe9e2}}
