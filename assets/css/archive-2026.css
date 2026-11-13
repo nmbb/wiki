@@ -30,3 +30,40 @@ footer,.footer{color:#9dadb4!important;border-color:#35434b!important}footer a{c
 .home-footer{border-top:1px solid #3a4e54;margin:80px auto 0;padding:24px 0 55px;display:flex;justify-content:space-between;color:#a5b7b9;font-size:12px}.home-footer a{color:#bed3c3}
 @media(max-width:850px){header.bar .wrap{flex-direction:column!important;align-items:flex-start!important;padding:12px 0!important}header.bar nav{flex-wrap:wrap}.home-hero{grid-template-columns:1fr;padding-top:55px;gap:32px}.home-category-grid{grid-template-columns:repeat(2,1fr)}.home-timeline-callout{flex-direction:column;align-items:flex-start}.timeline-detail-grid{grid-template-columns:1fr}}
 @media(max-width:570px){.wrap,.experience-home,main:not(.experience-home){width:calc(100% - 30px)!important}.home-category-grid{grid-template-columns:1fr}.home-stats{grid-template-columns:1fr}.home-stats>div{padding:12px 0}.home-hero h1{font-size:3.4rem}.retro-timebox{padding:19px}.home-timeline-callout{padding:24px}.redesign-strip{width:calc(100% - 30px);flex-direction:column;align-items:flex-start}header.bar .wrap{gap:4px!important}}
+
+
+/* Correção de legibilidade 2026-11-13: artigos sobre papel claro.
+   Mantém intactos menus, homepage, timeline, imagens e popup. */
+.wiki-sheet {color:#243b3a !important;}
+.wiki-sheet .content, .wiki-sheet .content > section,
+.wiki-sheet .content > section > p,
+.wiki-sheet .content > section > ul,
+.wiki-sheet .content > section > ol,
+.wiki-sheet .content > section > li {color:#263e3d !important;}
+.wiki-sheet .content > section > h2,
+.wiki-sheet main:not(.experience-home) h2 {color:#193a36 !important;}
+.wiki-sheet .content h3,
+.wiki-sheet main:not(.experience-home) h3 {color:#24483e !important;}
+.wiki-sheet .content > section > h2 + p {color:#344d4b !important;}
+.wiki-sheet .figure,
+.wiki-sheet figure.figure {background:#fff !important;border-color:#afc4c1 !important;}
+.wiki-sheet .figure figcaption,
+.wiki-sheet figure figcaption,
+.wiki-sheet .content figcaption {color:#385650 !important;background:#fff !important;}
+.wiki-sheet .content details:not(.wiki-menu) {background:#f8faf7 !important;border-color:#cbdcd3 !important;color:#24423b !important;}
+.wiki-sheet .content details:not(.wiki-menu) > summary {color:#25443e !important;font-weight:700 !important;}
+.wiki-sheet .content details:not(.wiki-menu) > .inside,
+.wiki-sheet .content details:not(.wiki-menu) > .inside p {color:#2a4942 !important;}
+.wiki-sheet .content .muted,
+.wiki-sheet .content .small {color:#4d6561 !important;}
+/* Em caixas escuras, manter texto claro para não perder contraste. */
+.wiki-sheet .content .panel,
+.wiki-sheet .content .note,
+.wiki-sheet .content .card {color:#e8f0ea !important;}
+.wiki-sheet .content .panel h3,
+.wiki-sheet .content .note h3,
+.wiki-sheet .content .card h3 {color:#e7f0e7 !important;}
+.wiki-sheet .content .panel p,
+.wiki-sheet .content .panel li,
+.wiki-sheet .content .note p,
+.wiki-sheet .content .card p {color:#dbe8e2 !important;}
