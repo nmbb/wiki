@@ -1,7 +1,5 @@
-Atualização incremental da Wiki — DOS (13/11/2026)
-
-Substituir dos.html, linha-do-tempo.html e projetos.html na pasta /wiki/.
-Copiar as duas novas capturas para /wiki/assets/img/wiki/.
-Não apagar as imagens existentes, porque o artigo continua a utilizá-las.
-
-Alterações: DOS 6.22 confirmado a arrancar pelo disco C:, nova captura; DOS 3.30 com captura do C:; timeline corrigida; removidos textos repetidos e referências antigas ao SuSE no artigo; só o erro real de compatibilidade da disquete Compaq permanece documentado.
+Atualização incremental da Wiki (14-11-2026).
+Substituir os HTML do ZIP diretamente na pasta /wiki/.
+Uniformiza os menus superior e lateral dos artigos (DOS e SuSE incluídos), mantém o visual e a timeline existentes e corrige o título histórico em artigos.html.
+A linha-do-tempo.html não é substituída, preservando a navegação e o desenho personalizados.
+Não altera CSS, JS, imagens nem a homepage.
