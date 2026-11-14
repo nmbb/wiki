@@ -1,0 +1,94 @@
+/* Laboratório retro — tema claro e timeline compacta, 14/11/2026 */
+#cronologia-retro.retro-timebox {
+  color:#263d39!important; background:#f6faf8!important;
+  border:1px solid #d8e5de!important; border-radius:18px;
+  padding:clamp(18px,3vw,30px)!important; box-sizing:border-box; max-width:100%;
+}
+#cronologia-retro h2,#cronologia-retro h3,#cronologia-retro .section-kicker,
+#cronologia-retro .timeline-intro,#cronologia-retro .timeline-note,
+#cronologia-retro .retro-period-hint {color:#2b4840!important}
+#cronologia-retro .timeline-legend {color:#4c635c!important}
+#cronologia-retro .retro-period,#cronologia-retro .retro-shift{
+  background:#fff!important;color:#39564c!important;border:1px solid #cadcd2!important;
+  box-shadow:none!important;border-radius:999px!important;
+  font-size:13px!important;padding:8px 13px!important
+}
+#cronologia-retro .retro-period.active,
+#cronologia-retro .retro-period[aria-pressed="true"]{
+  background:#dfeee4!important;color:#234c3b!important;border-color:#90bca0!important
+}
+#cronologia-retro .retro-timeline-arrows {display:none!important}
+#cronologia-retro .time-scroll{
+  width:100%!important;min-width:0!important;max-width:100%!important;
+  overflow:visible!important;background:transparent!important;
+  padding:4px 0!important;box-sizing:border-box!important;
+}
+#cronologia-retro .timeline-track{
+  display:grid!important; grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:12px!important;min-width:0!important;max-width:100%!important;
+  width:100%!important; padding:0!important; margin:0!important;
+  transform:none!important; background:none!important;
+}
+#cronologia-retro .timeline-track::before,#cronologia-retro .timeline-track::after,
+#cronologia-retro .time-col::before,#cronologia-retro .time-col::after{display:none!important}
+#cronologia-retro .time-col{
+  display:flex!important;flex-direction:column!important;
+  align-items:stretch!important;min-width:0!important;width:auto!important;
+  height:auto!important;max-width:100%!important;margin:0!important;
+  padding:0!important;background:transparent!important;
+}
+#cronologia-retro .time-col[hidden]{display:none!important}
+#cronologia-retro .time-year{
+  order:-1!important;display:block!important;position:static!important;
+  height:auto!important;width:auto!important;min-height:0!important;
+  margin:0 0 6px!important;padding:0!important;transform:none!important;
+  background:transparent!important;border:0!important;text-align:left!important;
+}
+#cronologia-retro .time-year span{background:none!important;color:#647b70!important;
+  font-size:12px!important;font-weight:750!important;padding:0!important;
+  border:0!important;box-shadow:none!important}
+#cronologia-retro .time-upper,#cronologia-retro .time-lower{
+  position:static!important;display:block!important;min-width:0!important;
+  width:100%!important;height:auto!important;margin:0!important;padding:0!important;
+  transform:none!important;background:transparent!important;
+}
+#cronologia-retro .time-lower:empty,#cronologia-retro .time-upper:empty{display:none!important}
+#cronologia-retro .timeline-card{
+  position:static!important;display:flex!important;flex-direction:column!important;
+  width:100%!important;max-width:100%!important;min-width:0!important;height:auto!important;
+  min-height:135px!important;box-sizing:border-box!important;overflow-wrap:anywhere!important;
+  padding:13px!important;margin:0 0 8px!important;transform:none!important;
+  border-radius:12px!important;background:#fff!important;
+  color:#2c463d!important;border:1px solid #d6e4dc!important;
+  box-shadow:0 2px 7px rgba(32,61,49,.04)!important;text-decoration:none!important;
+}
+#cronologia-retro .timeline-card.down{background:#fff9f7!important;border-color:#eed6cf!important}
+#cronologia-retro .timeline-card h3{font-size:15px!important;line-height:1.28!important;
+  margin:5px 0 6px!important;overflow-wrap:anywhere!important;color:#234236!important}
+#cronologia-retro .timeline-card p{font-size:12px!important;line-height:1.4!important;
+  margin:0 0 7px!important;color:#536960!important}
+#cronologia-retro .timeline-card small{display:block!important;font-size:11px!important;
+  font-weight:700!important;margin-top:auto!important;color:#557668!important}
+#cronologia-retro .timeline-card.down small{color:#a05d50!important}
+#cronologia-retro .os-icon{position:static!important;display:inline-block!important;
+  width:auto!important;height:auto!important;line-height:1!important;
+  font-size:18px!important;margin:0!important;color:#4c7965!important;
+  background:transparent!important;border:0!important}
+#cronologia-retro .retro-time-empty{background:#fff!important;color:#526d60!important;border-color:#d3e1d9!important}
+#retro .nt-domain-case{background:#fbfdfc;border:1px solid #dae6df;border-radius:14px;
+  padding:clamp(16px,2.5vw,24px);margin:22px 0}
+#retro .nt-domain-case h3{margin-top:5px}
+#retro .nt-domain-case p{max-width:78ch}
+#retro #nt31 .retro-uniform-shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#retro #nt31 figure{min-width:0;margin:0}
+#retro #nt31 figure img{width:100%;height:140px;object-fit:contain;background:#eff4f1;border-radius:8px}
+#retro #nt31 figcaption{font-size:12px;line-height:1.45}
+@media(max-width:850px){
+ #cronologia-retro .timeline-track{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #retro #nt31 .retro-uniform-shots{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+ #cronologia-retro .timeline-track{grid-template-columns:minmax(0,1fr)!important}
+ #cronologia-retro .timeline-card{min-height:0!important}
+ #retro #nt31 .retro-uniform-shots{grid-template-columns:minmax(0,1fr)}
+}
