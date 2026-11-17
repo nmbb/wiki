@@ -6,7 +6,7 @@ ROOT=os.path.dirname(os.path.abspath(__file__)); OUT=os.path.abspath(sys.argv[1]
 BASE='https://nmbb.github.io/wiki/'
 INFRA=[('homelab','Home Lab'),('redes','Redes e VLANs'),('pfsense','pfSense'),('proxmox','Proxmox'),('tailscale','Tailscale'),('cloudflare','Cloudflare e alojamento')]
 SERV=[('banana-pi-m5','Banana Pi M5'),('banana-pi-docker-rede','Docker: falha no arranque'),('home-assistant','Home Assistant'),('homarr','Homarr'),('monitorizacao','Monitorização')]
-LAB=[('projetos','Visão geral do laboratório'),('projetos#retro','Windows NT / Linux Retro'),('dos','MS-DOS · 1982–1994'),('suse9','SuSE Linux 9.0'),('retro-simh','Retro-SIMH · 1977–1982'),('86box','86Box · sistemas históricos'),('86box-instalacao','Instalação do 86Box'),('projetos#pxe','PXE e iVentoy'),('fog','FOG Project')]
+LAB=[('projetos','Visão geral do laboratório'),('projetos#retro','Windows NT / Linux Retro'),('dos','MS-DOS · 1982–1994'),('suse9','SuSE Linux 9.0'),('retro-simh','Retro-SIMH · 1977–1982'),('projetos#pxe','PXE e iVentoy'),('fog','FOG Project')]
 TOP=[('index','Início'),('artigos','Artigos'),('linha-do-tempo','Timeline retro'),('sobre','Sobre')]
 ORDER=[k for k,_ in INFRA+SERV+LAB if '#' not in k]; TITLES=dict(INFRA+SERV+LAB)
 CSS=['legacy/wiki.css','legacy/wiki-unified.css','legacy/archive-2026.css','legacy/gallery-modal-20261113.css','legacy/wiki-sidebar-v2.css','theme.css']
