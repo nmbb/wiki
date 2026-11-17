@@ -31,3 +31,24 @@
 .os-flow-dot{position:absolute;top:calc(var(--axis-y) - 10px);left:calc(50% - 10px);width:20px;height:20px;border:4px solid #fff;border-radius:50%;background:var(--state);box-shadow:0 0 0 2px var(--state);z-index:2}
 @media(max-width:650px){.os-flow{padding:14px}.os-flow-heading{align-items:flex-start}.os-flow-navigation{margin-top:24px}.os-flow-legend{margin-top:12px}.os-flow-stop{width:155px;min-width:155px;max-width:155px}.os-flow-card{width:147px!important;max-width:147px!important;height:118px!important;left:4px}.os-flow-name{font-size:12px!important}.os-flow-rail{height:355px}}
 @media(prefers-reduced-motion:reduce){.os-flow-viewport{scroll-behavior:auto}}
+
+/* Correção 2026-11-17: rodapés da timeline legíveis no modo CRT verde.
+   O rodapé da página e o rodapé global não devem herdar fundos claros. */
+#crt > main.timeline-page > footer.home-footer,
+#crt > main.timeline-page + footer {
+  background: #10191f !important;
+  color: #a5b7b9 !important;
+  border-color: #35434b !important;
+}
+#crt > main.timeline-page > footer.home-footer a,
+#crt > main.timeline-page + footer a { color: #bed3c3 !important; }
+html[data-theme="verde"] #crt > main.timeline-page > footer.home-footer,
+html[data-theme="verde"] #crt > main.timeline-page + footer {
+  background: #050905 !important;
+  color: #b5eac3 !important;
+  border-color: #1c5130 !important;
+}
+html[data-theme="verde"] #crt > main.timeline-page > footer.home-footer a,
+html[data-theme="verde"] #crt > main.timeline-page + footer a {
+  color: #c5f7d2 !important;
+}
