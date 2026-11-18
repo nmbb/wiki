@@ -1,0 +1,19 @@
+/* Correção isolada: rodapés da timeline no tema normal (Arquivo). */
+html:not([data-theme="verde"]) main.timeline-page > footer.home-footer {
+  background:transparent !important;
+  color:#a5b7b9 !important;
+  border-top:1px solid #3a4e54 !important;
+  box-shadow:none !important;
+}
+html:not([data-theme="verde"]) main.timeline-page > footer.home-footer a {
+  color:#bed3c3 !important;
+}
+html:not([data-theme="verde"]) main.timeline-page + footer {
+  background:#10191f !important;
+  color:#aabcc0 !important;
+  border-color:#35434b !important;
+  box-shadow:none !important;
+}
+html:not([data-theme="verde"]) main.timeline-page + footer a {
+  color:#d5e8de !important;
+}
