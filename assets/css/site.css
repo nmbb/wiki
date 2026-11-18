@@ -700,3 +700,22 @@ html.boot .crt-lines::after{animation:crt-flash .55s ease-out}
 html[data-theme="verde"] footer,html[data-theme="verde"] .site-footer,html[data-theme="verde"] .footer,html[data-theme="verde"] .timeline-page footer{background:#0a100c!important;color:#c2e8ca!important;border-color:#28593c!important}
 html[data-theme="verde"] footer a,html[data-theme="verde"] .site-footer a,html[data-theme="verde"] .footer a{color:#b0efbe!important}
 html[data-theme="verde"] .timeline-page + footer,html[data-theme="verde"] .timeline-page ~ footer{background:#0a100c!important}
+
+/* Cartões do laboratório: miniaturas uniformes sem ampliar ao clicar.
+   A ligação do cartão continua a levar ao artigo/secção. */
+.wiki-sheet .cards > a.card > img.lab-topic-thumb {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: center;
+  align-self: center;
+  flex: 0 0 auto;
+  margin: 0.6rem 0 0.8rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(96, 122, 113, .08);
+}
