@@ -53,7 +53,7 @@ for f in sorted(os.listdir(ROOT+'/src/pages')):
     head=('<!DOCTYPE html><html lang="pt-PT" data-theme="arquivo"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10191f">'
       '<title>%s</title><meta name="description" content="%s"><meta property="og:type" content="website"><meta property="og:locale" content="pt_PT"><meta property="og:title" content="%s"><meta property="og:description" content="%s"><meta property="og:url" content="%s%s.html">'%(title,esc(desc),esc(title),esc(desc),BASE,slug)
       +('<meta property="og:image" content="%sassets/img/og.png"><meta name="twitter:card" content="summary_large_image">'%BASE if og else '')
-      +'<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><script>try{var t=localStorage.getItem("wiki-theme");if(t==\"verde\")document.documentElement.dataset.theme=t}catch(e){}</script>'
+      +'<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><script>try{var t=localStorage.getItem("wiki-theme");if([\"arquivo\",\"verde\",\"ambar\",\"ibm\",\"papel\",\"mac\"].indexOf(t)!==-1)document.documentElement.dataset.theme=t}catch(e){}</script>'
       '<link rel="stylesheet" href="assets/css/site.css?v=%s">'%V['css/site.css']
       +''.join('<link rel="stylesheet" href="assets/css/%s">'%c for c in fm.get('css','').split(',') if c)+'</head>')
     js=''.join('<script defer src="assets/js/%s"></script>'%j for j in fm.get('js','').split(',') if j)

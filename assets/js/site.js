@@ -1,5 +1,5 @@
 (function(){
-var T=['arquivo','verde'],N={arquivo:'Arquivo',verde:'Verde'},H=document.documentElement,box,inp,list,res=[],sel=0;
+var T=['arquivo','verde','ambar','ibm','papel','mac'],N={arquivo:'Arquivo',verde:'Verde CRT',ambar:'Âmbar CRT',ibm:'IBM Blue',papel:'Papel antigo',mac:'Macintosh clássico'},H=document.documentElement,box,inp,list,res=[],sel=0;
 var cur=function(){return H.dataset.theme||'arquivo'};
 function lab(b){b.textContent='◐ '+N[cur()];b.setAttribute('aria-label','Tema: '+N[cur()]+'. Clicar para mudar.')}
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
@@ -25,9 +25,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();
 var nav=document.querySelector('header.bar nav');
 if(nav){var w=document.createElement('span');w.className='nav-tools';
  var s=document.createElement('button');s.type='button';s.textContent='Pesquisar /';s.addEventListener('click',open);
- var b=document.createElement('button');b.type='button';lab(b);
- b.addEventListener('click',function(){var n=T[(T.indexOf(cur())+1)%T.length];H.dataset.theme=n;try{localStorage.setItem('wiki-theme',n)}catch(e){}lab(b);H.classList.add('boot');setTimeout(function(){H.classList.remove('boot')},600)});
- w.append(s,b);nav.append(w)}
+ var l=document.createElement('label');l.className='theme-picker';
+  var caption=document.createElement('span');caption.className='theme-picker-label';caption.textContent='Tema';
+  var b=document.createElement('select');b.id='wiki-theme-select';b.setAttribute('aria-label','Escolher tema visual da wiki');
+  T.forEach(function(t){var o=document.createElement('option');o.value=t;o.textContent=N[t];b.append(o)});
+  b.value=T.indexOf(cur())>=0?cur():'arquivo';
+  b.addEventListener('change',function(){var n=T.indexOf(b.value)>=0?b.value:'arquivo';H.dataset.theme=n;try{localStorage.setItem('wiki-theme',n)}catch(e){}if(n==='verde'||n==='ambar'){H.classList.add('boot');setTimeout(function(){H.classList.remove('boot')},600)}});
+  l.append(caption,b);w.append(s,l);nav.append(w)}
 var m=document.querySelector('main.content'),sb=document.querySelector('aside.wiki-sidebar-v2');
 if(m&&sb){var hs=[].slice.call(m.querySelectorAll('h2')).filter(function(h){return!h.closest('.home-timeline-callout')});
  if(hs.length>=3){var g=document.createElement('div');g.className='wiki-side-group toc-group';g.innerHTML='<span class="wiki-side-title">NESTA PÁGINA</span>';
