@@ -961,3 +961,55 @@ html[data-theme="ibm"] .timeline-page > div[style*="padding-bottom"]{
 html[data-theme="ibm"] .timeline-page > div[style*="padding-bottom"] a{
   color:#bfe3ff!important;
 }
+
+
+/* 2026-11-19 — rodapés mais homogéneos entre temas.
+   O fundo passa a acompanhar o tema/página para evitar uma "caixa" visível no fim. */
+footer,.footer,.site-footer,.home-footer{box-shadow:none!important}
+
+html[data-theme="arquivo"] footer,
+html[data-theme="arquivo"] .footer,
+html[data-theme="arquivo"] .site-footer,
+html[data-theme="arquivo"] .home-footer{
+  background:var(--bg)!important;
+  color:#9dadb4!important;
+  border-color:#35434b!important;
+}
+html[data-theme="arquivo"] footer a,
+html[data-theme="arquivo"] .footer a,
+html[data-theme="arquivo"] .site-footer a,
+html[data-theme="arquivo"] .home-footer a{color:#cddfd2!important}
+
+html[data-theme="verde"] footer,
+html[data-theme="verde"] .footer,
+html[data-theme="verde"] .site-footer,
+html[data-theme="verde"] .timeline-page footer,
+html[data-theme="verde"] .timeline-page + footer,
+html[data-theme="verde"] .timeline-page ~ footer,
+html[data-theme="verde"] .home-footer{
+  background:var(--bg)!important;
+  color:var(--s-fg)!important;
+  border-color:var(--s-line)!important;
+}
+html[data-theme="verde"] footer a,
+html[data-theme="verde"] .footer a,
+html[data-theme="verde"] .site-footer a,
+html[data-theme="verde"] .home-footer a{color:var(--s-ac)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .site-footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .timeline-page .home-footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .timeline-page + footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .timeline-page ~ footer{
+  background:var(--bg)!important;
+  color:var(--s-dim)!important;
+  border-color:var(--line)!important;
+}
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) footer a,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .footer a,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .site-footer a,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-footer a{
+  color:var(--s-ac)!important;
+}
