@@ -827,3 +827,137 @@ html[data-theme="mac"] .terminal-content strong,html[data-theme="mac"] .terminal
 html[data-theme="mac"] .terminal-content .negative{color:#8e2631!important}
 /* Print must remain readable independently of selected theme */
 @media print{html[data-theme] body,html[data-theme] #crt{background:white!important;color:#111!important;filter:none!important}html[data-theme] .crt-lines,html[data-theme] .crt-tint{display:none!important}}
+
+
+/* 2026-11-19 — ajustes de legibilidade nos temas claros (Papel antigo e Macintosh clássico)
+   Corrige texto pouco visível no cabeçalho e rodapés, sobretudo na Timeline. */
+html[data-theme="papel"] header.bar,
+html[data-theme="papel"] footer,
+html[data-theme="papel"] .home-footer{
+  background:#efe4cf!important;
+  color:#3e3225!important;
+  border-color:#b8a78c!important;
+}
+html[data-theme="papel"] .timeline-page .home-footer,
+html[data-theme="papel"] .timeline-page + footer,
+html[data-theme="papel"] .timeline-page ~ footer{
+  background:#efe4cf!important;
+  color:#3e3225!important;
+  border-color:#b8a78c!important;
+}
+html[data-theme="papel"] header.bar .brand,
+html[data-theme="papel"] header.bar nav>a,
+html[data-theme="papel"] header.bar nav summary,
+html[data-theme="papel"] .theme-picker,
+html[data-theme="papel"] footer,
+html[data-theme="papel"] .home-footer,
+html[data-theme="papel"] .home-footer span,
+html[data-theme="papel"] footer span{
+  color:#3e3225!important;
+}
+html[data-theme="papel"] header.bar .brand::before{
+  background:#73502e!important;
+  color:#fcf5e5!important;
+}
+html[data-theme="papel"] header.bar nav>a:hover,
+html[data-theme="papel"] header.bar nav>a[aria-current],
+html[data-theme="papel"] header.bar nav summary:hover,
+html[data-theme="papel"] header.bar .wiki-menu[open] summary{
+  background:#e9ddc5!important;
+  color:#5f452a!important;
+}
+html[data-theme="papel"] footer a,
+html[data-theme="papel"] .home-footer a,
+html[data-theme="papel"] .timeline-page a{
+  color:#73502e!important;
+}
+html[data-theme="papel"] .nav-tools .theme-picker select{
+  background:#fcf5e5!important;
+  color:#3e3225!important;
+  border-color:#b8a78c!important;
+}
+html[data-theme="papel"] .timeline-page > div[style*="padding-bottom"]{
+  color:#5f5241!important;
+}
+html[data-theme="papel"] .timeline-page > div[style*="padding-bottom"] a{
+  color:#73502e!important;
+}
+
+html[data-theme="mac"] header.bar,
+html[data-theme="mac"] footer,
+html[data-theme="mac"] .home-footer{
+  background:#dde2ea!important;
+  color:#252d3e!important;
+  border-color:#8f98a5!important;
+}
+html[data-theme="mac"] .timeline-page .home-footer,
+html[data-theme="mac"] .timeline-page + footer,
+html[data-theme="mac"] .timeline-page ~ footer{
+  background:#dde2ea!important;
+  color:#252d3e!important;
+  border-color:#8f98a5!important;
+}
+html[data-theme="mac"] header.bar .brand,
+html[data-theme="mac"] header.bar nav>a,
+html[data-theme="mac"] header.bar nav summary,
+html[data-theme="mac"] .theme-picker,
+html[data-theme="mac"] footer,
+html[data-theme="mac"] .home-footer,
+html[data-theme="mac"] .home-footer span,
+html[data-theme="mac"] footer span{
+  color:#252d3e!important;
+}
+html[data-theme="mac"] header.bar .brand::before{
+  background:#2d66c3!important;
+  color:#f7f9fc!important;
+}
+html[data-theme="mac"] header.bar nav>a:hover,
+html[data-theme="mac"] header.bar nav>a[aria-current],
+html[data-theme="mac"] header.bar nav summary:hover,
+html[data-theme="mac"] header.bar .wiki-menu[open] summary{
+  background:#d1d7e2!important;
+  color:#234b8c!important;
+}
+html[data-theme="mac"] footer a,
+html[data-theme="mac"] .home-footer a,
+html[data-theme="mac"] .timeline-page a{
+  color:#254b8d!important;
+}
+html[data-theme="mac"] .nav-tools .theme-picker select{
+  background:#f5f5f7!important;
+  color:#252d3e!important;
+  border-color:#8992a0!important;
+}
+html[data-theme="mac"] .timeline-page > div[style*="padding-bottom"]{
+  color:#515867!important;
+}
+html[data-theme="mac"] .timeline-page > div[style*="padding-bottom"] a{
+  color:#254b8d!important;
+}
+
+/* IBM Blue: reforço ligeiro do contraste no cabeçalho e rodapés. */
+html[data-theme="ibm"] header.bar .brand,
+html[data-theme="ibm"] header.bar nav>a,
+html[data-theme="ibm"] header.bar nav summary,
+html[data-theme="ibm"] footer,
+html[data-theme="ibm"] .home-footer,
+html[data-theme="ibm"] .home-footer span,
+html[data-theme="ibm"] footer span{
+  color:#e8f2ff!important;
+}
+html[data-theme="ibm"] footer a,
+html[data-theme="ibm"] .home-footer a,
+html[data-theme="ibm"] .timeline-page a{
+  color:#bfe3ff!important;
+}
+html[data-theme="ibm"] .nav-tools .theme-picker select{
+  background:#133564!important;
+  color:#e8f2ff!important;
+  border-color:#5c86b7!important;
+}
+html[data-theme="ibm"] .timeline-page > div[style*="padding-bottom"]{
+  color:#c4d8f0!important;
+}
+html[data-theme="ibm"] .timeline-page > div[style*="padding-bottom"] a{
+  color:#bfe3ff!important;
+}
