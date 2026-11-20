@@ -1,67 +1,276 @@
-<!DOCTYPE html><html lang="pt-PT" data-theme="arquivo"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10191f"><title>Linha do tempo retro | Wiki técnica</title><meta name="description" content="Timeline de sistemas antigos testados no Proxmox, por ano de lançamento: sucessos, falhas e experiências pendentes."><meta property="og:type" content="website"><meta property="og:locale" content="pt_PT"><meta property="og:title" content="Linha do tempo retro | Wiki técnica"><meta property="og:description" content="Timeline de sistemas antigos testados no Proxmox, por ano de lançamento: sucessos, falhas e experiências pendentes."><meta property="og:url" content="https://nmbb.github.io/wiki/linha-do-tempo.html"><meta property="og:image" content="https://nmbb.github.io/wiki/assets/img/og.png"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><script>try{var t=localStorage.getItem("wiki-theme");if(["arquivo","verde","mf3270","mf3279"].indexOf(t)!==-1)document.documentElement.dataset.theme=t}catch(e){}</script><link rel="stylesheet" href="assets/css/site.css?v=20261120a"><link rel="stylesheet" href="assets/css/os-timeline-flow-20261114.css"><link rel="stylesheet" href="assets/css/timeline-footer-normal-fix.css"></head><body><a class="skip-link" href="#conteudo">Saltar para o conteúdo</a><div id="crt"><header class="bar"><div class="wrap"><a class="brand" href="index.html">◈  ARQUIVO / WIKI</a><nav aria-label="Navegação principal"><a href="index.html">Início</a><details class="wiki-menu"><summary>Infraestrutura</summary><div class="wiki-submenu"><a href="homelab.html">Home Lab</a><a href="redes.html">Redes e VLANs</a><a href="pfsense.html">pfSense</a><a href="proxmox.html">Proxmox</a><a href="tailscale.html">Tailscale</a><a href="cloudflare.html">Cloudflare e alojamento</a><a href="banana-pi-m5.html">Banana Pi M5</a><a href="banana-pi-docker-rede.html">Docker: falha no arranque</a><a href="home-assistant.html">Home Assistant</a><a href="homarr.html">Homarr</a><a href="monitorizacao.html">Monitorização</a></div></details><details class="wiki-menu"><summary>Laboratório</summary><div class="wiki-submenu"><a href="projetos.html">Visão geral do laboratório</a><a href="projetos.html#retro">Windows NT / Linux Retro</a><a href="dos.html">MS-DOS · 1982–1994</a><a href="windows-antigos.html">Windows 1.01, 2.1 e 3.11</a><a href="suse9.html">SuSE Linux 9.0</a><a href="retro-simh.html">Retro-SIMH · 1977–1982</a><a href="projetos.html#pxe">PXE e iVentoy</a><a href="fog.html">FOG Project</a></div></details><a href="artigos.html">Artigos</a><a href="linha-do-tempo.html" aria-current="page">Timeline retro</a><a href="sobre.html">Sobre</a></nav></div></header><main id="conteudo" class="experience-home timeline-page"><div style="padding-top:65px"><div class="kicker">LABORATÓRIO RETRO / MÁQUINAS VIRTUAIS</div><h1 style="font-size:clamp(3rem,6vw,6rem);margin:12px 0 14px">Uma viagem pelos<br/><em style="color:#b7d6bd;font-style:normal">sistemas operativos.</em></h1><p style="max-width:760px;color:#abc0bd">De Windows NT a SuSE, cada sistema representa uma época. As cores distinguem o resultado dos testes, sem alterar a cronologia histórica.</p></div><section aria-labelledby="os-flow-title" class="os-flow" id="cronologia-retro">
-<div class="os-flow-heading"><div><p class="os-flow-eyebrow">RETROCOMPUTAÇÃO · CRONOLOGIA</p><h2 id="os-flow-title">Evolução dos sistemas operativos</h2><p class="os-flow-explainer">Datas de lançamento dos sistemas · estado dos testes no laboratório. Seleciona um cartão para abrir o artigo.</p></div>
-<div aria-label="Percorrer cronologia" class="os-flow-navigation"><button aria-label="Anos anteriores" class="os-flow-prev" type="button">←</button><button aria-label="Anos seguintes" class="os-flow-next" type="button">→</button></div></div>
-<div aria-label="Legenda dos estados" class="os-flow-legend"><span><i class="os-flow-legend-dot os-flow-green"></i>Funcional</span><span><i class="os-flow-legend-dot os-flow-yellow"></i>Parcial / em teste / por testar</span><span class="os-flow-legend-emulated"><i class="os-flow-legend-diamond"></i>Executado no SIMH</span><span class="os-flow-legend-86box"><i aria-hidden="true" class="os-flow-legend-square"></i>86Box · emulação / configuração</span><span><i class="os-flow-legend-dot os-flow-red"></i>Não funcionou</span></div>
-<div aria-label="Linha do tempo horizontal, desliza para ver os anos seguintes" class="os-flow-viewport" role="region" tabindex="0">
-<div class="os-flow-rail" role="list">
-<div class="os-flow-stop os-flow-good os-flow-up os-flow-emulated" role="listitem"><a aria-label="Altair DOS 1.0 (1977), Funcional, testado no SIMH. Abrir artigo ou secção" class="os-flow-card" href="retro-simh.html"><span class="os-flow-year">1977</span><strong class="os-flow-name">Altair DOS 1.0</strong><span class="os-flow-emulator">SIMH · emulação</span><span class="os-flow-status">Funcional</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-good os-flow-down os-flow-emulated" role="listitem"><a aria-label="CP/M 1.4 (1977), Funcional, testado no SIMH. Abrir artigo ou secção" class="os-flow-card" href="retro-simh.html"><span class="os-flow-year">1977</span><strong class="os-flow-name">CP/M 1.4</strong><span class="os-flow-emulator">SIMH · emulação</span><span class="os-flow-status">Funcional</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-good os-flow-up os-flow-emulated" role="listitem"><a aria-label="CP/M 2.2 (1979), Funcional, testado no SIMH. Abrir artigo ou secção" class="os-flow-card" href="retro-simh.html"><span class="os-flow-year">1979</span><strong class="os-flow-name">CP/M 2.2</strong><span class="os-flow-emulator">SIMH · emulação</span><span class="os-flow-status">Funcional</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-good os-flow-down os-flow-emulated" role="listitem"><a aria-label="86-DOS 0.11 (1980), Funcional, testado no SIMH. Abrir artigo ou secção" class="os-flow-card" href="retro-simh.html"><span class="os-flow-year">1980</span><strong class="os-flow-name">86-DOS 0.11</strong><span class="os-flow-emulator">SIMH · emulação</span><span class="os-flow-status">Funcional</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-good os-flow-up os-flow-emulated" role="listitem"><a aria-label="86-DOS 0.34 (1980), Funcional, testado no SIMH. Abrir artigo ou secção" class="os-flow-card" href="retro-simh.html"><span class="os-flow-year">1980</span><strong class="os-flow-name">86-DOS 0.34</strong><span class="os-flow-emulator">SIMH · emulação</span><span class="os-flow-status">Funcional</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-good os-flow-down os-flow-emulated" role="listitem"><a aria-label="86-DOS 1.00 (1981), Funcional, testado no SIMH. Abrir artigo ou secção" class="os-flow-card" href="retro-simh.html"><span class="os-flow-year">1981</span><strong class="os-flow-name">86-DOS 1.00</strong><span class="os-flow-emulator">SIMH · emulação</span><span class="os-flow-status">Funcional</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-good os-flow-up os-flow-86box" role="listitem"><a aria-label="IBM PC 5150 · BASIC (1981), Arranque confirmado, experiência no 86Box. Abrir artigo" class="os-flow-card" href="86box.html"><span class="os-flow-year">1981</span><strong class="os-flow-name">IBM PC 5150 · BASIC</strong><span class="os-flow-emulator">86Box · emulação</span><span class="os-flow-status">Arranque confirmado</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div><div class="os-flow-stop os-flow-good os-flow-up os-flow-emulated" role="listitem"><a aria-label="CP/M 3.0 (1982), Funcional, testado no SIMH. Abrir artigo ou secção" class="os-flow-card" href="retro-simh.html"><span class="os-flow-year">1982</span><strong class="os-flow-name">CP/M 3.0</strong><span class="os-flow-emulator">SIMH · emulação</span><span class="os-flow-status">Funcional</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-good os-flow-up" role="listitem">
-<a aria-label="Compaq DOS 1.10 (1983), Funcional. Abrir artigo ou secção" class="os-flow-card" href="dos.html#dos125">
-<span class="os-flow-year">1983</span><strong class="os-flow-name">Compaq DOS 1.10</strong><span class="os-flow-status">Funcional</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
-</div><div class="os-flow-stop os-flow-partial os-flow-down os-flow-86box" role="listitem"><a aria-label="GEM Desktop 1.1 (1985), Configurado, experiência no 86Box. Abrir artigo" class="os-flow-card" href="86box.html"><span class="os-flow-year">1985</span><strong class="os-flow-name">GEM Desktop 1.1</strong><span class="os-flow-emulator">86Box · emulação</span><span class="os-flow-status">Configurado</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div><div class="os-flow-stop os-flow-good os-flow-up" role="listitem"><a aria-label="Windows 1.01 (1985), Ambiente iniciado, VM sobre DOS. Abrir artigo" class="os-flow-card" href="windows-antigos.html#windows101"><span class="os-flow-year">1985</span><strong class="os-flow-name">Windows 1.01</strong><span class="os-flow-status">Ambiente iniciado</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-good os-flow-down" role="listitem">
-<a aria-label="MS-DOS 3.30 (1987), Funcional. Abrir artigo ou secção" class="os-flow-card" href="dos.html#dos330">
-<span class="os-flow-year">1987</span><strong class="os-flow-name">MS-DOS 3.30</strong><span class="os-flow-status">Funcional</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
-</div><div class="os-flow-stop os-flow-partial os-flow-down os-flow-86box" role="listitem"><a aria-label="OS/2 1.00 (1987), Configurado, experiência no 86Box. Abrir artigo" class="os-flow-card" href="86box.html"><span class="os-flow-year">1987</span><strong class="os-flow-name">OS/2 1.00</strong><span class="os-flow-emulator">86Box · emulação</span><span class="os-flow-status">Configurado</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div><div class="os-flow-stop os-flow-partial os-flow-up os-flow-86box" role="listitem"><a aria-label="DR-DOS 3.40 (1988), Configurado, experiência no 86Box. Abrir artigo" class="os-flow-card" href="86box.html"><span class="os-flow-year">1988</span><strong class="os-flow-name">DR-DOS 3.40</strong><span class="os-flow-emulator">86Box · emulação</span><span class="os-flow-status">Configurado</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div><div class="os-flow-stop os-flow-good os-flow-down" role="listitem"><a aria-label="Windows 2.1 (1988), Notepad funcional, VM sobre DOS. Abrir artigo" class="os-flow-card" href="windows-antigos.html#windows21"><span class="os-flow-year">1988</span><strong class="os-flow-name">Windows 2.1</strong><span class="os-flow-status">Notepad funcional</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-good os-flow-down" role="listitem"><a aria-label="Windows for Workgroups 3.11 (1993), Program Manager funcional, VM sobre DOS. Abrir artigo" class="os-flow-card" href="windows-antigos.html#wfw311"><span class="os-flow-year">1993</span><strong class="os-flow-name">Windows for Workgroups 3.11</strong><span class="os-flow-status">Program Manager funcional</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-partial os-flow-up" role="listitem">
-<a aria-label="Windows NT 3.1 Advanced Server (1993), Parcial. Abrir artigo ou secção" class="os-flow-card" href="projetos.html#nt31">
-<span class="os-flow-year">1993</span><strong class="os-flow-name">Windows NT 3.1 Advanced Server</strong><span class="os-flow-status">Parcial</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
-</div><div class="os-flow-stop os-flow-good os-flow-down" role="listitem">
-<a aria-label="MS-DOS 6.22 (1994), Funcional. Abrir artigo ou secção" class="os-flow-card" href="dos.html#dos622">
-<span class="os-flow-year">1994</span><strong class="os-flow-name">MS-DOS 6.22</strong><span class="os-flow-status">Funcional</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
-</div><div class="os-flow-stop os-flow-good os-flow-up" role="listitem">
-<a aria-label="Windows NT 4.0 (1996), Funcional. Abrir artigo ou secção" class="os-flow-card" href="#nt4">
-<span class="os-flow-year">1996</span><strong class="os-flow-name">Windows NT 4.0</strong><span class="os-flow-status">Funcional</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
-</div><div class="os-flow-stop os-flow-partial os-flow-down" role="listitem"><a aria-label="SuSE Linux 5.2 (1998), Por testar. Abrir artigo ou secção" class="os-flow-card" href="projetos.html#linux-retro"><span class="os-flow-year">1998</span><strong class="os-flow-name">SuSE Linux 5.2</strong><span class="os-flow-status">Por testar</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-partial os-flow-up" role="listitem"><a aria-label="SuSE Linux 6.0 (1998), Por testar. Abrir artigo ou secção" class="os-flow-card" href="projetos.html#linux-retro"><span class="os-flow-year">1998</span><strong class="os-flow-name">SuSE Linux 6.0</strong><span class="os-flow-status">Por testar</span></a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span></div>
-<div class="os-flow-stop os-flow-bad os-flow-down" role="listitem">
-<a aria-label="Red Hat Linux 6.2 (2000), Falhou. Abrir artigo ou secção" class="os-flow-card" href="#redhat62">
-<span class="os-flow-year">2000</span><strong class="os-flow-name">Red Hat Linux 6.2</strong><span class="os-flow-status">Falhou</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
-</div><div class="os-flow-stop os-flow-good os-flow-up" role="listitem">
-<a aria-label="Windows 2000 (2000), Funcional. Abrir artigo ou secção" class="os-flow-card" href="#win2000">
-<span class="os-flow-year">2000</span><strong class="os-flow-name">Windows 2000</strong><span class="os-flow-status">Funcional</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
-</div><div class="os-flow-stop os-flow-bad os-flow-down" role="listitem">
-<a aria-label="Caldera OpenLinux 3.1 (2001), Falhou. Abrir artigo ou secção" class="os-flow-card" href="#caldera">
-<span class="os-flow-year">2001</span><strong class="os-flow-name">Caldera OpenLinux 3.1</strong><span class="os-flow-status">Falhou</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
-</div><div class="os-flow-stop os-flow-good os-flow-up" role="listitem">
-<a aria-label="Red Hat Linux 7.1 (2001), Funcional. Abrir artigo ou secção" class="os-flow-card" href="#redhat71">
-<span class="os-flow-year">2001</span><strong class="os-flow-name">Red Hat Linux 7.1</strong><span class="os-flow-status">Funcional</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
-</div><div class="os-flow-stop os-flow-partial os-flow-down" role="listitem">
-<a aria-label="SuSE Linux 9.0 (2003), Parcial. Abrir artigo ou secção" class="os-flow-card" href="suse9.html">
-<span class="os-flow-year">2003</span><strong class="os-flow-name">SuSE Linux 9.0</strong><span class="os-flow-status">Parcial</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
-</div><div class="os-flow-stop os-flow-partial os-flow-up" role="listitem">
-<a aria-label="Windows Server 2008 R2 (2009), Parcial. Abrir artigo ou secção" class="os-flow-card" href="#ws2008">
-<span class="os-flow-year">2009</span><strong class="os-flow-name">Windows Server 2008 R2</strong><span class="os-flow-status">Parcial</span>
-</a><span aria-hidden="true" class="os-flow-stem"></span><span aria-hidden="true" class="os-flow-dot"></span>
+<!DOCTYPE html><html lang="pt-PT" data-theme="arquivo"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10191f"><title>Linha do tempo retro | Wiki técnica</title><meta name="description" content="Timeline de sistemas antigos testados no Proxmox, por ano de lançamento: sucessos, falhas e experiências pendentes."><meta property="og:type" content="website"><meta property="og:locale" content="pt_PT"><meta property="og:title" content="Linha do tempo retro | Wiki técnica"><meta property="og:description" content="Timeline de sistemas antigos testados no Proxmox, por ano de lançamento: sucessos, falhas e experiências pendentes."><meta property="og:url" content="https://nmbb.github.io/wiki/linha-do-tempo.html"><meta property="og:image" content="https://nmbb.github.io/wiki/assets/img/og.png"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><script>try{var t=localStorage.getItem("wiki-theme");if(["arquivo","verde","mf3270","mf3279"].indexOf(t)!==-1)document.documentElement.dataset.theme=t}catch(e){}</script><link rel="stylesheet" href="assets/css/site.css?v=0067cb10"><link rel="stylesheet" href="assets/css/timeline-demo-20261120.css"><link rel="stylesheet" href="assets/css/timeline-footer-normal-fix.css"></head><body><a class="skip-link" href="#conteudo">Saltar para o conteúdo</a><div id="crt"><header class="bar"><div class="wrap"><a class="brand" href="index.html">◈  ARQUIVO / WIKI</a><nav aria-label="Navegação principal"><a href="index.html">Início</a><details class="wiki-menu"><summary>Infraestrutura</summary><div class="wiki-submenu"><a href="homelab.html">Home Lab</a><a href="redes.html">Redes e VLANs</a><a href="pfsense.html">pfSense</a><a href="proxmox.html">Proxmox</a><a href="tailscale.html">Tailscale</a><a href="cloudflare.html">Cloudflare e alojamento</a><a href="banana-pi-m5.html">Banana Pi M5</a><a href="banana-pi-docker-rede.html">Docker: falha no arranque</a><a href="home-assistant.html">Home Assistant</a><a href="homarr.html">Homarr</a><a href="monitorizacao.html">Monitorização</a></div></details><details class="wiki-menu"><summary>Laboratório</summary><div class="wiki-submenu"><a href="projetos.html">Visão geral do laboratório</a><a href="projetos.html#retro">Windows NT / Linux Retro</a><a href="dos.html">MS-DOS · 1982–1994</a><a href="windows-antigos.html">Windows 1.01, 2.1 e 3.11</a><a href="suse9.html">SuSE Linux 9.0</a><a href="retro-simh.html">Retro-SIMH · 1977–1982</a><a href="projetos.html#pxe">PXE e iVentoy</a><a href="fog.html">FOG Project</a></div></details><a href="artigos.html">Artigos</a><a href="linha-do-tempo.html" aria-current="page">Timeline retro</a><a href="sobre.html">Sobre</a></nav></div></header><main id="conteudo" class="experience-home timeline-page"><div style="padding-top:65px"><div class="kicker">LABORATÓRIO RETRO / MÁQUINAS VIRTUAIS</div><h1 style="font-size:clamp(3rem,6vw,6rem);margin:12px 0 14px">Uma viagem pelos<br/><em style="color:#b7d6bd;font-style:normal">sistemas operativos.</em></h1><p style="max-width:760px;color:#abc0bd">De Windows NT a SuSE, cada sistema representa uma época. As cores distinguem o resultado dos testes, sem alterar a cronologia histórica.</p></div><section aria-label="Linha do tempo interativa dos sistemas operativos" class="timeline-demo" id="cronologia-retro"><div class="topline"><h2>Experiências de 1977 a 2009</h2><div class="legend"><span class="ok">Funcional</span><span class="test">Em teste / parcial</span><span class="fail">Falhou</span></div></div>
+<div class="tools"><div aria-label="Filtrar experiências" class="filters" role="group"><button aria-pressed="true" data-filter="all" type="button">Todas (27)</button><button aria-pressed="false" data-filter="ok" type="button">Funcionais</button><button aria-pressed="false" data-filter="test" type="button">Em teste</button><button aria-pressed="false" data-filter="fail" type="button">Falhas</button><button aria-pressed="false" data-filter="SIMH" type="button">SIMH</button><button aria-pressed="false" data-filter="86Box" type="button">86Box</button></div><div class="navbuttons"><button aria-label="Anos anteriores" id="retro-prev" type="button">←</button><button aria-label="Anos seguintes" id="retro-next" type="button">→</button></div></div>
+<div aria-label="Cronologia horizontal; deslize para navegar" class="viewport" id="retro-timeline-viewport" role="region" tabindex="0"><div class="track"><div class="milestone" data-platform="SIMH" data-state="ok">
+<div class="event event-top">
+<a class="event-card" href="retro-simh.html" title="Abrir artigo: Altair DOS 1.0">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▣</span><strong>Altair DOS 1.0</strong></div>
+<p>Sistema histórico executado no simulador</p>
+<div class="meta"><span class="platform">SIMH</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1977</span></div>
+</div>
+<div class="milestone" data-platform="SIMH" data-state="ok">
+<div class="event event-bottom">
+<a class="event-card" href="retro-simh.html" title="Abrir artigo: CP/M 1.4">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▣</span><strong>CP/M 1.4</strong></div>
+<p>Primeira geração de CP/M no laboratório</p>
+<div class="meta"><span class="platform">SIMH</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1977</span></div>
+</div>
+<div class="milestone" data-platform="SIMH" data-state="ok">
+<div class="event event-top">
+<a class="event-card" href="retro-simh.html" title="Abrir artigo: CP/M 2.2">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▣</span><strong>CP/M 2.2</strong></div>
+<p>Arranque e comandos confirmados</p>
+<div class="meta"><span class="platform">SIMH</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1979</span></div>
+</div>
+<div class="milestone" data-platform="SIMH" data-state="ok">
+<div class="event event-bottom">
+<a class="event-card" href="retro-simh.html" title="Abrir artigo: 86-DOS 0.11">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▣</span><strong>86-DOS 0.11</strong></div>
+<p>Versão inicial executada no emulador</p>
+<div class="meta"><span class="platform">SIMH</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1980</span></div>
+</div>
+<div class="milestone" data-platform="SIMH" data-state="ok">
+<div class="event event-top">
+<a class="event-card" href="retro-simh.html" title="Abrir artigo: 86-DOS 0.34">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▣</span><strong>86-DOS 0.34</strong></div>
+<p>Experiência histórica em ambiente SIMH</p>
+<div class="meta"><span class="platform">SIMH</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1980</span></div>
+</div>
+<div class="milestone" data-platform="SIMH" data-state="ok">
+<div class="event event-bottom">
+<a class="event-card" href="retro-simh.html" title="Abrir artigo: 86-DOS 1.00">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▣</span><strong>86-DOS 1.00</strong></div>
+<p>Evolução do DOS antes do MS-DOS</p>
+<div class="meta"><span class="platform">SIMH</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1981</span></div>
+</div>
+<div class="milestone" data-platform="86Box" data-state="ok">
+<div class="event event-top">
+<a class="event-card" href="86box.html" title="Abrir artigo: IBM PC 5150 · BASIC">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▤</span><strong>IBM PC 5150 · BASIC</strong></div>
+<p>IBM BASIC iniciado num PC de 1981</p>
+<div class="meta"><span class="platform">86Box</span><span class="status ok">Arranque confirmado</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1981</span></div>
+</div>
+<div class="milestone" data-platform="SIMH" data-state="ok">
+<div class="event event-bottom">
+<a class="event-card" href="retro-simh.html" title="Abrir artigo: CP/M 3.0">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▣</span><strong>CP/M 3.0</strong></div>
+<p>Versão posterior de CP/M testada</p>
+<div class="meta"><span class="platform">SIMH</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1982</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="ok">
+<div class="event event-top">
+<a class="event-card" href="dos.html#dos125" title="Abrir artigo: Compaq DOS 1.10">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Compaq DOS 1.10</strong></div>
+<p>Arranque e utilização verificados</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1983</span></div>
+</div>
+<div class="milestone" data-platform="86Box" data-state="test">
+<div class="event event-bottom">
+<a class="event-card" href="86box.html" title="Abrir artigo: GEM Desktop 1.1">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▤</span><strong>GEM Desktop 1.1</strong></div>
+<p>Máquina criada; arranque por confirmar</p>
+<div class="meta"><span class="platform">86Box</span><span class="status test">Configurado</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1985</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="ok">
+<div class="event event-top">
+<a class="event-card" href="windows-antigos.html#windows101" title="Abrir artigo: Windows 1.01">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Windows 1.01</strong></div>
+<p>Executado sobre MS-DOS 3.30</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status ok">Ambiente iniciado</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1985</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="ok">
+<div class="event event-bottom">
+<a class="event-card" href="dos.html#dos330" title="Abrir artigo: MS-DOS 3.30">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>MS-DOS 3.30</strong></div>
+<p>Base usada também no Windows 1.01 e 2.1</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1987</span></div>
+</div>
+<div class="milestone" data-platform="86Box" data-state="test">
+<div class="event event-top">
+<a class="event-card" href="86box.html" title="Abrir artigo: OS/2 1.00">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▤</span><strong>OS/2 1.00</strong></div>
+<p>Configuração criada; arranque por confirmar</p>
+<div class="meta"><span class="platform">86Box</span><span class="status test">Configurado</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1987</span></div>
+</div>
+<div class="milestone" data-platform="86Box" data-state="test">
+<div class="event event-bottom">
+<a class="event-card" href="86box.html" title="Abrir artigo: DR-DOS 3.40">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">▤</span><strong>DR-DOS 3.40</strong></div>
+<p>Emulação preparada; sem arranque validado</p>
+<div class="meta"><span class="platform">86Box</span><span class="status test">Configurado</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1988</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="ok">
+<div class="event event-top">
+<a class="event-card" href="windows-antigos.html#windows21" title="Abrir artigo: Windows 2.1">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Windows 2.1</strong></div>
+<p>Notepad aberto sobre MS-DOS 3.30</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status ok">Notepad funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1988</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="ok">
+<div class="event event-bottom">
+<a class="event-card" href="windows-antigos.html#wfw311" title="Abrir artigo: Windows for Workgroups 3.11">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Windows for Workgroups 3.11</strong></div>
+<p>Program Manager sobre MS-DOS 6.22</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status ok">Program Manager funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1993</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="test">
+<div class="event event-top">
+<a class="event-card" href="projetos.html#nt31" title="Abrir artigo: Windows NT 3.1 Advanced Server">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Windows NT 3.1 Advanced Server</strong></div>
+<p>Instalado; placa de rede por resolver</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status test">Parcial</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1993</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="ok">
+<div class="event event-bottom">
+<a class="event-card" href="dos.html#dos622" title="Abrir artigo: MS-DOS 6.22">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>MS-DOS 6.22</strong></div>
+<p>Arranque pelo disco C: e teclado PT</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1994</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="ok">
+<div class="event event-top">
+<a class="event-card" href="projetos.html#nt4" title="Abrir artigo: Windows NT 4.0">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Windows NT 4.0</strong></div>
+<p>Domínio, Samba e autenticação testados</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1996</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="test">
+<div class="event event-bottom">
+<a class="event-card" href="projetos.html#linux-retro" title="Abrir artigo: SuSE Linux 5.2">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>SuSE Linux 5.2</strong></div>
+<p>ISO obtida; instalação por testar</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status test">Por testar</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1998</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="test">
+<div class="event event-top">
+<a class="event-card" href="projetos.html#linux-retro" title="Abrir artigo: SuSE Linux 6.0">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>SuSE Linux 6.0</strong></div>
+<p>ISO obtida; instalação por testar</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status test">Por testar</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>1998</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="fail">
+<div class="event event-bottom">
+<a class="event-card" href="projetos.html#redhat62" title="Abrir artigo: Red Hat Linux 6.2">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Red Hat Linux 6.2</strong></div>
+<p>Instalador falhou; sem sistema funcional</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status fail">Falhou</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>2000</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="ok">
+<div class="event event-top">
+<a class="event-card" href="projetos.html#win2000" title="Abrir artigo: Windows 2000">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Windows 2000</strong></div>
+<p>Login e acesso a partilhas verificados</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>2000</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="fail">
+<div class="event event-bottom">
+<a class="event-card" href="projetos.html#caldera" title="Abrir artigo: Caldera OpenLinux 3.1">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Caldera OpenLinux 3.1</strong></div>
+<p>Instalação bloqueada no LIZARD</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status fail">Falhou</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>2001</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="ok">
+<div class="event event-top">
+<a class="event-card" href="projetos.html#redhat71" title="Abrir artigo: Red Hat Linux 7.1">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Red Hat Linux 7.1</strong></div>
+<p>Samba acessível a partir do Windows NT</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status ok">Funcional</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>2001</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="test">
+<div class="event event-bottom">
+<a class="event-card" href="suse9.html" title="Abrir artigo: SuSE Linux 9.0">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>SuSE Linux 9.0</strong></div>
+<p>YaST, SSH e Samba parcialmente validados</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status test">Parcial</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>2003</span></div>
+</div>
+<div class="milestone" data-platform="Proxmox" data-state="test">
+<div class="event event-top">
+<a class="event-card" href="projetos.html#ws2008" title="Abrir artigo: Windows Server 2008 R2">
+<div class="event-heading"><span aria-hidden="true" class="event-icon">⌘</span><strong>Windows Server 2008 R2</strong></div>
+<p>Instalado; serviços ainda não validados</p>
+<div class="meta"><span class="platform">Proxmox</span><span class="status test">Parcial</span></div>
+</a><div class="stem"></div>
+</div>
+<div class="year-ribbon"><span>2009</span></div>
 </div></div></div>
-<p class="os-flow-footnote">As datas indicam o lançamento original dos sistemas, não as datas dos testes. Verde: funcional; amarelo: parcial, configurado ou por testar; vermelho: falhou. SIMH e 86Box identificam os emuladores usados. No 86Box, o BASIC do IBM PC arrancou; GEM, OS/2 e DR-DOS têm máquinas configuradas, mas ainda não há arranque comprovado.</p>
+<p class="caption">Os anos pertencem aos sistemas originais, não à data dos testes. Nos primeiros Windows foi utilizado DOS posterior ao lançamento de alguns sistemas. <a href="windows-antigos.html">Ver documentação Windows →</a></p>
 </section><div class="split-heading"><div><div class="section-kicker">REGISTO DAS EXPERIÊNCIAS</div><h2>O que aconteceu em cada teste.</h2></div></div><section class="timeline-detail-grid" id="experiencias"><div class="timeline-detail" id="retro-simh"><span class="time-label">1977–1982 · EMULAÇÃO FUNCIONAL</span><h3>Altair DOS, CP/M e 86-DOS</h3><p>Sete sistemas históricos executados no Open SIMH, numa VM Debian 13 do Proxmox: Altair DOS 1.0, CP/M 1.4/2.2/3.0 e 86-DOS 0.11/0.34/1.00. Os ecrãs de arranque e as listagens foram confirmados, com acesso à disquete também validado no Altair DOS.</p><a href="retro-simh.html">Ver laboratório e capturas →</a></div><div class="timeline-detail" id="retro-86box"><span class="time-label">1981–1988 · EMULAÇÃO X86 · ESTADOS DOCUMENTADOS</span><h3>IBM PC 5150, GEM, OS/2 e DR-DOS no 86Box</h3><p>O IBM PC 5150 arrancou no BASIC residente em ROM (1981); o PC-DOS 1.0 ainda não foi confirmado. Foram também configuradas máquinas para GEM Desktop 1.1 (1985), OS/2 1.00 (1987) e DR-DOS 3.40 (1988), sem prova de instalação ou arranque desses sistemas. A compilação do emulador em Debian 13 está documentada separadamente.</p><a href="86box.html">Ver configurações, estados e capturas →</a></div>
 <div class="timeline-detail" id="windows-sobre-dos"><span class="time-label">1985–1993 · VMs NO PROXMOX · DOS + WINDOWS</span><h3>Windows 1.01, 2.1 e Windows for Workgroups 3.11</h3><p>Os três ambientes foram executados em VMs Proxmox, instalados sobre DOS. As datas de 1985, 1988 e 1993 referem-se aos lançamentos dos Windows, não às versões de DOS utilizadas. Por exemplo, no teste do Windows 1.01 (1985) usou-se MS-DOS 3.30 (1987), posterior ao Windows. O Windows 2.1 (1988) utilizou também MS-DOS 3.30 (1987), enquanto o Windows for Workgroups 3.11 (1993) foi instalado sobre MS-DOS 6.22 (1994). Estas combinações correspondem às VMs testadas, não necessariamente às configurações originais da época. Foram observados o MS-DOS Executive, o Notepad e o Program Manager, respetivamente; a rede do 3.11 ainda não foi validada.</p><a href="windows-antigos.html">Ver testes, instalação e capturas →</a></div><div class="timeline-detail" id="nt4"><span class="time-label">1996 · CONFIRMADO</span><h3>Windows NT 4.0</h3><p>Domínio LABNT40, controladores NT4 e estação de trabalho. Os testes de acesso à partilha Samba do Red Hat confirmaram leitura e escrita, incluindo a pasta criada a partir do Windows.</p><a href="projetos.html#retro">Ver experiências NT4 →</a></div>
 <div class="timeline-detail" id="redhat62"><span class="time-label">2000 · INSTALAÇÃO FALHADA</span><h3>Red Hat Linux 6.2</h3><p>O instalador Anaconda terminou com uma exceção associada a <code>getCompsList()</code>. Não se concluiu a instalação nem se identificou uma causa definitiva.</p><a href="projetos.html#linux-retro">Ver Linux Retro →</a></div>
@@ -70,4 +279,4 @@
 <div class="timeline-detail" id="caldera"><span class="time-label">2001 · INSTALAÇÃO FALHADA</span><h3>Caldera OpenLinux Server 3.1</h3><p>Detetou dispositivos PCI, CD-ROM e placa Ethernet, mas o LIZARD apresentou problemas e ficou bloqueado ao preparar o particionamento. A instalação não foi concluída.</p><a href="projetos.html#linux-retro">Contexto do laboratório →</a></div>
 <div class="timeline-detail" id="suse9"><span class="time-label">2003 · PARCIALMENTE VALIDADO</span><h3>SuSE Linux 9.0</h3><p>Instalação concluída pelo YaST, rede virtual vmbr71 e SSH verificados. Samba 2.2.8a respondeu ao Windows 2000. A pasta COMUM apresentou NT_STATUS_BAD_NETWORK_NAME.</p><a href="suse9.html">Ler artigo completo →</a></div>
 <div class="timeline-detail" id="ws2008"><span class="time-label">2009 · INSTALADO</span><h3>Windows Server 2008 R2</h3><p>Instalação e captura do ecrã de início de sessão documentadas. Não foram confirmados testes adicionais de gestão de utilizadores ou serviços de domínio.</p><a href="projetos.html#windows-2000-2008">Ver notas Windows →</a></div>
-<div class="timeline-detail" id="pendentes"><span class="time-label">ARQUIVO · AINDA NÃO TESTADO</span><h3>SuSE Linux 5.2 / 6.0</h3><p>Obtiveram-se imagens ISO históricas, mas não existe confirmação de instalação ou de testes funcionais destas versões. Não são assinaladas como falhadas.</p><a href="artigos.html">Regressar à biblioteca →</a></div></section><div style="padding-bottom:70px;color:#9eb4b5;font-size:13px">As datas referem-se ao lançamento original dos sistemas operativos, não à realização dos testes. Referências históricas: <a href="https://fedoraproject.org/wiki/History_of_Red_Hat_Linux">Fedora / Red Hat Linux</a>, <a href="https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions">Windows</a> e <a href="https://en.wikipedia.org/wiki/SUSE_Linux">SUSE</a>.</div><footer class="home-footer"><span>Arquivo técnico · experiências reais</span><a href="index.html">Voltar ao início ↗</a></footer></main><footer><div class="wrap"><span>© 2026 Nuno Brandão · Wiki pessoal e técnica</span><a href="artigos.html">Voltar à Wiki ↑</a></div></footer></div><div class="crt-tint" aria-hidden="true"></div><div class="crt-lines" aria-hidden="true"></div><script defer src="assets/js/search-index.js"></script><script defer src="assets/js/site.js?v=20261120a"></script><script defer src="assets/js/wiki-nav.js?v=2dea8594"></script><script defer src="assets/js/gallery-modal-20261113.js?v=24f1061a"></script><script defer src="assets/js/os-timeline-flow-20261114.js"></script></body></html>
+<div class="timeline-detail" id="pendentes"><span class="time-label">ARQUIVO · AINDA NÃO TESTADO</span><h3>SuSE Linux 5.2 / 6.0</h3><p>Obtiveram-se imagens ISO históricas, mas não existe confirmação de instalação ou de testes funcionais destas versões. Não são assinaladas como falhadas.</p><a href="artigos.html">Regressar à biblioteca →</a></div></section><div style="padding-bottom:70px;color:#9eb4b5;font-size:13px">As datas referem-se ao lançamento original dos sistemas operativos, não à realização dos testes. Referências históricas: <a href="https://fedoraproject.org/wiki/History_of_Red_Hat_Linux">Fedora / Red Hat Linux</a>, <a href="https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions">Windows</a> e <a href="https://en.wikipedia.org/wiki/SUSE_Linux">SUSE</a>.</div><footer class="home-footer"><span>Arquivo técnico · experiências reais</span><a href="index.html">Voltar ao início ↗</a></footer></main><footer><div class="wrap"><span>© 2026 Nuno Brandão · Wiki pessoal e técnica</span><a href="artigos.html">Voltar à Wiki ↑</a></div></footer></div><div class="crt-tint" aria-hidden="true"></div><div class="crt-lines" aria-hidden="true"></div><script defer src="assets/js/search-index.js"></script><script defer src="assets/js/site.js?v=e40fe2ed"></script><script defer src="assets/js/wiki-nav.js?v=2dea8594"></script><script defer src="assets/js/gallery-modal-20261113.js?v=24f1061a"></script><script defer src="assets/js/timeline-demo-20261120.js"></script></body></html>
