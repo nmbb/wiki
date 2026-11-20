@@ -1,5 +1,5 @@
 (function(){
-var T=['arquivo','verde','ambar','ibm','papel','mac'],N={arquivo:'Arquivo',verde:'Verde CRT',ambar:'Âmbar CRT',ibm:'IBM Blue',papel:'Papel antigo',mac:'Macintosh clássico'},H=document.documentElement,box,inp,list,res=[],sel=0;
+var T=['arquivo','verde','mf3270','mf3279'],N={arquivo:'Arquivo',verde:'Verde CRT',mf3270:'Mainframe 3270',mf3279:'3279 a cores'},H=document.documentElement,box,inp,list,res=[],sel=0;
 var cur=function(){return H.dataset.theme||'arquivo'};
 function lab(b){b.textContent='◐ '+N[cur()];b.setAttribute('aria-label','Tema: '+N[cur()]+'. Clicar para mudar.')}
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}

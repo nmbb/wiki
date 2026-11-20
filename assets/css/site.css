@@ -1013,3 +1013,185 @@ html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme
 html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-footer a{
   color:var(--s-ac)!important;
 }
+
+
+/* Rodapés contínuos com a superfície central — 19/11/2026.
+   Home: mesma cor da zona principal; artigos: mesma cor da folha de conteúdo. */
+html[data-theme="papel"]{--footer-center:#fbfcf8;--footer-text:#493c2f;--footer-link:#694628}
+html[data-theme="mac"]{--footer-center:#fbfcf8;--footer-text:#303947;--footer-link:#244b8b}
+html[data-theme="arquivo"]{--footer-center:#10191f;--footer-text:#b3c1c6;--footer-link:#d0e1d7}
+html[data-theme="verde"]{--footer-center:#0b0b0b;--footer-text:#c2e8ca;--footer-link:#b0efbe}
+html[data-theme="ambar"]{--footer-center:#0d0b08;--footer-text:#d5ad60;--footer-link:#ffca70}
+html[data-theme="ibm"]{--footer-center:#071532;--footer-text:#c7daf1;--footer-link:#bfe3ff}
+html[data-theme] .home-footer,
+html[data-theme] footer,
+html[data-theme] .footer,
+html[data-theme] .site-footer,
+html[data-theme] .timeline-page + footer,
+html[data-theme] .timeline-page ~ footer{
+  background:var(--footer-center)!important;
+  color:var(--footer-text)!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+html[data-theme] footer a,
+html[data-theme] .home-footer a,
+html[data-theme] .footer a,
+html[data-theme] .site-footer a{
+  color:var(--footer-link)!important;
+}
+html[data-theme] footer span,
+html[data-theme] .home-footer span{color:var(--footer-text)!important}
+/* Os rodapés das páginas de artigos prolongam a mesma superfície dos artigos. */
+html:is([data-theme="papel"],[data-theme="mac"]) .wiki-sheet + footer,
+html:is([data-theme="papel"],[data-theme="mac"]) .wiki-sheet ~ footer{
+  background:var(--card)!important;
+}
+/* Área de timeline: manter a continuidade visual da cor do tema. */
+html:is([data-theme="papel"],[data-theme="mac"]) .timeline-page .home-footer,
+html:is([data-theme="papel"],[data-theme="mac"]) .timeline-page + footer,
+html:is([data-theme="papel"],[data-theme="mac"]) .timeline-page ~ footer{
+  background:var(--footer-center)!important;
+}
+
+/* 2026-11-20 — simplificação dos temas visuais.
+   Mantém Arquivo como padrão e acrescenta duas variantes inspiradas em terminais/mainframes IBM. */
+html[data-theme="mf3270"]{
+  --bg:#0b0f0c;--ink:#9ed0a8;--mut:#739b7b;--line:#2a4d35;--card:#101611;--soft:#162019;--ac:#c4f5ca;--navy:#0b0f0c;--yel:#d9c677;
+  --s-bg:#0b0f0c;--s-fg:#9ed0a8;--s-dim:#739b7b;--s-line:#2f6545;--s-ac:#d4ffd9;--s-hi:#162019;
+  --footer-center:#0b0f0c;--footer-text:#95c79f;--footer-link:#d0f7d4;
+}
+html[data-theme="mf3279"]{
+  --bg:#0a1218;--ink:#dbe8f4;--mut:#a8bfd4;--line:#375472;--card:#10202d;--soft:#153042;--ac:#f2d36e;--navy:#091723;--yel:#f2d36e;
+  --s-bg:#091723;--s-fg:#dce8f3;--s-dim:#abc1d6;--s-line:#48698d;--s-ac:#ffe189;--s-hi:#173347;
+  --footer-center:#0a1218;--footer-text:#c9d9e8;--footer-link:#ffe189;
+  --ok:#86df95;--warn:#ffe189;--bad:#ff9c97;--info:#9cd5ff;
+}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) body{background:var(--bg)!important;color:var(--ink)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) #crt{background:var(--bg)!important;min-height:100vh}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) #crt *{font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,"Liberation Mono",monospace!important;letter-spacing:0!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .card,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .panel,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .figure,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .sidebar,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-category,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .hero-terminal,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .bar .wiki-submenu,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .button,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-btn,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .article-topic-tag,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .project-status,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .nav-tools .theme-picker select,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav>a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav summary{border-radius:0!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar{background:var(--navy)!important;border-color:var(--line)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar .brand{color:var(--s-fg)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar .brand::before{background:var(--ac)!important;color:var(--bg)!important;border-radius:0!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav>a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav summary,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .theme-picker,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .theme-picker-label{color:var(--s-fg)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav>a:hover,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav>a[aria-current],
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav summary:hover,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar .wiki-menu[open] summary{background:var(--soft)!important;color:var(--s-ac)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar details .wiki-submenu{background:var(--card)!important;border-color:var(--line)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar details .wiki-submenu a{color:var(--ink)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar details .wiki-submenu a:hover{background:var(--soft)!important;color:var(--ac)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .nav-tools .theme-picker select{background:var(--s-hi)!important;color:var(--s-fg)!important;border-color:var(--s-line)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet{background:var(--card)!important;color:var(--ink)!important;box-shadow:none!important;border:1px solid var(--line)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .top{background:var(--soft)!important;color:var(--ink)!important;border-bottom:1px solid var(--line)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .top h1,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .top .lead,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .top .eyebrow,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content p,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content li,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content section,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content h2,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content h3{color:var(--ink)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .breadcrumb,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .breadcrumb a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .muted,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .small.muted{color:var(--mut)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) a{color:var(--ac)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .card,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .panel,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .note,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .figure,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .sidebar,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-category,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .hero-terminal,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .article-item,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content details:not(.wiki-menu){background:var(--card)!important;color:var(--ink)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .figure figcaption,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) figcaption,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) table th{background:var(--soft)!important;color:var(--ink)!important;border-color:var(--line)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) table td{border-color:var(--line)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) pre{background:var(--navy)!important;color:var(--s-fg)!important;border-color:var(--line)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) code:not(pre code){background:var(--soft)!important;color:var(--ink)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .button,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-btn:not(.alt){background:var(--soft)!important;color:var(--s-ac)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .button.alt,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-btn.alt{background:transparent!important;color:var(--ink)!important;border:1px solid var(--line)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .article-topic-tag,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .project-status,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .quick a{border:1px solid var(--line)!important;background:var(--soft)!important;color:var(--s-ac)!important}
+
+html[data-theme="mf3270"] .home-hero h1,
+html[data-theme="mf3270"] .split-heading h2,
+html[data-theme="mf3270"] .home-timeline-callout h2{color:#c8f6cf!important}
+html[data-theme="mf3270"] .hero-terminal,
+html[data-theme="mf3270"] .terminal-content{background:#09100b!important;color:#9ed0a8!important;border-color:#2f6545!important}
+html[data-theme="mf3270"] .terminal-top,
+html[data-theme="mf3270"] .terminal-foot{background:#101812!important;color:#c4f5ca!important;border-color:#2f6545!important}
+html[data-theme="mf3270"] .terminal-content .positive,
+html[data-theme="mf3270"] .terminal-content strong{color:#c4f5ca!important}
+html[data-theme="mf3270"] .terminal-content .negative{color:#e7b68f!important}
+html[data-theme="mf3270"] .article-topic-tag{color:#d4ffd9!important}
+html[data-theme="mf3270"] .crt-tint{display:block;background:#79d487;mix-blend-mode:multiply;opacity:.35;z-index:9998}
+html[data-theme="mf3270"] .crt-lines{display:block;z-index:9999;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.24) 0 1px,transparent 1px 4px),radial-gradient(ellipse at center,transparent 62%,rgba(0,0,0,.55) 100%)}
+
+html[data-theme="mf3279"] .home-hero h1,
+html[data-theme="mf3279"] .split-heading h2,
+html[data-theme="mf3279"] .home-timeline-callout h2{color:#f2f6fb!important}
+html[data-theme="mf3279"] .hero-terminal,
+html[data-theme="mf3279"] .terminal-content{background:#091723!important;color:#9cd5ff!important;border-color:#48698d!important}
+html[data-theme="mf3279"] .terminal-top,
+html[data-theme="mf3279"] .terminal-foot{background:#143347!important;color:#ffe189!important;border-color:#48698d!important}
+html[data-theme="mf3279"] .terminal-content .positive,
+html[data-theme="mf3279"] .terminal-content strong{color:#86df95!important}
+html[data-theme="mf3279"] .terminal-content .negative{color:#ff9c97!important}
+html[data-theme="mf3279"] .article-topic-tag:nth-of-type(3n+1){background:#173347!important;color:#9cd5ff!important;border-color:#48698d!important}
+html[data-theme="mf3279"] .article-topic-tag:nth-of-type(3n+2){background:#2f2c14!important;color:#ffe189!important;border-color:#8a7741!important}
+html[data-theme="mf3279"] .article-topic-tag:nth-of-type(3n){background:#19311c!important;color:#86df95!important;border-color:#486d4c!important}
+html[data-theme="mf3279"] .project-status.status-funcional{background:#19311c!important;color:#86df95!important;border-color:#486d4c!important}
+html[data-theme="mf3279"] .project-status.status-em-testes,
+html[data-theme="mf3279"] .project-status.status-parcial{background:#2f2c14!important;color:#ffe189!important;border-color:#8a7741!important}
+html[data-theme="mf3279"] .project-status.status-falhou{background:#331919!important;color:#ff9c97!important;border-color:#7b4a4a!important}
+html[data-theme="mf3279"] .home-btn:not(.alt),
+html[data-theme="mf3279"] .button:not(.alt){background:#173347!important;color:#ffe189!important;border-color:#48698d!important}
+html[data-theme="mf3279"] .home-btn.alt,
+html[data-theme="mf3279"] .button.alt{color:#dce8f3!important}
+html[data-theme="mf3279"] .crt-tint{display:block;background:#7fc3ff;mix-blend-mode:soft-light;opacity:.15;z-index:9998}
+html[data-theme="mf3279"] .crt-lines{display:block;z-index:9999;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.20) 0 1px,transparent 1px 4px),radial-gradient(ellipse at center,transparent 65%,rgba(0,0,0,.45) 100%)}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-footer,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) footer,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .footer,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .site-footer,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page + footer,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page ~ footer{background:var(--footer-center)!important;color:var(--footer-text)!important;border-color:transparent!important;box-shadow:none!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) footer a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-footer a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .footer a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .site-footer a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page a{color:var(--footer-link)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) footer span,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-footer span{color:var(--footer-text)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page > div[style*="padding-bottom"]{color:var(--footer-text)!important}
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page > div[style*="padding-bottom"] a{color:var(--footer-link)!important}
