@@ -1,0 +1,7 @@
+Atualização sobre a base wiki-main.zip fornecida em 20/11/2026.
+Carregar diretamente na raiz do repositório os ficheiros mantendo os caminhos:
+monitorizacao.html
+src/pages/monitorizacao.html
+assets/img/wiki/ups-mustek-cyberpower-ha-20261120.webp
+
+Não inclui outros ficheiros da wiki e não exige executar scripts.
