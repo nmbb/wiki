@@ -1431,3 +1431,93 @@ html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-
 header.bar nav .wiki-menu[open] > summary::after,
 html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
 header.bar nav .wiki-menu > summary:hover::after {color: currentColor !important;}
+
+
+/* 2026-11-21 — Artigos: legibilidade do tema Mainframe 3279.
+   Restrito à pagina que contém a grelha .project-list. Não altera os outros temas.
+   Preserva os cabeçalhos uniformes e os menus corrigidos anteriormente. */
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-feature {
+  background: #142d43 !important;
+  color: #edf5ff !important;
+  border-color: #587799 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-feature h3 {
+  color: #fff2bd !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-feature p {
+  color: #e5effa !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-feature a {
+  color: #98e5ff !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .status-legend > div {
+  background: #173248 !important;
+  color: #f0f6ff !important;
+  border-color: #547591 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .status-legend p {
+  color: #e2ebf7 !important;
+  -webkit-text-fill-color: #e2ebf7 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card {
+  background: #173248 !important;
+  color: #f0f6ff !important;
+  border-color: #547591 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card:is(:hover,:focus-visible) {
+  background: #224362 !important;
+  border-color: #9ccef3 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card h3 {
+  color: #fff0b3 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card p,
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card small {
+  color: #dce9fa !important;
+  -webkit-text-fill-color: #dce9fa !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card .arrow {
+  color: #a5e6ff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card .tag,
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-feature .tag,
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .card-topic-tags .tag {
+  background: #304a59 !important;
+  color: #f9e4a0 !important;
+  border-color: #77848a !important;
+  -webkit-text-fill-color: #f9e4a0 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-toolbar button {
+  background: #1a344b !important;
+  color: #e4f0ff !important;
+  border-color: #6282a0 !important;
+  -webkit-text-fill-color: #e4f0ff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-toolbar button:is(:hover,:focus-visible) {
+  background: #315774 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-toolbar button[aria-pressed="true"] {
+  background: #f0cf73 !important;
+  border-color: #f0cf73 !important;
+  color: #142738 !important;
+  -webkit-text-fill-color: #142738 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-search {
+  background: #182f43 !important;
+  color: #f3f8ff !important;
+  border-color: #7997ae !important;
+  -webkit-text-fill-color: #f3f8ff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-search::placeholder {
+  color: #c2d5e7 !important;
+  -webkit-text-fill-color: #c2d5e7 !important;
+  opacity: 1;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-count,
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .muted {
+  color: #dce9fa !important;
+}

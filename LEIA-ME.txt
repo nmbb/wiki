@@ -1,3 +1,7 @@
-Carregar estes três ficheiros na raiz do repositório, preservando as pastas.
-Corrigida a descrição da timeline na home e no índice de pesquisa.
-Não altera CSS, JS dos filtros ou página da timeline.
+Correção de contraste para a página Artigos no tema Mainframe 3279.
+Carregar na raiz do repositório, respeitando os caminhos:
+assets/css/site.css
+src/css/theme.css
+
+Não alterar HTML nem JS. A regra usa :has(.project-list), compatível com Safari recente.
+Ficheiros preparados a partir da última correção disponível do menu superior.
