@@ -1,1 +1,3 @@
-Atualização localizada: texto da legenda no topo da timeline (tema Arquivo).\nCarregar os dois CSS na raiz da Wiki nas respetivas pastas.\nNão substitui HTML/JS: preserva a tua correção Compaq DOS 1.25.\nSe houver cache, recarregar a página sem cache no navegador.\n
+Correção localizada da timeline: Compaq DOS 1.10 → Compaq DOS 1.25 no título do cartão e no atributo title da ligação.
+
+Carregar os dois HTML na raiz do repositório, respeitando a pasta src/pages/. Não inclui CSS ou JavaScript. A base é o último pacote de reparação da timeline disponível nesta conversa.
