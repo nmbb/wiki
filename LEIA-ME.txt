@@ -1,13 +1,6 @@
-Atualização para nmbb/wiki — timeline retro.
+Correção da data de início do laboratório na página Artigos: 1982 -> 1977.
 
-Carregar na RAIZ do repositório, respeitando as pastas:
-- linha-do-tempo.html
-- src/pages/linha-do-tempo.html
-- assets/js/timeline-hex-oficial-20261120.js
-- assets/css/timeline-footer-normal-fix.css
-- src/css/extra/timeline-footer-normal-fix.css
-
-Os botões Windows, Linux e Outros filtram pelo atributo data-family.
-Foi alterada a referência do JavaScript para ?v=20261121b para evitar cache.
-Reduzimos as margens entre os detalhes históricos, referências e rodapé.
-Não substituir assets/css/site.css: preserva correções de contraste anteriores.
+Atualiza artigos.html e src/pages/artigos.html na raiz do repositório.
+As datas de 1982–1994 do artigo MS-DOS e 1985–1993 do Windows antigo são intervalos específicos e foram preservadas.
+Os outros cabeçalhos gerais analisados já usam 1977–2009.
+Não foram alterados CSS, JavaScript, timeline nem restantes páginas.
