@@ -50,3 +50,24 @@ html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .hex-t
 }
 .hex-timeline .above .connector { top: 232px; }
 .hex-timeline .below .connector { top: 339px; }
+
+
+/* 2026-11-21 — contraste da legenda da timeline no tema Arquivo.
+   Restrito ao topo da cronologia; não altera a apresentação dos cartões. */
+html[data-theme="arquivo"] section.hex-timeline .topline h2,
+html[data-theme="arquivo"] section.hex-timeline .topline .legend,
+html[data-theme="arquivo"] section.hex-timeline .topline .legend span,
+html[data-theme="arquivo"] section.hex-timeline .topline .legend span:not(.state) {
+    color: #e9f1f2 !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: #e9f1f2 !important;
+    text-shadow: none !important;
+}
+html[data-theme="arquivo"] section.hex-timeline .topline .legend i {
+    opacity: 1 !important;
+}
+/* Protege as letras caso a seleção de texto seja feita sobre a legenda. */
+html[data-theme="arquivo"] section.hex-timeline .topline ::selection {
+    background: #40627b;
+    color: #fff;
+}

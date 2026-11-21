@@ -1,4 +1,1 @@
-Corrige APENAS a tabela Comparação das três experiências de dos.html nos temas Mainframe 3270 e 3279.
-Carregar os dois CSS nas mesmas pastas do repositório. Não altera site.css, JavaScript, o texto O que aprendemos ou outros temas.
-A base dos dois ficheiros é wiki-main.zip fornecido anteriormente.
-Se o navegador mantiver as cores antigas, forçar atualização (Cmd+Shift+R).
+Atualização localizada: texto da legenda no topo da timeline (tema Arquivo).\nCarregar os dois CSS na raiz da Wiki nas respetivas pastas.\nNão substitui HTML/JS: preserva a tua correção Compaq DOS 1.25.\nSe houver cache, recarregar a página sem cache no navegador.\n
