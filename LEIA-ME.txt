@@ -1,7 +1,4 @@
-Correção de contraste para a página Artigos no tema Mainframe 3279.
-Carregar na raiz do repositório, respeitando os caminhos:
-assets/css/site.css
-src/css/theme.css
-
-Não alterar HTML nem JS. A regra usa :has(.project-list), compatível com Safari recente.
-Ficheiros preparados a partir da última correção disponível do menu superior.
+Corrige APENAS a tabela Comparação das três experiências de dos.html nos temas Mainframe 3270 e 3279.
+Carregar os dois CSS nas mesmas pastas do repositório. Não altera site.css, JavaScript, o texto O que aprendemos ou outros temas.
+A base dos dois ficheiros é wiki-main.zip fornecido anteriormente.
+Se o navegador mantiver as cores antigas, forçar atualização (Cmd+Shift+R).

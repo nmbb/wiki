@@ -3,3 +3,42 @@
 
 /* Ilustração DOS: distinta das capturas técnicas reais */
 .dos-cover{margin:22px auto 30px;max-width:720px;text-align:center}.dos-cover img{display:block;max-width:100%;width:100%;height:auto;border:1px solid #69847b;border-radius:18px}.dos-cover figcaption{font-size:13px;line-height:1.55;color:#536b68;margin:10px 0 0}
+
+/* 2026-11-21 — Apenas a tabela de comparação DOS nos temas Mainframe.
+   Preserva "O que aprendemos", todos os restantes temas e o layout. */
+html[data-theme="mf3270"] .dos-table,
+html[data-theme="mf3279"] .dos-table {
+  border-collapse: collapse;
+}
+html[data-theme="mf3270"] .dos-table th {
+  background: #163722 !important;
+  color: #e6ffe7 !important;
+  border-bottom: 1px solid #598e65 !important;
+}
+html[data-theme="mf3270"] .dos-table td {
+  background: #0d2418 !important;
+  color: #d9f5dc !important;
+  border-bottom: 1px solid #416e4a !important;
+}
+html[data-theme="mf3270"] .dos-table tbody tr:nth-child(even) td {
+  background: #143120 !important;
+}
+html[data-theme="mf3270"] .dos-table td:first-child {
+  color: #a8f6ae !important;
+}
+html[data-theme="mf3279"] .dos-table th {
+  background: #223d55 !important;
+  color: #fff0ac !important;
+  border-bottom: 1px solid #6885a5 !important;
+}
+html[data-theme="mf3279"] .dos-table td {
+  background: #14283d !important;
+  color: #eef5ff !important;
+  border-bottom: 1px solid #526d8b !important;
+}
+html[data-theme="mf3279"] .dos-table tbody tr:nth-child(even) td {
+  background: #20374e !important;
+}
+html[data-theme="mf3279"] .dos-table td:first-child {
+  color: #ffe1a3 !important;
+}
