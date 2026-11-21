@@ -1195,3 +1195,42 @@ html:is([data-theme="mf3270"],[data-theme="mf3279"]) footer span,
 html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-footer span{color:var(--footer-text)!important}
 html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page > div[style*="padding-bottom"]{color:var(--footer-text)!important}
 html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page > div[style*="padding-bottom"] a{color:var(--footer-link)!important}
+
+
+/* 2026-11-21 — legibilidade do tema 3279: componentes antigos de fundo claro.
+   Restrito ao 3279; não altera os outros temas ou o desenho das páginas. */
+html[data-theme="mf3279"] .wiki-sheet .content .steps > li,
+html[data-theme="mf3279"] .wiki-sheet .content .simple-list,
+html[data-theme="mf3279"] .wiki-sheet .content .simple-list > li,
+html[data-theme="mf3279"] .wiki-sheet .content .glossary-grid > div,
+html[data-theme="mf3279"] .wiki-sheet .content .diagram-network,
+html[data-theme="mf3279"] .wiki-sheet .content .hosting-flow,
+html[data-theme="mf3279"] .wiki-sheet .content .fog-flow-node,
+html[data-theme="mf3279"] .wiki-sheet .content .callout,
+html[data-theme="mf3279"] .wiki-sheet .content .wan-info-card {
+  background: #173044 !important;
+  color: #e7f1fa !important;
+  border-color: #48698d !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .steps > li {
+  background-image: none !important;
+  line-height: 1.65;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .steps > li::before {
+  background: #e0bd4f !important;
+  color: #112332 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .glossary-grid > div :is(p,li,small),
+html[data-theme="mf3279"] .wiki-sheet .content .hosting-flow :is(p,li,small),
+html[data-theme="mf3279"] .wiki-sheet .content .fog-flow-node :is(p,li,small),
+html[data-theme="mf3279"] .wiki-sheet .content .diagram-network :is(p,li,small),
+html[data-theme="mf3279"] .wiki-sheet .content .callout :is(p,li,small) {
+  color: #dbe8f4 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .glossary-grid > div :is(strong,h3),
+html[data-theme="mf3279"] .wiki-sheet .content .hosting-flow :is(strong,h3),
+html[data-theme="mf3279"] .wiki-sheet .content .fog-flow-node :is(strong,h3),
+html[data-theme="mf3279"] .wiki-sheet .content .diagram-network :is(strong,h3),
+html[data-theme="mf3279"] .wiki-sheet .content .callout :is(strong,h3) {
+  color: #f2d36e !important;
+}

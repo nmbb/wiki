@@ -1,1 +1,5 @@
-Ver README.txt
+Atualização pontual do tema 3279 com base no wiki-main.zip fornecido.
+Substituir assets/css/site.css no GitHub. Não executar scripts.
+Corrige caixas de passos (Home Assistant e Windows antigos), caixas glossário e outros blocos técnicos com fundo claro e letras claras.
+Não altera os restantes temas nem HTML.
+Se não notar a alteração, forçar atualização da página com Ctrl+Shift+R ou Cmd+Shift+R.
