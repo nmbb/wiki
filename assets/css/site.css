@@ -1234,3 +1234,33 @@ html[data-theme="mf3279"] .wiki-sheet .content .diagram-network :is(strong,h3),
 html[data-theme="mf3279"] .wiki-sheet .content .callout :is(strong,h3) {
   color: #f2d36e !important;
 }
+
+
+/* 2026-11-21 — contraste dos componentes do artigo de projetos no tema 3279.
+   Complemento à correção anterior. Só altera a apresentação em mf3279. */
+html[data-theme="mf3279"] .wiki-sheet .content .retro-statuses > div,
+html[data-theme="mf3279"] .wiki-sheet .content .simple-diagram {
+  background: #173044 !important;
+  color: #e7f1fa !important;
+  border-color: #48698d !important;
+  box-shadow: none !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .retro-statuses > div strong,
+html[data-theme="mf3279"] .wiki-sheet .content .diagram-label {
+  color: #ffe189 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .retro-statuses > div small,
+html[data-theme="mf3279"] .wiki-sheet .content .retro-statuses > div :is(p,span),
+html[data-theme="mf3279"] .wiki-sheet .content .simple-diagram :is(p,small) {
+  color: #dbe8f4 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .diagram-network span {
+  color: #9cd5ff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .explainer-label {
+  color: #ffe189 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .nt-domain-case,
+html[data-theme="mf3279"] .wiki-sheet .content .explainer-section {
+  border-color: #48698d !important;
+}
