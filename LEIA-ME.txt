@@ -1,5 +1,12 @@
-Corrige somente o contraste ao passar o rato e ao focar links no menu lateral dos temas Mainframe 3270 (verde) e 3279 (a cores).
+Correção localizada — 21/11/2026
 
-Carregar os dois CSS nas pastas indicadas na raiz de nmbb/wiki. Não executar scripts.
+Corrigido:
+- Arquivo: legenda e subtítulo da cronologia retro com contraste legível.
+- Sobre: margem lateral e largura do texto principal, em todos os temas.
+- Preservados os títulos normalizados anteriores no CSS portal.
 
-Foi usada como base a última correção de títulos uniformes de 21/11/2026. Se alteraste site.css depois dessa correção, compara antes de substituir para não perder mudanças posteriores.
+Copiar os ficheiros mantendo as pastas na raiz do repositório nmbb/wiki.
+NÃO substituir assets/css/site.css nem os ficheiros JS: não é necessário.
+Não altera filtros, sistemas, rodapés, menu lateral ou conteúdo.
+Depois de publicar, atualizar o navegador com Cmd+Shift+R.
+A verificação visual final deve ser feita depois da publicação.

@@ -134,3 +134,28 @@ html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page
 html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) :is(.text-link,.breadcrumb a) {
  color:var(--about-link) !important;
 }
+
+
+/* 2026-11-21: maior conforto de leitura na página Sobre.
+   Só a página Sobre, em todos os temas; preserva os tamanhos de títulos. */
+html body main.page:has(> .about-hero) > .breadcrumb,
+html body main.page:has(> .about-hero) > .about-hero,
+html body main.page:has(> .about-hero) > .section {
+  padding-inline: clamp(30px, 5.5vw, 92px) !important;
+  box-sizing: border-box;
+}
+html body main.page:has(> .about-hero) > .about-hero p.lead {
+  max-width: 64ch !important;
+  line-height: 1.7 !important;
+  overflow-wrap: break-word;
+}
+html body main.page:has(> .about-hero) > .about-hero .tagline {
+  gap: 12px !important;
+}
+@media (max-width: 640px) {
+  html body main.page:has(> .about-hero) > .breadcrumb,
+  html body main.page:has(> .about-hero) > .about-hero,
+  html body main.page:has(> .about-hero) > .section {
+    padding-inline: 24px !important;
+  }
+}
