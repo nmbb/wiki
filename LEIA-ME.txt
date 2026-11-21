@@ -1,6 +1,3 @@
-Correção da data de início do laboratório na página Artigos: 1982 -> 1977.
-
-Atualiza artigos.html e src/pages/artigos.html na raiz do repositório.
-As datas de 1982–1994 do artigo MS-DOS e 1985–1993 do Windows antigo são intervalos específicos e foram preservadas.
-Os outros cabeçalhos gerais analisados já usam 1977–2009.
-Não foram alterados CSS, JavaScript, timeline nem restantes páginas.
+Carregar estes dois ficheiros nas respetivas pastas na raiz do repositório.
+Cabeçalhos dos artigos mais compactos; não altera menu, página inicial nem restantes páginas.
+O site.css foi baseado na correção de contraste 3279 da página Projetos.
