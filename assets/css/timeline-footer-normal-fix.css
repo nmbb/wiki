@@ -29,3 +29,19 @@ main.timeline-page > footer.home-footer {
   padding: 14px 18px !important;
   min-height: 0 !important;
 }
+
+/* Ajuste definitivo: retirar o espaço morto no final da timeline. */
+main.timeline-page .timeline-detail-grid {margin-bottom: 18px !important;}
+main.timeline-page > .timeline-references {
+  margin: 8px 0 0 !important;
+  padding: 0 0 12px !important;
+  line-height: 1.5;
+}
+main.timeline-page > footer.home-footer {
+  margin: 0 !important;
+  padding: 12px 0 16px !important;
+  min-height: 0 !important;
+}
+@media (max-width: 600px) {
+  main.timeline-page > footer.home-footer {padding:12px 0 !important;gap:10px;flex-wrap:wrap;}
+}

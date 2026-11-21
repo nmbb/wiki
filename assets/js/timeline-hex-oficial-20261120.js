@@ -1,10 +1,26 @@
+/* Timeline retro: filtros por estado, plataforma e família (2026-11-21). */
 (function(){
-const root=document.querySelector('.hex-timeline');if(!root)return;
-const win=root.querySelector('#hex-timeline-window');const moments=[...root.querySelectorAll('.moment')];
-root.querySelector('#hex-next')?.addEventListener('click',()=>win.scrollBy({left:690,behavior:'smooth'}));
-root.querySelector('#hex-prev')?.addEventListener('click',()=>win.scrollBy({left:-690,behavior:'smooth'}));
-root.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{
-const v=b.dataset.filter;root.querySelectorAll('[data-filter]').forEach(other=>other.setAttribute('aria-pressed',String(other===b)));
-moments.forEach(e=>{e.hidden=!(v==='all'||e.dataset.state===v||e.dataset.platform===v||e.dataset.family===v)});win.scrollLeft=0;
-}));
+  function init(){
+    const root=document.querySelector('.hex-timeline');
+    if(!root) return;
+    const windowEl=root.querySelector('#hex-timeline-window');
+    const cards=Array.from(root.querySelectorAll('.moment'));
+    const buttons=Array.from(root.querySelectorAll('button[data-filter]'));
+    if(!windowEl || !cards.length || !buttons.length) return;
+    root.querySelector('#hex-next')?.addEventListener('click',()=>windowEl.scrollBy({left:690,behavior:'smooth'}));
+    root.querySelector('#hex-prev')?.addEventListener('click',()=>windowEl.scrollBy({left:-690,behavior:'smooth'}));
+    function applyFilter(value){
+      buttons.forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.filter===value)));
+      cards.forEach(card=>{
+        const visible=value==='all'||card.dataset.state===value||card.dataset.platform===value||card.dataset.family===value;
+        card.hidden=!visible;
+        card.style.display=visible?'':'none';
+      });
+      windowEl.scrollLeft=0;
+    }
+    buttons.forEach(btn=>btn.addEventListener('click',()=>applyFilter(btn.dataset.filter)));
+    applyFilter('all');
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
+  else init();
 })();
