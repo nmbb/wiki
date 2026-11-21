@@ -1368,3 +1368,66 @@ html[data-theme="mf3279"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:is(.cur,[aria-c
   color: #ffe189 !important;
   box-shadow: inset 3px 0 0 #ffe189 !important;
 }
+
+
+/* 2026-11-21 — Corrigir contraste do menu Laboratório e Infraestrutura.
+   Antes: hover/ativo herdava um fundo claro e texto igualmente claro.
+   A correção afeta só o menu superior nos temas indicados. */
+html[data-theme="arquivo"] header.bar nav .wiki-menu .wiki-submenu a:is(:hover,:focus-visible,[aria-current="page"],.active,.cur),
+html[data-theme="arquivo"] header.bar nav .wiki-menu .wiki-submenu a[aria-current="page"]:hover {
+  background: #294957 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-theme="verde"] header.bar nav .wiki-menu .wiki-submenu a:is(:hover,:focus-visible,[aria-current="page"],.active,.cur),
+html[data-theme="verde"] header.bar nav .wiki-menu .wiki-submenu a[aria-current="page"]:hover {
+  background: #174b38 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-theme="mf3270"] header.bar nav .wiki-menu .wiki-submenu a:is(:hover,:focus-visible,[aria-current="page"],.active,.cur),
+html[data-theme="mf3270"] header.bar nav .wiki-menu .wiki-submenu a[aria-current="page"]:hover {
+  background: #1b4930 !important;
+  color: #c4ffd0 !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #c4ffd0 !important;
+}
+html[data-theme="mf3279"] header.bar nav .wiki-menu .wiki-submenu a:is(:hover,:focus-visible,[aria-current="page"],.active,.cur),
+html[data-theme="mf3279"] header.bar nav .wiki-menu .wiki-submenu a[aria-current="page"]:hover {
+  background: #234f72 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #fff !important;
+}
+/* O título do dropdown também precisa de uma cor legível quando aberto/hover. */
+html[data-theme="arquivo"] header.bar nav .wiki-menu > summary:is(:hover,:focus-visible),
+html[data-theme="arquivo"] header.bar nav .wiki-menu[open] > summary {
+  background: #294957 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-theme="verde"] header.bar nav .wiki-menu > summary:is(:hover,:focus-visible),
+html[data-theme="verde"] header.bar nav .wiki-menu[open] > summary {
+  background: #174b38 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-theme="mf3270"] header.bar nav .wiki-menu > summary:is(:hover,:focus-visible),
+html[data-theme="mf3270"] header.bar nav .wiki-menu[open] > summary {
+  background: #1b4930 !important;
+  color: #c4ffd0 !important;
+  -webkit-text-fill-color: #c4ffd0 !important;
+}
+html[data-theme="mf3279"] header.bar nav .wiki-menu > summary:is(:hover,:focus-visible),
+html[data-theme="mf3279"] header.bar nav .wiki-menu[open] > summary {
+  background: #234f72 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+/* Remover o contraste baixo do ícone/seta do submenu nos quatro temas. */
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+header.bar nav .wiki-menu[open] > summary::after,
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+header.bar nav .wiki-menu > summary:hover::after {color: currentColor !important;}

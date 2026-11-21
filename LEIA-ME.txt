@@ -1,12 +1,6 @@
-Correção localizada — 21/11/2026
+Correção dos itens de submenu e do título Laboratório/Infraestrutura quando selecionados/hover.
 
-Corrigido:
-- Arquivo: legenda e subtítulo da cronologia retro com contraste legível.
-- Sobre: margem lateral e largura do texto principal, em todos os temas.
-- Preservados os títulos normalizados anteriores no CSS portal.
+Carregar assets/css/site.css e src/css/theme.css na raiz do repositório GitHub, respeitando as pastas.
 
-Copiar os ficheiros mantendo as pastas na raiz do repositório nmbb/wiki.
-NÃO substituir assets/css/site.css nem os ficheiros JS: não é necessário.
-Não altera filtros, sistemas, rodapés, menu lateral ou conteúdo.
-Depois de publicar, atualizar o navegador com Cmd+Shift+R.
-A verificação visual final deve ser feita depois da publicação.
+Base: última correção do menu superior/lateral de 21-11-2026. Os ficheiros portal.css, timeline e HTML não são alterados.
+Verificar os temas Arquivo, Verde, Mainframe 3270 e 3279 após atualizar o cache (Cmd+Shift+R).
