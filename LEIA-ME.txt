@@ -1,4 +1,5 @@
-Correção da legibilidade em SOBRE nos temas Arquivo, Verde e 3270. Tema 3279 preservado.
-Carregar os três ficheiros nos respetivos caminhos na raiz do repositório.
-O sobre.html inclui a correção anterior do rodapé único e a versão nova do CSS para limpar a cache.
-Sem alterações a outras páginas, títulos, scripts ou filtros.
+Corrige somente o contraste ao passar o rato e ao focar links no menu lateral dos temas Mainframe 3270 (verde) e 3279 (a cores).
+
+Carregar os dois CSS nas pastas indicadas na raiz de nmbb/wiki. Não executar scripts.
+
+Foi usada como base a última correção de títulos uniformes de 21/11/2026. Se alteraste site.css depois dessa correção, compara antes de substituir para não perder mudanças posteriores.

@@ -1339,3 +1339,32 @@ html body .wiki-sheet > .top p.lead {
   html body .wiki-sheet > .top { padding-block: 1.1rem !important; }
   html body main.timeline-page > .timeline-intro { padding-top: 1.15rem !important; }
 }
+
+
+/* 2026-11-21 — Legibilidade do menu lateral em Mainframe 3270 e 3279.
+   Restrito aos links do menu lateral: restantes temas e menus não são alterados. */
+html[data-theme="mf3270"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:hover,
+html[data-theme="mf3270"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:focus-visible {
+  background: #28563a !important;
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+html[data-theme="mf3279"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:hover,
+html[data-theme="mf3279"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:focus-visible {
+  background: #355d7d !important;
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+/* O item atual continua identificável, inclusive sob o rato. */
+html[data-theme="mf3270"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:is(.cur,[aria-current="page"]) {
+  background: #21442f !important;
+  color: #d4ffd9 !important;
+  box-shadow: inset 3px 0 0 #a6f3b4 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:is(.cur,[aria-current="page"]) {
+  background: #294761 !important;
+  color: #ffe189 !important;
+  box-shadow: inset 3px 0 0 #ffe189 !important;
+}
