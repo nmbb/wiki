@@ -17,3 +17,15 @@ html[data-theme="arquivo"] main.timeline-page + footer {
 html[data-theme="arquivo"] main.timeline-page + footer a {
   color:#d5e8de !important;
 }
+
+/* 2026-11-21: compactar apenas o final da timeline.
+   O último bloco de referências tem padding-bottom:70px no HTML antigo. */
+main.timeline-page > div[style*="padding-bottom:70px"] {
+  padding-bottom: 12px !important;
+}
+main.timeline-page > footer.home-footer {
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+  padding: 14px 18px !important;
+  min-height: 0 !important;
+}

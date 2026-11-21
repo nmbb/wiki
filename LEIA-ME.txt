@@ -1,12 +1,4 @@
-Correção incremental de contraste — tema IBM 3279, página projetos.html
-
-Base: wiki-main.zip + a correção CSS anterior do tema 3279.
-Inclui apenas: assets/css/site.css.
-
-No GitHub, substituir assets/css/site.css pelo ficheiro deste ZIP.
-Não substituir HTML, nem alterar os outros temas.
-Depois de publicar, forçar atualização no navegador (Cmd + Shift + R).
-
-Corrige caixas de estado do Windows NT, diagramas PXE, legendas e separadores
-na versão 3279 e mantém as correções anteriores (passos, glossários e cartões).
-Revisão estática do CSS/HTML; não constitui teste visual em navegador.
+Timeline: reduzir espaço excessivo antes e dentro do rodapé.
+Carregar os dois ficheiros CSS nas respetivas pastas na raiz do repositório.
+Não substituir site.css nem os HTML.
+Depois atualizar o navegador sem cache.
