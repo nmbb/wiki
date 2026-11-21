@@ -1,11 +1,21 @@
-CORRECAO 21/11/2026 — timeline e cabecalhos
+CORREÇÃO DE ESCALA DOS TÍTULOS — 21/11/2026
 
-1. Carregar todos os 7 ficheiros nas respetivas pastas na raiz do repositorio.
-2. Nao criar outra pasta wiki.
-3. Atualizar a pagina com Cmd+Shift+R.
+Base: CSS da correção de contraste/JS da timeline de 21/11 e CSS de contraste da página Sobre.
 
-Causa: o ficheiro-fonte timeline tinha dois blocos YAML; o segundo era visivel no HTML publicado.
-O titulo tinha um font-size inline ate 6rem e nao respeitava a reducao anterior do CSS.
-O JavaScript da timeline foi refeito e a versao da referencia foi renovada.
-O CSS global conserva as correcoes anteriores de contraste do tema 3279.
-A pagina conserva os 27 sistemas, filtros e apenas um rodape.
+Verificados os 23 HTML da base wiki-main.zip. Os cabeçalhos principais usam quatro estruturas:
+- Início: .home-hero h1
+- Sobre: .about-hero h1
+- Timeline: .timeline-intro h1
+- Outros 20 artigos: .wiki-sheet > .top h1
+
+Escala normalizada: 1,9–2,8 rem no desktop, 1,75–2,2 rem em ecrãs pequenos.
+Sem alterações de conteúdo, rodapés, JavaScript ou navegação.
+
+Colocar os seis CSS nas respetivas pastas na RAIZ do repositório.
+Não criar uma pasta wiki adicional.
+
+Pode ser necessário um recarregamento forçado em Safari (Cmd+Shift+R),
+porque os HTML atuais ainda referem nomes iguais de CSS.
+Não substitua estes CSS por ficheiros de ZIPs anteriores.
+
+Validação: seletores e estrutura HTML inspecionados; não foi feito teste no navegador real.

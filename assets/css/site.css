@@ -1302,3 +1302,40 @@ body > .top, .wiki-sheet .top, .wiki-sheet > .top, .top:has(+ .wrap > .breadcrum
 .top .lead {font-size: clamp(.95rem, 1.3vw, 1.06rem) !important; line-height:1.5 !important; margin-bottom:.55rem !important;}
 .top .quick {margin-top:.65rem !important;}
 @media(max-width:600px){ .top {padding-top:1.25rem !important;padding-bottom:1.15rem !important;} }
+
+/* Títulos uniformizados em todas as páginas — 21-11-2026.
+   Apenas H1 de cabeçalho. Não altera os H2/H3 dos artigos nem os menus. */
+:root { --wiki-heading-size: clamp(1.9rem, 3.25vw, 2.8rem); }
+html body .wiki-sheet > .top { padding-block: 1.65rem 1.4rem !important; }
+html body .wiki-sheet > .top h1,
+html body main.experience-home > section.home-hero h1,
+html body main.timeline-page > .timeline-intro h1,
+html body main.page > section.about-hero h1 {
+  font-size: var(--wiki-heading-size) !important;
+  line-height: 1.14 !important;
+  letter-spacing: -.035em !important;
+  margin-block: .35rem .8rem !important;
+  max-width: 100% !important;
+}
+html body main.experience-home > section.home-hero,
+html body main.page > section.about-hero {
+  padding-block: 1.8rem 1.6rem !important;
+}
+html body main.timeline-page > .timeline-intro {
+  padding-top: 1.8rem !important;
+  padding-bottom: .65rem !important;
+}
+html body main.experience-home > section.home-hero p.intro,
+html body main.page > section.about-hero p.lead,
+html body main.timeline-page > .timeline-intro > p,
+html body .wiki-sheet > .top p.lead {
+  font-size: clamp(.97rem, 1.45vw, 1.07rem) !important;
+  line-height: 1.58 !important;
+}
+@media(max-width: 640px) {
+  :root { --wiki-heading-size: clamp(1.75rem, 7vw, 2.2rem); }
+  html body main.experience-home > section.home-hero,
+  html body main.page > section.about-hero { padding-block: 1.15rem 1.2rem !important; }
+  html body .wiki-sheet > .top { padding-block: 1.1rem !important; }
+  html body main.timeline-page > .timeline-intro { padding-top: 1.15rem !important; }
+}

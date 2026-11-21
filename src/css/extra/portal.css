@@ -70,3 +70,18 @@ html[data-theme="mf3279"] .page:has(.about-hero) .section-label,
 html[data-theme="mf3279"] .page:has(.about-hero) .card-icon{color:#ffdd83!important}
 html[data-theme="mf3279"] .page:has(.about-hero) .cta .pill{background:#f1d373!important;color:#132534!important;border:1px solid #f1d373!important}
 html[data-theme="mf3279"] .page:has(.about-hero) .cta .pill:hover{background:#ffe5a2!important}
+
+/* Alinhar Inicio e Sobre com os H1 dos restantes artigos, sem mexer na paleta. */
+html body main.experience-home > section.home-hero h1,
+html body main.page > section.about-hero h1 {
+ font-size: clamp(1.9rem,3.25vw,2.8rem) !important;
+ line-height: 1.14 !important;
+ letter-spacing: -.035em !important;
+ margin: .35rem 0 .8rem !important;
+}
+html body main.page > section.about-hero {padding:1.8rem 0 1.6rem !important;}
+@media(max-width:640px) {
+ html body main.experience-home > section.home-hero h1,
+ html body main.page > section.about-hero h1 {font-size:clamp(1.75rem,7vw,2.2rem) !important;}
+ html body main.page > section.about-hero {padding:1.15rem 0 1.2rem !important;}
+}
