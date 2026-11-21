@@ -44,3 +44,29 @@
 @media(max-width:650px){.history-line{grid-template-columns:1fr;gap:4px}.history-section{padding:40px 22px}}
 
 .site-header nav a{font-size:13px!important;line-height:1.35;font-weight:650}
+
+
+/* 3279 — página Sobre: contraste dos módulos de origem portal.css.
+   Escopo restrito à página Sobre para preservar os restantes artigos. */
+html[data-theme="mf3279"] .page:has(.about-hero){background:#0b1c29!important;color:#e9f2fa!important;border:1px solid #36546e}
+html[data-theme="mf3279"] .page:has(.about-hero) .about-hero{background:#10283a!important;color:#eaf2fc!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .about-hero h1,
+html[data-theme="mf3279"] .page:has(.about-hero) .section h2,
+html[data-theme="mf3279"] .page:has(.about-hero) .card h3,
+html[data-theme="mf3279"] .page:has(.about-hero) .cta h2{color:#f0f5fc!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .about-hero h1 em{color:#ffe08b!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .section{background:#0d2030!important;border-color:#38556c!important;color:#eaf2fc!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .three .card{background:#173247!important;border:1px solid #53728b!important;color:#edf5fc!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .tagline span{background:#173247!important;border:1px solid #53728b!important;color:#f0f5fc!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .cta{background:#173247!important;border:1px solid #53728b!important;color:#edf5fc!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .lead,
+html[data-theme="mf3279"] .page:has(.about-hero) .section p,
+html[data-theme="mf3279"] .page:has(.about-hero) .three .card p,
+html[data-theme="mf3279"] .page:has(.about-hero) .cta p{color:#d6e5f3!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .text-link,
+html[data-theme="mf3279"] .page:has(.about-hero) .breadcrumb a{color:#ffe08b!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .eyebrow,
+html[data-theme="mf3279"] .page:has(.about-hero) .section-label,
+html[data-theme="mf3279"] .page:has(.about-hero) .card-icon{color:#ffdd83!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .cta .pill{background:#f1d373!important;color:#132534!important;border:1px solid #f1d373!important}
+html[data-theme="mf3279"] .page:has(.about-hero) .cta .pill:hover{background:#ffe5a2!important}

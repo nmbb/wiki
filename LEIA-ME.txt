@@ -1,5 +1,8 @@
-Atualização pontual do tema 3279 com base no wiki-main.zip fornecido.
-Substituir assets/css/site.css no GitHub. Não executar scripts.
-Corrige caixas de passos (Home Assistant e Windows antigos), caixas glossário e outros blocos técnicos com fundo claro e letras claras.
-Não altera os restantes temas nem HTML.
-Se não notar a alteração, forçar atualização da página com Ctrl+Shift+R ou Cmd+Shift+R.
+CORREÇÃO SOBRE + TIMELINE — 21/11/2026
+
+Extraído da base wiki-main.zip fornecida no chat.
+Carrega os ficheiros nas pastas correspondentes, na RAIZ do repositório.
+A página Sobre ganhou contraste no tema 3279 sem alterações nos restantes temas.
+Removido o rodapé genérico duplicado da página Sobre e da timeline.
+Atualizadas também as fontes src/pages para evitar que o build.py volte a inserir duplicados.
+NÃO é necessário executar scripts para publicar estes ficheiros.
