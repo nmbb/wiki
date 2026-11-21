@@ -1,26 +1,33 @@
-/* Timeline retro: filtros por estado, plataforma e família (2026-11-21). */
-(function(){
-  function init(){
-    const root=document.querySelector('.hex-timeline');
-    if(!root) return;
-    const windowEl=root.querySelector('#hex-timeline-window');
-    const cards=Array.from(root.querySelectorAll('.moment'));
-    const buttons=Array.from(root.querySelectorAll('button[data-filter]'));
-    if(!windowEl || !cards.length || !buttons.length) return;
-    root.querySelector('#hex-next')?.addEventListener('click',()=>windowEl.scrollBy({left:690,behavior:'smooth'}));
-    root.querySelector('#hex-prev')?.addEventListener('click',()=>windowEl.scrollBy({left:-690,behavior:'smooth'}));
-    function applyFilter(value){
-      buttons.forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.filter===value)));
-      cards.forEach(card=>{
-        const visible=value==='all'||card.dataset.state===value||card.dataset.platform===value||card.dataset.family===value;
-        card.hidden=!visible;
-        card.style.display=visible?'':'none';
+/* Timeline retro — filtros por estado, familia e plataforma. */
+(function () {
+  'use strict';
+  function init() {
+    var root = document.querySelector('.hex-timeline');
+    if (!root) return;
+    var scroller = root.querySelector('#hex-timeline-window');
+    var cards = Array.from(root.querySelectorAll('.moment'));
+    var buttons = Array.from(root.querySelectorAll('.filters [data-filter]'));
+    if (!scroller || !cards.length || !buttons.length) return;
+    function apply(value) {
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.filter === value));
       });
-      windowEl.scrollLeft=0;
+      cards.forEach(function (card) {
+        var match = value === 'all' || [card.dataset.state, card.dataset.platform, card.dataset.family].includes(value);
+        card.hidden = !match;
+        card.style.display = match ? '' : 'none';
+      });
+      scroller.scrollLeft = 0;
     }
-    buttons.forEach(btn=>btn.addEventListener('click',()=>applyFilter(btn.dataset.filter)));
-    applyFilter('all');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {apply(btn.dataset.filter);});
+    });
+    var next = root.querySelector('#hex-next');
+    var prev = root.querySelector('#hex-prev');
+    if (next) next.addEventListener('click', function () {scroller.scrollBy({left:690,behavior:'smooth'});});
+    if (prev) prev.addEventListener('click', function () {scroller.scrollBy({left:-690,behavior:'smooth'});});
+    apply('all');
   }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});
   else init();
 })();
