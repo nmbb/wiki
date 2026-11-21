@@ -1,2 +1,3 @@
-Atualização mínima: altura da faixa das datas de 70 para 64 px (-6px), ajustando os conectores para manter o alinhamento.
-Carregar os três ficheiros nas pastas exatas do repositório GitHub. Não são necessários scripts. O HTML foi baseado na reparação da timeline mais recente disponível; não altera filtros, dados nem textos.
+Carregar estes três ficheiros na raiz do repositório, preservando as pastas.
+Corrigida a descrição da timeline na home e no índice de pesquisa.
+Não altera CSS, JS dos filtros ou página da timeline.
