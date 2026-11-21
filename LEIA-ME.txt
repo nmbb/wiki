@@ -1,6 +1,2 @@
-Correção dos itens de submenu e do título Laboratório/Infraestrutura quando selecionados/hover.
-
-Carregar assets/css/site.css e src/css/theme.css na raiz do repositório GitHub, respeitando as pastas.
-
-Base: última correção do menu superior/lateral de 21-11-2026. Os ficheiros portal.css, timeline e HTML não são alterados.
-Verificar os temas Arquivo, Verde, Mainframe 3270 e 3279 após atualizar o cache (Cmd+Shift+R).
+Atualização mínima: altura da faixa das datas de 70 para 64 px (-6px), ajustando os conectores para manter o alinhamento.
+Carregar os três ficheiros nas pastas exatas do repositório GitHub. Não são necessários scripts. O HTML foi baseado na reparação da timeline mais recente disponível; não altera filtros, dados nem textos.

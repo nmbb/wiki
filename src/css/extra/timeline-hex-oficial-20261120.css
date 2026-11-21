@@ -41,12 +41,12 @@ html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .hex-t
 .hex-timeline .moment[hidden]{display:none!important}
 
 
-/* 2026-11-21: legibilidade da legenda e cabeçalho da cronologia em Arquivo.
-   Não altera cartões, filtros, linhas, JavaScript ou outros temas. */
-html[data-theme="arquivo"] .hex-timeline .topline h2,
-html[data-theme="arquivo"] .hex-timeline .topline .legend,
-html[data-theme="arquivo"] .hex-timeline .topline .legend span {
-  color: #e3ebec !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
+/* Ajuste visual pontual: faixa das datas 6px mais baixa, centrada.
+   Mantém hexágonos, filtros, cabeçalhos e rodapés intactos. */
+.hex-timeline .moment .year {
+  top: 275px;
+  height: 64px;
+  font-size: 25px !important;
 }
+.hex-timeline .above .connector { top: 232px; }
+.hex-timeline .below .connector { top: 339px; }
