@@ -1,21 +1,4 @@
-CORREÇÃO DE ESCALA DOS TÍTULOS — 21/11/2026
-
-Base: CSS da correção de contraste/JS da timeline de 21/11 e CSS de contraste da página Sobre.
-
-Verificados os 23 HTML da base wiki-main.zip. Os cabeçalhos principais usam quatro estruturas:
-- Início: .home-hero h1
-- Sobre: .about-hero h1
-- Timeline: .timeline-intro h1
-- Outros 20 artigos: .wiki-sheet > .top h1
-
-Escala normalizada: 1,9–2,8 rem no desktop, 1,75–2,2 rem em ecrãs pequenos.
-Sem alterações de conteúdo, rodapés, JavaScript ou navegação.
-
-Colocar os seis CSS nas respetivas pastas na RAIZ do repositório.
-Não criar uma pasta wiki adicional.
-
-Pode ser necessário um recarregamento forçado em Safari (Cmd+Shift+R),
-porque os HTML atuais ainda referem nomes iguais de CSS.
-Não substitua estes CSS por ficheiros de ZIPs anteriores.
-
-Validação: seletores e estrutura HTML inspecionados; não foi feito teste no navegador real.
+Correção da legibilidade em SOBRE nos temas Arquivo, Verde e 3270. Tema 3279 preservado.
+Carregar os três ficheiros nos respetivos caminhos na raiz do repositório.
+O sobre.html inclui a correção anterior do rodapé único e a versão nova do CSS para limpar a cache.
+Sem alterações a outras páginas, títulos, scripts ou filtros.

@@ -85,3 +85,52 @@ html body main.page > section.about-hero {padding:1.8rem 0 1.6rem !important;}
  html body main.page > section.about-hero h1 {font-size:clamp(1.75rem,7vw,2.2rem) !important;}
  html body main.page > section.about-hero {padding:1.15rem 0 1.2rem !important;}
 }
+
+
+/* 2026-11-21 — Legibilidade da página Sobre em Arquivo, Verde e 3270.
+   Regras limitadas ao main.page que contém .about-hero; 3279 permanece intacto. */
+html[data-theme="arquivo"] .page:has(> .about-hero) {
+ --about-surface:#f5f8f6; --about-hero:#e5eee9; --about-panel:#ffffff;
+ --about-card:#eef4ef; --about-fg:#18352f; --about-muted:#35554b;
+ --about-link:#235d49; --about-border:#a5c1b1; --about-highlight:#1f644e;
+}
+html[data-theme="verde"] .page:has(> .about-hero) {
+ --about-surface:#0d180f; --about-hero:#102519; --about-panel:#102117;
+ --about-card:#173321; --about-fg:#daf6df; --about-muted:#b9d9c1;
+ --about-link:#b7f0c4; --about-border:#477758; --about-highlight:#a7efb7;
+}
+html[data-theme="mf3270"] .page:has(> .about-hero) {
+ --about-surface:#0c130e; --about-hero:#101c14; --about-panel:#101a13;
+ --about-card:#17271b; --about-fg:#d4f5d7; --about-muted:#add5b4;
+ --about-link:#bffac5; --about-border:#456f4b; --about-highlight:#c4f5ca;
+}
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) {
+ background:var(--about-surface) !important; color:var(--about-fg) !important;
+ border-color:var(--about-border) !important;
+}
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) .about-hero {
+ background:var(--about-hero) !important; color:var(--about-fg) !important;
+}
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) .section {
+ background:var(--about-panel) !important; color:var(--about-fg) !important;
+ border-color:var(--about-border) !important;
+}
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) .three .card,
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) .tagline span,
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) .cta {
+ background:var(--about-card) !important; color:var(--about-fg) !important;
+ border:1px solid var(--about-border) !important;
+}
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) :is(h1,h2,h3) {
+ color:var(--about-fg) !important;
+}
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) .about-hero h1 em,
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) :is(.eyebrow,.section-label,.card-icon) {
+ color:var(--about-highlight) !important;
+}
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) :is(.lead,.section p,.three .card p,.cta p,.breadcrumb) {
+ color:var(--about-muted) !important;
+}
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .page:has(> .about-hero) :is(.text-link,.breadcrumb a) {
+ color:var(--about-link) !important;
+}
