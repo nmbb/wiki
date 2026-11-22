@@ -203,3 +203,14 @@ html[data-theme="mf3279"] main.timeline-page > .timeline-intro :is(h1,h1 em,.kic
   color:#e5edf9 !important;
   -webkit-text-fill-color:#e5edf9 !important;
 }
+
+/* MF3279: contraste obrigatório nas superfícies fixas */
+html[data-theme="mf3279"] .home-timeline-callout :is(h2,p,.section-kicker),
+html[data-theme="mf3279"] .home-category :is(h3,p,small) {color:#f2f5fa!important;-webkit-text-fill-color:#f2f5fa!important;opacity:1!important}
+html[data-theme="mf3279"] .wiki-sheet .content .glossary-grid>div :is(h3,strong,p,small,span,li){color:#e9f3ed!important;-webkit-text-fill-color:#e9f3ed!important}
+html[data-theme="mf3279"] .wiki-sheet .content :is(.note,.retro-safety-note){min-height:0!important;height:auto!important}
+html[data-theme="mf3279"] .wiki-sheet .content .nt4-direct-link a{background:#0b5967!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-theme="mf3279"] .wiki-sheet .content .nt4-direct-link a:is(:hover,:focus-visible){background:#084653!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+
+html[data-theme="mf3279"] .wiki-sheet .content .retro-safety-note{background:#e6f0ed!important;border-color:#aac6b9!important;color:#243e35!important}
+html[data-theme="mf3279"] .wiki-sheet .content .retro-safety-note :is(strong,p,li,small,span){color:#243e35!important;-webkit-text-fill-color:#243e35!important;opacity:1!important}

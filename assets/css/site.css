@@ -2618,3 +2618,21 @@ main.timeline-page > .timeline-references,main.timeline-page > div[style*="paddi
 main.timeline-page > footer.home-footer {margin-top:.4rem!important;}
 /* Garantir que elementos comuns mantêm a largura e não criam rodapés gigantes */
 #crt main {min-width:0;} footer .wrap {align-items:center;}
+
+/* 22-11-2026 · Revisão final de contraste — superfícies de cor fixa */
+.home-timeline-callout{margin-block:clamp(36px,5vw,66px)}
+.home-timeline-callout :is(h2,p,.section-kicker){color:#eef5f2!important;-webkit-text-fill-color:#eef5f2!important;opacity:1!important}
+.home-category :is(h3,p,small){color:#f0f6f4!important;-webkit-text-fill-color:#f0f6f4!important;opacity:1!important}
+.home-category p{color:#cddfdc!important;-webkit-text-fill-color:#cddfdc!important}
+.nt4-direct-link a,.nt4-direct-link a:visited{background:#0b5967!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+.nt4-direct-link a:hover,.nt4-direct-link a:focus-visible{background:#084653!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+#retro .retro-uniform-shots figcaption,#linux-retro .retro-uniform-shots figcaption,
+#retro .nt-domain-shots figcaption {color:#e6f0ed!important;-webkit-text-fill-color:#e6f0ed!important;background:#1b2b33!important;opacity:1!important}
+#retro .retro-uniform-shots figcaption :is(strong,span,small,code),
+#linux-retro .retro-uniform-shots figcaption :is(strong,span,small,code){color:#e6f0ed!important;-webkit-text-fill-color:#e6f0ed!important;opacity:1!important}
+/* O mesmo padrão para os cartões de explicação do NT quando têm fundo fixo escuro. */
+.wiki-sheet .content .glossary-grid>div{background:#1b2b33!important;border-color:#36545a!important;color:#eaf3ee!important}
+.wiki-sheet .content .glossary-grid>div :is(h3,strong,p,small,span,li){color:#eaf3ee!important;-webkit-text-fill-color:#eaf3ee!important;opacity:1!important}
+/* Estabilidade visual dos rodapés sem alturas artificiais. */
+#crt footer,#crt .home-footer {min-height:0!important;height:auto!important;padding-block:clamp(12px,2vw,23px)!important;margin-top:clamp(12px,2vw,28px)!important}
+#crt .home-footer * {opacity:1}

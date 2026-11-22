@@ -1,0 +1,13 @@
+REVISÃO DE CONTRASTE · 22 NOVEMBRO 2026
+
+- Mantidas as cinco folhas CSS separadas por tema.
+- Corrigida a ordem de carregamento: o tema passa a ser aplicado após os CSS específicos da página.
+- Corrigidos textos claros/escuros na página inicial, cartões, legendas de imagens, glossários, botão de Proxmox e nota do laboratório.
+- Mantidos os estilos e as imagens existentes.
+- Rodapés com espaçamento controlado, sem alterações ao conteúdo.
+- Fontes do gerador sincronizadas com o CSS publicado.
+
+LIMITAÇÃO: o navegador de testes disponível bloqueia até páginas locais.
+A validação inclui sintaxe CSS/JS, recursos, estrutura HTML e compilação; não substitui uma inspeção visual no Safari após publicação.
+
+Publicação: copiar os ficheiros para a raiz do repositório local, preservar .git, Commit e Push.
