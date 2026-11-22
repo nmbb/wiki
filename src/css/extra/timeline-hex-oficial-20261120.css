@@ -122,3 +122,96 @@ html[data-theme="arquivo"] section.hex-timeline .topline ::selection {
     background: #40627b;
     color: #fff;
 }
+
+
+
+/* 2026-11-22 — isolação de layout e contraste nos temas CRT.
+   Na janela dos hexágonos usa-se painel claro e texto escuro, como na base
+   funcional, para evitar conflito com as regras globais dos terminais. */
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline {
+  --hex-bg:#f7faf8;
+  --hex-ink:#1c3036;
+  --hex-muted:#40545a;
+  --hex-line:#b2c7c7;
+  margin:18px auto 34px !important;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .timeline-window {
+  background:#f7faf8 !important;
+  color:#1c3036 !important;
+  border:1px solid #b2c7c7 !important;
+  border-radius:15px !important;
+  overflow-x:auto !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .moment-link,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .moment-link h3 {
+  color:#1c3036 !important;
+  -webkit-text-fill-color:#1c3036 !important;
+  font-size:17px !important;
+  line-height:1.2 !important;
+  text-shadow:none !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .moment-link p {
+  color:#40545a !important;
+  -webkit-text-fill-color:#40545a !important;
+  font-size:12px !important;
+  line-height:1.4 !important;
+  text-shadow:none !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .symbol-inside {
+  background:#fff !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .platform {
+  background:#e4eef0 !important;
+  color:#273f4a !important;
+  -webkit-text-fill-color:#273f4a !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .markers .state {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .year {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  font-size:25px !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .topline h2,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .legend,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .legend span {
+  color:#d8f1e3 !important;
+  -webkit-text-fill-color:#d8f1e3 !important;
+  opacity:1 !important;
+  text-shadow:none !important;
+}
+html[data-theme="mf3279"] main.timeline-page .hex-timeline :is(.topline h2,.legend,.legend span) {
+  color:#e4eefc !important;
+  -webkit-text-fill-color:#e4eefc !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .legend i {
+  -webkit-text-fill-color:initial !important;
+  opacity:1 !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .filters button,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .navigation button {
+  font:700 12px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif !important;
+  padding:8px 12px !important;
+  border-radius:9px !important;
+  background:#f7faf8 !important;
+  color:#203c48 !important;
+  -webkit-text-fill-color:#203c48 !important;
+  border:1px solid #9daeb5 !important;
+  text-shadow:none !important;
+  letter-spacing:normal !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .filters button:is([aria-pressed="true"],:hover,:focus-visible),
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .navigation button:is(:hover,:focus-visible) {
+  background:#254e62 !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  border-color:#254e62 !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .note,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .note strong {
+  color:#d8f1e3 !important;
+  -webkit-text-fill-color:#d8f1e3 !important;
+}

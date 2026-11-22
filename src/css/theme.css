@@ -783,3 +783,54 @@ html[data-theme="macclassic"] .hero-terminal,
 html[data-theme="macclassic"] .hero-terminal * {color:#d9e5e8}
 html[data-theme="macclassic"] .hero-terminal .positive {color:#9bdbb4!important;-webkit-text-fill-color:#9bdbb4!important}
 html[data-theme="macclassic"] .hero-terminal .negative {color:#ffaaaa!important;-webkit-text-fill-color:#ffaaaa!important}
+
+
+
+/* 2026-11-22 — Harmonização da timeline nos três temas CRT.
+   Mantém efeitos retro, mas evita títulos ampliados e letras sem contraste.
+   Não toca no Default nem no Macintosh Clássico. */
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro {
+  padding:24px 0 14px !important;
+  margin-bottom:0 !important;
+  min-height:0 !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro h1 {
+  font-size:clamp(1.95rem,3.1vw,2.8rem) !important;
+  line-height:1.16 !important;
+  letter-spacing:-.025em !important;
+  max-width:870px !important;
+  margin:10px 0 13px !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro h1 em {
+  font-size:inherit !important;
+  line-height:inherit !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro > p {
+  font-size:clamp(.96rem,1.4vw,1.06rem) !important;
+  line-height:1.58 !important;
+  max-width:760px !important;
+  margin:0 0 12px !important;
+  opacity:1 !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro .kicker {
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.12em !important;
+}
+html[data-theme="verde"] main.timeline-page > .timeline-intro :is(h1,h1 em,.kicker,p) {
+  color:#b6efbe !important;
+  -webkit-text-fill-color:#b6efbe !important;
+}
+html[data-theme="mf3270"] main.timeline-page > .timeline-intro :is(h1,h1 em,.kicker,p) {
+  color:#c4f4ce !important;
+  -webkit-text-fill-color:#c4f4ce !important;
+}
+html[data-theme="mf3279"] main.timeline-page > .timeline-intro :is(h1,h1 em,.kicker,p) {
+  color:#e5edf9 !important;
+  -webkit-text-fill-color:#e5edf9 !important;
+}
+@media(max-width:650px){
+ html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro h1 {
+   font-size:clamp(1.7rem,6.6vw,2.15rem) !important;
+ }
+}
