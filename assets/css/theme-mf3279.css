@@ -214,3 +214,17 @@ html[data-theme="mf3279"] .wiki-sheet .content .nt4-direct-link a:is(:hover,:foc
 
 html[data-theme="mf3279"] .wiki-sheet .content .retro-safety-note{background:#e6f0ed!important;border-color:#aac6b9!important;color:#243e35!important}
 html[data-theme="mf3279"] .wiki-sheet .content .retro-safety-note :is(strong,p,li,small,span){color:#243e35!important;-webkit-text-fill-color:#243e35!important;opacity:1!important}
+
+/* 2026-11-22 — etiquetas de codigo: claro sobre escuro apenas neste Mainframe.
+   A regra nao altera blocos <pre>, figuras, menus ou outros temas. */
+html[data-theme="mf3279"] .wiki-sheet .content :is(p,li,td,th,blockquote,figcaption) code:not(pre code),
+html[data-theme="mf3279"] .wiki-sheet .content > code:not(pre code),
+html[data-theme="mf3279"] .wiki-sheet .content .note code:not(pre code) {
+  background: #e4eef7 !important;
+  color: #173047 !important;
+  -webkit-text-fill-color: #173047 !important;
+  border: 1px solid #89a8bf !important;
+  border-radius: 4px;
+  padding: .08em .25em;
+  text-shadow: none !important;
+}
