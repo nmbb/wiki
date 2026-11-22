@@ -1,0 +1,68 @@
+/* Correção isolada: rodapés da timeline no tema normal (Arquivo). */
+html[data-theme="arquivo"] main.timeline-page > footer.home-footer {
+  background:transparent !important;
+  color:#a5b7b9 !important;
+  border-top:1px solid #3a4e54 !important;
+  box-shadow:none !important;
+}
+html[data-theme="arquivo"] main.timeline-page > footer.home-footer a {
+  color:#bed3c3 !important;
+}
+html[data-theme="arquivo"] main.timeline-page + footer {
+  background:#10191f !important;
+  color:#aabcc0 !important;
+  border-color:#35434b !important;
+  box-shadow:none !important;
+}
+html[data-theme="arquivo"] main.timeline-page + footer a {
+  color:#d5e8de !important;
+}
+
+/* 2026-11-21: compactar apenas o final da timeline.
+   O último bloco de referências tem padding-bottom:70px no HTML antigo. */
+main.timeline-page > div[style*="padding-bottom:70px"] {
+  padding-bottom: 12px !important;
+}
+main.timeline-page > footer.home-footer {
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+  padding: 14px 18px !important;
+  min-height: 0 !important;
+}
+
+/* Ajuste definitivo: retirar o espaço morto no final da timeline. */
+main.timeline-page .timeline-detail-grid {margin-bottom: 18px !important;}
+main.timeline-page > .timeline-references {
+  margin: 8px 0 0 !important;
+  padding: 0 0 12px !important;
+  line-height: 1.5;
+}
+main.timeline-page > footer.home-footer {
+  margin: 0 !important;
+  padding: 12px 0 16px !important;
+  min-height: 0 !important;
+}
+@media (max-width: 600px) {
+  main.timeline-page > footer.home-footer {padding:12px 0 !important;gap:10px;flex-wrap:wrap;}
+}
+
+/* Correcao de dimensoes da timeline sem afetar outros artigos. */
+main.timeline-page .timeline-intro {padding-top: 22px !important;}
+main.timeline-page .timeline-intro h1 {font-size:clamp(1.9rem,3.4vw,2.8rem) !important;line-height:1.14 !important;margin:10px 0 12px !important;}
+main.timeline-page .timeline-intro > p {font-size:1rem !important;line-height:1.55 !important;}
+main.timeline-page .hex-timeline .topline h2 {font-size:clamp(1rem,1.5vw,1.22rem) !important;line-height:1.3 !important;}
+main.timeline-page .timeline-references {padding-bottom:8px !important;margin-bottom:0 !important;}
+main.timeline-page > footer.home-footer {margin:0 !important;padding:10px 0 14px !important;min-height:0 !important;}
+
+/* Tamanho alinhado com Início, Sobre e artigos; sem mexer no JS ou nos hexágonos. */
+html body main.timeline-page > .timeline-intro h1 {
+ font-size: clamp(1.9rem,3.25vw,2.8rem) !important;
+ line-height:1.14 !important;
+ letter-spacing:-.035em !important;
+ margin:.35rem 0 .8rem !important;
+}
+html body main.timeline-page > .timeline-intro {padding-top:1.8rem !important; padding-bottom:.65rem !important;}
+@media(max-width:640px) {
+ html body main.timeline-page > .timeline-intro h1 {font-size:clamp(1.75rem,7vw,2.2rem) !important;}
+ html body main.timeline-page > .timeline-intro {padding-top:1.15rem !important;}
+}
