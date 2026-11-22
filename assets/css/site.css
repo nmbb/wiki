@@ -2636,3 +2636,57 @@ main.timeline-page > footer.home-footer {margin-top:.4rem!important;}
 /* Estabilidade visual dos rodapés sem alturas artificiais. */
 #crt footer,#crt .home-footer {min-height:0!important;height:auto!important;padding-block:clamp(12px,2vw,23px)!important;margin-top:clamp(12px,2vw,28px)!important}
 #crt .home-footer * {opacity:1}
+
+
+/* 2026-11-22 — Barra superior sem quebra nos temas CRT/Mainframe.
+   O menu deve manter o seletor na mesma linha nos ecrãs largos.
+   Abaixo de 1000px continua a usar o comportamento responsivo comum. */
+@media (min-width:1000px) {
+  html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) header.bar > .wrap {
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+    align-items:center !important;
+    gap:clamp(8px,1.3vw,18px) !important;
+    min-height:72px !important;
+    padding-block:0 !important;
+  }
+  html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) header.bar .brand {
+    flex:0 0 auto !important;
+    white-space:nowrap !important;
+  }
+  html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav {
+    display:flex !important;
+    flex:1 1 auto !important;
+    width:auto !important;
+    min-width:0 !important;
+    flex-wrap:nowrap !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:clamp(2px,.36vw,7px) !important;
+    padding:0 !important;
+    overflow:visible !important;
+  }
+  html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav > a,
+  html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav > .wiki-menu > summary {
+    flex:0 0 auto !important;
+    font-size:clamp(10px,.75vw,12px) !important;
+    padding:8px clamp(4px,.47vw,9px) !important;
+    white-space:nowrap !important;
+  }
+  html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) header.bar .nav-tools {
+    display:inline-flex !important;
+    flex:0 0 auto !important;
+    flex-wrap:nowrap !important;
+    white-space:nowrap !important;
+    align-items:center !important;
+    gap:5px !important;
+    margin-left:3px !important;
+  }
+  html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) header.bar .nav-tools .theme-picker select {
+    width:clamp(100px,9vw,143px) !important;
+    max-width:143px !important;
+    min-width:100px !important;
+    font-size:11px !important;
+  }
+}
