@@ -1,0 +1,17 @@
+REVISÃO E RESTAURO DA WIKI - 22/11/2026
+
+Base: wiki-main(1).zip (inclui todas as imagens e ficheiros originais).
+Sobreposição: revisão global de contraste + tema Macintosh clássico.
+
+Correções:
+- CSS de timeline convertido de @scope para seletores explícitos compatíveis e preservado nos diretórios publicado/fonte.
+- Contraste da página inicial no tema Macintosh.
+- Referências Compaq DOS 1.25 uniformizadas onde se referia à máquina testada.
+- Recursos e referências de CSS inspecionados.
+- Tema Arquivo apresentado como Default na seleção.
+
+IMPORTANTE: Não apagar a pasta .git do repositório local do GitHub Desktop. Substituir o CONTEÚDO do repositório com estes ficheiros, fazer commit e push.
+
+Ficheiros alterados pelo Compaq: index.html, dos.html, LEIA-ME.txt, artigos.html, assets/js/search-index.js, src/pages/index.html, src/pages/dos.html, src/pages/artigos.html
+
+Referências a ficheiros locais em falta: 0

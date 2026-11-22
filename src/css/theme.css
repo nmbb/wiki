@@ -758,3 +758,28 @@ html[data-theme="macclassic"] :is(footer,.footer,.site-footer,.home-footer) {bac
 html[data-theme="macclassic"] :is(footer,.footer,.site-footer,.home-footer) a {color:#234d81!important}
 html[data-theme="macclassic"] ::selection {background:#234d81;color:white}
 @media (max-width:700px) {html[data-theme="macclassic"] .wiki-submenu {box-shadow:none!important}}
+
+
+/* Macintosh Classic: accessible, consistent body copy on light background */
+html[data-theme="macclassic"] .home-hero h1,
+html[data-theme="macclassic"] .home-hero h1 em,
+html[data-theme="macclassic"] .home-hero .intro,
+html[data-theme="macclassic"] .home-stats strong,
+html[data-theme="macclassic"] .home-stats span,
+html[data-theme="macclassic"] .split-heading p,
+html[data-theme="macclassic"] .section-kicker,
+html[data-theme="macclassic"] .home-timeline-callout p {color:#273b43!important;-webkit-text-fill-color:#273b43!important;text-shadow:none!important}
+html[data-theme="macclassic"] .home-hero h1 em {color:#214d77!important;-webkit-text-fill-color:#214d77!important}
+html[data-theme="macclassic"] .home-hero .intro {color:#364950!important;-webkit-text-fill-color:#364950!important}
+html[data-theme="macclassic"] .home-stats strong {color:#202d33!important;-webkit-text-fill-color:#202d33!important}
+html[data-theme="macclassic"] .home-stats span {color:#43545d!important;-webkit-text-fill-color:#43545d!important}
+html[data-theme="macclassic"] .home-btn.alt {color:#1b3650!important;-webkit-text-fill-color:#1b3650!important;background:#f5f6f2!important}
+html[data-theme="macclassic"] .home-btn.alt:hover,
+html[data-theme="macclassic"] .home-btn.alt:focus-visible {background:#234d81!important;color:white!important;-webkit-text-fill-color:white!important}
+html[data-theme="macclassic"] .home-hero .kicker {color:#35516b!important;-webkit-text-fill-color:#35516b!important}
+html[data-theme="macclassic"] .home-category p,
+html[data-theme="macclassic"] .home-category h3 {color:#273b43!important;-webkit-text-fill-color:#273b43!important}
+html[data-theme="macclassic"] .hero-terminal,
+html[data-theme="macclassic"] .hero-terminal * {color:#d9e5e8}
+html[data-theme="macclassic"] .hero-terminal .positive {color:#9bdbb4!important;-webkit-text-fill-color:#9bdbb4!important}
+html[data-theme="macclassic"] .hero-terminal .negative {color:#ffaaaa!important;-webkit-text-fill-color:#ffaaaa!important}
