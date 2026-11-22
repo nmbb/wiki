@@ -72,3 +72,14 @@ html[data-theme="mf3270"] .wiki-sheet .content .note code:not(pre code) {
   padding: .08em .25em;
   text-shadow: none !important;
 }
+
+/* Ajuste final: titulos dos dois cartoes editoriais claros (Artigos), Mainframe 3270.
+   Conserva a textura, os fundos e as cores dos restantes componentes. */
+html[data-theme="mf3270"] .wiki-intro-grid a > strong,
+html[data-theme="mf3270"] .wiki-intro-grid a:hover > strong,
+html[data-theme="mf3270"] .wiki-intro-grid a:focus-visible > strong {
+  color: #20533a !important;
+  -webkit-text-fill-color: #20533a !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
