@@ -33,7 +33,9 @@ FOOT='<footer><div class="wrap"><span>© 2026 Nuno Brandão · Wiki pessoal e t�
 # 1) CSS único com versão automática
 os.makedirs(OUT+'/assets/css',exist_ok=True)
 if OUT!=ROOT: shutil.copytree(ROOT+'/assets',OUT+'/assets',dirs_exist_ok=True)
-put(OUT+'/assets/css/site.css','\n'.join(rd(ROOT+'/src/css/'+c) for c in CSS))
+put(OUT+'/assets/css/site.css',rd(ROOT+'/src/css/site-base.css'))
+for theme in ('arquivo','verde','mf3270','mf3279','macclassic'):
+    put(OUT+'/assets/css/theme-'+theme+'.css',rd(ROOT+'/src/css/themes/theme-'+theme+'.css'))
 for f in os.listdir(ROOT+'/src/css/extra'): shutil.copy(ROOT+'/src/css/extra/'+f,OUT+'/assets/css/'+f)
 V={n:hv(OUT+'/assets/'+n) for n in ('css/site.css','js/site.js','js/wiki-nav.js','js/gallery-modal-20261113.js')}
 # 2) páginas
@@ -55,7 +57,7 @@ for f in sorted(os.listdir(ROOT+'/src/pages')):
       +('<meta property="og:image" content="%sassets/img/og.png"><meta name="twitter:card" content="summary_large_image">'%BASE if og else '')
       +'<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><script>try{var t=localStorage.getItem("wiki-theme");if([\"arquivo\",\"verde\",\"mf3270\",\"mf3279\",\"macclassic\"].indexOf(t)!==-1)document.documentElement.dataset.theme=t}catch(e){}</script>'
       '<link rel="stylesheet" href="assets/css/site.css?v=%s">'%V['css/site.css']
-      +''.join('<link rel="stylesheet" href="assets/css/%s">'%c for c in fm.get('css','').split(',') if c)+'</head>')
+      +"<script>(function(){var names=['arquivo','verde','mf3270','mf3279','macclassic'];function apply(){var t=document.documentElement.dataset.theme||'arquivo';if(names.indexOf(t)<0)t='arquivo';var l=document.getElementById('active-wiki-theme');if(!l){l=document.createElement('link');l.rel='stylesheet';l.id='active-wiki-theme';document.head.appendChild(l)}var h='assets/css/theme-'+t+'.css?v=20261122split';if(l.getAttribute('href')!==h)l.setAttribute('href',h)}apply();new MutationObserver(apply).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']})})();</script>"+''.join('<link rel="stylesheet" href="assets/css/%s">'%c for c in fm.get('css','').split(',') if c)+'</head>')
     js=''.join('<script defer src="assets/js/%s"></script>'%j for j in fm.get('js','').split(',') if j)
     tail=('<div class="crt-tint" aria-hidden="true"></div><div class="crt-lines" aria-hidden="true"></div>'
       '<script defer src="assets/js/search-index.js"></script><script defer src="assets/js/site.js?v=%s"></script><script defer src="assets/js/wiki-nav.js?v=%s"></script><script defer src="assets/js/gallery-modal-20261113.js?v=%s"></script>%s</body></html>'%(V['js/site.js'],V['js/wiki-nav.js'],V['js/gallery-modal-20261113.js'],js))

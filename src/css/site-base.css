@@ -1,0 +1,2620 @@
+
+:root{--ink:#1c241e;--mut:#616a73;--line:#dcdfe2;--bg:#f4f5f3;--card:#fff;--ac:#4a6741;--navy:#232d25;--yel:#b8a05a;--soft:#e8ece6}
+
+*{box-sizing:border-box}
+ html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+
+a{color:var(--ac)}
+:focus-visible{outline:3px solid var(--yel);outline-offset:3px}
+.wrap{width:min(100% - 2.5rem,1000px);margin-inline:auto}
+h1,h2,h3,.serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+h1,h2,h3{line-height:1.22}
+em{color:var(--ac)}
+
+header.bar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:1.2rem;min-height:3.65rem}
+.brand{font-weight:700;text-decoration:none;white-space:nowrap;color:var(--ink)}
+.bar nav{display:flex;gap:.1rem;overflow-x:auto;flex:1}
+.bar nav a{padding:.45rem .65rem;border-radius:6px;color:var(--mut);text-decoration:none;font-size:.92rem;white-space:nowrap}
+.bar nav a:hover,.bar nav a.cur{background:var(--soft);color:var(--ink)}
+.bar .cta{background:var(--ac);color:#fff;text-decoration:none;border-radius:6px;padding:.45rem .9rem;font-size:.92rem;font-weight:600;white-space:nowrap}
+
+.top{background:#fff;border-bottom:1px solid var(--line);padding:3.3rem 0 2.8rem;background-image:url("../img/wiki/pattern.svg");background-size:240px 240px}
+.eyebrow{font-size:.9rem;color:var(--mut);margin:0 0 .45rem}
+.top h1{font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.024em;max-width:780px;margin:.2rem 0 1rem}
+.top p.lead{font-size:1.13rem;max-width:760px;margin:0 0 1.1rem}
+.top .quick{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.3rem}
+.button{display:inline-block;padding:.6rem 1rem;border:1px solid var(--ac);border-radius:6px;background:var(--ac);color:#fff;text-decoration:none;font-weight:600}
+.button.alt{background:white;color:var(--ac)}
+.button:hover{filter:brightness(1.07)}
+
+.breadcrumb{font-size:.86rem;color:var(--mut);padding:1.05rem 0}
+.breadcrumb a{text-decoration:none}
+.breadcrumb span{padding:0 .45rem}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:2.5rem;align-items:start}
+.content{min-width:0;padding-bottom:2rem}
+.sidebar{position:sticky;top:5.2rem;background:white;border:1px solid var(--line);border-radius:9px;padding:1.05rem}
+.sidebar strong{display:block;margin-bottom:.55rem}
+.sidebar a{display:block;border-radius:5px;padding:.27rem .45rem;text-decoration:none;font-size:.91rem;color:var(--mut)}
+.sidebar a:hover,.sidebar a.cur{background:var(--soft);color:var(--ink)}
+
+section{margin:1.7rem 0 2.25rem}
+section h2{font-size:1.7rem;margin:0 0 1rem}
+p{margin:.4rem 0 1rem}
+.muted{color:var(--mut)}
+.small{font-size:.91rem}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.card{display:flex;flex-direction:column;gap:.35rem;background:#fff;border:1px solid var(--line);border-radius:9px;padding:1.25rem;text-decoration:none;color:inherit;min-width:0}
+.card:hover{border-color:#83987d;box-shadow:0 5px 18px #1c241e0b}
+.card h3{font-size:1.13rem;margin:0}
+.card p{margin:0;color:var(--mut);font-size:.92rem}
+.card .arrow{margin-top:auto;padding-top:.4rem;color:var(--ac);font-weight:650;font-size:.88rem}
+.tag{font-size:.74rem;font-weight:650;color:#46613e;background:#edf2ea;border-radius:5px;padding:.1rem .45rem;align-self:flex-start}
+.panel{background:#fff;border:1px solid var(--line);border-radius:9px;padding:1.25rem;margin:1rem 0}
+.panel h3{margin:0 0 .5rem;font-size:1.13rem}
+.panel ul{margin:.35rem 0;padding-left:1.2rem}
+.panel li{margin:.25rem 0}
+.note{border-left:4px solid var(--ac);background:#ecf1e9;padding:.8rem 1rem;border-radius:0 7px 7px 0;margin:1.2rem 0;color:#33412f}
+.note.warning{border-color:var(--yel);background:#f6f1e4}
+.figure{background:white;border:1px solid var(--line);border-radius:9px;overflow:hidden;margin:1.2rem 0}
+.figure img{display:block;width:100%;height:auto}
+.figure figcaption{padding:.6rem 1rem;font-size:.86rem;color:var(--mut);border-top:1px solid var(--line)}
+.shot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.shot-grid .figure{margin:0}
+.shot-grid .figure figcaption{min-height:3rem}
+.steps{counter-reset:steps;list-style:none;padding:0;display:grid;gap:.7rem}
+.steps li{background:#fff;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem .9rem 3rem;position:relative}
+.steps li:before{counter-increment:steps;content:counter(steps);position:absolute;left:1rem;top:.95rem;border-radius:50%;background:var(--ac);color:#fff;width:1.3rem;height:1.3rem;display:grid;place-items:center;font-weight:700;font-size:.75rem}
+.simple-list{padding:0;list-style:none;background:white;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.simple-list li{padding:.7rem 1rem;border-bottom:1px solid var(--line)}
+.simple-list li:last-child{border-bottom:0}
+details{background:white;border:1px solid var(--line);border-radius:9px;margin:.8rem 0}
+summary{cursor:pointer;padding:.8rem 1rem;font-weight:650}
+details .inside{padding:0 1rem 1rem}
+details[open] summary{border-bottom:1px solid var(--line)}
+code{padding:.12rem .3rem;background:#ecede9;border-radius:4px;font-size:.88em}
+pre{overflow:auto;padding:1rem;background:#232d25;color:#e9efe6;border-radius:7px;font-size:.84rem}
+pre code{background:transparent;color:inherit;padding:0}
+.footer-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin:2.2rem 0}
+.footer-nav a{text-decoration:none;font-weight:600}
+footer{background:var(--navy);color:#c3ccc2;padding:1.4rem 0;font-size:.89rem;margin-top:3rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
+footer a{color:#fff}
+
+@media (max-width:780px){
+.layout{grid-template-columns:1fr}
+.sidebar{position:static;order:-1}
+.bar .brand{display:none}
+.bar .wrap{gap:.5rem}
+.top{padding:2.4rem 0}
+.cards{grid-template-columns:1fr}
+.shot-grid{grid-template-columns:1fr}
+}
+@media  print{
+header.bar,.sidebar,.quick,.footer-nav{display:none!important}
+.layout{display:block}
+.top{background:white;padding:1rem 0}
+details>*{display:block!important}
+.cards{display:block}
+.card{break-inside:avoid;margin:.5rem 0}
+.figure{break-inside:avoid}
+footer{color:black;background:white}
+}
+
+
+/* Artigos verificados nos sites pessoais */
+.article-stack{display:grid;gap:.75rem;margin:1rem 0 1.5rem}
+.article-item{background:var(--card,#fff);border:1px solid var(--line,#dcdfe2);border-radius:8px;padding:1rem 1.15rem}
+.article-item h3{margin:0 0 .25rem;font-size:1.06rem}
+.article-item p{margin:.25rem 0 .45rem}
+.article-item .source{color:var(--mut,#616a73);font-size:.86rem}
+.article-item a{font-weight:600}
+
+
+
+/* Identidade própria: Atlas Técnico — azul-petróleo, turquesa e cobre */
+:root{
+ --bg:#edf3f5;--ink:#18303a;--mut:#526774;--line:#d0dee2;
+ --card:#fff;--ac:#0d7480;--navy:#102934;--yel:#da9665;--soft:#e3f2f3;
+ --deep:#0b2330;--aqua:#44d0cb;--copper:#ebac79;
+}
+
+body{background:var(--bg);color:var(--ink)}
+
+header.bar{background:#fff;box-shadow:0 4px 22px #0a2d3710}
+
+.bar .brand{color:#0e3c49;letter-spacing:-.02em}
+
+.bar .brand::before{content:"◈";color:var(--ac);margin-right:.55rem;font-size:1.12rem}
+
+.bar nav{flex-wrap:wrap;align-items:center;overflow:visible}
+
+.bar nav a{padding:.47rem .54rem}
+
+.bar nav a.cur{background:#d8eef0;color:#0d626b;font-weight:750}
+
+.bar .cta{background:#0e6675}
+
+.top{background-color:var(--deep);background-image:radial-gradient(circle at 83% 18%,#28758369 0,transparent 35%),linear-gradient(110deg,#091f2b,#173d4b 74%,#16404d);color:#f1fbfd;position:relative;overflow:hidden;border:0;padding:3.9rem 0 3.1rem}
+
+.top::after{content:"";pointer-events:none;position:absolute;inset:0;opacity:.19;background-image:linear-gradient(#58c2c11c 1px,transparent 1px),linear-gradient(90deg,#58c2c11c 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to right,transparent 20%,#000 95%)}
+
+.top .wrap{position:relative;z-index:1}
+
+.top .eyebrow{color:#84dfd9;font-weight:800;letter-spacing:.17em;text-transform:uppercase;font-size:.74rem}
+
+.top h1{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#fff;font-size:clamp(2.35rem,5vw,4.35rem);font-weight:760;letter-spacing:-.045em;line-height:1.09;max-width:790px;margin:.25rem 0 1.1rem}
+
+.top h1::after{content:"";display:block;width:78px;height:3px;background:var(--copper);margin:1.1rem 0 0;border-radius:8px}
+
+.top .lead{color:#c3dce3;max-width:700px;font-size:1.1rem}
+
+.top .quick{gap:.7rem;margin-top:1.65rem}
+
+.top .button{border-color:#6dd2ce;background:#67ded0;color:#092f39;font-weight:730;border-radius:7px}
+
+.top .button.alt{border-color:#547780;background:#ffffff0e;color:#e7f5f6}
+
+.breadcrumb{font-size:.83rem;color:#617985;padding:1.1rem 0}
+
+.breadcrumb a{color:#0d7480}
+
+.layout{grid-template-columns:minmax(0,1fr) 224px;gap:2.6rem}
+
+.content>section{margin:1.75rem 0 2.65rem}
+
+.content>section>h2{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;letter-spacing:-.025em;font-size:clamp(1.45rem,2.7vw,1.95rem);line-height:1.2;color:#153b47;margin-bottom:1.15rem}
+
+.cards{gap:.85rem}
+
+.card{border-radius:12px;border:1px solid #d2e1e5;border-left:4px solid #2d9c9e;box-shadow:0 3px 16px #16455108;padding:1.2rem 1.3rem;transition:box-shadow .18s,transform .18s,border-color .18s}
+
+.card:hover{transform:translateY(-3px);border-color:#7ac3c5;box-shadow:0 12px 24px #123a451d}
+
+.card h3{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:1.12rem;font-weight:750;color:#153743}
+
+.card p{line-height:1.55}
+
+.card .arrow{color:#0c7881;margin-top:auto;padding-top:.7rem}
+
+.tag{border-radius:5px;background:#def1f2;color:#0c6f78;font-weight:750;letter-spacing:.055em;text-transform:uppercase;font-size:.69rem}
+
+.figure,.panel,.article-item,.sidebar{border-color:#cfdfe3;border-radius:11px;box-shadow:0 4px 18px #102b360a}
+
+.figure img{max-height:690px;object-fit:contain;background:#102934}
+
+.figure figcaption{background:#fff}
+
+.sidebar{border-top:4px solid #2aa6a7;position:sticky;top:5.2rem}
+
+.sidebar strong{color:#0a6875;text-transform:uppercase;letter-spacing:.095em;font-size:.75rem}
+
+.sidebar a.cur{background:#d7eef0;color:#0b6871;font-weight:750}
+
+.panel h3{color:#153743}
+
+.note{background:#dff0ef;border-left-color:#1c97a1;color:#19464d}
+
+.note.warning{background:#fbefdD;border-left-color:#c7814e;color:#60452f}
+
+.article-item h3{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+
+.project-feature{display:grid;grid-template-columns:1.05fr 1fr;gap:1.4rem;align-items:center;padding:1.1rem;background:#102d39;color:#f3fbfc;border:1px solid #1f5664;border-radius:13px;margin:1.35rem 0;box-shadow:0 12px 27px #0c2d3a1c}
+
+.project-feature img{width:100%;aspect-ratio:16/10;max-height:300px;object-fit:cover;border-radius:9px}
+
+.project-feature h3{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:1.43rem;margin:.25rem 0 .7rem;color:#fff}
+
+.project-feature p{color:#c5dce3}
+
+.project-feature a{color:#79e3df;font-weight:750;text-decoration:none}
+
+.project-toolbar{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.15rem 0}
+
+.project-toolbar button{font:650 .86rem system-ui,sans-serif;cursor:pointer;background:#fff;color:#27505c;border:1px solid #bed7dc;border-radius:7px;padding:.48rem .9rem}
+
+.project-toolbar button[aria-pressed=true]{background:#0b7781;color:#fff;border-color:#0b7781}
+
+.project-search{display:block;width:100%;max-width:440px;border:1px solid #b7d3d8;border-radius:8px;background:#fff;padding:.7rem .95rem;font:inherit}
+
+.project-count{font-size:.88rem;color:var(--mut);margin:.75rem 0 1rem}
+
+.project-card-image{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:7px;margin-bottom:.6rem;background:#102934}
+
+.project-list .card[hidden]{display:none!important}
+
+footer{background:#0c2733;color:#b9d6df}
+
+@media (max-width:780px){
+.layout{grid-template-columns:1fr;gap:1.15rem}
+.sidebar{position:static;order:-1}
+.bar nav{overflow-x:auto;flex-wrap:nowrap}
+.top{padding:2.7rem 0 2.3rem}
+.project-feature{grid-template-columns:1fr}
+.cards{grid-template-columns:1fr}
+}
+
+@media (prefers-reduced-motion:reduce){
+.card{transition:none}
+}
+
+@media  print{
+.top{background:#fff;color:#000}
+.top h1{color:#000}
+.top .lead{color:#444}
+.project-feature{color:#000;background:#fff}
+}
+
+
+/* Mapas com dimensões moderadas nas páginas da Wiki */
+.figure.map-compact{width:min(100%,680px);max-width:680px;margin:1.15rem auto 1.5rem}
+
+.figure.map-compact img{width:100%;height:auto;max-height:440px;object-fit:contain;background:#102934}
+
+.figure.map-compact .map-open{display:block;cursor:zoom-in}
+
+.figure.map-compact figcaption a{display:inline-block;margin-left:.4rem;font-weight:650}
+
+@media (max-width:700px){
+.figure.map-compact img{max-height:none}
+}
+
+
+/* Banana Pi M5 — narrativa técnica */
+.banana-kicker{font-size:.75rem;font-weight:800;letter-spacing:.15em;color:#0c8188;margin-bottom:.65rem}
+
+.banana-intro h2{font-size:clamp(1.6rem,3vw,2.25rem);letter-spacing:-.035em;margin:.25rem 0 .85rem;color:#12333e}
+
+.banana-lead{font-size:1.13rem;line-height:1.76;color:#244c56;font-weight:540}
+
+.banana-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;margin:1.5rem 0}
+
+.banana-stats>div{background:#e3f2f2;border:1px solid #c3e0e0;border-radius:10px;padding:1rem .75rem;min-width:0}
+
+.banana-stats strong{display:block;font-size:1.42rem;color:#0c6570;line-height:1.2;margin-bottom:.2rem}
+
+.banana-stats span{display:block;font-size:.78rem;color:#476772}
+
+.banana-shot{margin:1.25rem 0 1.55rem}
+
+.banana-shot img{display:block;width:100%;height:auto;max-height:590px;object-fit:contain;background:#151a20}
+
+.banana-shot-narrow img{max-height:365px}
+
+.banana-services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:1.35rem 0}
+
+.banana-services article{border:1px solid #d5e5e7;background:#f8fbfc;padding:1.05rem;border-radius:11px}
+
+.banana-services article:last-child{grid-column:1/-1}
+
+.banana-services h3{font-size:1.1rem;margin:.25rem 0 .4rem;color:#173844}
+
+.banana-services p{margin:0;font-size:.93rem;line-height:1.6}
+
+.banana-no{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:#128d92}
+
+.banana-aside{background:#eef6f5;padding:1rem 1.15rem;border-left:3px solid #1c9a9f;border-radius:3px 8px 8px 3px;font-size:.95rem}
+
+.banana-flow{display:flex;gap:.45rem;align-items:center;justify-content:center;flex-wrap:wrap;margin:1.3rem 0;padding:1.15rem;background:#102e3a;border-radius:12px;color:#effcfc}
+
+.banana-flow span{padding:.65rem .78rem;background:#1b4d5b;border:1px solid #41989d;border-radius:8px;font-size:.83rem;text-align:center;font-weight:700}
+
+.banana-flow b{color:#62d0ca}
+
+.banana-conclusion{margin:1.7rem 0 0;padding:1.5rem;background:#103542;color:#d8eeee;border-radius:11px}
+
+.banana-conclusion strong{color:#fff;font-size:1.13rem}
+
+.banana-conclusion p{color:#d8eeee}
+
+.banana-conclusion a{color:#82e5e0;font-weight:700}
+
+@media (max-width:700px){
+.banana-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.banana-services{grid-template-columns:1fr}
+.banana-services article:last-child{grid-column:auto}
+.banana-flow{justify-content:flex-start}
+}
+
+
+/* Banana Pi M5 — narrativa técnica */
+.banana-kicker{font-size:.75rem;font-weight:800;letter-spacing:.15em;color:#0c8188;margin-bottom:.65rem}
+
+.banana-intro h2{font-size:clamp(1.6rem,3vw,2.25rem);letter-spacing:-.035em;margin:.25rem 0 .85rem;color:#12333e}
+
+.banana-lead{font-size:1.13rem;line-height:1.76;color:#244c56;font-weight:540}
+
+.banana-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;margin:1.5rem 0}
+
+.banana-stats>div{background:#e3f2f2;border:1px solid #c3e0e0;border-radius:10px;padding:1rem .75rem;min-width:0}
+
+.banana-stats strong{display:block;font-size:1.42rem;color:#0c6570;line-height:1.2;margin-bottom:.2rem}
+
+.banana-stats span{display:block;font-size:.78rem;color:#476772}
+
+.banana-shot{margin:1.25rem 0 1.55rem}
+
+.banana-shot img{display:block;width:100%;height:auto;max-height:590px;object-fit:contain;background:#151a20}
+
+.banana-shot-narrow img{max-height:365px}
+
+.banana-services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:1.35rem 0}
+
+.banana-services article{border:1px solid #d5e5e7;background:#f8fbfc;padding:1.05rem;border-radius:11px}
+
+.banana-services article:last-child{grid-column:1/-1}
+
+.banana-services h3{font-size:1.1rem;margin:.25rem 0 .4rem;color:#173844}
+
+.banana-services p{margin:0;font-size:.93rem;line-height:1.6}
+
+.banana-no{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:#128d92}
+
+.banana-aside{background:#eef6f5;padding:1rem 1.15rem;border-left:3px solid #1c9a9f;border-radius:3px 8px 8px 3px;font-size:.95rem}
+
+.banana-flow{display:flex;gap:.45rem;align-items:center;justify-content:center;flex-wrap:wrap;margin:1.3rem 0;padding:1.15rem;background:#102e3a;border-radius:12px;color:#effcfc}
+
+.banana-flow span{padding:.65rem .78rem;background:#1b4d5b;border:1px solid #41989d;border-radius:8px;font-size:.83rem;text-align:center;font-weight:700}
+
+.banana-flow b{color:#62d0ca}
+
+.banana-conclusion{margin:1.7rem 0 0;padding:1.5rem;background:#103542;color:#d8eeee;border-radius:11px}
+
+.banana-conclusion strong{color:#fff;font-size:1.13rem}
+
+.banana-conclusion p{color:#d8eeee}
+
+.banana-conclusion a{color:#82e5e0;font-weight:700}
+
+@media (max-width:700px){
+.banana-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.banana-services{grid-template-columns:1fr}
+.banana-services article:last-child{grid-column:auto}
+.banana-flow{justify-content:flex-start}
+}
+
+
+/* Real equipment photography: readable in the page; enlarges on click. */
+.figure.real-setup,.figure.orange-pi-photo{max-width:680px;margin:1.15rem auto 1.7rem;}
+
+.figure.real-setup img{display:block;width:100%;height:auto;max-height:480px;object-fit:contain;background:#f4f6f7;}
+
+.figure.orange-pi-photo{max-width:440px;}
+
+.figure.orange-pi-photo img{display:block;width:100%;height:auto;max-height:480px;object-fit:contain;background:#f4f6f7;}
+
+.photo-expand{display:block;cursor:zoom-in;}
+
+@media (max-width:700px){
+.figure.real-setup,.figure.orange-pi-photo{max-width:100%;}
+}
+
+
+/* Laboratório Windows NT: imagens reais em destaque */
+.nt4-direct-link{margin:1.1rem 0 0}
+.nt4-direct-link a{display:inline-block;padding:.68rem 1rem;background:#0b5967;color:#fff;border-radius:9px;font-weight:700;text-decoration:none}
+.nt4-direct-link a:hover{background:#087986;color:white}
+
+#windows-nt4{scroll-margin-top:86px}
+#windows-nt4 .shot-grid{align-items:start}
+#windows-nt4 .figure img{width:100%;height:auto;max-height:none;object-fit:contain}
+ .nt4-feature-card .project-card-image{object-position:center}
+
+
+/* Eletrónica experimental — apresentação editorial, sem fotografias */
+.elec-intro{padding:1.7rem 1.8rem;border-radius:12px;background:linear-gradient(135deg,#122936,#1c4653);color:#eef7f7;border:1px solid #285565}
+
+.elec-intro h2{color:#fff;margin:.45rem 0 1rem;font-size:clamp(1.5rem,3vw,2.1rem)}
+
+.elec-intro p{color:#dce9eb}
+
+.elec-eyebrow{font-size:.74rem!important;font-weight:750;letter-spacing:.11em;color:#92e1dc!important}
+
+.elec-lead{font-size:1.1rem;line-height:1.65}
+
+.elec-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;margin:1.2rem 0}
+
+.elec-highlights div{background:#ffffff12;border:1px solid #ffffff30;border-radius:9px;padding:.8rem}
+
+.elec-highlights strong{display:block;color:#f8cba7;font-size:1.2rem}
+
+.elec-highlights span{font-size:.8rem;color:#c8dfe1}
+
+.elec-status{display:flex;gap:.65rem;align-items:baseline;border-top:1px solid #ffffff35;padding-top:1rem;font-size:.88rem}
+
+.elec-status strong{white-space:nowrap;color:#a8eee6}
+
+.elec-index{font-size:.75rem!important;letter-spacing:.09em;font-weight:750;color:#126e82!important;margin-bottom:.35rem!important}
+
+.elec-ideas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin:1.1rem 0}
+
+.elec-ideas article{border:1px solid var(--line);border-radius:9px;background:#fff;padding:1rem}
+
+.elec-ideas article span{font-size:.69rem;font-weight:750;letter-spacing:.08em;color:#0b8294}
+
+.elec-ideas h3{margin:.4rem 0;font-size:1.1rem}
+
+.elec-ideas p{font-size:.87rem;margin:0;color:var(--mut)}
+
+.elec-flow{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0}
+
+.elec-flow span{background:#e5f0f2;border:1px solid #bad4d9;border-radius:7px;padding:.55rem .8rem;font-size:.85rem;font-weight:650;color:#244b55}
+
+.elec-flow b{color:#0d8390}
+
+.elec-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:1.1rem 0}
+
+.elec-steps div{display:flex;gap:.75rem;align-items:flex-start;background:#fff;border:1px solid var(--line);padding:1rem;border-radius:8px}
+
+.elec-steps strong{color:#0a8190;font-size:1.15rem}
+
+.elec-steps p{margin:0;font-size:.9rem}
+
+.elec-state-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+
+.elec-project-card{background:linear-gradient(135deg,#102b38,#256070)!important;color:#f6fcfc!important;justify-content:center;min-height:185px}
+
+.elec-project-card h3{color:#fff!important}
+.elec-project-card p{color:#d7e7e9!important}
+
+.elec-project-card .tag{color:#11373b;background:#a9ede4}
+
+.elec-project-card .arrow{color:#ffc39e}
+
+@media (max-width:700px){
+.elec-highlights,.elec-ideas{grid-template-columns:1fr}
+.elec-steps,.elec-state-grid{grid-template-columns:1fr}
+.elec-intro{padding:1.15rem}
+.elec-status{display:block}
+.elec-status strong{display:block;margin-bottom:.35rem}
+}
+
+
+/* Melhorias de acessibilidade e consistência (pré-visualização) */
+.skip-link{position:absolute;left:1rem;top:-8rem;z-index:9999;padding:.7rem 1rem;background:#fff;color:#12333e;border:2px solid #0d7480;border-radius:6px}
+
+.skip-link:focus{top:1rem}
+
+:focus-visible{outline:3px solid #da9665;outline-offset:3px}
+
+.editorial-note{margin-top:1.25rem}
+
+@media (max-width:560px){
+.bar .wrap{flex-wrap:wrap}
+.bar nav{width:100%;padding-bottom:.4rem}
+.top h1{font-size:2.25rem}
+}
+
+
+/* Navegação nova 2026: editorial azul-petróleo */
+header.bar{z-index:100}
+
+.bar .wrap{max-width:1200px}
+
+.bar nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:3px}
+
+.bar nav .wiki-menu{position:relative;margin:0;border:0;background:transparent}
+
+.bar nav .wiki-menu summary{list-style:none;cursor:pointer;color:#345360;font-size:.9rem;padding:.5rem .65rem;border-radius:8px;font-weight:600;white-space:nowrap}
+
+.bar nav .wiki-menu summary::-webkit-details-marker{display:none}
+
+.bar nav .wiki-menu summary:after{content:"⌄";padding-left:.5rem;color:#0d7480}
+
+.bar nav .wiki-menu summary:hover,.bar nav .wiki-menu[open] summary{background:#e3f2f3;color:#0c6472}
+
+.bar nav .wiki-submenu{display:grid;gap:3px;position:absolute;top:calc(100% + 8px);left:0;min-width:225px;background:white;border:1px solid #c8e1e4;box-shadow:0 20px 38px #0b27332b;padding:9px;border-radius:12px;z-index:999}
+
+.bar nav .wiki-submenu a{display:block;padding:.65rem .7rem;font-size:.87rem;color:#244653}
+
+.bar nav .wiki-submenu a:hover{background:#dff1f1}
+
+.bar .cta{border-radius:9px}
+
+.wiki-intro-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:1rem 0 1.5rem}
+
+.wiki-intro-grid a{padding:1.2rem;border:1px solid #c9e2e3;border-radius:13px;background:#fff;text-decoration:none;color:#173c49;display:block;box-shadow:0 7px 20px #123a450a}
+
+.wiki-intro-grid a:hover{border-color:#55b0b1;transform:translateY(-2px)}
+
+.wiki-intro-grid strong{display:block;font-size:1.02rem;margin:.4rem 0}
+
+.wiki-intro-grid span{font-size:.86rem;color:#526774}
+
+.wiki-intro-grid .wi-icon{font-size:1.4rem;color:#087d87}
+
+@media (max-width:860px){
+.bar .wrap{flex-wrap:wrap;padding-block:.55rem}
+.bar nav{order:3;flex-basis:100%;justify-content:flex-start}
+.bar .brand{display:block}
+.bar nav .wiki-submenu{min-width:195px}
+.wiki-intro-grid{grid-template-columns:1fr}
+}
+
+@media  print{
+.wiki-intro-grid{display:none}
+}
+
+
+
+/* Identidade visual unificada com a pagina inicial — Novembro 2026 */
+:root{--ink:#172f2f;--mut:#607671;--line:#d8e3db;--bg:#dce9e0;--card:#fbfdfb;--ac:#356d5e;--navy:#172f2f;--yel:#ac8563;--soft:#e9f2ea;--deep:#172f2f;--aqua:#6eae94;--copper:#ac8563}
+
+body{background:#dce9e0;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.65}
+
+a{color:#356d5e}
+
+.wrap{width:min(100% - 2.5rem,1036px)}
+
+header.bar{position:relative;top:auto;border:0;box-shadow:none;background:#dce9e0;width:min(1200px,calc(100% - 42px));margin:auto;z-index:50}
+
+.bar .wrap{width:100%;max-width:none;min-height:86px;padding:0 14px;gap:18px}
+
+.bar .brand{color:#172f2f;font-size:15px;font-weight:800}
+
+.bar .brand::before{content:"NB";display:inline-grid;place-items:center;width:38px;height:38px;color:#fff;background:#172f2f;border-radius:11px;margin-right:12px;font-size:13px;letter-spacing:-1px}
+
+.bar nav{justify-content:flex-end;gap:7px;flex-wrap:wrap;overflow:visible}
+
+.bar nav a,.bar nav .wiki-menu summary{color:#45665a;font-size:13px;font-weight:650;border-radius:8px;padding:.53rem .72rem}
+
+.bar nav a:hover,.bar nav a.cur,.bar nav .wiki-menu summary:hover,.bar nav .wiki-menu[open] summary{background:#e9f2ea;color:#356d5e}
+
+.bar nav .wiki-menu summary:after{color:#528571}
+
+.bar nav .wiki-submenu{background:#fbfcf8;border-color:#d8e3db;box-shadow:0 18px 40px #285a4025}
+
+.bar nav .wiki-submenu a{color:#274f43}
+
+.bar nav .wiki-submenu a:hover{background:#e9f2ea}
+
+.bar .cta{display:none}
+
+/* A pagina de artigo e um unico papel branco, como a home */
+.wiki-sheet{width:min(1200px,calc(100% - 42px));margin:0 auto;background:#fbfcf8;border-radius:16px 16px 0 0;overflow:clip;box-shadow:0 8px 60px #285a4020}
+
+.top{background:#edf3ec;background-image:none!important;color:#172f2f;padding:68px 0 52px;border:0}
+
+.top::after{display:none}
+
+.top .wrap{width:min(100% - 4rem,1010px)}
+
+.top .eyebrow{font-size:11px;color:#356d5e;letter-spacing:2.4px}
+
+.top h1{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:clamp(2.4rem,5.2vw,4.15rem);font-weight:750;line-height:1.08;letter-spacing:-.055em;color:#172f2f;margin:18px 0}
+
+.top h1::after{background:#7aa78e;width:54px;height:3px;margin:20px 0 0}
+
+.top .lead{color:#607671;font-size:1rem;line-height:1.85;max-width:680px}
+
+.top .button{background:#172f2f;color:white;border-color:#172f2f;border-radius:8px;padding:.72rem 1.1rem;font-size:13px}
+
+.top .button.alt{background:transparent;border-color:#bed2c5;color:#356d5e}
+
+.wiki-sheet > .wrap{width:min(100% - 4rem,1010px)}
+
+.breadcrumb{font-size:12px;color:#648275;padding:24px 0 10px}
+
+.breadcrumb a{color:#356d5e}
+
+.layout{grid-template-columns:minmax(0,1fr) 218px;gap:36px}
+
+.content>section{margin:1.7rem 0 2.55rem}
+
+.content>section>h2{color:#172f2f;font-size:clamp(1.45rem,2.7vw,1.85rem);letter-spacing:-.035em}
+
+.content p,.content li{color:#506960}
+
+.sidebar{background:#f5f9f4;box-shadow:none;border:1px solid #d8e3db;border-top:3px solid #77a78f;border-radius:10px;top:1.5rem}
+
+.sidebar strong{color:#356d5e}
+
+.sidebar a{color:#567468}
+
+.sidebar a:hover,.sidebar a.cur{background:#e2eee5;color:#245c4a}
+
+.card,.panel,.article-item,.figure{background:#fff;border:1px solid #d8e3db;border-radius:11px;box-shadow:none}
+
+.card{border-left:1px solid #d8e3db;padding:21px}
+
+.card:hover{border-color:#90bba2;box-shadow:0 12px 24px #14392e12}
+
+.card h3,.panel h3{color:#172f2f}
+
+.card p{color:#607671}
+
+.card .arrow{color:#356d5e}
+
+.tag{color:#356d5e;background:#e5f0e8;border-radius:20px;padding:4px 10px;font-size:10px}
+
+.figure img{background:#f4f7f5}
+
+.note{background:#e9f2ea;border-color:#6a9f83;color:#365c4c}
+
+.note.warning{background:#f6eee4;border-color:#ac8563}
+
+.project-feature{background:#e4efe6;color:#172f2f;border:1px solid #cbded0;box-shadow:none}
+
+.project-feature h3{color:#172f2f}
+
+.project-feature p{color:#607671}
+
+.project-feature a{color:#356d5e}
+
+.project-toolbar button{border:1px solid #d8e3db;color:#567569;border-radius:26px;background:#fff}
+
+.project-toolbar button[aria-pressed=true]{background:#2a584c;border-color:#2a584c;color:#fff}
+
+.project-search{border:1px solid #cddfd2;border-radius:9px}
+
+.wiki-intro-grid a{border:1px solid #d8e3db;background:#fff;color:#172f2f}
+
+.wiki-intro-grid a:hover{border-color:#90bba2}
+
+.wiki-intro-grid span{color:#607671}
+
+.wiki-intro-grid .wi-icon{color:#356d5e}
+
+.elec-project-card{background:#e4efe6!important;color:#172f2f!important;min-height:185px}
+
+.elec-project-card h3{color:#172f2f!important}
+.elec-project-card p{color:#607671!important}
+
+.elec-project-card .tag{color:#356d5e;background:#fff}
+.elec-project-card .arrow{color:#356d5e}
+
+footer{width:min(1200px,calc(100% - 42px));margin:0 auto;background:#d0e1d4;color:#597367;padding:18px 0;font-size:11px}
+
+footer .wrap{width:calc(100% - 42px);max-width:1155px}
+
+footer a{color:#356d5e}
+
+.content details:not(.wiki-menu){border-color:#d8e3db}
+
+.content pre{background:#172f2f}
+
+@media (max-width:900px){
+.layout{grid-template-columns:1fr}
+.sidebar{position:static;order:-1}
+.bar .wrap{flex-wrap:wrap;padding:12px 10px}
+.bar nav{justify-content:flex-start;width:100%}
+}
+
+@media (max-width:590px){
+.wiki-sheet,header.bar,footer{width:100%}
+.top{padding:45px 0 35px}
+.top .wrap,.wiki-sheet>.wrap{width:calc(100% - 40px)}
+.top h1{font-size:2.45rem;letter-spacing:-.04em}
+.bar nav{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}
+.bar nav .wiki-submenu{position:fixed;left:16px;right:16px;top:auto;min-width:0}
+.cards,.wiki-intro-grid{grid-template-columns:1fr}
+.project-feature{grid-template-columns:1fr}
+}
+
+@media  print{
+body{background:white}
+.wiki-sheet{width:100%;box-shadow:none}
+.top{background:white}
+.bar{display:none}
+}
+
+
+
+/* Documentação de failover pfSense */
+.shot-grid.two-up{grid-template-columns:repeat(2,minmax(0,1fr));}
+
+.status-strip{display:flex;flex-wrap:wrap;gap:.7rem;margin:1rem 0 1.2rem}
+
+.status-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.48rem .78rem;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:.86rem;font-weight:600}
+
+.status-pill i{display:inline-block;width:.6rem;height:.6rem;border-radius:50%}
+
+.status-pill.ok i{background:#5ba56a}
+.status-pill.warn i{background:#f0c04d}
+.status-pill.bad i{background:#c34f45}
+
+.sequence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem;align-items:stretch}
+
+.sequence-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem}
+
+.sequence-card h3{margin:.1rem 0 .5rem;font-size:1.06rem}
+
+.sequence-card ol{margin:.2rem 0 0;padding-left:1.2rem}
+
+.sequence-card li{margin:.42rem 0}
+
+.callout-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1rem 0}
+
+.callout{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem}
+
+.callout strong{display:block;color:var(--ink);margin-bottom:.35rem}
+
+.callout p{margin:0;color:var(--mut)}
+
+.caption-link{font-size:.92rem;color:var(--ac)}
+
+.related-link-card{display:flex;justify-content:space-between;align-items:center;gap:1rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;text-decoration:none;color:inherit}
+
+.related-link-card:hover{border-color:#90bba2;box-shadow:0 12px 24px #14392e12}
+
+.related-link-card strong{display:block;color:var(--ink)}
+
+.related-link-card span:last-child{color:var(--ac);font-weight:700}
+
+@media (max-width:900px){
+.shot-grid.two-up,.sequence-grid,.callout-grid{grid-template-columns:1fr}
+}
+
+
+/* Apartes pedagógicos: Novembro 2026 */
+.explainer-section{border-top:1px solid #d8e3db;padding-top:1.45rem}
+
+.explainer-label{font-size:.67rem;letter-spacing:.15em;font-weight:800;color:#527d6e;margin-bottom:.5rem}
+
+.glossary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:1.1rem 0}
+
+.glossary-grid>div{background:#f6faf5;border:1px solid #d9e6dc;border-radius:12px;padding:1rem 1.1rem}
+
+.glossary-grid strong{color:#224b3e;display:block;margin-bottom:.3rem}
+
+.glossary-grid p{margin:0;font-size:.91rem;line-height:1.55}
+
+.simple-diagram{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;padding:1.2rem;background:#edf4ed;border:1px solid #d0e2d5;border-radius:12px;margin:1.2rem 0}
+
+.diagram-label{grid-column:1/-1;text-align:center;font-weight:700;color:#315d4d;padding-bottom:.35rem}
+
+.diagram-network{background:#fff;border-radius:10px;border:1px solid #b9d5c1;padding:1rem .65rem;display:flex;align-items:center;flex-direction:column;text-align:center;gap:.2rem}
+
+.diagram-network span{font-size:.78rem;letter-spacing:.06em;font-weight:750;color:#4b8c73}
+
+.diagram-network strong{font-size:.95rem;color:#224739}
+
+.failover-feature{background:#edf5ec!important}
+
+.mini-tag{display:inline-block;font-size:.69rem;font-weight:800;color:#356d5e;letter-spacing:.12em;margin-bottom:.55rem}
+
+@media (max-width:650px){
+.simple-diagram,.glossary-grid{grid-template-columns:1fr}
+}
+
+
+/* Caixas do failover equilibradas */
+.sequence-grid > *{box-sizing:border-box;min-width:0;width:100%;margin:0;height:100%}
+
+.sequence-grid > .note.warning{padding:1rem 1.1rem}
+
+
+/* Respiro vertical entre os cartões e as capturas do failover */
+.sequence-grid + .shot-grid.two-up{margin-top:26px;}
+
+.sequence-grid{margin-bottom:0;}
+
+.shot-grid.two-up{gap:18px;}
+
+@media (max-width:900px){
+.sequence-grid + .shot-grid.two-up{margin-top:22px;}
+}
+
+
+/* Guia Cloudflare e alojamento */
+.hosting-flow{display:flex;gap:12px;align-items:center;background:#eef5ee;border:1px solid #d8e3db;border-radius:14px;padding:16px;margin:24px 0}
+.hosting-flow>div{flex:1;display:flex;flex-direction:column;gap:5px;align-items:center;text-align:center;background:#fff;padding:19px 9px;border:1px solid #d8e3db;border-radius:11px}
+.hosting-flow>div span{font-size:11px;font-weight:800;color:#528575;letter-spacing:1px}
+.hosting-flow>div strong{color:#172f2f}
+.hosting-flow>div small{color:#607671}
+.hosting-flow>b{color:#66957a}
+.hosting-compare{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0}
+.hosting-compare>div{background:#f7faf6;border:1px solid #d8e3db;border-radius:12px;padding:22px}
+.hosting-compare h3{margin:0 0 10px;color:#172f2f}
+.hosting-compare p{margin:0}
+.reference-links{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0}
+.reference-links a{padding:11px 15px;border:1px solid #d8e3db;border-radius:10px;background:#fff;text-decoration:none;font-size:13px}
+@media (max-width:680px){
+.hosting-flow{flex-direction:column}
+.hosting-flow>div{width:100%}
+.hosting-flow>b{transform:rotate(90deg)}
+.hosting-compare{grid-template-columns:1fr}
+}
+
+
+/* Artigo FOG Project */
+.fog-flow{display:flex;align-items:stretch;gap:10px;margin:1.25rem 0 1.4rem}
+
+.fog-flow-node{background:#f5faf4;border:1px solid #c9dfce;border-radius:12px;flex:1;display:flex;flex-direction:column;gap:.45rem;padding:1rem;min-width:0}
+
+.fog-flow-node span{font-size:.68rem;letter-spacing:.06em;color:#4c846e;font-weight:800}
+
+.fog-flow-node strong{color:#1d4b3d;font-size:.95rem;line-height:1.3}
+
+.fog-flow-node small{font-size:.79rem;color:#607671;line-height:1.5}
+
+.fog-flow-arrow{display:grid;place-items:center;font-size:1.5rem;color:#5f987e}
+
+@media (max-width:760px){
+.fog-flow{flex-direction:column}
+.fog-flow-arrow{transform:rotate(90deg)}
+}
+
+
+/* Classificação transversal sem duplicar entradas de navegação */
+.card-topic-tags,.article-taxonomy{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:10px 0 12px}
+
+.card-topic-tags .tag{display:inline-flex;align-items:center;border:1px solid #c8dfce;background:#eaf3eb;color:#30664f;font-size:11px;padding:3px 9px}
+
+.card-topic-tags .tag:nth-child(2){background:#f6f6ee;color:#6d7659;border-color:#dce2d2}
+
+.article-taxonomy{margin:12px 0 14px}
+
+.article-topic-tag{font-size:11px;color:#396f59;background:#fff;border:1px solid #caddce;border-radius:30px;padding:4px 11px;font-weight:650}
+
+
+/* Ensaios de autenticação Windows NT */
+.nt-domain-case{border-top:1px solid #d8e3db;margin-top:2rem;padding-top:1.4rem}
+
+.nt-domain-shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem;margin:1.25rem 0}
+
+.nt-domain-shots .figure{margin:0;min-width:0}
+
+.nt-domain-shots img{display:block;width:100%;height:auto;object-fit:contain}
+
+@media (max-width:760px){
+.nt-domain-shots{grid-template-columns:1fr}
+}
+
+
+/* Galeria uniforme de capturas do laboratório retro */
+#retro .shot-grid.retro-uniform-shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:20px;margin:20px 0 26px}
+
+#retro .retro-uniform-shots .figure{display:flex;flex-direction:column;min-width:0;margin:0;overflow:hidden}
+
+#retro .retro-uniform-shots .figure>a{display:flex;justify-content:center;align-items:center;height:260px;min-height:260px;background:#eef3ef;padding:8px;box-sizing:border-box}
+
+#retro .retro-uniform-shots .figure>img{width:100%;height:260px;object-fit:contain;background:#eef3ef;padding:8px;box-sizing:border-box;display:block}
+
+#retro .retro-uniform-shots .figure a img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#eef3ef}
+
+#retro .retro-uniform-shots figcaption{padding:14px 16px;flex:1;line-height:1.55}
+
+#retro .retro-safety-note{margin:18px 0 24px}
+
+@media (max-width:700px){
+#retro .shot-grid.retro-uniform-shots{grid-template-columns:1fr}
+#retro .retro-uniform-shots .figure>a,#retro .retro-uniform-shots .figure>img{height:220px;min-height:220px}
+}
+
+
+
+/* Estados de projetos: distintos das etiquetas temáticas */
+.project-status{display:inline-flex;align-items:center;gap:7px;width:max-content;
+ border:1px solid #d4dfd8;border-radius:30px;padding:5px 11px;
+ font:700 11px/1.4 system-ui,-apple-system,sans-serif;letter-spacing:.02em;
+ background:#f5f7f4;color:#456054;margin-bottom:9px}
+
+.project-status .status-dot{height:7px;width:7px;border-radius:50%;background:currentColor;flex-shrink:0}
+
+.project-status.status-funcional{color:#28704e;background:#edf7ef;border-color:#cde7d3}
+
+.project-status.status-em-testes{color:#93641d;background:#f9f1de;border-color:#e8d5a8}
+
+.project-status.status-com-limitacoes{color:#a05a39;background:#fbede6;border-color:#eccfbe}
+
+.project-status.status-planeado{color:#5e6872;background:#edf0f2;border-color:#d8dfe3}
+
+.article-status{margin:14px 0 0}
+
+.article-status .project-status{margin:0}
+
+.section-status{margin:0 0 18px}
+
+.status-legend{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:19px 0 24px}
+
+.status-legend>div{min-width:0;border:1px solid #d8e3db;background:#fbfdfb;border-radius:12px;padding:13px}
+
+.status-legend p{font-size:12px!important;color:#607671!important;line-height:1.5;margin:2px 0 0}
+
+.retro-statuses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}
+
+.retro-statuses>div{display:flex;flex-direction:column;align-items:flex-start;gap:5px;
+ border:1px solid #d8e3db;background:#f9fcf9;border-radius:10px;padding:15px}
+
+.retro-statuses strong{font-size:14px;color:#172f2f}
+
+.retro-statuses small{color:#607671;font-size:12px;line-height:1.45}
+
+@media (max-width:900px){
+.status-legend{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media (max-width:650px){
+.status-legend,.retro-statuses{grid-template-columns:1fr}
+}
+
+
+.article-period{font-size:12px;color:#4b7260;margin-top:18px;letter-spacing:.01em}
+
+
+/* Comparação de estados da ligação principal e de reserva */
+.wan-scenario{margin:24px 0 52px!important;padding-top:28px;border-top:1px solid #d8e3db}
+
+.wan-scenario-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:20px}
+
+.wan-scenario-head h2{font-size:clamp(1.6rem,3vw,2.1rem);margin:1px 0 10px;color:#17332e}
+
+.wan-scenario-head p{margin:0;max-width:740px}
+
+.wan-number{background:#e5f1e8;border:1px solid #bdd7c8;color:#346d56;border-radius:11px;font-weight:800;font-size:17px;min-width:48px;height:48px;display:grid;place-items:center}
+
+.wan-outage .wan-number{background:#f7ede2;border-color:#e6ceb3;color:#815b36}
+
+.wan-info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch;margin:16px 0 28px}
+
+.wan-info-card{background:#f9fcf9;border:1px solid #d6e3db;border-radius:13px;padding:18px;min-width:0}
+
+.wan-info-card h3{font-size:1rem;color:#284d41;display:flex;gap:9px;align-items:center;margin:0 0 15px}
+
+.wan-card-icon{font-weight:800;color:#507c64}
+
+.wan-info-card p{font-size:.91rem;line-height:1.6;margin:9px 0 0}
+
+.wan-info-card .wan-subtle{font-size:.82rem;color:#61786e}
+
+.wan-status-row{display:flex;align-items:center;justify-content:space-between;gap:7px;margin:8px 0;font-size:.88rem;color:#2f4d43}
+
+.wan-pill{font-weight:750;font-size:.72rem;white-space:nowrap;padding:4px 9px;border-radius:99px;border:1px solid transparent}
+
+.wan-pill.online{color:#23663e;background:#e5f3e7;border-color:#cce4d1}
+
+.wan-pill.pending{color:#8b5b26;background:#fff1da;border-color:#ecd7ae}
+
+.wan-route{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin:16px 0 12px;font-size:.9rem;color:#527868}
+
+.wan-route-from,.wan-route-to{background:#e9f3e9;color:#214e3d;padding:10px 12px;border-radius:9px;font-weight:700;text-align:center}
+
+.wan-route-to{background:#326b52;color:#fff}
+
+.wan-outage .wan-route-to{background:#9a6941}
+
+.wan-route-to small{display:block;font-size:.7rem;font-weight:500;opacity:.83}
+
+.wan-screens-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:12px}
+
+.wan-screens-heading h3{margin:0;font-size:1.08rem;color:#274b40}
+
+.wan-screens-heading span{font-size:.83rem;color:#778b80}
+
+.wan-shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
+
+.wan-shots figure.figure{margin:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid #d6e3db;background:#fff;min-width:0}
+
+.wan-shots figure>a{display:flex;align-items:center;justify-content:center;background:#eef4f0;height:230px;padding:12px}
+
+.wan-shots img{display:block;max-height:100%;max-width:100%;width:100%;height:100%;object-fit:contain}
+
+.wan-shots figcaption{font-size:.84rem;line-height:1.55;color:#546d61;padding:13px 15px;flex:1}
+
+.wan-caveat{background:#f4f8f3;border-left:3px solid #83ab90;padding:15px 18px;border-radius:0 10px 10px 0;font-size:.9rem}
+
+@media (max-width:1000px){
+.wan-info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.wan-info-card:last-child{grid-column:1/-1}
+}
+
+@media (max-width:700px){
+.wan-info-grid,.wan-shots{grid-template-columns:1fr}
+.wan-info-card:last-child{grid-column:auto}
+.wan-shots figure>a{height:220px}
+.wan-scenario-head{gap:12px}
+.wan-number{min-width:40px;height:40px}
+}
+
+
+/* pfSense visual comparison refresh */
+.wan-hero{margin-bottom:1.6rem}
+
+.wan-hero h2{font-size:clamp(2.35rem,5vw,3.8rem);line-height:1.02;margin:.2rem 0 1rem;color:#163131;letter-spacing:-.04em}
+
+.wan-hero-intro{font-size:clamp(1.15rem,2.2vw,1.45rem);line-height:1.75;color:#537066;max-width:60rem;margin:0 0 1.55rem}
+
+.wan-summary-pills{display:flex;flex-wrap:wrap;gap:1rem;margin:0 0 .35rem}
+
+.wan-summary-pill{display:inline-flex;align-items:center;gap:.95rem;padding:1rem 1.45rem;border-radius:999px;border:2px solid #cad8cd;background:#f8fbf8;color:#233d39;font-weight:800;font-size:1rem;letter-spacing:-.015em}
+
+.wan-summary-pill i{width:1rem;height:1rem;border-radius:50%;display:inline-block;flex:0 0 auto}
+
+.wan-summary-pill.ok i{background:#63ac71}
+
+.wan-summary-pill.warn i{background:#d0a142}
+
+.wan-summary-pill.down i{background:#c45c4f}
+
+.wan-grid-intro{font-size:.95rem;color:#61756f;margin:0 0 .9rem}
+
+.wan-info-grid{margin-top:.25rem}
+
+.wan-info-card{border-radius:20px;border:1px solid #d7e3d9;background:#fbfcfb;box-shadow:none}
+
+.wan-info-card h3{font-size:1.02rem}
+
+.wan-scenario{padding-top:.2rem;border-top:0}
+
+.wan-outage{margin-top:3.5rem;padding-top:2.4rem;border-top:1px solid #d8e3db}
+
+@media  (max-width: 800px){
+.wan-summary-pills{gap:.75rem}
+.wan-summary-pill{width:100%;justify-content:flex-start}
+}
+
+
+/* Comparação pfSense: título → texto → etiquetas → capturas → pormenores */
+.wan-scenario .wan-hero{margin-bottom:1.4rem}
+
+.wan-scenario .wan-screens-heading{margin-top:1rem;margin-bottom:.8rem}
+
+.wan-scenario .wan-shots{margin-bottom:2.1rem;gap:18px}
+
+.wan-scenario .wan-grid-intro{margin-top:1.8rem;margin-bottom:1rem}
+
+.wan-scenario .wan-info-grid{margin-top:0;gap:18px}
+
+.wan-scenario .wan-info-card{min-width:0}
+
+.wan-scenario .wan-shots .figure{overflow:hidden}
+
+.wan-scenario .wan-shots img{width:100%;height:auto;object-fit:contain;display:block}
+
+@media (max-width:800px){
+.wan-scenario .wan-shots{margin-bottom:1.6rem}
+}
+
+
+/* pfSense: três etiquetas por cenário, capturas e explicação única no fim */
+.wan-scenario .wan-hero{margin:0 0 1.35rem}
+
+.wan-scenario .wan-summary-pills{margin-bottom:1.75rem;gap:14px}
+
+.wan-scenario .wan-shots{margin:0;gap:22px}
+
+.wan-scenario .wan-shots figure>a{height:245px}
+
+.wan-scenario .wan-shots figure{border-radius:14px}
+
+.wan-scenario .wan-shots figcaption{padding:13px 16px}
+
+.wan-scenario.wan-outage{margin-top:3.2rem;padding-top:3rem;border-top:1px solid #d8e3db}
+
+#explicacao-failover{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #d8e3db}
+
+@media (max-width:700px){
+.wan-scenario .wan-shots{grid-template-columns:1fr}
+.wan-scenario .wan-summary-pills{gap:10px}
+.wan-scenario .wan-shots figure>a{height:210px}
+}
+
+
+/* Etiquetas compactas e consistentes nos dois cenários pfSense */
+.wan-scenario .wan-summary-pills{gap:10px;margin-bottom:22px;align-items:center}
+
+.wan-scenario .wan-summary-pill{width:auto;min-height:0;padding:9px 14px;gap:9px;font-size:.85rem;line-height:1.25;font-weight:700;border-width:1px;white-space:normal}
+
+.wan-scenario .wan-summary-pill i{width:9px;height:9px}
+
+@media (max-width:800px){
+.wan-scenario .wan-summary-pill{width:auto;justify-content:center}
+}
+
+@media (max-width:540px){
+.wan-scenario .wan-summary-pills{gap:8px}
+.wan-scenario .wan-summary-pill{padding:8px 11px;font-size:.8rem}
+}
+
+
+/* 11-11-2026 — Navegacao unificada, sem menus cortados e fontes consistentes */
+header.bar .bar, header.bar nav{box-sizing:border-box}
+
+header.bar nav{display:flex;align-items:center;gap:8px;justify-content:flex-end;flex-wrap:wrap;overflow:visible!important;width:auto;min-width:0;padding:0}
+
+header.bar nav>a,header.bar nav>.wiki-menu>summary{font-family:inherit;font-size:13px!important;font-weight:650;line-height:1.35;letter-spacing:0;padding:8px 10px;white-space:nowrap}
+
+header.bar .wiki-menu{position:relative;flex:0 0 auto;z-index:auto}
+
+header.bar .wiki-menu[open]{z-index:900}
+
+header.bar nav .wiki-submenu{position:absolute!important;top:calc(100% + 6px)!important;left:0!important;right:auto!important;display:grid;gap:2px;width:max-content;min-width:210px;max-width:min(340px,calc(100vw - 32px));max-height:min(65vh,470px);overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;z-index:901;border-radius:12px;padding:7px}
+
+header.bar nav .wiki-submenu a{font-family:inherit;font-size:12.5px!important;font-weight:500;line-height:1.4;white-space:normal;padding:9px 10px;border-radius:7px}
+
+header.bar nav .wiki-submenu a[aria-current="page"]{font-weight:750;background:#e1efe5;color:#225843}
+
+header.bar .wrap{min-height:76px;align-items:center;flex-wrap:wrap}
+
+/* Menus laterais: mesmo indice e medidas, sem esconder itens em ecras pequenos */
+.layout{min-width:0}
+
+.layout>main{min-width:0}
+
+aside.sidebar{box-sizing:border-box;min-width:0;max-height:calc(100vh - 32px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;overscroll-behavior:contain}
+
+aside.sidebar strong{display:block;font-size:13px;line-height:1.4;margin-bottom:7px}
+
+aside.sidebar a{display:block;font-size:12.5px!important;line-height:1.4!important;font-weight:500;padding:8px 10px;overflow-wrap:anywhere}
+
+aside.sidebar a.cur{font-weight:750}
+
+/* Mesma escala tipografica em todos os artigos */
+.wiki-sheet .content{font-size:15px;line-height:1.7}
+
+.wiki-sheet .content>section>h2{font-size:clamp(1.45rem,2.6vw,1.85rem)}
+
+.wiki-sheet .content h3{font-size:1.08rem;line-height:1.4}
+
+.wiki-sheet .content p,.wiki-sheet .content li{font-size:.95rem;line-height:1.72}
+
+.wiki-sheet .top .lead{font-size:1rem}
+
+/* Indicador vermelhO: Pending = aviso de falha observada, nao altera texto do estado */
+#wan-falha .wan-summary-pill.down i{background:#c74740!important}
+
+#wan-falha .wan-summary-pill.down{border-color:#edd8d4}
+
+@media (max-width:900px){
+header.bar nav{width:100%;justify-content:flex-start;flex-wrap:wrap!important;overflow:visible!important;gap:5px}
+header.bar .wrap{padding-bottom:12px}
+aside.sidebar{position:static!important;order:-1;max-height:none;overflow:visible}
+.layout{grid-template-columns:1fr!important}
+}
+
+@media (max-width:540px){
+header.bar nav>a,header.bar nav>.wiki-menu>summary{font-size:12.5px!important;padding:8px}
+header.bar nav .wiki-submenu{max-width:calc(100vw - 40px)}
+.wiki-sheet .content{font-size:14px}
+}
+
+/* Home/Sobre têm um cabeçalho editorial diferente mas a mesma escala de menu */
+.site-header nav a{font-size:13px!important;line-height:1.35;font-weight:650}
+
+
+/* Capturas documentais HA / Zigbee2MQTT */
+.ha-zigbee-figure{margin:1.25rem 0;overflow:hidden}
+
+.ha-zigbee-figure a{display:block}
+
+.ha-zigbee-figure img{display:block;width:100%;height:auto;max-height:500px;object-fit:contain;background:#e9f1ec}
+
+.ha-zigbee-figure figcaption{font-size:.88rem;line-height:1.55}
+
+.zigbee-doc{border-top:1px solid #d8e3db;margin-top:1.75rem;padding-top:1.25rem}
+
+.zigbee-doc h3{color:#172f2f}
+
+.image-related-link{font-size:.92rem}
+
+
+/* Edição Atelier / Arquivo 2026 – redesign completo, sem dependências externas */
+:root{--ink:#f2efe7;--mut:#a7b4bc;--line:#35434b;--bg:#10191f;--card:#1b2a31;--ac:#b6d7bd;--navy:#10191f;--soft:#263840;--yel:#e7ba82;--paper:#eef0eb;--primary:#b6d7bd;--rust:#d98b7f;--glow:#85b6ac}
+
+html{scroll-behavior:smooth}
+body{background:var(--bg)!important;color:var(--ink)!important;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;letter-spacing:.005em;line-height:1.75}
+
+body:before{content:"";position:fixed;pointer-events:none;inset:0;background:radial-gradient(ellipse at 85% 0,rgba(86,128,128,.13),transparent 38%),linear-gradient(90deg,transparent 95%,rgba(255,255,255,.012) 95%);z-index:-1}
+
+a{color:var(--ac)}
+ a:hover{color:#fff}
+::selection{background:#c0d6ba;color:#12231b}
+
+h1,h2,h3,.serif{font-family:"Iowan Old Style",Georgia,serif;letter-spacing:-.035em}
+h1{letter-spacing:-.055em;line-height:1.06}
+h2{line-height:1.18}
+
+.wrap{width:min(100% - 44px,1160px)!important}
+header.bar{position:sticky!important;top:0!important;background:rgba(16,25,31,.94)!important;width:100%!important;max-width:none!important;border-bottom:1px solid #34434b!important;backdrop-filter:blur(18px);z-index:100!important}
+header.bar .wrap{max-width:1160px!important;min-height:72px!important;padding:0!important}
+header.bar .brand{color:#f0eee8!important;font-size:13px!important;font-family:inherit!important;letter-spacing:.045em}
+header.bar .brand:before{content:"◈"!important;display:inline-grid;place-items:center;color:#14231e!important;background:#b6d7bd!important;border-radius:10px!important;width:34px!important;height:34px!important;font-size:20px!important;margin-right:10px!important}
+header.bar nav{gap:8px!important}
+header.bar nav>a,header.bar nav summary{color:#b9c6c7!important;font-weight:600!important;font-size:12px!important;border-radius:8px!important;padding:9px 12px!important}
+header.bar nav>a:hover,header.bar nav summary:hover,header.bar nav>a[aria-current]{background:#263840!important;color:white!important}
+header.bar details .wiki-submenu{background:#1e3038!important;border:1px solid #42535c!important;border-radius:14px!important;box-shadow:0 18px 60px #0008!important}
+header.bar details .wiki-submenu a{color:#e7e9e3!important}
+header.bar details .wiki-submenu a:hover{background:#30464d!important}
+
+main:not(.experience-home){width:min(100% - 44px,1160px)!important;margin-inline:auto!important}
+main:not(.experience-home) section{scroll-margin-top:85px}
+
+main:not(.experience-home) h1{font-size:clamp(2.2rem,5vw,4.8rem)!important;color:#f4f2ec!important}
+main:not(.experience-home) h2{color:#f2eee5!important}
+main:not(.experience-home) h3{color:#d8e9da!important}
+
+p,.lead,small,figcaption{color:inherit}
+ .muted,.eyebrow,.section-label{color:#9dbaa9!important}
+
+.card,.panel,.note,.figure,.project-card,.topic-card,.feature,.retro-index-card,.glossary-grid>div,.status-legend>div{background:#1b2b33!important;border:1px solid #344951!important;color:#e2e9e5!important;border-radius:16px!important;box-shadow:none!important}
+
+.card:hover,.project-card:hover,.topic-card:hover{border-color:#729f92!important;transform:translateY(-2px)}
+.project-status,.topic-category,.badge,.tag{border-radius:99px!important;letter-spacing:.04em!important}
+pre,code{font-family:ui-monospace,Menlo,Consolas,monospace}
+pre{background:#0c161c!important;color:#cce8d0!important;border:1px solid #34444a!important;border-radius:12px!important;overflow:auto;padding:18px!important}
+code:not(pre code){background:#2a3e46!important;color:#d9f2d2!important;border-radius:4px;padding:.12em .28em}
+table{border-collapse:collapse}
+table td,table th{border-bottom:1px solid #3b5056!important}
+table th{background:#283e44!important;color:#edf5e9!important}
+
+.figure img,figure img{border-radius:13px!important;max-width:100%;height:auto}
+.figure figcaption,figcaption{color:#aabbbd!important;font-size:.85rem!important}
+ .note.warning{border-color:#986a52!important}
+
+footer,.footer{color:#9dadb4!important;border-color:#35434b!important}
+footer a{color:#cddfd2!important}
+
+#conteudo{scroll-margin-top:80px}
+input,select,textarea{background:#172932!important;color:#f1f0e7!important;border:1px solid #455b61!important}
+input::placeholder{color:#93a6a8}
+.project-card a,.pill,.button,a.cta{transition:all .18s ease}
+
+/* Index / article cards */
+.project-grid,.topic-grid,.cards-grid,.grid{gap:20px!important}
+.project-card img{border-radius:12px!important;object-fit:cover}
+.project-card .project-status{font-size:11px!important}
+
+/* Shared banner, appended to each technical article */
+.redesign-strip{width:min(100% - 44px,1160px);margin:22px auto 0;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:13px 17px;border:1px solid #354a4f;border-radius:12px;background:linear-gradient(110deg,#20343b,#1a292f);font-size:12px;color:#bdd1cc}
+.redesign-strip a{font-weight:700;text-decoration:none;color:#cfdfcc}
+.redesign-strip .strip-time{color:#e9bb80;font-weight:800;letter-spacing:.08em}
+
+/* Home redesign */
+.experience-home{width:min(100% - 44px,1160px);margin:0 auto}
+.home-hero{position:relative;min-height:520px;padding:94px 0 64px;display:grid;grid-template-columns:1.35fr .85fr;gap:54px;align-items:center}
+.home-hero h1{font-size:clamp(3.6rem,7vw,7rem);margin:18px 0 24px;line-height:.99;max-width:820px}
+.home-hero h1 em{font-style:normal;color:#b7d6bd}
+.home-hero .intro{font-size:18px;color:#adbdc0;max-width:620px}
+.kicker{font-size:12px;letter-spacing:.22em;font-weight:800;color:#a5c9b0}
+.hero-links{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
+.home-btn{display:inline-flex;gap:10px;align-items:center;border-radius:999px;text-decoration:none;padding:13px 20px;background:#b9d8bc;color:#13231c!important;font-weight:800}
+.home-btn.alt{background:transparent;border:1px solid #61737a;color:#e4ece7!important}
+.home-btn:hover{transform:translateY(-2px)}
+.hero-terminal{background:#17252d;border:1px solid #426069;box-shadow:0 26px 90px #0005;border-radius:18px;overflow:hidden;transform:rotate(1.4deg)}
+.terminal-top{padding:14px 17px;border-bottom:1px solid #334b52;display:flex;gap:6px;align-items:center;color:#b6c3c7;font-size:12px}
+.terminal-top i{width:8px;height:8px;border-radius:50%;background:#dd8a7c;display:inline-block}
+.terminal-top i:nth-child(2){background:#dec386}
+.terminal-top i:nth-child(3){background:#89b5a1}
+.terminal-top span{margin-left:auto}
+.terminal-content{padding:30px 25px;font:14px/1.9 ui-monospace,Menlo,monospace;color:#b3c9bb}
+.terminal-content strong{color:#f0e8d4}
+.terminal-content .positive{color:#b1e3b7}
+.terminal-content .negative{color:#edaaa0}
+.terminal-foot{padding:13px 25px;background:#1f3239;color:#a4b3b3;font-size:12px}
+
+.home-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #3a4d53;border-bottom:1px solid #3a4d53;margin-bottom:90px}
+.home-stats>div{padding:22px 22px 22px 0}
+.home-stats strong{font-size:29px;display:block;color:#e9eedf}
+.home-stats span{color:#a1b2b6;font-size:13px}
+.section-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#b4caa9}
+.split-heading{display:flex;gap:22px;justify-content:space-between;align-items:end;margin-bottom:25px}
+.split-heading h2{font-size:clamp(2rem,4vw,3.7rem);margin:8px 0}
+.split-heading p{max-width:400px;color:#9bb1b4}
+.split-heading a{white-space:nowrap}
+
+.home-category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.home-category{display:block;min-height:270px;text-decoration:none;border:1px solid #36515a;border-radius:18px;padding:27px;background:linear-gradient(145deg,#1b2e35,#17252c);transition:.18s}
+.home-category:hover{background:#243942;transform:translateY(-4px)}
+.home-category .big-icon{font-size:32px;color:#c1dac1}
+.home-category h3{font-family:Georgia,serif;font-size:28px;color:#f1f1e7;margin:38px 0 8px}
+.home-category p{font-size:14px;color:#a5bbbf}
+.home-category .arrow{float:right;color:#c7dfc7}
+
+.home-timeline-callout{margin:100px 0;padding:42px;border:1px solid #4b615c;border-radius:22px;background:linear-gradient(125deg,#253a3d,#17272d);display:flex;justify-content:space-between;align-items:center;gap:25px}
+.home-timeline-callout h2{font-size:clamp(2rem,4vw,3.3rem);margin:8px 0}
+.home-timeline-callout p{color:#afc0bb;max-width:700px}
+
+/* timeline */
+.retro-timebox{margin:36px 0 45px;padding:30px;border-radius:20px;border:1px solid #39535a;background:#142229;overflow:hidden}
+.retro-timebox h2{font-size:clamp(1.8rem,3vw,3rem);margin:6px 0 10px}
+.retro-timebox .timeline-intro{color:#a8babd;max-width:780px}
+.timeline-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#c5d4d3;margin:18px 0 27px}
+.timeline-legend span{display:flex;align-items:center;gap:8px}
+.timeline-legend i{width:10px;height:10px;border-radius:50%;display:inline-block;background:#a2d9ac}
+.timeline-legend .fail{background:#d98f84}
+.timeline-legend .partial{background:#e9c184}
+
+.time-scroll{overflow-x:auto;scrollbar-color:#6a8c8b #1c3037;padding:8px 0 16px}
+.timeline-track{min-width:1030px;display:grid;grid-template-columns:repeat(7,1fr);gap:10px;position:relative}
+.timeline-track:after{content:"";position:absolute;top:220px;left:7%;right:7%;height:2px;background:#6c8887;z-index:0}
+.time-col{min-height:485px;display:grid;grid-template-rows:209px 44px 220px;align-items:stretch;position:relative}
+.time-upper,.time-lower{display:flex;flex-direction:column;justify-content:flex-end}
+.time-lower{justify-content:flex-start}
+.timeline-card{display:block;background:#1f343b;border:1px solid #446159;border-radius:13px;padding:14px 12px;text-decoration:none;color:#ebf0e9!important;min-height:143px;position:relative;z-index:1;transition:.2s}
+.timeline-card:hover{background:#29474b;transform:translateY(-2px)}
+.timeline-card.down{border-color:#825a59;background:#30262a}
+.timeline-card.down:hover{background:#473238}
+.timeline-card.pending{border-color:#997d52}
+.timeline-card .os-icon{display:inline-grid;width:36px;height:36px;place-items:center;border:1px solid #597673;border-radius:9px;font-size:20px;margin-bottom:9px;background:#254448}
+.timeline-card.down .os-icon{border-color:#7e5d5e;background:#4a3031}
+.timeline-card h3{font:700 15px/1.2 inherit;color:#f0f0e8!important;margin:0 0 6px;letter-spacing:-.01em}
+.timeline-card p{font-size:11px;line-height:1.5;color:#b6c5c7;margin:0}
+.time-year{display:grid;place-items:center;font:700 15px/1.3 ui-monospace,monospace;color:#e7f0e0;position:relative;z-index:2}
+.time-year:before{content:"";position:absolute;width:12px;height:12px;border:3px solid #b3d4b8;border-radius:50%;background:#16252b;top:4px}
+.time-year span{position:relative;top:11px}
+.time-track-empty{color:#708d91;font-size:11px;padding:16px 0 0 10px}
+.time-lower .timeline-card{margin-top:12px}
+.time-upper .timeline-card{margin-bottom:11px}
+.timeline-card small{display:block;margin-top:8px;font-size:10px;color:#c1dbbe;text-transform:uppercase;letter-spacing:.06em}
+.timeline-card.down small{color:#e6a49d}
+.timeline-card.pending small{color:#e8c685}
+.timeline-note{font-size:12px;color:#a1b7b9;margin-top:15px}
+.timeline-full-link{display:inline-block;margin-top:12px;font-weight:700}
+
+.timeline-page .retro-timebox{margin-top:32px}
+.timeline-detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:30px 0 70px}
+.timeline-detail{background:#1b2b33;border:1px solid #375158;border-radius:16px;padding:23px}
+.timeline-detail h3{font-size:21px}
+.timeline-detail p{color:#b5c6c6}
+.timeline-detail .time-label{font-size:12px;color:#d2dfa9;letter-spacing:.09em;font-weight:800}
+
+/* global home footer */
+.home-footer{border-top:1px solid #3a4e54;margin:80px auto 0;padding:24px 0 55px;display:flex;justify-content:space-between;color:#a5b7b9;font-size:12px}
+.home-footer a{color:#bed3c3}
+
+@media (max-width:850px){
+header.bar .wrap{flex-direction:column!important;align-items:flex-start!important;padding:12px 0!important}
+header.bar nav{flex-wrap:wrap}
+.home-hero{grid-template-columns:1fr;padding-top:55px;gap:32px}
+.home-category-grid{grid-template-columns:repeat(2,1fr)}
+.home-timeline-callout{flex-direction:column;align-items:flex-start}
+.timeline-detail-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:570px){
+.wrap,.experience-home,main:not(.experience-home){width:calc(100% - 30px)!important}
+.home-category-grid{grid-template-columns:1fr}
+.home-stats{grid-template-columns:1fr}
+.home-stats>div{padding:12px 0}
+.home-hero h1{font-size:3.4rem}
+.retro-timebox{padding:19px}
+.home-timeline-callout{padding:24px}
+.redesign-strip{width:calc(100% - 30px);flex-direction:column;align-items:flex-start}
+header.bar .wrap{gap:4px!important}
+}
+
+
+
+/* Correção de legibilidade 2026-11-13: artigos sobre papel claro.
+   Mantém intactos menus, homepage, timeline, imagens e popup. */
+.wiki-sheet {color:#243b3a !important;}
+
+.wiki-sheet .content, .wiki-sheet .content > section,
+.wiki-sheet .content > section > p,
+.wiki-sheet .content > section > ul,
+.wiki-sheet .content > section > ol,
+.wiki-sheet .content > section > li {color:#263e3d !important;}
+
+.wiki-sheet .content > section > h2,
+.wiki-sheet main:not(.experience-home) h2 {color:#193a36 !important;}
+
+.wiki-sheet .content h3,
+.wiki-sheet main:not(.experience-home) h3 {color:#24483e !important;}
+
+.wiki-sheet .content > section > h2 + p {color:#344d4b !important;}
+
+.wiki-sheet .figure,
+.wiki-sheet figure.figure {background:#fff !important;border-color:#afc4c1 !important;}
+
+.wiki-sheet .figure figcaption,
+.wiki-sheet figure figcaption,
+.wiki-sheet .content figcaption {color:#385650 !important;background:#fff !important;}
+
+.wiki-sheet .content details:not(.wiki-menu) {background:#f8faf7 !important;border-color:#cbdcd3 !important;color:#24423b !important;}
+
+.wiki-sheet .content details:not(.wiki-menu) > summary {color:#25443e !important;font-weight:700 !important;}
+
+.wiki-sheet .content details:not(.wiki-menu) > .inside,
+.wiki-sheet .content details:not(.wiki-menu) > .inside p {color:#2a4942 !important;}
+
+.wiki-sheet .content .muted,
+.wiki-sheet .content .small {color:#4d6561 !important;}
+
+/* Em caixas escuras, manter texto claro para não perder contraste. */
+.wiki-sheet .content .panel,
+.wiki-sheet .content .note,
+.wiki-sheet .content .card {color:#e8f0ea !important;}
+
+.wiki-sheet .content .panel h3,
+.wiki-sheet .content .note h3,
+.wiki-sheet .content .card h3 {color:#e7f0e7 !important;}
+
+.wiki-sheet .content .panel p,
+.wiki-sheet .content .panel li,
+.wiki-sheet .content .note p,
+.wiki-sheet .content .card p {color:#dbe8e2 !important;}
+
+
+/* DOS timeline 1982–2009: smaller cards and headline */
+.home-hero h1{font-size:clamp(2.8rem,5.2vw,5.5rem);line-height:1.06;max-width:900px}
+
+.timeline-track{min-width:1140px;grid-template-columns:repeat(10,minmax(0,1fr));gap:7px}
+
+.time-col{min-height:418px;grid-template-rows:184px 39px 190px}
+
+.timeline-track:after{top:203px}
+
+.timeline-card{padding:10px 9px;min-height:126px;border-radius:10px}
+
+.timeline-card h3{font-size:12px;line-height:1.26;margin:6px 0}
+
+.timeline-card p{font-size:10.5px;line-height:1.35;margin:4px 0}
+
+.timeline-card small{font-size:9px}
+
+.timeline-card .os-icon{width:27px;height:27px;font-size:15px}
+
+.time-year span{font-size:12px}
+
+@media (max-width:700px){
+.home-hero h1{font-size:clamp(2.3rem,8vw,3.4rem)}
+}
+
+
+/* Galerias de experiências: miniaturas contidas, alinhadas, sem cortes */
+#retro .shot-grid.retro-uniform-shots,
+#linux-retro .shot-grid.retro-uniform-shots {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch;margin:1.25rem 0 1.75rem}
+
+#retro .retro-uniform-shots .figure,
+#linux-retro .retro-uniform-shots .figure {display:flex;flex-direction:column;margin:0;min-width:0;overflow:hidden;align-self:stretch;background:#1b2b33;border:1px solid #41565d;border-radius:16px}
+
+#retro .retro-uniform-shots .figure > a,
+#linux-retro .retro-uniform-shots .figure > a,
+#retro .retro-uniform-shots .figure > img,
+#linux-retro .retro-uniform-shots .figure > img {box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:300px;min-height:300px;padding:18px;background:#edf3f0;cursor:zoom-in;overflow:hidden}
+
+#retro .retro-uniform-shots .figure > a img,
+#linux-retro .retro-uniform-shots .figure > a img,
+#retro .retro-uniform-shots .figure > img,
+#linux-retro .retro-uniform-shots .figure > img {width:100%;height:100%;max-height:264px;object-fit:contain;object-position:center;display:block;background:transparent;border-radius:9px}
+
+#retro .retro-uniform-shots .figure > img,
+#linux-retro .retro-uniform-shots .figure > img {object-fit:contain}
+
+#retro .retro-uniform-shots figcaption,
+#linux-retro .retro-uniform-shots figcaption {flex:1;min-height:80px;box-sizing:border-box;padding:16px 18px;line-height:1.55;background:#1b2b33!important;color:#b8cbca!important;border-top:1px solid #41565d;display:block}
+
+#retro .retro-uniform-shots figcaption strong,
+#linux-retro .retro-uniform-shots figcaption strong {color:#f2f6f2}
+
+#linux-retro > .figure {max-width:840px;margin:1.4rem auto;overflow:hidden}
+
+#linux-retro > .figure > a {display:flex;justify-content:center;align-items:center;padding:20px;background:#edf3f0;cursor:zoom-in}
+
+#linux-retro > .figure img {width:auto;max-width:100%;max-height:440px;object-fit:contain;background:transparent}
+
+#linux-retro > .figure figcaption {padding:15px 18px}
+
+.figure a[href$=".png"],.figure a[href$=".webp"],.figure a[href$=".jpg"],.figure a[href$=".jpeg"] {cursor:zoom-in}
+
+@media (max-width:760px){
+#retro .shot-grid.retro-uniform-shots,#linux-retro .shot-grid.retro-uniform-shots{grid-template-columns:1fr;gap:15px}
+#retro .retro-uniform-shots .figure>a,#linux-retro .retro-uniform-shots .figure>a{height:245px;min-height:245px}
+#retro .retro-uniform-shots .figure>a img,#linux-retro .retro-uniform-shots .figure>a img{max-height:209px}
+#retro .retro-uniform-shots figcaption,#linux-retro .retro-uniform-shots figcaption{min-height:0}
+}
+
+/* Janela de ampliação nativa: fecha com Esc, clique no fundo ou X */
+.wiki-image-modal {border:0;padding:0;background:transparent;color:#f3f7f5;width:min(96vw,1400px);max-width:96vw;max-height:95vh;overflow:visible}
+
+.wiki-image-modal::backdrop{background:rgba(5,13,18,.87);backdrop-filter:blur(5px)}
+
+.wiki-modal-shell{display:flex;flex-direction:column;align-items:center;gap:10px;position:relative;max-height:94vh}
+
+.wiki-modal-image{display:block;max-width:100%;max-height:calc(94vh - 100px);width:auto;height:auto;object-fit:contain;border-radius:10px;box-shadow:0 20px 60px #0008}
+
+.wiki-modal-caption{font-size:.9rem;text-align:center;max-width:950px;line-height:1.4;color:#d5e5df}
+
+.wiki-modal-close{position:absolute;right:6px;top:6px;border:1px solid #8baca6;color:white;background:#1a3138e8;border-radius:50%;width:42px;height:42px;font-size:25px;cursor:pointer}
+
+.wiki-modal-close:focus-visible,.figure a:focus-visible{outline:3px solid #80c2b1;outline-offset:2px}
+
+
+/* Ampliação universal das imagens editoriais. Não interfere com os ícones da interface. */
+main img:not(.no-lightbox), .content img:not(.no-lightbox), .wiki-sheet img:not(.no-lightbox) { cursor:zoom-in; }
+
+.wiki-image-modal {position:fixed;inset:0;margin:auto;z-index:99999;box-sizing:border-box;}
+
+.wiki-image-modal .wiki-modal-shell{padding:18px 12px 10px;box-sizing:border-box;}
+
+.wiki-image-modal .wiki-modal-close{z-index:2;right:14px;top:12px;}
+
+.wiki-image-modal .wiki-modal-caption{padding:4px 50px;}
+
+.wiki-modal-image:focus{outline:none}
+
+@media (max-width:620px){
+.wiki-image-modal .wiki-modal-shell{padding:52px 8px 10px}
+.wiki-modal-image{max-height:calc(90vh - 130px)}
+.wiki-modal-caption{font-size:.8rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+.wiki-image-modal *{transition:none!important}
+}
+
+
+/* Menu lateral unificado da Wiki — 13-11-2026 */
+.wiki-sheet .sidebar.wiki-sidebar-v2{align-self:start;min-width:0;box-sizing:border-box;background:#f7faf7;border:1px solid #d5e0d9;border-top:3px solid #3e8d77;border-radius:12px;padding:17px 13px;box-shadow:0 5px 22px rgba(16,42,35,.05);max-height:calc(100vh - 36px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;top:18px}
+
+.wiki-sidebar-v2 .wiki-side-heading{display:block;color:#23483b;font-size:14px;font-weight:800;letter-spacing:-.01em;margin:0 4px 14px;text-transform:none}
+
+.wiki-sidebar-v2 .wiki-side-group{display:block;margin:0 0 14px;padding:0 0 12px;border-bottom:1px solid #dfe9e2}
+
+.wiki-sidebar-v2 .wiki-side-group:last-child{margin-bottom:0;padding-bottom:0;border:0}
+
+.wiki-sidebar-v2 .wiki-side-title{display:block;color:#61766b;font-size:10px;font-weight:800;letter-spacing:.11em;margin:0 9px 6px;text-transform:uppercase}
+
+.wiki-sheet .sidebar.wiki-sidebar-v2 a{display:block;padding:7px 10px;margin:2px 0;border-radius:7px;color:#345a4c;font-size:12.5px!important;line-height:1.4!important;font-weight:550;text-decoration:none;white-space:normal;overflow-wrap:break-word;transition:background .15s,color .15s}
+
+.wiki-sheet .sidebar.wiki-sidebar-v2 a:hover,.wiki-sheet .sidebar.wiki-sidebar-v2 a:focus-visible{background:#e5f0e8;color:#1b4e39;outline-offset:2px}
+
+.wiki-sheet .sidebar.wiki-sidebar-v2 a.cur,.wiki-sheet .sidebar.wiki-sidebar-v2 a[aria-current="page"]{background:#d4e8db;color:#174937;font-weight:800;box-shadow:inset 3px 0 0 #368b6c}
+
+@media (max-width:900px){
+.wiki-sheet .sidebar.wiki-sidebar-v2{position:static;order:-1;max-height:none;overflow:visible;padding:14px}
+.wiki-sidebar-v2 .wiki-side-group{display:inline-block;vertical-align:top;width:calc(50% - 12px);margin-right:8px;border-bottom:0}
+.wiki-sidebar-v2 .wiki-side-heading{margin-bottom:12px}
+}
+
+@media (max-width:540px){
+.wiki-sidebar-v2 .wiki-side-group{display:block;width:100%;margin:0 0 12px;padding:0 0 10px;border-bottom:1px solid #dfe9e2}
+}
+
+
+/* Camada nova: componentes + temas Arquivo (original), Âmbar e Verde (CRT de fósforo). */
+.skip-link{position:absolute;left:-9999px;top:8px;z-index:10000;padding:8px 14px;background:#f2efe7;color:#10191f;border-radius:6px}
+.skip-link:focus{left:10px}
+
+main.content h2,main.content h3{scroll-margin-top:90px}
+
+.nav-tools{display:inline-flex;gap:8px;margin-left:8px;align-items:center}
+
+.nav-tools button{font:inherit;font-size:13px;color:inherit;background:transparent;border:1px solid var(--line,#35434b);border-radius:999px;padding:5px 12px;cursor:pointer;white-space:nowrap}
+
+.nav-tools button:hover,.nav-tools button:focus-visible{border-color:var(--ac,#b6d7bd);color:var(--ac,#b6d7bd)}
+
+.toc-group a{font-size:13px;padding:3px 0}
+
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:48px 0 8px}
+
+.pn a{display:block;padding:14px 16px;border:1px solid var(--line,#35434b);border-radius:10px;text-decoration:none;color:inherit}
+
+.pn a:hover,.pn a:focus-visible{border-color:var(--ac,#b6d7bd)}
+.pn small{display:block;opacity:.7;font-size:12px;margin-bottom:2px}
+.pn-next{text-align:right;grid-column:2}
+
+@media (max-width:600px){
+.pn{grid-template-columns:1fr}
+.pn-next{grid-column:1}
+}
+
+:root{--s-bg:#10191f;--s-fg:#f2efe7;--s-dim:#a7b4bc;--s-line:#35434b;--s-ac:#b6d7bd;--s-hi:#1b2a31;--tint:#ffb000}
+
+
+.busca{position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.62);display:flex;justify-content:center;align-items:flex-start;padding:12vh 16px 0}
+.busca[hidden]{display:none}
+
+.busca-box{width:min(660px,100%);background:var(--s-bg);color:var(--s-fg);border:1px solid var(--s-line);border-radius:10px;box-shadow:0 24px 70px rgba(0,0,0,.65);overflow:hidden;font:15px/1.5 ui-monospace,"Cascadia Mono",Menlo,Consolas,monospace}
+
+.busca input{width:100%;box-sizing:border-box;padding:16px 18px;background:transparent;border:0;border-bottom:1px solid var(--s-line);color:inherit;font:inherit;outline:0}
+
+.busca ul{list-style:none;margin:0;padding:6px;max-height:52vh;overflow:auto}
+
+.busca li a{display:block;padding:10px 12px;border-radius:6px;color:inherit;text-decoration:none}
+
+.busca li a[aria-selected=true],.busca li a:hover{background:var(--s-hi)}
+
+.busca small{display:block;color:var(--s-dim);font-size:13px}
+
+.crt-tint,.crt-lines{display:none;position:fixed;inset:0;pointer-events:none}
+
+
+
+
+
+
+
+
+.crt-lines::after{content:"";position:absolute;inset:0;background:var(--tint);opacity:0}
+
+html.boot .crt-lines::after{animation:crt-flash .55s ease-out}
+
+@keyframes crt-flash{0%{opacity:.5}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+html.boot .crt-lines::after{animation:none}
+}
+
+
+/* Ajuste local CRT: rodapés escuros em vez de verde fluorescente. */
+
+
+
+
+/* Cartões do laboratório: miniaturas uniformes sem ampliar ao clicar.
+   A ligação do cartão continua a levar ao artigo/secção. */
+.wiki-sheet .cards > a.card > img.lab-topic-thumb {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: center;
+  align-self: center;
+  flex: 0 0 auto;
+  margin: 0.6rem 0 0.8rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(96, 122, 113, .08);
+}
+
+
+/* Tema verde CRT — letras ligeiramente menores nos títulos grandes. */
+
+
+
+
+
+
+
+
+
+/* --- Novos temas 2026/11: seletor com seis opções --- */
+.theme-picker{display:inline-flex;gap:7px;align-items:center;color:inherit;font-size:12px;white-space:nowrap}
+
+.theme-picker-label{opacity:.82}
+
+.nav-tools .theme-picker select{appearance:auto!important;cursor:pointer;font:inherit;font-size:12px;max-width:167px;min-width:110px;padding:6px 9px;border-radius:8px;background:var(--s-hi,#1b2a31)!important;color:var(--s-fg,#fff)!important;border:1px solid var(--s-line,#35434b)!important}
+
+.nav-tools .theme-picker select:focus-visible{outline:2px solid var(--s-ac,#b6d7bd);outline-offset:2px}
+
+@media (max-width:650px){
+.nav-tools{gap:5px}
+.theme-picker-label{display:none}
+.nav-tools .theme-picker select{max-width:125px;font-size:11px}
+}
+
+
+/* Variáveis partilhadas. Os temas novos substituem os tons fixos das folhas históricas
+   apenas quando um deles é selecionado. A identidade Arquivo/Verde mantém-se. */
+html[data-theme="ambar"]{
+  --bg:#0d0b08;--ink:#ffe5a6;--mut:#d5ad60;--line:#705326;--card:#191409;--soft:#29200f;--ac:#ffbf59;--navy:#0d0b08;--yel:#ffd58c;
+  --s-bg:#140f08;--s-fg:#ffd590;--s-dim:#c79b4b;--s-line:#69451e;--s-ac:#ffcd78;--s-hi:#30200f;--tint:#ffac38
+}
+
+html[data-theme="ibm"]{
+  --bg:#071532;--ink:#e5efff;--mut:#a5bedf;--line:#3f6498;--card:#0c2349;--soft:#133564;--ac:#97ceff;--navy:#071532;--yel:#f3d790;
+  --s-bg:#081c3d;--s-fg:#e2f0ff;--s-dim:#9dc3e8;--s-line:#38628e;--s-ac:#93d3ff;--s-hi:#143660
+}
+
+html[data-theme="papel"]{
+  --bg:#e9dfc9;--ink:#3e3225;--mut:#6e5e4c;--line:#b8a78c;--card:#f9f2e2;--soft:#e9ddc5;--ac:#73502e;--navy:#41352a;--yel:#967540;
+  --s-bg:#fcf5e5;--s-fg:#3e3225;--s-dim:#6e5e4c;--s-line:#b8a78c;--s-ac:#73502e;--s-hi:#ede1c9
+}
+
+html[data-theme="mac"]{
+  --bg:#c7c8cc;--ink:#242630;--mut:#525765;--line:#808794;--card:#f0f0f2;--soft:#d8dce4;--ac:#254b8d;--navy:#333a4c;--yel:#7395ce;
+  --s-bg:#f5f5f7;--s-fg:#262d3d;--s-dim:#555d6b;--s-line:#8992a0;--s-ac:#254b8d;--s-hi:#dce4f3
+}
+
+/* Paleta geral com especificidade superior às regras históricas. */
+html[data-theme="ambar"] body,html[data-theme="ibm"] body,html[data-theme="papel"] body,html[data-theme="mac"] body{background:var(--bg)!important;color:var(--ink)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) #crt{background:var(--bg);min-height:100vh}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar{background:var(--navy)!important;border-color:var(--line)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar .brand{color:var(--s-fg)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar .brand:before{background:var(--ac)!important;color:var(--bg)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar nav>a,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar nav summary{color:var(--s-fg)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar nav>a:hover,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar nav>a[aria-current],html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar nav summary:hover{background:var(--soft)!important;color:var(--s-ac)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar details .wiki-submenu{background:var(--card)!important;border-color:var(--line)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar details .wiki-submenu a{color:var(--ink)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) header.bar details .wiki-submenu a:hover{background:var(--soft)!important;color:var(--ac)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .wiki-sheet{background:var(--card)!important;color:var(--ink)!important;box-shadow:0 12px 45px #0002}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .wiki-sheet .top{background:var(--soft)!important;color:var(--ink)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .top h1,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .top .lead,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .top .eyebrow{color:var(--ink)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .wiki-sheet .content,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .wiki-sheet .content p,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .wiki-sheet .content li,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .wiki-sheet .content section{color:var(--ink)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .wiki-sheet .content h2,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .wiki-sheet .content h3{color:var(--ink)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .card,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .panel,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .note,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .figure,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .sidebar,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-category,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .hero-terminal,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .article-item{background:var(--card)!important;color:var(--ink)!important;border-color:var(--line)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-category h3,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .card h3,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .panel h3{color:var(--ink)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-category p,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .card p,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .intro,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .muted{color:var(--mut)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) a{color:var(--ac)}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .button,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-btn:not(.alt){background:var(--ac)!important;color:var(--bg)!important;border-color:var(--ac)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .button.alt,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-btn.alt{background:var(--card)!important;color:var(--ink)!important;border-color:var(--line)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .sidebar a{color:var(--mut)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .sidebar a:hover,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .sidebar a.cur{color:var(--ink)!important;background:var(--soft)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .figure figcaption,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) figcaption{background:var(--card)!important;color:var(--mut)!important;border-color:var(--line)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .redesign-strip{background:var(--soft)!important;border-color:var(--line)!important;color:var(--ink)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .redesign-strip a{color:var(--ac)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .redesign-strip .strip-time{color:var(--ac)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) pre{background:var(--navy)!important;color:var(--s-fg)!important;border-color:var(--line)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) code:not(pre code){background:var(--soft)!important;color:var(--ink)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) footer,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-footer{background:var(--navy)!important;color:var(--s-fg)!important;border-color:var(--line)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) footer a{color:var(--s-ac)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .wiki-sheet .content details:not(.wiki-menu){background:var(--card)!important;color:var(--ink)!important;border-color:var(--line)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .wiki-sheet .content details:not(.wiki-menu)>summary{color:var(--ink)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) table td,html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) table th{border-color:var(--line)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) table th{background:var(--soft)!important;color:var(--ink)!important}
+
+/* Timeline, incluindo rodapés: não herdar cores erradas de temas anteriores */
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .timeline-page .home-footer{background:var(--navy)!important;color:var(--s-fg)!important}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .os-flow-stop{border-color:var(--line)!important}
+
+/* Dois monitores CRT: letras compactas, filtros aplicados à camada e não às fotografias isoladamente */
+html[data-theme="ambar"] #crt{filter:grayscale(1) contrast(1.07) brightness(1.06);text-shadow:0 0 5px #ffb74955}
+
+html[data-theme="ambar"] #crt *{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace!important;letter-spacing:0!important}
+
+html[data-theme="ambar"] .crt-tint{display:block;background:#ffb648;mix-blend-mode:multiply;z-index:9998}
+
+html[data-theme="ambar"] .crt-lines{display:block;z-index:9999;background:repeating-linear-gradient(to bottom,#0003 0 1px,transparent 1px 4px),radial-gradient(ellipse at center,transparent 62%,#0006 100%)}
+
+html[data-theme="ambar"] .home-hero h1{font-size:clamp(2.5rem,4.7vw,5rem)!important}
+
+html[data-theme="ambar"] .top h1{font-size:clamp(2.15rem,4.5vw,3.75rem)!important}
+
+html[data-theme="ambar"] .home-category h3{font-size:1.55rem!important}
+
+/* IBM Blue: inspirado nos programas e menus azuis do DOS */
+html[data-theme="ibm"] .home-hero h1,html[data-theme="ibm"] .split-heading h2{color:#dcecff!important}
+
+html[data-theme="ibm"] .hero-terminal,html[data-theme="ibm"] .terminal-content{background:#07152d!important;color:#a6d6ff!important}
+
+html[data-theme="ibm"] .terminal-top,html[data-theme="ibm"] .terminal-foot{background:#123568!important;color:#d0e8ff!important}
+
+html[data-theme="ibm"] .home-stats{border-color:#426c9e!important}
+
+/* Papel antigo: sem efeitos de monitor, leitura confortável */
+html[data-theme="papel"] body:before{background:none!important}
+
+html[data-theme="papel"] .home-hero h1,html[data-theme="papel"] .split-heading h2,html[data-theme="papel"] .home-timeline-callout h2{color:#3f3025!important}
+
+html[data-theme="papel"] .hero-terminal{background:#f9f2e2!important;box-shadow:0 10px 25px #54402b22!important}
+
+html[data-theme="papel"] .terminal-content,html[data-theme="papel"] .terminal-top,html[data-theme="papel"] .terminal-foot{background:#f0e5cf!important;color:#44392b!important}
+
+html[data-theme="papel"] .terminal-content strong,html[data-theme="papel"] .terminal-content .positive{color:#375a33!important}
+
+html[data-theme="papel"] .terminal-content .negative{color:#9d3c31!important}
+
+html[data-theme="papel"] .home-category,html[data-theme="papel"] .card,html[data-theme="papel"] .panel{box-shadow:0 4px 13px #54402b0f!important}
+
+/* Macintosh clássico: janelas retas, cinza e azul sem efeitos CRT */
+html[data-theme="mac"] .wiki-sheet,html[data-theme="mac"] .card,html[data-theme="mac"] .panel,html[data-theme="mac"] .figure,html[data-theme="mac"] .sidebar,html[data-theme="mac"] .home-category,html[data-theme="mac"] .hero-terminal,html[data-theme="mac"] .bar .wiki-submenu{border-radius:3px!important;box-shadow:3px 3px 0 #9298a3!important}
+
+html[data-theme="mac"] .home-hero h1,html[data-theme="mac"] .split-heading h2,html[data-theme="mac"] .home-timeline-callout h2{color:#262b3b!important}
+
+html[data-theme="mac"] .home-btn,html[data-theme="mac"] .button{border-radius:3px!important}
+
+html[data-theme="mac"] .terminal-top{background:repeating-linear-gradient(0deg,#d0d5df 0 2px,#edf0f6 2px 4px)!important;color:#252d3e!important}
+
+html[data-theme="mac"] .terminal-content,html[data-theme="mac"] .terminal-foot{background:#f0f0f2!important;color:#2d3544!important}
+
+html[data-theme="mac"] .terminal-content strong,html[data-theme="mac"] .terminal-content .positive{color:#1c4b81!important}
+
+html[data-theme="mac"] .terminal-content .negative{color:#8e2631!important}
+
+/* Print must remain readable independently of selected theme */
+@media  print{
+html[data-theme] body,html[data-theme] #crt{background:white!important;color:#111!important;filter:none!important}
+html[data-theme] .crt-lines,html[data-theme] .crt-tint{display:none!important}
+}
+
+
+
+/* 2026-11-19 — ajustes de legibilidade nos temas claros (Papel antigo e Macintosh clássico)
+   Corrige texto pouco visível no cabeçalho e rodapés, sobretudo na Timeline. */
+html[data-theme="papel"] header.bar,
+html[data-theme="papel"] footer,
+html[data-theme="papel"] .home-footer{
+  background:#efe4cf!important;
+  color:#3e3225!important;
+  border-color:#b8a78c!important;
+}
+
+html[data-theme="papel"] .timeline-page .home-footer,
+html[data-theme="papel"] .timeline-page + footer,
+html[data-theme="papel"] .timeline-page ~ footer{
+  background:#efe4cf!important;
+  color:#3e3225!important;
+  border-color:#b8a78c!important;
+}
+
+html[data-theme="papel"] header.bar .brand,
+html[data-theme="papel"] header.bar nav>a,
+html[data-theme="papel"] header.bar nav summary,
+html[data-theme="papel"] .theme-picker,
+html[data-theme="papel"] footer,
+html[data-theme="papel"] .home-footer,
+html[data-theme="papel"] .home-footer span,
+html[data-theme="papel"] footer span{
+  color:#3e3225!important;
+}
+
+html[data-theme="papel"] header.bar .brand::before{
+  background:#73502e!important;
+  color:#fcf5e5!important;
+}
+
+html[data-theme="papel"] header.bar nav>a:hover,
+html[data-theme="papel"] header.bar nav>a[aria-current],
+html[data-theme="papel"] header.bar nav summary:hover,
+html[data-theme="papel"] header.bar .wiki-menu[open] summary{
+  background:#e9ddc5!important;
+  color:#5f452a!important;
+}
+
+html[data-theme="papel"] footer a,
+html[data-theme="papel"] .home-footer a,
+html[data-theme="papel"] .timeline-page a{
+  color:#73502e!important;
+}
+
+html[data-theme="papel"] .nav-tools .theme-picker select{
+  background:#fcf5e5!important;
+  color:#3e3225!important;
+  border-color:#b8a78c!important;
+}
+
+html[data-theme="papel"] .timeline-page > div[style*="padding-bottom"]{
+  color:#5f5241!important;
+}
+
+html[data-theme="papel"] .timeline-page > div[style*="padding-bottom"] a{
+  color:#73502e!important;
+}
+
+
+html[data-theme="mac"] header.bar,
+html[data-theme="mac"] footer,
+html[data-theme="mac"] .home-footer{
+  background:#dde2ea!important;
+  color:#252d3e!important;
+  border-color:#8f98a5!important;
+}
+
+html[data-theme="mac"] .timeline-page .home-footer,
+html[data-theme="mac"] .timeline-page + footer,
+html[data-theme="mac"] .timeline-page ~ footer{
+  background:#dde2ea!important;
+  color:#252d3e!important;
+  border-color:#8f98a5!important;
+}
+
+html[data-theme="mac"] header.bar .brand,
+html[data-theme="mac"] header.bar nav>a,
+html[data-theme="mac"] header.bar nav summary,
+html[data-theme="mac"] .theme-picker,
+html[data-theme="mac"] footer,
+html[data-theme="mac"] .home-footer,
+html[data-theme="mac"] .home-footer span,
+html[data-theme="mac"] footer span{
+  color:#252d3e!important;
+}
+
+html[data-theme="mac"] header.bar .brand::before{
+  background:#2d66c3!important;
+  color:#f7f9fc!important;
+}
+
+html[data-theme="mac"] header.bar nav>a:hover,
+html[data-theme="mac"] header.bar nav>a[aria-current],
+html[data-theme="mac"] header.bar nav summary:hover,
+html[data-theme="mac"] header.bar .wiki-menu[open] summary{
+  background:#d1d7e2!important;
+  color:#234b8c!important;
+}
+
+html[data-theme="mac"] footer a,
+html[data-theme="mac"] .home-footer a,
+html[data-theme="mac"] .timeline-page a{
+  color:#254b8d!important;
+}
+
+html[data-theme="mac"] .nav-tools .theme-picker select{
+  background:#f5f5f7!important;
+  color:#252d3e!important;
+  border-color:#8992a0!important;
+}
+
+html[data-theme="mac"] .timeline-page > div[style*="padding-bottom"]{
+  color:#515867!important;
+}
+
+html[data-theme="mac"] .timeline-page > div[style*="padding-bottom"] a{
+  color:#254b8d!important;
+}
+
+
+/* IBM Blue: reforço ligeiro do contraste no cabeçalho e rodapés. */
+html[data-theme="ibm"] header.bar .brand,
+html[data-theme="ibm"] header.bar nav>a,
+html[data-theme="ibm"] header.bar nav summary,
+html[data-theme="ibm"] footer,
+html[data-theme="ibm"] .home-footer,
+html[data-theme="ibm"] .home-footer span,
+html[data-theme="ibm"] footer span{
+  color:#e8f2ff!important;
+}
+
+html[data-theme="ibm"] footer a,
+html[data-theme="ibm"] .home-footer a,
+html[data-theme="ibm"] .timeline-page a{
+  color:#bfe3ff!important;
+}
+
+html[data-theme="ibm"] .nav-tools .theme-picker select{
+  background:#133564!important;
+  color:#e8f2ff!important;
+  border-color:#5c86b7!important;
+}
+
+html[data-theme="ibm"] .timeline-page > div[style*="padding-bottom"]{
+  color:#c4d8f0!important;
+}
+
+html[data-theme="ibm"] .timeline-page > div[style*="padding-bottom"] a{
+  color:#bfe3ff!important;
+}
+
+
+
+/* 2026-11-19 — rodapés mais homogéneos entre temas.
+   O fundo passa a acompanhar o tema/página para evitar uma "caixa" visível no fim. */
+footer,.footer,.site-footer,.home-footer{box-shadow:none!important}
+
+
+
+
+
+
+
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .site-footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .timeline-page .home-footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .timeline-page + footer,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .timeline-page ~ footer{
+  background:var(--bg)!important;
+  color:var(--s-dim)!important;
+  border-color:var(--line)!important;
+}
+
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) footer a,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .footer a,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .site-footer a,
+html:is([data-theme="ambar"],[data-theme="ibm"],[data-theme="papel"],[data-theme="mac"]) .home-footer a{
+  color:var(--s-ac)!important;
+}
+
+
+
+/* Rodapés contínuos com a superfície central — 19/11/2026.
+   Home: mesma cor da zona principal; artigos: mesma cor da folha de conteúdo. */
+html[data-theme="papel"]{--footer-center:#fbfcf8;--footer-text:#493c2f;--footer-link:#694628}
+
+html[data-theme="mac"]{--footer-center:#fbfcf8;--footer-text:#303947;--footer-link:#244b8b}
+
+
+
+html[data-theme="ambar"]{--footer-center:#0d0b08;--footer-text:#d5ad60;--footer-link:#ffca70}
+
+html[data-theme="ibm"]{--footer-center:#071532;--footer-text:#c7daf1;--footer-link:#bfe3ff}
+
+html[data-theme] .home-footer,
+html[data-theme] footer,
+html[data-theme] .footer,
+html[data-theme] .site-footer,
+html[data-theme] .timeline-page + footer,
+html[data-theme] .timeline-page ~ footer{
+  background:var(--footer-center)!important;
+  color:var(--footer-text)!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+
+html[data-theme] footer a,
+html[data-theme] .home-footer a,
+html[data-theme] .footer a,
+html[data-theme] .site-footer a{
+  color:var(--footer-link)!important;
+}
+
+html[data-theme] footer span,
+html[data-theme] .home-footer span{color:var(--footer-text)!important}
+
+/* Os rodapés das páginas de artigos prolongam a mesma superfície dos artigos. */
+html:is([data-theme="papel"],[data-theme="mac"]) .wiki-sheet + footer,
+html:is([data-theme="papel"],[data-theme="mac"]) .wiki-sheet ~ footer{
+  background:var(--card)!important;
+}
+
+/* Área de timeline: manter a continuidade visual da cor do tema. */
+html:is([data-theme="papel"],[data-theme="mac"]) .timeline-page .home-footer,
+html:is([data-theme="papel"],[data-theme="mac"]) .timeline-page + footer,
+html:is([data-theme="papel"],[data-theme="mac"]) .timeline-page ~ footer{
+  background:var(--footer-center)!important;
+}
+
+
+/* 2026-11-20 — simplificação dos temas visuais.
+   Mantém Arquivo como padrão e acrescenta duas variantes inspiradas em terminais/mainframes IBM. */
+
+
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) body{background:var(--bg)!important;color:var(--ink)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) #crt{background:var(--bg)!important;min-height:100vh}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) #crt *{font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,"Liberation Mono",monospace!important;letter-spacing:0!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .card,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .panel,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .figure,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .sidebar,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-category,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .hero-terminal,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .bar .wiki-submenu,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .button,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-btn,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .article-topic-tag,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .project-status,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .nav-tools .theme-picker select,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav>a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav summary{border-radius:0!important}
+
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar{background:var(--navy)!important;border-color:var(--line)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar .brand{color:var(--s-fg)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar .brand::before{background:var(--ac)!important;color:var(--bg)!important;border-radius:0!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav>a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav summary,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .theme-picker,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .theme-picker-label{color:var(--s-fg)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav>a:hover,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav>a[aria-current],
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar nav summary:hover,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar .wiki-menu[open] summary{background:var(--soft)!important;color:var(--s-ac)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar details .wiki-submenu{background:var(--card)!important;border-color:var(--line)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar details .wiki-submenu a{color:var(--ink)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) header.bar details .wiki-submenu a:hover{background:var(--soft)!important;color:var(--ac)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .nav-tools .theme-picker select{background:var(--s-hi)!important;color:var(--s-fg)!important;border-color:var(--s-line)!important}
+
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet{background:var(--card)!important;color:var(--ink)!important;box-shadow:none!important;border:1px solid var(--line)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .top{background:var(--soft)!important;color:var(--ink)!important;border-bottom:1px solid var(--line)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .top h1,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .top .lead,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .top .eyebrow,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content p,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content li,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content section,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content h2,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content h3{color:var(--ink)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .breadcrumb,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .breadcrumb a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .muted,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .small.muted{color:var(--mut)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) a{color:var(--ac)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .card,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .panel,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .note,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .figure,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .sidebar,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-category,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .hero-terminal,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .article-item,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content details:not(.wiki-menu){background:var(--card)!important;color:var(--ink)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .figure figcaption,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) figcaption,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) table th{background:var(--soft)!important;color:var(--ink)!important;border-color:var(--line)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) table td{border-color:var(--line)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) pre{background:var(--navy)!important;color:var(--s-fg)!important;border-color:var(--line)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) code:not(pre code){background:var(--soft)!important;color:var(--ink)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .button,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-btn:not(.alt){background:var(--soft)!important;color:var(--s-ac)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .button.alt,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-btn.alt{background:transparent!important;color:var(--ink)!important;border:1px solid var(--line)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .article-topic-tag,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .project-status,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .quick a{border:1px solid var(--line)!important;background:var(--soft)!important;color:var(--s-ac)!important}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-footer,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) footer,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .footer,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .site-footer,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page + footer,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page ~ footer{background:var(--footer-center)!important;color:var(--footer-text)!important;border-color:transparent!important;box-shadow:none!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) footer a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-footer a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .footer a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .site-footer a,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page a{color:var(--footer-link)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) footer span,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .home-footer span{color:var(--footer-text)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page > div[style*="padding-bottom"]{color:var(--footer-text)!important}
+
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .timeline-page > div[style*="padding-bottom"] a{color:var(--footer-link)!important}
+
+
+
+/* 2026-11-21 — legibilidade do tema 3279: componentes antigos de fundo claro.
+   Restrito ao 3279; não altera os outros temas ou o desenho das páginas. */
+
+
+
+
+
+
+
+/* 2026-11-21 — contraste dos componentes do artigo de projetos no tema 3279.
+   Complemento à correção anterior. Só altera a apresentação em mf3279. */
+
+
+
+
+
+
+
+
+/* Wiki 2026-11-21 — cabeçalhos compactos nas páginas de artigos.
+   Não altera o cabeçalho/menu de navegação nem o hero da página inicial. */
+.wiki-sheet > .top {
+  padding: 34px 0 26px !important;
+}
+
+.wiki-sheet > .top h1 {
+  font-size: clamp(1.8rem, 3.1vw, 2.7rem) !important;
+  line-height: 1.17 !important;
+  margin: 10px 0 12px !important;
+}
+
+.wiki-sheet > .top h1::after {
+  margin-top: 12px !important;
+  margin-bottom: 0 !important;
+}
+
+.wiki-sheet > .top .lead {
+  font-size: clamp(.96rem, 1.55vw, 1.08rem) !important;
+  line-height: 1.55 !important;
+  margin-bottom: .7rem !important;
+}
+
+.wiki-sheet > .top .quick {
+  margin-top: .7rem !important;
+}
+
+@media (max-width:590px) {
+.wiki-sheet > .top {padding: 24px 0 20px !important}
+.wiki-sheet > .top h1 {font-size: clamp(1.65rem, 7vw, 2.05rem) !important}
+}
+
+
+/* 21-11-2026: reduzir realmente os cabeçalhos de artigos; sem alterar o menu nem a home. */
+body > .top, .wiki-sheet .top, .wiki-sheet > .top, .top:has(+ .wrap > .breadcrumb) {
+  padding-top: 1.7rem !important;
+  padding-bottom: 1.45rem !important;
+}
+
+.top h1 { font-size: clamp(1.7rem, 2.7vw, 2.45rem) !important; line-height: 1.15 !important; margin: .35rem 0 .6rem !important; }
+
+.top .lead {font-size: clamp(.95rem, 1.3vw, 1.06rem) !important; line-height:1.5 !important; margin-bottom:.55rem !important;}
+
+.top .quick {margin-top:.65rem !important;}
+
+@media (max-width:600px){
+.top {padding-top:1.25rem !important;padding-bottom:1.15rem !important;}
+}
+
+
+/* Títulos uniformizados em todas as páginas — 21-11-2026.
+   Apenas H1 de cabeçalho. Não altera os H2/H3 dos artigos nem os menus. */
+:root { --wiki-heading-size: clamp(1.9rem, 3.25vw, 2.8rem); }
+
+html body .wiki-sheet > .top { padding-block: 1.65rem 1.4rem !important; }
+
+html body .wiki-sheet > .top h1,
+html body main.experience-home > section.home-hero h1,
+html body main.timeline-page > .timeline-intro h1,
+html body main.page > section.about-hero h1 {
+  font-size: var(--wiki-heading-size) !important;
+  line-height: 1.14 !important;
+  letter-spacing: -.035em !important;
+  margin-block: .35rem .8rem !important;
+  max-width: 100% !important;
+}
+
+html body main.experience-home > section.home-hero,
+html body main.page > section.about-hero {
+  padding-block: 1.8rem 1.6rem !important;
+}
+
+html body main.timeline-page > .timeline-intro {
+  padding-top: 1.8rem !important;
+  padding-bottom: .65rem !important;
+}
+
+html body main.experience-home > section.home-hero p.intro,
+html body main.page > section.about-hero p.lead,
+html body main.timeline-page > .timeline-intro > p,
+html body .wiki-sheet > .top p.lead {
+  font-size: clamp(.97rem, 1.45vw, 1.07rem) !important;
+  line-height: 1.58 !important;
+}
+
+@media (max-width: 640px) {
+:root { --wiki-heading-size: clamp(1.75rem, 7vw, 2.2rem); }
+html body main.experience-home > section.home-hero,
+  html body main.page > section.about-hero { padding-block: 1.15rem 1.2rem !important; }
+html body .wiki-sheet > .top { padding-block: 1.1rem !important; }
+html body main.timeline-page > .timeline-intro { padding-top: 1.15rem !important; }
+}
+
+
+
+/* 2026-11-21 — Legibilidade do menu lateral em Mainframe 3270 e 3279.
+   Restrito aos links do menu lateral: restantes temas e menus não são alterados. */
+
+
+/* O item atual continua identificável, inclusive sob o rato. */
+
+
+
+
+/* 2026-11-21 — Corrigir contraste do menu Laboratório e Infraestrutura.
+   Antes: hover/ativo herdava um fundo claro e texto igualmente claro.
+   A correção afeta só o menu superior nos temas indicados. */
+
+
+
+
+/* O título do dropdown também precisa de uma cor legível quando aberto/hover. */
+
+
+
+
+/* Remover o contraste baixo do ícone/seta do submenu nos quatro temas. */
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+header.bar nav .wiki-menu[open] > summary::after,
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+header.bar nav .wiki-menu > summary:hover::after {color: currentColor !important;}
+
+
+
+/* 2026-11-21 — Artigos: legibilidade do tema Mainframe 3279.
+   Restrito à pagina que contém a grelha .project-list. Não altera os outros temas.
+   Preserva os cabeçalhos uniformes e os menus corrigidos anteriormente. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 2026-11-22 · Contraste harmonizado em caixas claras de conteúdo.
+   O aspeto original das superfícies é preservado; o texto de notas claras é escuro
+   também nos terminais CRT.  Não interfere com menus, cartões escuros ou filtros. */
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+  .wiki-sheet .content p.dos-note,
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+  .wiki-sheet .content .dos-note {
+  background-color:#d8efdb !important;
+  color:#193e2e !important;
+  -webkit-text-fill-color:#193e2e !important;
+  border-left-color:#367761 !important;
+  opacity:1 !important;
+}
+
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+  .wiki-sheet .content .dos-note :is(strong,em,a,code) {
+  color:#123b2b !important;
+  -webkit-text-fill-color:#123b2b !important;
+}
+
+/* Cartões e legendas claras do artigo DOS: mesma tonalidade de leitura. */
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+  .wiki-sheet .content .dos-metrics > div,
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+  .wiki-sheet .content .dos-spec > span,
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+  .wiki-sheet .content .dos-shot figcaption {
+  color:#213d35 !important;
+  -webkit-text-fill-color:#213d35 !important;
+}
+
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+  .wiki-sheet .content .dos-metrics > div :is(b,strong,span),
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"])
+  .wiki-sheet .content .dos-shot figcaption :is(strong,small) {
+  color:#203d34 !important;
+  -webkit-text-fill-color:#203d34 !important;
+}
+
+/* Cartões de projeto com superfícies brancas: descrições legíveis.
+   Não alterar cartões deliberadamente escuros dos Mainframe. */
+
+/* Legenda histórica na timeline Arquivo, fora dos cartões brancos. */
+
+
+
+/* AUDITORIA 22/11/2026 — contraste transversal em componentes reutilizados.
+   Preserva a cor de fundo de cada peça; ajusta apenas a tinta do conteúdo. */
+/* Glossários com superfície escura #1b2b33 nos quatro temas. */
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .glossary-grid > div :is(p,li,small) {color:#e6f2ed!important;-webkit-text-fill-color:#e6f2ed!important}
+
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .glossary-grid > div :is(strong,h3) {color:#f5f9ef!important;-webkit-text-fill-color:#f5f9ef!important}
+
+/* Passos e listas que conservam fundo branco: texto escuro. No 3279, o
+   componente steps já tem fundo escuro corrigido; não o alteramos. */
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .wiki-sheet .content .steps > li,
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .wiki-sheet .content .steps > li :is(p,span,strong),
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .wiki-sheet .content .simple-list > li {color:#243e39!important;-webkit-text-fill-color:#243e39!important}
+
+/* Blocos claros preservados: Banana Pi, NT, incidentes, Cloudflare. */
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .banana-services article :is(h3,p,small,strong),
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .banana-aside,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .banana-aside :is(p,strong),
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .nt-domain-case :is(h3,p,small),
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .incident-toc :is(li,p,span),
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .hosting-compare > div :is(h3,p,small),
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .hosting-flow > div :is(strong,span,p,small),
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .wan-caveat :is(p,small,strong),
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .wan-caveat {color:#263f37!important;-webkit-text-fill-color:#263f37!important}
+
+/* Details e texto interno estão sobre fundo escuro nestes dois temas. */
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content details:not(.wiki-menu) :is(p,li,small),
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content details:not(.wiki-menu) .inside :is(p,li) {color:var(--ink)!important;-webkit-text-fill-color:var(--ink)!important}
+
+/* Caixas de navegação relacionadas com fundo branco e texto escuro. */
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .related-link-card :is(strong,span,small) {color:#21413a!important;-webkit-text-fill-color:#21413a!important}
+
+/* Informação complementar em superfície azul/verde escura. */
+html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .content .banana-conclusion p,
+html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .content .incident-hero .small,
+html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .content .callout :is(p,li) {color:#e2efe9!important;-webkit-text-fill-color:#e2efe9!important}
+
+
+
+/* Última passagem da auditoria de contraste, 22/11/2026. */
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .incident-sequence > li,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .incident-sequence > li :is(strong,p,span,small),
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .diagram-network > div :is(small,p) {color:#213d34!important;-webkit-text-fill-color:#213d34!important}
+
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"]) .wiki-sheet .content .callout :is(p,li,small) {color:#284238!important;-webkit-text-fill-color:#284238!important}
+
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .card .arrow,
+html:is([data-theme="arquivo"],[data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .failover-feature .mini-tag {color:#b8e5d0!important;-webkit-text-fill-color:#b8e5d0!important}
+
+
+html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .project-feature ~ p,
+html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .project-toolbar + p {color:#324c46!important;-webkit-text-fill-color:#324c46!important}
+
+
+/* Confirmação final de contraste: conteúdo claro preservado nos temas CRT. */
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .incident-steps li,
+html:is([data-theme="mf3270"],[data-theme="mf3279"]) .wiki-sheet .content .incident-steps li :is(strong,p,span,small),
+html[data-theme="mf3270"] .wiki-sheet .content .diagram-network small {color:#203c32!important;-webkit-text-fill-color:#203c32!important}
+
+html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .project-feature + p,
+html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .project-feature p ~ p {color:#334b45!important;-webkit-text-fill-color:#334b45!important}
+
+html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .status-legend > div p {color:#c1d8d0!important;-webkit-text-fill-color:#c1d8d0!important}
+
+
+
+/* === TEMA MACINTOSH CLÁSSICO · System 7 / inspiração, 2026-11-22 ===
+   Tema adicional; não altera os quatro temas originais. Contraste AA nas superfícies base.
+   Fondos tipo papel, titulos de janelas cinzento, linhas e realces azulados. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Macintosh Classic: accessible, consistent body copy on light background */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 2026-11-22 — Harmonização da timeline nos três temas CRT.
+   Mantém efeitos retro, mas evita títulos ampliados e letras sem contraste.
+   Não toca no Default nem no Macintosh Clássico. */
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro {
+  padding:24px 0 14px !important;
+  margin-bottom:0 !important;
+  min-height:0 !important;
+}
+
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro h1 {
+  font-size:clamp(1.95rem,3.1vw,2.8rem) !important;
+  line-height:1.16 !important;
+  letter-spacing:-.025em !important;
+  max-width:870px !important;
+  margin:10px 0 13px !important;
+}
+
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro h1 em {
+  font-size:inherit !important;
+  line-height:inherit !important;
+}
+
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro > p {
+  font-size:clamp(.96rem,1.4vw,1.06rem) !important;
+  line-height:1.58 !important;
+  max-width:760px !important;
+  margin:0 0 12px !important;
+  opacity:1 !important;
+}
+
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro .kicker {
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.12em !important;
+}
+
+
+
+
+@media (max-width:650px){
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) body main.timeline-page > .timeline-intro h1 {
+   font-size:clamp(1.7rem,6.6vw,2.15rem) !important;
+ }
+}
+
+
+/* Uniformização: conteúdo e rodapés, independente do tema */
+#crt > footer, #crt main > footer, main.timeline-page > footer.home-footer, .home-footer {
+  min-height:0!important; height:auto!important; margin-top:1.4rem!important;
+  margin-bottom:0!important; padding-block:.85rem!important;
+}
+main.timeline-page > .timeline-references,main.timeline-page > div[style*="padding-bottom:70px"] {
+  padding-bottom:.6rem!important; margin-bottom:0!important;
+}
+main.timeline-page > footer.home-footer {margin-top:.4rem!important;}
+/* Garantir que elementos comuns mantêm a largura e não criam rodapés gigantes */
+#crt main {min-width:0;} footer .wrap {align-items:center;}
