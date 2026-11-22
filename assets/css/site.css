@@ -1624,3 +1624,63 @@ html[data-theme="mf3270"] .wiki-sheet .content .diagram-network small {color:#20
 html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .project-feature + p,
 html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .project-feature p ~ p {color:#334b45!important;-webkit-text-fill-color:#334b45!important}
 html:is([data-theme="arquivo"],[data-theme="verde"]) .wiki-sheet .status-legend > div p {color:#c1d8d0!important;-webkit-text-fill-color:#c1d8d0!important}
+
+
+/* === TEMA MACINTOSH CLÁSSICO · System 7 / inspiração, 2026-11-22 ===
+   Tema adicional; não altera os quatro temas originais. Contraste AA nas superfícies base.
+   Fondos tipo papel, titulos de janelas cinzento, linhas e realces azulados. */
+html[data-theme="macclassic"] {
+  color-scheme:light;
+  --bg:#e9e9e4;--ink:#20252a;--mut:#49535f;--line:#9ca5ad;
+  --card:#fcfcf8;--soft:#e1e6eb;--ac:#234d81;--navy:#26394a;--yel:#ad7930;
+  --s-bg:#f8f8f5;--s-fg:#202a32;--s-dim:#435461;--s-line:#929eaa;
+  --s-ac:#234d81;--s-hi:#e1e7ee;
+  --footer-center:#e5e5df;--footer-text:#36434c;--footer-link:#234d81;
+}
+html[data-theme="macclassic"] body {background:#e9e9e4!important;color:#20252a!important;
+  font-family:Geneva,"Helvetica Neue",Arial,sans-serif!important;text-shadow:none!important}
+html[data-theme="macclassic"] #crt {color:#20252a!important;text-shadow:none!important;filter:none!important}
+html[data-theme="macclassic"] .crt-tint,
+html[data-theme="macclassic"] .crt-lines {display:none!important}
+html[data-theme="macclassic"] :focus-visible {outline:3px solid #205ea4!important;outline-offset:3px}
+html[data-theme="macclassic"] :is(a,.brand) {color:#234d81}
+html[data-theme="macclassic"] :is(.wiki-sheet,.page,.top,.hero,.about-hero) {color:#20252a}
+html[data-theme="macclassic"] header.bar,
+html[data-theme="macclassic"] .site-header {background:#f0f0ec!important;border-bottom:2px solid #252b31!important;color:#20252a!important;box-shadow:0 2px 0 #fff}
+html[data-theme="macclassic"] header.bar .brand,
+html[data-theme="macclassic"] .site-header .brand {color:#20252a!important}
+html[data-theme="macclassic"] header.bar nav :is(a,summary),
+html[data-theme="macclassic"] .site-header nav a {color:#26333f!important}
+html[data-theme="macclassic"] header.bar nav :is(a,summary):is(:hover,:focus-visible),
+html[data-theme="macclassic"] header.bar nav a[aria-current],
+html[data-theme="macclassic"] .site-header nav a:is(:hover,:focus-visible,[aria-current]) {background:#234d81!important;color:#fff!important;border-radius:4px}
+html[data-theme="macclassic"] .wiki-submenu,
+html[data-theme="macclassic"] .wiki-menu[open] .wiki-submenu {background:#fafaf7!important;border:1px solid #7c8791!important;box-shadow:3px 4px 0 #9aa4ad!important}
+html[data-theme="macclassic"] .wiki-submenu a {color:#26333f!important;background:transparent!important;-webkit-text-fill-color:currentColor!important}
+html[data-theme="macclassic"] .wiki-submenu a:is(:hover,:focus-visible),
+html[data-theme="macclassic"] .wiki-submenu a.cur,
+html[data-theme="macclassic"] .wiki-submenu a[aria-current] {background:#234d81!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-theme="macclassic"] .wiki-sidebar-v2,
+html[data-theme="macclassic"] .sidebar {background:#f6f6f2!important;color:#26333f!important;border:1px solid #a9b0b5!important}
+html[data-theme="macclassic"] .wiki-sidebar-v2 a,
+html[data-theme="macclassic"] .sidebar a {color:#25466b!important}
+html[data-theme="macclassic"] .wiki-sidebar-v2 a:is(:hover,:focus-visible,.cur,[aria-current]),
+html[data-theme="macclassic"] .sidebar a:is(:hover,:focus-visible,.cur,[aria-current]) {background:#234d81!important;color:#fff!important}
+html[data-theme="macclassic"] :is(.top,.about-hero,.hero,.timeline-hero) {background:#ededeb!important;color:#20252a!important}
+html[data-theme="macclassic"] :is(.top,.about-hero,.hero) :is(h1,h2,p,.lead) {color:#20252a!important;text-shadow:none!important}
+html[data-theme="macclassic"] :is(.top,.about-hero,.hero) em {color:#234d81!important}
+html[data-theme="macclassic"] :is(.card,.panel,.note,.figure,.topic-card,.feature,.step,.wiki-card,.project-card,.timeline-detail) {background:#fcfcf8!important;color:#273039!important;border-color:#a5adb4!important;box-shadow:2px 2px 0 #c2c8cc}
+html[data-theme="macclassic"] :is(.card,.panel,.note,.figure,.topic-card,.feature,.step,.wiki-card,.project-card,.timeline-detail) :is(p,li,small,figcaption,strong,h2,h3) {color:#29333d!important;-webkit-text-fill-color:#29333d!important}
+html[data-theme="macclassic"] :is(.card,.panel,.note,.figure,.topic-card,.feature,.step,.wiki-card,.project-card,.timeline-detail) a {color:#234d81!important}
+html[data-theme="macclassic"] :is(.card,.topic-card,.feature,.panel) {border-radius:5px!important}
+html[data-theme="macclassic"] :is(.note,.callout,.summary-box,.project-feature) {background:#e9edf1!important;color:#25313b!important;border-left-color:#234d81!important}
+html[data-theme="macclassic"] :is(.note,.callout,.summary-box,.project-feature) :is(p,li,small,strong,span) {color:#25313b!important;-webkit-text-fill-color:#25313b!important}
+html[data-theme="macclassic"] :is(th,thead) {background:#d9e1e7!important;color:#202a34!important;-webkit-text-fill-color:#202a34!important}
+html[data-theme="macclassic"] :is(td,tbody tr) {background:#fafaf7!important;color:#29333d!important;-webkit-text-fill-color:#29333d!important}
+html[data-theme="macclassic"] :is(.button,.pill,.filter,.project-toolbar button,.timeline-filters button) {background:#f9f9f5!important;color:#263b51!important;border:1px solid #8494a4!important;border-radius:5px!important}
+html[data-theme="macclassic"] :is(.button,.pill,.filter,.project-toolbar button,.timeline-filters button):is(:hover,:focus-visible,.active,[aria-pressed="true"]) {background:#234d81!important;color:#fff!important}
+html[data-theme="macclassic"] .nav-tools .theme-picker select {background:#fcfcf8!important;color:#25313b!important;border:1px solid #929da8!important}
+html[data-theme="macclassic"] :is(footer,.footer,.site-footer,.home-footer) {background:#e5e5df!important;color:#36434c!important;border-top:2px solid #87949e!important}
+html[data-theme="macclassic"] :is(footer,.footer,.site-footer,.home-footer) a {color:#234d81!important}
+html[data-theme="macclassic"] ::selection {background:#234d81;color:white}
+@media (max-width:700px) {html[data-theme="macclassic"] .wiki-submenu {box-shadow:none!important}}
