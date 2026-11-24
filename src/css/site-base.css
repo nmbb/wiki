@@ -2717,3 +2717,29 @@ main.timeline-page > footer.home-footer {margin-top:.4rem!important;}
 .pfs-feature-table td,.pfs-feature-table td *{color:#17372e!important;-webkit-text-fill-color:#17372e!important}
 .pfs-feature-table th,.pfs-feature-table th *{-webkit-text-fill-color:#fff!important}
 @media(max-width:600px){.pfs-network-bottom{grid-template-columns:repeat(2,minmax(0,1fr))}.pfs-flow-decisions{grid-template-columns:1fr}.pfs-flow,.pfs-network{padding:.8rem}}
+
+/* === Cabeçalho: uma só linha em ecrã largo; pesquisa e tema como ícones (24-11-2026) === */
+html header.bar .nav-tools{display:inline-flex!important;flex:0 0 auto!important;align-items:center!important;gap:6px!important;margin-left:4px!important;position:relative}
+html header.bar .nav-tools .tool-btn{width:34px!important;height:34px!important;padding:0!important;display:inline-grid!important;place-items:center;font-size:19px!important;line-height:1;border-radius:9px!important;cursor:pointer}
+.theme-pop-wrap{position:relative;display:inline-block}
+.theme-pop{position:absolute;right:0;top:calc(100% + 10px);z-index:300;min-width:210px;display:grid;gap:2px;padding:8px;border-radius:10px;
+ background:var(--s-hi,#16232a);color:var(--s-fg,#e8f0ee);border:1px solid var(--s-line,#35434b);box-shadow:0 18px 40px #0008;font:inherit;font-size:13px;text-align:left}
+.theme-pop[hidden]{display:none}
+.theme-pop-title{font-size:10px;letter-spacing:.14em;opacity:.65;padding:2px 8px 6px}
+.theme-pop button{all:unset;box-sizing:border-box;cursor:pointer;display:block;padding:8px 10px;border-radius:7px;color:inherit;font:inherit;border:1px solid transparent}
+.theme-pop button::before{content:"○ ";opacity:.6}
+.theme-pop button[aria-pressed="true"]::before{content:"● ";opacity:1}
+.theme-pop button:hover,.theme-pop button:focus-visible{border-color:var(--s-ac,#b6d7bd);outline:0}
+html[data-theme="macclassic"] .theme-pop{background:#fcfcf8;color:#25313b;border-color:#929da8;box-shadow:0 10px 26px #0003}
+@media(min-width:1100px){
+ html header.bar .wrap{flex-wrap:nowrap!important;gap:14px!important;align-items:center!important}
+ html header.bar .brand{display:block!important;flex:0 0 auto!important;white-space:nowrap}
+ html header.bar nav{order:0!important;flex:1 1 0!important;width:auto!important;min-width:0!important;flex-wrap:nowrap!important;justify-content:flex-end!important;gap:2px!important;padding:0!important;overflow:visible!important}
+ html header.bar nav>a,html header.bar nav>.wiki-menu>summary{flex:0 0 auto!important;white-space:nowrap!important;font-size:clamp(11px,.92vw,13.5px)!important;padding:8px clamp(5px,.55vw,9px)!important}
+}
+@media(max-width:1099.98px){
+ html header.bar .wrap{flex-wrap:wrap!important;row-gap:4px}
+ html header.bar .brand{display:block!important;order:1!important}
+ html header.bar .nav-tools{order:2!important;margin-left:auto!important}
+ html header.bar nav{order:3!important;flex:1 0 100%!important;width:100%!important;flex-wrap:wrap!important;justify-content:flex-start!important;overflow:visible!important;padding:0 0 .4rem!important}
+}

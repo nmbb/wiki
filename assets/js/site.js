@@ -22,16 +22,21 @@ function open(){if(!box)mk();box.hidden=false;inp.value='';list.innerHTML='';inp
 function close(){if(box)box.hidden=true}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')close();
  if((e.key==='/'&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))||((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k')){e.preventDefault();open()}});
-var nav=document.querySelector('header.bar nav');
-if(nav){var w=document.createElement('span');w.className='nav-tools';
- var s=document.createElement('button');s.type='button';s.textContent='Pesquisar /';s.addEventListener('click',open);
- var l=document.createElement('label');l.className='theme-picker';
-  var caption=document.createElement('span');caption.className='theme-picker-label';caption.textContent='Tema';
-  var b=document.createElement('select');b.id='wiki-theme-select';b.setAttribute('aria-label','Escolher tema visual da wiki');
-  T.forEach(function(t){var o=document.createElement('option');o.value=t;o.textContent=N[t];b.append(o)});
-  b.value=T.indexOf(cur())>=0?cur():'arquivo';
-  b.addEventListener('change',function(){var n=T.indexOf(b.value)>=0?b.value:'arquivo';H.dataset.theme=n;try{localStorage.setItem('wiki-theme',n)}catch(e){}if(n==='verde'||n==='ambar'){H.classList.add('boot');setTimeout(function(){H.classList.remove('boot')},600)}});
-  l.append(caption,b);w.append(s,l);nav.append(w)}
+var nav=document.querySelector('header.bar nav'),hw=document.querySelector('header.bar .wrap');
+if(nav&&hw){var w=document.createElement('span');w.className='nav-tools';
+ var s=document.createElement('button');s.type='button';s.className='tool-btn tool-search';s.title='Pesquisar ( / )';s.setAttribute('aria-label','Pesquisar na wiki');s.innerHTML='<span aria-hidden="true">\u2315</span>';s.addEventListener('click',open);
+ var pw=document.createElement('span');pw.className='theme-pop-wrap';
+ var tb=document.createElement('button');tb.type='button';tb.className='tool-btn theme-btn';tb.title='Tema visual';tb.setAttribute('aria-label','Tema visual');tb.setAttribute('aria-haspopup','true');tb.setAttribute('aria-expanded','false');tb.setAttribute('aria-controls','theme-pop');tb.innerHTML='<span aria-hidden="true">\u25D0</span>';
+ var pop=document.createElement('div');pop.id='theme-pop';pop.className='theme-pop';pop.hidden=true;pop.setAttribute('role','group');pop.setAttribute('aria-label','Tema visual');
+ var cap=document.createElement('span');cap.className='theme-pop-title';cap.textContent='TEMA';pop.append(cap);
+ function pmark(){[].forEach.call(pop.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',String(x.dataset.t===cur()))})}
+ function popClose(f){pop.hidden=true;tb.setAttribute('aria-expanded','false');if(f)tb.focus()}
+ T.forEach(function(t){var o=document.createElement('button');o.type='button';o.dataset.t=t;o.textContent=N[t];
+  o.addEventListener('click',function(){H.dataset.theme=t;try{localStorage.setItem('wiki-theme',t)}catch(e){}if(t==='verde'){H.classList.add('boot');setTimeout(function(){H.classList.remove('boot')},600)}pmark();popClose(true)});pop.append(o)});
+ tb.addEventListener('click',function(e){e.stopPropagation();var show=pop.hidden;pop.hidden=!show;tb.setAttribute('aria-expanded',String(show));if(show){pmark();var c=pop.querySelector('[aria-pressed="true"]');if(c)c.focus()}});
+ document.addEventListener('click',function(e){if(!pop.hidden&&!pw.contains(e.target))popClose(false)});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!pop.hidden)popClose(true)});
+ pw.append(tb,pop);w.append(s,pw);hw.append(w)}
 var m=document.querySelector('main.content'),sb=document.querySelector('aside.wiki-sidebar-v2');
 if(m&&sb){var hs=[].slice.call(m.querySelectorAll('h2')).filter(function(h){return!h.closest('.home-timeline-callout')});
  if(hs.length>=3){var g=document.createElement('div');g.className='wiki-side-group toc-group';g.innerHTML='<span class="wiki-side-title">NESTA PÁGINA</span>';
