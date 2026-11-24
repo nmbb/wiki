@@ -1,7 +1,0 @@
-Atualização do menu superior em Verde CRT, Mainframe 3270 e 3279 a cores.
-Impede a passagem do seletor Tema para uma segunda linha nos ecrãs largos.
-Aplica tamanhos compactos apenas aos links do menu, sem alterar outras páginas.
-O site.css e o ficheiro-fonte src/css/site-base.css receberam a mesma regra.
-As 23 páginas HTML receberam um novo identificador de versão de site.css para reduzir problemas de cache.
-Para publicar: copiar todo o conteúdo sobre a pasta local do repositório, manter .git, Commit e Push.
-Nota: a validação visual automatizada no Chromium foi bloqueada pelo ambiente; inspecionado código e integridade dos ficheiros.

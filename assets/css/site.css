@@ -2743,3 +2743,16 @@ html[data-theme="macclassic"] .theme-pop{background:#fcfcf8;color:#25313b;border
  html header.bar .nav-tools{order:2!important;margin-left:auto!important}
  html header.bar nav{order:3!important;flex:1 0 100%!important;width:100%!important;flex-wrap:wrap!important;justify-content:flex-start!important;overflow:visible!important;padding:0 0 .4rem!important}
 }
+
+/* Caixa de indicadores: geometria comum aos oito temas. */
+html[data-theme] body main.experience-home > section.home-stats {
+  border:1px solid var(--line)!important;
+  border-radius:26px!important;
+  padding:clamp(20px,3.6vw,42px)!important;
+  gap:clamp(16px,3vw,36px)!important;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+html[data-theme] body main.experience-home > section.home-stats > div {padding:0!important;min-width:0;}
+html[data-theme] body main.experience-home > section.home-stats strong {line-height:1.25;margin-bottom:.55rem;overflow-wrap:anywhere;}
+html[data-theme="hercules"] body main.experience-home > section.home-stats {border-radius:34px!important;padding:clamp(20px,4.65vw,54px)!important;}
+@media(max-width:700px){html[data-theme] body main.experience-home > section.home-stats {grid-template-columns:1fr;gap:18px!important;}}
