@@ -83,3 +83,30 @@ html[data-theme="mf3270"] .wiki-intro-grid a:focus-visible > strong {
   opacity: 1 !important;
   text-shadow: none !important;
 }
+
+/* 24-11-2026 — revisão de contraste; sem alterações de geometria. */
+html[data-theme="mf3270"] .wiki-sheet .sidebar.wiki-sidebar-v2 a,
+html[data-theme="mf3270"] .wiki-sheet .sidebar.wiki-sidebar-v2 .wiki-side-title,
+html[data-theme="mf3270"] .wiki-sheet .top .article-period,
+html[data-theme="mf3270"] .wiki-sheet .top .button.alt,
+html[data-theme="mf3270"] .wiki-sheet .content details:not(.wiki-menu)>summary,
+html[data-theme="mf3270"] .wiki-sheet .content > .explainer-label { color:#c8f2cf!important;-webkit-text-fill-color:#c8f2cf!important; text-shadow:none!important; }
+html[data-theme="mf3270"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:is(:hover,:focus-visible,.cur,[aria-current]) { background-color:#21442f!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
+html[data-theme="mf3270"] a.skip-link { background-color:#f2efe7!important;color:#172a21!important;-webkit-text-fill-color:#172a21!important; text-shadow:none!important; }
+html[data-theme="mf3270"] .wiki-sheet .content .callout-grid .callout strong,
+html[data-theme="mf3270"] .wiki-sheet .project-feature a { color:#174b37!important;-webkit-text-fill-color:#174b37!important; text-shadow:none!important; }
+html[data-theme="mf3270"] .wiki-sheet .content .incident-hero :is(h2,.small) { color:#e7f4ef!important;-webkit-text-fill-color:#e7f4ef!important; text-shadow:none!important; }
+html[data-theme="mf3270"] .wiki-sheet .content .note[style*="background:#eaf5f0"],
+html[data-theme="mf3270"] .wiki-sheet .content .note[style*="background:#eaf5f0"] :is(strong,p) { color:#203e32!important;-webkit-text-fill-color:#203e32!important; text-shadow:none!important; }
+html[data-theme="mf3270"] .wiki-sheet .content .note[style*="background:#eaf5f0"] { background-color:#eaf5f0!important;color:#203e32!important;-webkit-text-fill-color:#203e32!important; text-shadow:none!important; }
+html[data-theme="mf3270"] .wiki-sheet .content .note[style*="background:#eaf5f0"] a { color:#145a48!important;-webkit-text-fill-color:#145a48!important; text-shadow:none!important; }
+html[data-theme="mf3270"] .wiki-sheet .content .banana-no { color:#12646a!important;-webkit-text-fill-color:#12646a!important; text-shadow:none!important; }
+html[data-theme="mf3270"] .wiki-sheet .content .diagram-network span,
+html[data-theme="mf3270"] .wiki-sheet .content .fog-flow-node span,
+html[data-theme="mf3270"] .wiki-sheet .content .hosting-flow b { color:#34604e!important;-webkit-text-fill-color:#34604e!important; text-shadow:none!important; }
+html[data-theme="mf3270"] .article-list .tag,
+html[data-theme="mf3270"] .article-item .tag { color:#4d583b!important;-webkit-text-fill-color:#4d583b!important; text-shadow:none!important; }
+html[data-theme="mf3270"] main.timeline-page .hex-timeline .moment-link .markers .state { background-color:#176c4c!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
+html[data-theme="mf3270"] main.timeline-page .hex-timeline .moment[data-state=test] .moment-link .markers .state { background-color:#79550b!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
+html[data-theme="mf3270"] main.timeline-page .hex-timeline .moment[data-state=fail] .moment-link .markers .state { background-color:#a33232!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
+html[data-theme="mf3270"] main.timeline-page .hex-timeline .moment .year { color:#17232c!important;-webkit-text-fill-color:#17232c!important; text-shadow:none!important; }

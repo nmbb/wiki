@@ -48,3 +48,31 @@ html[data-theme="arquivo"] .wiki-sheet .content .nt4-direct-link a:is(:hover,:fo
 
 html[data-theme="arquivo"] .wiki-sheet .content .retro-safety-note{background:#e6f0ed!important;border-color:#aac6b9!important;color:#243e35!important}
 html[data-theme="arquivo"] .wiki-sheet .content .retro-safety-note :is(strong,p,li,small,span){color:#243e35!important;-webkit-text-fill-color:#243e35!important;opacity:1!important}
+
+/* 24-11-2026 — revisão de contraste; sem alterações de geometria. */
+html[data-theme="arquivo"] .wiki-sheet .top .eyebrow,
+html[data-theme="arquivo"] .wiki-sheet .top .lead,
+html[data-theme="arquivo"] .wiki-sheet .breadcrumb,
+html[data-theme="arquivo"] .wiki-sheet .breadcrumb span,
+html[data-theme="arquivo"] .wiki-sheet .content .eyebrow { color:#38594b!important;-webkit-text-fill-color:#38594b!important; text-shadow:none!important; }
+html[data-theme="arquivo"] .wiki-sheet .breadcrumb a,
+html[data-theme="arquivo"] .wiki-sheet .content .nt-domain-case :is(a,em),
+html[data-theme="arquivo"] .wiki-sheet .content .button.alt,
+html[data-theme="arquivo"] .wiki-sheet .content .project-feature p { color:#285547!important;-webkit-text-fill-color:#285547!important; text-shadow:none!important; }
+html[data-theme="arquivo"] .wiki-sheet .content .callout-grid .callout strong { color:#173d33!important;-webkit-text-fill-color:#173d33!important; text-shadow:none!important; }
+html[data-theme="arquivo"] .timeline-page .note { color:#e2eee8!important;-webkit-text-fill-color:#e2eee8!important; text-shadow:none!important; }
+html[data-theme="arquivo"] .wiki-sheet .content .incident-hero :is(h2,.small) { color:#e7f4ef!important;-webkit-text-fill-color:#e7f4ef!important; text-shadow:none!important; }
+html[data-theme="arquivo"] .wiki-sheet .content .note[style*="background:#eaf5f0"],
+html[data-theme="arquivo"] .wiki-sheet .content .note[style*="background:#eaf5f0"] :is(strong,p) { color:#203e32!important;-webkit-text-fill-color:#203e32!important; text-shadow:none!important; }
+html[data-theme="arquivo"] .wiki-sheet .content .note[style*="background:#eaf5f0"] { background-color:#eaf5f0!important;color:#203e32!important;-webkit-text-fill-color:#203e32!important; text-shadow:none!important; }
+html[data-theme="arquivo"] .wiki-sheet .content .note[style*="background:#eaf5f0"] a { color:#145a48!important;-webkit-text-fill-color:#145a48!important; text-shadow:none!important; }
+html[data-theme="arquivo"] .wiki-sheet .content .banana-no { color:#12646a!important;-webkit-text-fill-color:#12646a!important; text-shadow:none!important; }
+html[data-theme="arquivo"] .wiki-sheet .content .diagram-network span,
+html[data-theme="arquivo"] .wiki-sheet .content .fog-flow-node span,
+html[data-theme="arquivo"] .wiki-sheet .content .hosting-flow b { color:#34604e!important;-webkit-text-fill-color:#34604e!important; text-shadow:none!important; }
+html[data-theme="arquivo"] .article-list .tag,
+html[data-theme="arquivo"] .article-item .tag { color:#4d583b!important;-webkit-text-fill-color:#4d583b!important; text-shadow:none!important; }
+html[data-theme="arquivo"] main.timeline-page .hex-timeline .moment-link .markers .state { background-color:#176c4c!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
+html[data-theme="arquivo"] main.timeline-page .hex-timeline .moment[data-state=test] .moment-link .markers .state { background-color:#79550b!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
+html[data-theme="arquivo"] main.timeline-page .hex-timeline .moment[data-state=fail] .moment-link .markers .state { background-color:#a33232!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
+html[data-theme="arquivo"] main.timeline-page .hex-timeline .moment .year { color:#17232c!important;-webkit-text-fill-color:#17232c!important; text-shadow:none!important; }

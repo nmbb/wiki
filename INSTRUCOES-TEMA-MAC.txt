@@ -1,3 +1,0 @@
-Tema Macintosh Clássico; Arquivo renomeado Default.
-Copiar estes ficheiros para a raiz do repositório wiki e fazer Commit / Push.
-Não cria pasta wiki-main e não remove ficheiros existentes.

@@ -1,3 +1,0 @@
-Correção localizada da timeline: Compaq DOS 1.25 → Compaq DOS 1.25 no título do cartão e no atributo title da ligação.
-
-Carregar os dois HTML na raiz do repositório, respeitando a pasta src/pages/. Não inclui CSS ou JavaScript. A base é o último pacote de reparação da timeline disponível nesta conversa.
