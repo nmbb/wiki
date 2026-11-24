@@ -1,0 +1,14 @@
+WIKI — SEPARAÇÃO DOS TEMAS E RODAPÉS (22/11/2026)
+
+CSS base: assets/css/site.css; fonte src/css/site-base.css.
+CSS por tema: assets/css/theme-arquivo.css, theme-verde.css,
+theme-mf3270.css, theme-mf3279.css, theme-macclassic.css.
+Fontes editáveis: src/css/themes/.
+O seletor carrega um tema de cada vez. Os 5 temas continuam disponíveis.
+Rodapés: auditoria aos 23 HTML; há um footer por página.
+Ajustada a margem e o padding de rodapés para reduzir o espaço excessivo.
+
+Publicar: copiar CONTEÚDO desta pasta para o repositório local, preservar .git,
+Commit e Push no GitHub Desktop. NÃO executar o build.py só para publicar.
+O build.py foi atualizado para utilizar os CSS divididos.
+Não apaga imagens, filtros, páginas nem serviços.

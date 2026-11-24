@@ -104,38 +104,3 @@ html[data-theme="macclassic"] .wiki-sheet .content .nt4-direct-link a {backgroun
 html[data-theme="macclassic"] .wiki-sheet .content .nt4-direct-link a:is(:hover,:focus-visible){background:#1d4e7c!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
 html[data-theme="macclassic"] .wiki-sheet .content code:not(pre code){background:#2a3e46!important;color:#e4f1eb!important;-webkit-text-fill-color:#e4f1eb!important}
 html[data-theme="macclassic"] .wiki-sheet .content .retro-safety-note{min-height:0!important;height:auto!important}
-
-/* 24-11-2026 — revisão de contraste; sem alterações de geometria. */
-html[data-theme="macclassic"] header.bar nav details.wiki-menu .wiki-submenu { background-color:#fafaf7!important;color:#26333f!important;-webkit-text-fill-color:#26333f!important; text-shadow:none!important; }
-html[data-theme="macclassic"] header.bar nav details.wiki-menu .wiki-submenu a,
-html[data-theme="macclassic"] .wiki-sheet .sidebar.wiki-sidebar-v2 a,
-html[data-theme="macclassic"] .wiki-sheet .sidebar.wiki-sidebar-v2 .wiki-side-title { color:#25466b!important;-webkit-text-fill-color:#25466b!important; text-shadow:none!important; }
-html[data-theme="macclassic"] header.bar nav details.wiki-menu .wiki-submenu a:is(:hover,:focus-visible,.cur,[aria-current]),
-html[data-theme="macclassic"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:is(:hover,:focus-visible,.cur,[aria-current]) { background-color:#234d81!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .redesign-strip .strip-time,
-html[data-theme="macclassic"] .redesign-strip span,
-html[data-theme="macclassic"] .page .breadcrumb,
-html[data-theme="macclassic"] .page .about-hero .eyebrow,
-html[data-theme="macclassic"] .page .cta :is(h2,p,.eyebrow),
-html[data-theme="macclassic"] .page .section :is(.section-label,h2),
-html[data-theme="macclassic"] .page .card .card-icon { color:#364c57!important;-webkit-text-fill-color:#364c57!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .timeline-page .timeline-detail .time-label { color:#354a34!important;-webkit-text-fill-color:#354a34!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .wiki-sheet .content .banana-conclusion :is(p,a) { color:#e8f5f3!important;-webkit-text-fill-color:#e8f5f3!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .wiki-sheet .content .card .lab-status-badge { background-color:#e1efe5!important;color:#234d37!important;-webkit-text-fill-color:#234d37!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .wiki-sheet .content .card .lab-status-testing { background-color:#fff0c5!important;color:#634600!important;-webkit-text-fill-color:#634600!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .wiki-sheet .content .card .lab-status-waiting { background-color:#e3ebf2!important;color:#34485d!important;-webkit-text-fill-color:#34485d!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .wiki-sheet .content .incident-hero :is(h2,.small) { color:#e7f4ef!important;-webkit-text-fill-color:#e7f4ef!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .wiki-sheet .content .note[style*="background:#eaf5f0"],
-html[data-theme="macclassic"] .wiki-sheet .content .note[style*="background:#eaf5f0"] :is(strong,p) { color:#203e32!important;-webkit-text-fill-color:#203e32!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .wiki-sheet .content .note[style*="background:#eaf5f0"] { background-color:#eaf5f0!important;color:#203e32!important;-webkit-text-fill-color:#203e32!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .wiki-sheet .content .note[style*="background:#eaf5f0"] a { color:#145a48!important;-webkit-text-fill-color:#145a48!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .wiki-sheet .content .banana-no { color:#12646a!important;-webkit-text-fill-color:#12646a!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .wiki-sheet .content .diagram-network span,
-html[data-theme="macclassic"] .wiki-sheet .content .fog-flow-node span,
-html[data-theme="macclassic"] .wiki-sheet .content .hosting-flow b { color:#34604e!important;-webkit-text-fill-color:#34604e!important; text-shadow:none!important; }
-html[data-theme="macclassic"] .article-list .tag,
-html[data-theme="macclassic"] .article-item .tag { color:#4d583b!important;-webkit-text-fill-color:#4d583b!important; text-shadow:none!important; }
-html[data-theme="macclassic"] main.timeline-page .hex-timeline .moment-link .markers .state { background-color:#176c4c!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
-html[data-theme="macclassic"] main.timeline-page .hex-timeline .moment[data-state=test] .moment-link .markers .state { background-color:#79550b!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
-html[data-theme="macclassic"] main.timeline-page .hex-timeline .moment[data-state=fail] .moment-link .markers .state { background-color:#a33232!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important; text-shadow:none!important; }
-html[data-theme="macclassic"] main.timeline-page .hex-timeline .moment .year { color:#17232c!important;-webkit-text-fill-color:#17232c!important; text-shadow:none!important; }

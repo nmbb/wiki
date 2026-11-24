@@ -1,0 +1,46 @@
+WIKI COMPLETA — 17 de novembro de 2026
+====================================
+
+Este é o pacote COMPLETO, que reúne wiki-nova-2.zip e a atualização de 86Box.
+NÃO é um pacote incremental. Substitui os ficheiros da versão anterior.
+
+INSTALAÇÃO
+1. Abrir o repositório nmbb/wiki na sua pasta raiz (a mesma do index.html).
+2. Extrair o CONTEÚDO do ZIP diretamente nessa pasta. NÃO criar wiki/wiki.
+3. Substituir os ficheiros com o mesmo nome.
+4. Publicar as alterações (commit/push) no GitHub.
+5. Ficheiros antigos que existam apenas no repositório, e não neste ZIP,
+   NÃO desaparecem automaticamente. Consultar LIMPEZA.txt antes de apagar.
+
+PORQUE EXISTEM DUAS PASTAS DE HTML?
+- src/pages/*.html: 22 FONTES para editar os artigos.
+- *.html (na raiz): 22 PÁGINAS PUBLICÁVEIS, criadas pelo build.py.
+Isto NÃO corresponde a 44 artigos diferentes. É intencional e necessário
+para manter o projeto editável e, ao mesmo tempo, publicável sem servidor.
+
+Se pretender mudar um artigo, modificar src/pages/<artigo>.html e executar
+  python3 build.py
+O script atualiza as páginas na raiz, os menus e o índice de pesquisa.
+
+PÁGINAS NOVAS NESTA VERSÃO
+- 86box.html — máquinas históricas emuladas; estados dos testes.
+- 86box-instalacao.html — compilação do 86Box no Debian 13.7.
+
+RESULTADOS DA AUDITORIA
+- 22 fontes HTML e 22 HTML gerados; nomes coincidentes esperados.
+- 22 páginas distintas: não existem páginas completas idênticas.
+- Nenhum ID HTML duplicado dentro de uma página.
+- Nenhuma ligação local / âncora quebrada nas páginas HTML.
+- Nenhum recurso local ausente nas páginas HTML.
+- Título PXE/iVentoy já diferenciado no índice inicial.
+- 4 CSS estão em src/css/extra e assets/css: cópias necessárias ao build.
+- 2 imagens NT 3.1 não estão utilizadas nos artigos atuais, mas foram
+  preservadas para arquivo: nt31-config-pcnet-20261114.webp e
+  nt31-servico-dependencia-20261114.webp.
+
+DISTINÇÃO DE ESTADOS DO 86BOX
+- Arranque IBM PC 5150 em ROM BASIC: confirmado.
+- Arranque PC-DOS 1.0: ainda não demonstrado nas capturas.
+- DR-DOS, GEM e OS/2: máquinas configuradas; arranque não confirmado.
+
+NOTA: Não eliminar src/pages, src/css ou build.py. São as fontes da wiki.

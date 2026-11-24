@@ -1,0 +1,22 @@
+ATUALIZAÇÃO 86BOX — 17/11/2026
+
+Extrair este ZIP na raiz do repositório wiki/, SOBRE a versão wiki-nova-2.zip.
+Contém apenas os ficheiros novos ou modificados relativamente ao ZIP recebido.
+
+NOVOS:
+- 86box.html e 86box-instalacao.html (+ fontes src/pages/)
+- 6 imagens WebP em assets/img/wiki/86box/
+
+ALTERADOS:
+- build.py (menu centralizado)
+- páginas HTML geradas (menu e barra lateral em todas)
+- src/pages/artigos.html, projetos.html, linha-do-tempo.html, index.html
+- assets/js/search-index.js (pesquisa)
+
+VERIFICAÇÃO DE DUPLICADOS:
+- Não foram encontradas páginas HTML com conteúdo exatamente igual, nem IDs repetidos.
+- src/pages/*.html são fontes do gerador; *.html na raiz são páginas publicadas: manter ambas.
+- O título PXE e iVentoy repetido duas vezes em index foi diferenciado.
+- O gerador regenerou 22 páginas sem links/recursos em falta.
+
+O IBM PC 5150 arrancou em BASIC. PC-DOS 1.0, GEM, DR-DOS e OS/2 ainda carecem de comprovação de arranque.

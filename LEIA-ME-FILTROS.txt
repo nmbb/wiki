@@ -1,0 +1,11 @@
+TIMELINE: filtros Linux / Windows / Outros
+
+Extraído da base wiki-main.zip, mantendo a correção anterior de rodapé duplicado.
+Ficheiros para carregar na RAIZ do repositório GitHub:
+  linha-do-tempo.html
+  src/pages/linha-do-tempo.html
+  assets/js/timeline-hex-oficial-20261120.js
+
+Os novos filtros são exclusivos (como os filtros já existentes).
+Windows: sistemas com Windows no nome; Linux: Red Hat, SuSE e Caldera; Outros: DOS, CP/M, GEM, OS/2, IBM BASIC.
+Mantém o CSS do rodapé compacto carregado anteriormente; não substitui folhas de estilos.

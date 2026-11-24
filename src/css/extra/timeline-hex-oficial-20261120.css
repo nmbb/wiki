@@ -1,0 +1,217 @@
+/* Explicit prefixed fallback for timeline (Safari/Chromium) */
+.hex-timeline .topline{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.hex-timeline .topline h2{font-size:17px;letter-spacing:-.02em;margin:0}
+.hex-timeline .legend{display:flex;gap:10px;flex-wrap:wrap;font-size:12px}
+.hex-timeline .legend span{display:inline-flex;gap:6px;align-items:center}
+.hex-timeline .legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.hex-timeline .legend .ok{background:#2d976d}
+.hex-timeline .legend .test{background:#c99124}
+.hex-timeline .legend .fail{background:#d75e5e}
+.hex-timeline .toolbar{margin:16px 0;display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.hex-timeline .filters{display:flex;gap:7px;flex-wrap:wrap}
+.hex-timeline .filters button,.hex-timeline .navigation button{border:1px solid #c9d6dd;background:#fff;border-radius:9px;padding:8px 12px;font-size:12px;color:#273d4a;font-weight:700}
+.hex-timeline .filters button[aria-pressed=true]{color:#fff;background:#234b65;border-color:#234b65}
+.hex-timeline .navigation{display:flex;gap:7px}
+.hex-timeline .navigation button{font-size:16px;padding:6px 17px}
+.hex-timeline .navigation button:hover,.hex-timeline .filters button:hover{box-shadow:0 2px 8px #20304022}
+.hex-timeline .timeline-window{background:#fff;border:1px solid #dbe3e5;border-radius:15px;box-shadow:0 10px 28px #22384612;overflow-x:auto;overflow-y:hidden;scrollbar-color:#a9b9bf #edf0f2;scrollbar-width:thin;scroll-behavior:smooth}
+.hex-timeline .rail{display:flex;width:max-content;padding:0 22px 17px;min-height:603px}
+.hex-timeline .moment{--year:#dc8d36;--line:#c18a2b;--line-light:#f6ead7;position:relative;width:238px;flex:0 0 238px;height:582px;text-align:center}
+.hex-timeline .moment:nth-child(6n/**/+1){--year:#e8ad2b;--line:#daa22d;--line-light:#fff6d9}
+.hex-timeline .moment:nth-child(6n/**/+2){--year:#53a6e1;--line:#4d9dcf;--line-light:#e8f5fe}
+.hex-timeline .moment:nth-child(6n/**/+3){--year:#e85c60;--line:#d84f54;--line-light:#ffeff0}
+.hex-timeline .moment:nth-child(6n/**/+4){--year:#5453d8;--line:#5956d5;--line-light:#efefff}
+.hex-timeline .moment:nth-child(6n/**/+5){--year:#58c787;--line:#3cae72;--line-light:#eaf9f1}
+.hex-timeline .moment:nth-child(6n){--year:#db9b35;--line:#d59130;--line-light:#fff4de}
+.hex-timeline .year{position:absolute;top:272px;left:1px;right:1px;height:70px;background:var(--year);display:flex;align-items:center;justify-content:center;color:white;font-size:26px;font-weight:850;letter-spacing:-.03em;text-shadow:0 1px 1px #0003;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 50%,calc(100% - 10px) 100%,0 100%,10px 50%)}
+.hex-timeline .moment:first-child .year{clip-path:polygon(0 0,calc(100% - 10px) 0,100% 50%,calc(100% - 10px) 100%,0 100%)}
+.hex-timeline .moment-link{position:absolute;left:9px;right:9px;height:223px;display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#2c3b43;padding:0 7px;transition:transform .16s}
+.hex-timeline .above .moment-link{top:6px}
+.hex-timeline .below .moment-link{bottom:6px}
+.hex-timeline .moment-link:hover{transform:translateY(-4px)}
+.hex-timeline .moment-link:focus-visible{border-radius:8px}
+.hex-timeline .moment .symbol{width:94px;height:91px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;background:var(--line);clip-path:polygon(50% 0,94% 25%,94% 75%,50% 100%,6% 75%,6% 25%)}
+.hex-timeline .symbol-inside{width:80px;height:77px;display:grid;place-items:center;background:#fff;clip-path:polygon(50% 0,94% 25%,94% 75%,50% 100%,6% 75%,6% 25%)}
+.hex-timeline .symbol-inside span{color:var(--line);font-size:36px;font-weight:800;line-height:1}
+.hex-timeline .moment-link h3{font-size:17px;line-height:1.18;max-width:215px;margin:10px 0 4px;letter-spacing:-.025em}
+.hex-timeline .moment-link p{font-size:12px;line-height:1.38;color:#51626b;max-width:210px;margin:0;min-height:34px}
+.hex-timeline .markers{display:flex;justify-content:center;align-items:center;gap:5px;flex-wrap:wrap;margin-top:auto}
+.hex-timeline .markers span{font-size:10px;font-weight:780;padding:4px 6px;border-radius:5px}
+.hex-timeline .platform{background:#eaf0f4;color:#3b5361}
+.hex-timeline .state{color:#fff;background:#2b9369}
+.hex-timeline .moment[data-state=test] .state{background:#bc8620}
+.hex-timeline .moment[data-state=fail] .state{background:#cb5252}
+.hex-timeline .connector{width:2px;border-left:3px dashed var(--line);position:absolute;left:calc(50% - 1px);height:43px}
+.hex-timeline .connector:after{content:"";width:10px;height:10px;border-radius:50%;border:3px solid var(--line);background:#fff;position:absolute;left:-9px}
+.hex-timeline .above .connector{top:229px}
+.hex-timeline .above .connector:after{bottom:-5px}
+.hex-timeline .below .connector{top:342px}
+.hex-timeline .below .connector:after{top:-5px}
+.hex-timeline .below .moment-link{flex-direction:column-reverse}
+.hex-timeline .below .symbol{order:3}
+.hex-timeline .below .moment-link h3{order:2;margin:9px 0 3px}
+.hex-timeline .below .moment-link p{order:1}
+.hex-timeline .below .moment-link .markers{order:0;margin-top:0;margin-bottom:auto}
+.hex-timeline .below .moment-link{justify-content:space-between;padding-top:4px}
+.hex-timeline .moment[hidden]{display:none!important}
+.hex-timeline .note{font-size:13px;color:#667782;line-height:1.6;margin:14px 2px}
+.hex-timeline .note strong{color:#314553}
+.hex-timeline .note a{color:#28648b;font-weight:700}
+@media (max-width:600px){.hex-timeline .moment{width:218px;flex-basis:218px}
+.hex-timeline .rail{padding:0 8px 15px}
+.hex-timeline .timeline-window{border-radius:10px}}
+@media (prefers-reduced-motion:reduce){.hex-timeline .timeline-window{scroll-behavior:auto}
+.hex-timeline .moment-link{transition:none}}
+/* Timeline hexagonal integrada na Wiki; estilos isolados. */
+.hex-timeline{--hex-bg:#fff;--hex-ink:#182a34;--hex-muted:#51626b;--hex-line:#dbe3e5;max-width:100%;margin:38px auto 48px;color:var(--hex-ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important}
+.hex-timeline *{box-sizing:border-box}
+.hex-timeline .timeline-window{background:var(--hex-bg);border-color:var(--hex-line);color:var(--hex-ink)}
+.hex-timeline .topline h2{color:var(--hex-ink)!important}
+.hex-timeline .note,.hex-timeline .note strong{color:var(--hex-muted)!important}
+.hex-timeline .moment-link h3{color:var(--hex-ink)!important}
+.hex-timeline .moment-link p{color:var(--hex-muted)!important}
+.hex-timeline .moment-link,.hex-timeline .year,.hex-timeline .toolbar button,.hex-timeline .topline{font-family:system-ui,-apple-system,"Segoe UI",sans-serif!important;letter-spacing:normal!important}
+.hex-timeline .moment-link{color:var(--hex-ink)!important}
+.hex-timeline .moment-link p{font-size:12px!important;line-height:1.38!important}
+.hex-timeline .moment-link h3{font-size:17px!important}
+.hex-timeline .year{font-size:26px!important}
+.hex-timeline .moment-link .markers .state{color:white!important}
+.hex-timeline .moment-link .markers .platform{color:#304d5c!important}
+.hex-timeline .symbol-inside{background:var(--hex-bg)}
+html:is([data-theme="verde"],[data-theme="mf3270"]){--unused-hex:1}
+html:is([data-theme="verde"],[data-theme="mf3270"]) .hex-timeline{--hex-bg:#111b16;--hex-ink:#e4f3e6;--hex-muted:#b3cbb9;--hex-line:#376347}
+html[data-theme="mf3279"] .hex-timeline{--hex-bg:#122537;--hex-ink:#eaf2fc;--hex-muted:#c2d7e9;--hex-line:#48749a}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .hex-timeline .moment-link{color:var(--hex-ink)!important}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .hex-timeline .moment-link h3{color:var(--hex-ink)!important}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .hex-timeline .moment-link p{color:var(--hex-muted)!important}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .hex-timeline .filters button,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .hex-timeline .navigation button{background:var(--hex-bg);color:var(--hex-ink);border-color:var(--hex-line)}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .hex-timeline .filters button[aria-pressed=true]{background:#285d46;color:#fff}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .hex-timeline .platform{background:#d8e6e9}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) .hex-timeline .note{color:var(--hex-muted)!important}
+.hex-timeline .moment[hidden]{display:none!important}
+
+
+/* Ajuste visual pontual: faixa das datas 6px mais baixa, centrada.
+   Mantém hexágonos, filtros, cabeçalhos e rodapés intactos. */
+.hex-timeline .moment .year {
+  top: 275px;
+  height: 64px;
+  font-size: 25px !important;
+}
+.hex-timeline .above .connector { top: 232px; }
+.hex-timeline .below .connector { top: 339px; }
+
+
+/* 2026-11-21 — contraste da legenda da timeline no tema Arquivo.
+   Restrito ao topo da cronologia; não altera a apresentação dos cartões. */
+html[data-theme="arquivo"] section.hex-timeline .topline h2,
+html[data-theme="arquivo"] section.hex-timeline .topline .legend,
+html[data-theme="arquivo"] section.hex-timeline .topline .legend span,
+html[data-theme="arquivo"] section.hex-timeline .topline .legend span:not(.state) {
+    color: #e9f1f2 !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: #e9f1f2 !important;
+    text-shadow: none !important;
+}
+html[data-theme="arquivo"] section.hex-timeline .topline .legend i {
+    opacity: 1 !important;
+}
+/* Protege as letras caso a seleção de texto seja feita sobre a legenda. */
+html[data-theme="arquivo"] section.hex-timeline .topline ::selection {
+    background: #40627b;
+    color: #fff;
+}
+
+
+
+/* 2026-11-22 — isolação de layout e contraste nos temas CRT.
+   Na janela dos hexágonos usa-se painel claro e texto escuro, como na base
+   funcional, para evitar conflito com as regras globais dos terminais. */
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline {
+  --hex-bg:#f7faf8;
+  --hex-ink:#1c3036;
+  --hex-muted:#40545a;
+  --hex-line:#b2c7c7;
+  margin:18px auto 34px !important;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .timeline-window {
+  background:#f7faf8 !important;
+  color:#1c3036 !important;
+  border:1px solid #b2c7c7 !important;
+  border-radius:15px !important;
+  overflow-x:auto !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .moment-link,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .moment-link h3 {
+  color:#1c3036 !important;
+  -webkit-text-fill-color:#1c3036 !important;
+  font-size:17px !important;
+  line-height:1.2 !important;
+  text-shadow:none !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .moment-link p {
+  color:#40545a !important;
+  -webkit-text-fill-color:#40545a !important;
+  font-size:12px !important;
+  line-height:1.4 !important;
+  text-shadow:none !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .symbol-inside {
+  background:#fff !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .platform {
+  background:#e4eef0 !important;
+  color:#273f4a !important;
+  -webkit-text-fill-color:#273f4a !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .markers .state {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .year {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  font-size:25px !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .topline h2,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .legend,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .legend span {
+  color:#d8f1e3 !important;
+  -webkit-text-fill-color:#d8f1e3 !important;
+  opacity:1 !important;
+  text-shadow:none !important;
+}
+html[data-theme="mf3279"] main.timeline-page .hex-timeline :is(.topline h2,.legend,.legend span) {
+  color:#e4eefc !important;
+  -webkit-text-fill-color:#e4eefc !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .legend i {
+  -webkit-text-fill-color:initial !important;
+  opacity:1 !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .filters button,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .navigation button {
+  font:700 12px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif !important;
+  padding:8px 12px !important;
+  border-radius:9px !important;
+  background:#f7faf8 !important;
+  color:#203c48 !important;
+  -webkit-text-fill-color:#203c48 !important;
+  border:1px solid #9daeb5 !important;
+  text-shadow:none !important;
+  letter-spacing:normal !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .filters button:is([aria-pressed="true"],:hover,:focus-visible),
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .navigation button:is(:hover,:focus-visible) {
+  background:#254e62 !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  border-color:#254e62 !important;
+}
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .note,
+html:is([data-theme="verde"],[data-theme="mf3270"],[data-theme="mf3279"]) main.timeline-page .hex-timeline .note strong {
+  color:#d8f1e3 !important;
+  -webkit-text-fill-color:#d8f1e3 !important;
+}
