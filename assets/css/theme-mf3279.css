@@ -1,0 +1,230 @@
+/* Tema mf3279: regras visuais independentes. */
+html[data-theme="mf3279"]{
+  --bg:#0a1218;--ink:#dbe8f4;--mut:#a8bfd4;--line:#375472;--card:#10202d;--soft:#153042;--ac:#f2d36e;--navy:#091723;--yel:#f2d36e;
+  --s-bg:#091723;--s-fg:#dce8f3;--s-dim:#abc1d6;--s-line:#48698d;--s-ac:#ffe189;--s-hi:#173347;
+  --footer-center:#0a1218;--footer-text:#c9d9e8;--footer-link:#ffe189;
+  --ok:#86df95;--warn:#ffe189;--bad:#ff9c97;--info:#9cd5ff;
+}
+html[data-theme="mf3279"] .home-hero h1,
+html[data-theme="mf3279"] .split-heading h2,
+html[data-theme="mf3279"] .home-timeline-callout h2{color:#f2f6fb!important}
+html[data-theme="mf3279"] .hero-terminal,
+html[data-theme="mf3279"] .terminal-content{background:#091723!important;color:#9cd5ff!important;border-color:#48698d!important}
+html[data-theme="mf3279"] .terminal-top,
+html[data-theme="mf3279"] .terminal-foot{background:#143347!important;color:#ffe189!important;border-color:#48698d!important}
+html[data-theme="mf3279"] .terminal-content .positive,
+html[data-theme="mf3279"] .terminal-content strong{color:#86df95!important}
+html[data-theme="mf3279"] .terminal-content .negative{color:#ff9c97!important}
+html[data-theme="mf3279"] .article-topic-tag:nth-of-type(3n/**/+1){background:#173347!important;color:#9cd5ff!important;border-color:#48698d!important}
+html[data-theme="mf3279"] .article-topic-tag:nth-of-type(3n/**/+2){background:#2f2c14!important;color:#ffe189!important;border-color:#8a7741!important}
+html[data-theme="mf3279"] .article-topic-tag:nth-of-type(3n){background:#19311c!important;color:#86df95!important;border-color:#486d4c!important}
+html[data-theme="mf3279"] .project-status.status-funcional{background:#19311c!important;color:#86df95!important;border-color:#486d4c!important}
+html[data-theme="mf3279"] .project-status.status-em-testes,
+html[data-theme="mf3279"] .project-status.status-parcial{background:#2f2c14!important;color:#ffe189!important;border-color:#8a7741!important}
+html[data-theme="mf3279"] .project-status.status-falhou{background:#331919!important;color:#ff9c97!important;border-color:#7b4a4a!important}
+html[data-theme="mf3279"] .home-btn:not(.alt),
+html[data-theme="mf3279"] .button:not(.alt){background:#173347!important;color:#ffe189!important;border-color:#48698d!important}
+html[data-theme="mf3279"] .home-btn.alt,
+html[data-theme="mf3279"] .button.alt{color:#dce8f3!important}
+html[data-theme="mf3279"] .crt-tint{display:block;background:#7fc3ff;mix-blend-mode:soft-light;opacity:.15;z-index:9998}
+html[data-theme="mf3279"] .crt-lines{display:block;z-index:9999;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.20) 0 1px,transparent 1px 4px),radial-gradient(ellipse at center,transparent 65%,rgba(0,0,0,.45) 100%)}
+html[data-theme="mf3279"] .wiki-sheet .content .steps > li,
+html[data-theme="mf3279"] .wiki-sheet .content .simple-list,
+html[data-theme="mf3279"] .wiki-sheet .content .simple-list > li,
+html[data-theme="mf3279"] .wiki-sheet .content .glossary-grid > div,
+html[data-theme="mf3279"] .wiki-sheet .content .diagram-network,
+html[data-theme="mf3279"] .wiki-sheet .content .hosting-flow,
+html[data-theme="mf3279"] .wiki-sheet .content .fog-flow-node,
+html[data-theme="mf3279"] .wiki-sheet .content .callout,
+html[data-theme="mf3279"] .wiki-sheet .content .wan-info-card {
+  background: #173044 !important;
+  color: #e7f1fa !important;
+  border-color: #48698d !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .steps > li {
+  background-image: none !important;
+  line-height: 1.65;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .steps > li::before {
+  background: #e0bd4f !important;
+  color: #112332 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .glossary-grid > div :is(p,li,small),
+html[data-theme="mf3279"] .wiki-sheet .content .hosting-flow :is(p,li,small),
+html[data-theme="mf3279"] .wiki-sheet .content .fog-flow-node :is(p,li,small),
+html[data-theme="mf3279"] .wiki-sheet .content .diagram-network :is(p,li,small),
+html[data-theme="mf3279"] .wiki-sheet .content .callout :is(p,li,small) {
+  color: #dbe8f4 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .glossary-grid > div :is(strong,h3),
+html[data-theme="mf3279"] .wiki-sheet .content .hosting-flow :is(strong,h3),
+html[data-theme="mf3279"] .wiki-sheet .content .fog-flow-node :is(strong,h3),
+html[data-theme="mf3279"] .wiki-sheet .content .diagram-network :is(strong,h3),
+html[data-theme="mf3279"] .wiki-sheet .content .callout :is(strong,h3) {
+  color: #f2d36e !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .retro-statuses > div,
+html[data-theme="mf3279"] .wiki-sheet .content .simple-diagram {
+  background: #173044 !important;
+  color: #e7f1fa !important;
+  border-color: #48698d !important;
+  box-shadow: none !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .retro-statuses > div strong,
+html[data-theme="mf3279"] .wiki-sheet .content .diagram-label {
+  color: #ffe189 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .retro-statuses > div small,
+html[data-theme="mf3279"] .wiki-sheet .content .retro-statuses > div :is(p,span),
+html[data-theme="mf3279"] .wiki-sheet .content .simple-diagram :is(p,small) {
+  color: #dbe8f4 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .diagram-network span {
+  color: #9cd5ff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .explainer-label {
+  color: #ffe189 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .content .nt-domain-case,
+html[data-theme="mf3279"] .wiki-sheet .content .explainer-section {
+  border-color: #48698d !important;
+}
+html[data-theme="mf3279"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:hover,
+html[data-theme="mf3279"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:focus-visible {
+  background: #355d7d !important;
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+html[data-theme="mf3279"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:is(.cur,[aria-current="page"]) {
+  background: #294761 !important;
+  color: #ffe189 !important;
+  box-shadow: inset 3px 0 0 #ffe189 !important;
+}
+html[data-theme="mf3279"] header.bar nav .wiki-menu .wiki-submenu a:is(:hover,:focus-visible,[aria-current="page"],.active,.cur),
+html[data-theme="mf3279"] header.bar nav .wiki-menu .wiki-submenu a[aria-current="page"]:hover {
+  background: #234f72 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-theme="mf3279"] header.bar nav .wiki-menu > summary:is(:hover,:focus-visible),
+html[data-theme="mf3279"] header.bar nav .wiki-menu[open] > summary {
+  background: #234f72 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-feature {
+  background: #142d43 !important;
+  color: #edf5ff !important;
+  border-color: #587799 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-feature h3 {
+  color: #fff2bd !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-feature p {
+  color: #e5effa !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-feature a {
+  color: #98e5ff !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .status-legend > div {
+  background: #173248 !important;
+  color: #f0f6ff !important;
+  border-color: #547591 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .status-legend p {
+  color: #e2ebf7 !important;
+  -webkit-text-fill-color: #e2ebf7 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card {
+  background: #173248 !important;
+  color: #f0f6ff !important;
+  border-color: #547591 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card:is(:hover,:focus-visible) {
+  background: #224362 !important;
+  border-color: #9ccef3 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card h3 {
+  color: #fff0b3 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card p,
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card small {
+  color: #dce9fa !important;
+  -webkit-text-fill-color: #dce9fa !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card .arrow {
+  color: #a5e6ff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-list > .card .tag,
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-feature .tag,
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .card-topic-tags .tag {
+  background: #304a59 !important;
+  color: #f9e4a0 !important;
+  border-color: #77848a !important;
+  -webkit-text-fill-color: #f9e4a0 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-toolbar button {
+  background: #1a344b !important;
+  color: #e4f0ff !important;
+  border-color: #6282a0 !important;
+  -webkit-text-fill-color: #e4f0ff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-toolbar button:is(:hover,:focus-visible) {
+  background: #315774 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-toolbar button[aria-pressed="true"] {
+  background: #f0cf73 !important;
+  border-color: #f0cf73 !important;
+  color: #142738 !important;
+  -webkit-text-fill-color: #142738 !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-search {
+  background: #182f43 !important;
+  color: #f3f8ff !important;
+  border-color: #7997ae !important;
+  -webkit-text-fill-color: #f3f8ff !important;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-search::placeholder {
+  color: #c2d5e7 !important;
+  -webkit-text-fill-color: #c2d5e7 !important;
+  opacity: 1;
+}
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .project-count,
+html[data-theme="mf3279"] .wiki-sheet:has(.project-list) .muted {
+  color: #dce9fa !important;
+}
+html[data-theme="mf3279"] main.timeline-page > .timeline-intro :is(h1,h1 em,.kicker,p) {
+  color:#e5edf9 !important;
+  -webkit-text-fill-color:#e5edf9 !important;
+}
+
+/* MF3279: contraste obrigatório nas superfícies fixas */
+html[data-theme="mf3279"] .home-timeline-callout :is(h2,p,.section-kicker),
+html[data-theme="mf3279"] .home-category :is(h3,p,small) {color:#f2f5fa!important;-webkit-text-fill-color:#f2f5fa!important;opacity:1!important}
+html[data-theme="mf3279"] .wiki-sheet .content .glossary-grid>div :is(h3,strong,p,small,span,li){color:#e9f3ed!important;-webkit-text-fill-color:#e9f3ed!important}
+html[data-theme="mf3279"] .wiki-sheet .content :is(.note,.retro-safety-note){min-height:0!important;height:auto!important}
+html[data-theme="mf3279"] .wiki-sheet .content .nt4-direct-link a{background:#0b5967!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-theme="mf3279"] .wiki-sheet .content .nt4-direct-link a:is(:hover,:focus-visible){background:#084653!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+
+html[data-theme="mf3279"] .wiki-sheet .content .retro-safety-note{background:#e6f0ed!important;border-color:#aac6b9!important;color:#243e35!important}
+html[data-theme="mf3279"] .wiki-sheet .content .retro-safety-note :is(strong,p,li,small,span){color:#243e35!important;-webkit-text-fill-color:#243e35!important;opacity:1!important}
+
+/* 2026-11-22 — etiquetas de codigo: claro sobre escuro apenas neste Mainframe.
+   A regra nao altera blocos <pre>, figuras, menus ou outros temas. */
+html[data-theme="mf3279"] .wiki-sheet .content :is(p,li,td,th,blockquote,figcaption) code:not(pre code),
+html[data-theme="mf3279"] .wiki-sheet .content > code:not(pre code),
+html[data-theme="mf3279"] .wiki-sheet .content .note code:not(pre code) {
+  background: #e4eef7 !important;
+  color: #173047 !important;
+  -webkit-text-fill-color: #173047 !important;
+  border: 1px solid #89a8bf !important;
+  border-radius: 4px;
+  padding: .08em .25em;
+  text-shadow: none !important;
+}

@@ -1,0 +1,67 @@
+/* Tema verde: regras visuais independentes. */
+html[data-theme=verde]{--s-bg:#03120a;--s-fg:#8dffae;--s-dim:#4cc277;--s-line:#17603a;--s-ac:#d2ffe0;--s-hi:#06240f;--tint:#8dffae}
+html[data-theme=verde]{background:#050505}
+html[data-theme=verde] body{background:#0b0b0b!important}
+html[data-theme=verde] #crt{filter:grayscale(1) contrast(1.12) brightness(1.12);background:#0b0b0b;min-height:100vh;text-shadow:0 0 5px rgba(255,255,255,.3)}
+html[data-theme=verde] #crt *{font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,"Liberation Mono",monospace!important;letter-spacing:0!important}
+html[data-theme=verde] .crt-tint{display:block;background:var(--tint);mix-blend-mode:multiply;z-index:9998}
+html[data-theme=verde] .crt-lines{display:block;z-index:9999;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.26) 0 1px,transparent 1px 3px),radial-gradient(ellipse at center,transparent 58%,rgba(0,0,0,.6) 100%)}
+html[data-theme=verde] ::selection{background:var(--tint);color:#000}
+html[data-theme="verde"] footer,html[data-theme="verde"] .site-footer,html[data-theme="verde"] .footer,html[data-theme="verde"] .timeline-page footer{background:#0a100c!important;color:#c2e8ca!important;border-color:#28593c!important}
+html[data-theme="verde"] footer a,html[data-theme="verde"] .site-footer a,html[data-theme="verde"] .footer a{color:#b0efbe!important}
+html[data-theme="verde"] .timeline-page + footer,html[data-theme="verde"] .timeline-page ~ footer{background:#0a100c!important}
+html[data-theme="verde"] .home-hero h1{font-size:clamp(2.5rem,4.7vw,5rem)!important}
+html[data-theme="verde"] .top h1{font-size:clamp(2.15rem,4.5vw,3.75rem)!important}
+html[data-theme="verde"] .split-heading h2{font-size:clamp(1.8rem,3.5vw,3.15rem)!important}
+html[data-theme="verde"] .home-timeline-callout h2,
+html[data-theme="verde"] .retro-timebox h2{font-size:clamp(1.65rem,2.7vw,2.65rem)!important}
+html[data-theme="verde"] .wiki-sheet .content>section>h2,
+html[data-theme="verde"] main.content>section>h2{font-size:clamp(1.35rem,2.35vw,1.7rem)!important}
+html[data-theme="verde"] .home-category h3{font-size:1.55rem!important}
+@media (max-width:700px){
+html[data-theme="verde"] .home-hero h1{font-size:clamp(2.25rem,7.2vw,3rem)!important}
+}
+html[data-theme="verde"] footer,
+html[data-theme="verde"] .footer,
+html[data-theme="verde"] .site-footer,
+html[data-theme="verde"] .timeline-page footer,
+html[data-theme="verde"] .timeline-page + footer,
+html[data-theme="verde"] .timeline-page ~ footer,
+html[data-theme="verde"] .home-footer{
+  background:var(--bg)!important;
+  color:var(--s-fg)!important;
+  border-color:var(--s-line)!important;
+}
+html[data-theme="verde"] footer a,
+html[data-theme="verde"] .footer a,
+html[data-theme="verde"] .site-footer a,
+html[data-theme="verde"] .home-footer a{color:var(--s-ac)!important}
+html[data-theme="verde"]{--footer-center:#0b0b0b;--footer-text:#c2e8ca;--footer-link:#b0efbe}
+html[data-theme="verde"] header.bar nav .wiki-menu .wiki-submenu a:is(:hover,:focus-visible,[aria-current="page"],.active,.cur),
+html[data-theme="verde"] header.bar nav .wiki-menu .wiki-submenu a[aria-current="page"]:hover {
+  background: #174b38 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-theme="verde"] header.bar nav .wiki-menu > summary:is(:hover,:focus-visible),
+html[data-theme="verde"] header.bar nav .wiki-menu[open] > summary {
+  background: #174b38 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-theme="verde"] main.timeline-page > .timeline-intro :is(h1,h1 em,.kicker,p) {
+  color:#b6efbe !important;
+  -webkit-text-fill-color:#b6efbe !important;
+}
+
+/* VERDE: contraste obrigatório nas superfícies fixas */
+html[data-theme="verde"] .home-timeline-callout :is(h2,p,.section-kicker),
+html[data-theme="verde"] .home-category :is(h3,p,small) {color:#d0ffdc!important;-webkit-text-fill-color:#d0ffdc!important;opacity:1!important}
+html[data-theme="verde"] .wiki-sheet .content .glossary-grid>div :is(h3,strong,p,small,span,li){color:#e9f3ed!important;-webkit-text-fill-color:#e9f3ed!important}
+html[data-theme="verde"] .wiki-sheet .content :is(.note,.retro-safety-note){min-height:0!important;height:auto!important}
+html[data-theme="verde"] .wiki-sheet .content .nt4-direct-link a{background:#0b5967!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-theme="verde"] .wiki-sheet .content .nt4-direct-link a:is(:hover,:focus-visible){background:#084653!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+
+html[data-theme="verde"] .wiki-sheet .content .retro-safety-note{background:#e6f0ed!important;border-color:#aac6b9!important;color:#243e35!important}
+html[data-theme="verde"] .wiki-sheet .content .retro-safety-note :is(strong,p,li,small,span){color:#243e35!important;-webkit-text-fill-color:#243e35!important;opacity:1!important}

@@ -1,0 +1,85 @@
+/* Tema mf3270: regras visuais independentes. */
+html[data-theme="mf3270"]{
+  --bg:#0b0f0c;--ink:#9ed0a8;--mut:#739b7b;--line:#2a4d35;--card:#101611;--soft:#162019;--ac:#c4f5ca;--navy:#0b0f0c;--yel:#d9c677;
+  --s-bg:#0b0f0c;--s-fg:#9ed0a8;--s-dim:#739b7b;--s-line:#2f6545;--s-ac:#d4ffd9;--s-hi:#162019;
+  --footer-center:#0b0f0c;--footer-text:#95c79f;--footer-link:#d0f7d4;
+}
+html[data-theme="mf3270"] .home-hero h1,
+html[data-theme="mf3270"] .split-heading h2,
+html[data-theme="mf3270"] .home-timeline-callout h2{color:#c8f6cf!important}
+html[data-theme="mf3270"] .hero-terminal,
+html[data-theme="mf3270"] .terminal-content{background:#09100b!important;color:#9ed0a8!important;border-color:#2f6545!important}
+html[data-theme="mf3270"] .terminal-top,
+html[data-theme="mf3270"] .terminal-foot{background:#101812!important;color:#c4f5ca!important;border-color:#2f6545!important}
+html[data-theme="mf3270"] .terminal-content .positive,
+html[data-theme="mf3270"] .terminal-content strong{color:#c4f5ca!important}
+html[data-theme="mf3270"] .terminal-content .negative{color:#e7b68f!important}
+html[data-theme="mf3270"] .article-topic-tag{color:#d4ffd9!important}
+html[data-theme="mf3270"] .crt-tint{display:block;background:#79d487;mix-blend-mode:multiply;opacity:.35;z-index:9998}
+html[data-theme="mf3270"] .crt-lines{display:block;z-index:9999;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.24) 0 1px,transparent 1px 4px),radial-gradient(ellipse at center,transparent 62%,rgba(0,0,0,.55) 100%)}
+html[data-theme="mf3270"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:hover,
+html[data-theme="mf3270"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:focus-visible {
+  background: #28563a !important;
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+html[data-theme="mf3270"] .wiki-sheet .sidebar.wiki-sidebar-v2 a:is(.cur,[aria-current="page"]) {
+  background: #21442f !important;
+  color: #d4ffd9 !important;
+  box-shadow: inset 3px 0 0 #a6f3b4 !important;
+}
+html[data-theme="mf3270"] header.bar nav .wiki-menu .wiki-submenu a:is(:hover,:focus-visible,[aria-current="page"],.active,.cur),
+html[data-theme="mf3270"] header.bar nav .wiki-menu .wiki-submenu a[aria-current="page"]:hover {
+  background: #1b4930 !important;
+  color: #c4ffd0 !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #c4ffd0 !important;
+}
+html[data-theme="mf3270"] header.bar nav .wiki-menu > summary:is(:hover,:focus-visible),
+html[data-theme="mf3270"] header.bar nav .wiki-menu[open] > summary {
+  background: #1b4930 !important;
+  color: #c4ffd0 !important;
+  -webkit-text-fill-color: #c4ffd0 !important;
+}
+html[data-theme="mf3270"] .wiki-sheet .project-feature :is(h3,p,small) {color:#22443a!important;-webkit-text-fill-color:#22443a!important}
+html[data-theme="mf3270"] main.timeline-page > .timeline-intro :is(h1,h1 em,.kicker,p) {
+  color:#c4f4ce !important;
+  -webkit-text-fill-color:#c4f4ce !important;
+}
+
+/* MF3270: contraste obrigatório nas superfícies fixas */
+html[data-theme="mf3270"] .home-timeline-callout :is(h2,p,.section-kicker),
+html[data-theme="mf3270"] .home-category :is(h3,p,small) {color:#c4f5ca!important;-webkit-text-fill-color:#c4f5ca!important;opacity:1!important}
+html[data-theme="mf3270"] .wiki-sheet .content .glossary-grid>div :is(h3,strong,p,small,span,li){color:#e9f3ed!important;-webkit-text-fill-color:#e9f3ed!important}
+html[data-theme="mf3270"] .wiki-sheet .content :is(.note,.retro-safety-note){min-height:0!important;height:auto!important}
+html[data-theme="mf3270"] .wiki-sheet .content .nt4-direct-link a{background:#0b5967!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-theme="mf3270"] .wiki-sheet .content .nt4-direct-link a:is(:hover,:focus-visible){background:#084653!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+
+html[data-theme="mf3270"] .wiki-sheet .content .retro-safety-note{background:#e6f0ed!important;border-color:#aac6b9!important;color:#243e35!important}
+html[data-theme="mf3270"] .wiki-sheet .content .retro-safety-note :is(strong,p,li,small,span){color:#243e35!important;-webkit-text-fill-color:#243e35!important;opacity:1!important}
+
+/* 2026-11-22 — etiquetas de codigo: claro sobre escuro apenas neste Mainframe.
+   A regra nao altera blocos <pre>, figuras, menus ou outros temas. */
+html[data-theme="mf3270"] .wiki-sheet .content :is(p,li,td,th,blockquote,figcaption) code:not(pre code),
+html[data-theme="mf3270"] .wiki-sheet .content > code:not(pre code),
+html[data-theme="mf3270"] .wiki-sheet .content .note code:not(pre code) {
+  background: #d7eedb !important;
+  color: #143320 !important;
+  -webkit-text-fill-color: #143320 !important;
+  border: 1px solid #7ea78a !important;
+  border-radius: 4px;
+  padding: .08em .25em;
+  text-shadow: none !important;
+}
+
+/* Ajuste final: titulos dos dois cartoes editoriais claros (Artigos), Mainframe 3270.
+   Conserva a textura, os fundos e as cores dos restantes componentes. */
+html[data-theme="mf3270"] .wiki-intro-grid a > strong,
+html[data-theme="mf3270"] .wiki-intro-grid a:hover > strong,
+html[data-theme="mf3270"] .wiki-intro-grid a:focus-visible > strong {
+  color: #20533a !important;
+  -webkit-text-fill-color: #20533a !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
