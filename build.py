@@ -7,7 +7,7 @@ BASE='https://nmbb.github.io/wiki/'
 INFRA=[('homelab','Home Lab'),('redes','Redes e VLANs'),('pfsense','pfSense'),('proxmox','Proxmox'),('tailscale','Tailscale'),('cloudflare','Cloudflare e alojamento')]
 SERV=[('banana-pi-m5','Banana Pi M5'),('home-assistant','Home Assistant'),('homarr','Homarr'),('monitorizacao','Monitorização')]
 CASOS=[('banana-pi-docker-rede','Docker arrancou antes da rede')]
-LAB=[('projetos','Visão geral do laboratório'),('dos','MS-DOS · 1982–1994'),('windows-antigos','Windows 1.01, 2.1 e 3.11'),('windows-nt','Windows NT 3.1, NT4 e 2000'),('redhat-samba','Red Hat 7.1 + Samba'),('suse9','SuSE Linux 9.0'),('retro-simh','Retro-SIMH · 1977–1982'),('86box','86Box · x86 histórico'),('pxe-iventoy','PXE e iVentoy'),('fog','FOG Project')]
+LAB=[('projetos','Visão geral do laboratório'),('mainframes','Mainframes IBM · MVS'),('dos','MS-DOS · 1982–1994'),('windows-antigos','Windows 1.01, 2.1 e 3.11'),('windows-nt','Windows NT 3.1, NT4 e 2000'),('redhat-samba','Red Hat 7.1 + Samba'),('suse9','SuSE Linux 9.0'),('retro-simh','Retro-SIMH · 1977–1982'),('86box','86Box · x86 histórico'),('pxe-iventoy','PXE e iVentoy'),('fog','FOG Project')]
 TOP=[('index','Início'),('artigos','Biblioteca'),('linha-do-tempo','Timeline retro'),('sobre','Sobre')]
 ORDER=[k for k,_ in INFRA+SERV+CASOS+LAB if '#' not in k]; TITLES=dict(INFRA+SERV+CASOS+LAB)
 CSS=['legacy/wiki.css','legacy/wiki-unified.css','legacy/archive-2026.css','legacy/gallery-modal-20261113.css','legacy/wiki-sidebar-v2.css','theme.css']
