@@ -1,0 +1,1 @@
+(()=>{const buttons=[...document.querySelectorAll('.museum-eras button')],cards=[...document.querySelectorAll('.museum-card')];buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));cards.forEach(c=>c.hidden=b.dataset.era!=='all'&&c.dataset.era!==b.dataset.era)}));})();

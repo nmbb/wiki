@@ -7,7 +7,7 @@ BASE='https://nmbb.github.io/wiki/'
 INFRA=[('homelab','Home Lab'),('redes','Redes e VLANs'),('pfsense','pfSense'),('proxmox','Proxmox'),('tailscale','Tailscale'),('cloudflare','Cloudflare e alojamento')]
 SERV=[('banana-pi-m5','Banana Pi M5'),('home-assistant','Home Assistant'),('homarr','Homarr'),('monitorizacao','Monitorização')]
 CASOS=[('banana-pi-docker-rede','Docker arrancou antes da rede')]
-LAB=[('projetos','Visão geral do laboratório'),('mainframes','Mainframes IBM · MVS'),('os360','IBM OS/360 · MFT'),('dos','MS-DOS · 1982–1994'),('windows-antigos','Windows 1.01, 2.1 e 3.11'),('windows-nt','Windows NT 3.1, NT4 e 2000'),('redhat-samba','Red Hat 7.1 + Samba'),('suse9','SuSE Linux 9.0'),('retro-simh','Retro-SIMH · 1977–1982'),('86box','86Box · x86 histórico'),('pxe-iventoy','PXE e iVentoy'),('fog','FOG Project')]
+LAB=[('projetos','Coleção do museu'),('ferranti','1951 · Ferranti Mark I'),('os360','1972 · IBM OS/360 MFT'),('retro-simh','1977–1982 · Retro-SIMH'),('mainframes','1981 · IBM MVS 3.8j TK4-'),('86box','1981–1988 · 86Box'),('dos','1982–1994 · MS-DOS'),('windows-antigos','1985–1993 · Windows sobre DOS'),('windows-nt','1993–2009 · Windows NT'),('redhat-samba','2001 · Red Hat 7.1 + Samba'),('suse9','2003 · SuSE Linux 9.0'),('pxe-iventoy','PXE e iVentoy'),('fog','FOG Project')]
 TOP=[('index','Início'),('artigos','Biblioteca'),('linha-do-tempo','Timeline retro'),('sobre','Sobre')]
 ORDER=[k for k,_ in INFRA+SERV+CASOS+LAB if '#' not in k]; TITLES=dict(INFRA+SERV+CASOS+LAB)
 CSS=['legacy/wiki.css','legacy/wiki-unified.css','legacy/archive-2026.css','legacy/gallery-modal-20261113.css','legacy/wiki-sidebar-v2.css','theme.css']
@@ -21,8 +21,8 @@ def link(it,cur):
 def header(cur):
     top=lambda k,t:'<a href="%s.html"%s>%s</a>'%(k,' aria-current="page"' if k==cur else '',t)
     menu=lambda t,L:'<details class="wiki-menu"><summary>%s</summary><div class="wiki-submenu">%s</div></details>'%(t,''.join(link(i,cur) for i in L))
-    return ('<header class="bar"><div class="wrap"><a class="brand" href="index.html">◈  ARQUIVO / WIKI</a><nav aria-label="Navegação principal">'
-        +top('index','Início')+menu('Infraestrutura',INFRA)+menu('Serviços e casos',SERV+CASOS)+menu('Laboratório',LAB)+top('artigos','Biblioteca')+top('linha-do-tempo','Timeline retro')+top('sobre','Sobre')+'</nav></div></header>')
+    return ('<header class="bar"><div class="wrap"><a class="brand" href="index.html">◈  ARQUIVO / MUSEU</a><nav aria-label="Navegação principal">'
+        +top('index','Início')+menu('Infraestrutura',INFRA)+menu('Serviços e casos',SERV+CASOS)+menu('Coleção',LAB)+top('artigos','Biblioteca')+top('linha-do-tempo','Timeline retro')+top('sobre','Sobre')+'</nav></div></header>')
 def sidebar(cur):
     g=lambda t,L:'<div class="wiki-side-group"><span class="wiki-side-title">%s</span>%s</div>'%(t,''.join(link(i,cur) for i in L))
     return g('PRINCIPAL',[('artigos','Biblioteca'),('linha-do-tempo','Timeline retro')])+g('INFRAESTRUTURA',INFRA)+g('SERVIÇOS E AUTOMAÇÃO',SERV)+g('CASOS PRÁTICOS',CASOS)+g('LABORATÓRIO RETRO',LAB)

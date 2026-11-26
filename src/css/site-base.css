@@ -2756,3 +2756,16 @@ html[data-theme] body main.experience-home > section.home-stats > div {padding:0
 html[data-theme] body main.experience-home > section.home-stats strong {line-height:1.25;margin-bottom:.55rem;overflow-wrap:anywhere;}
 html[data-theme="hercules"] body main.experience-home > section.home-stats {border-radius:34px!important;padding:clamp(20px,4.65vw,54px)!important;}
 @media(max-width:700px){html[data-theme] body main.experience-home > section.home-stats {grid-template-columns:1fr;gap:18px!important;}}
+
+/* Espacamento consistente dos blocos de comandos nos oito temas. */
+html[data-theme] .wiki-sheet .content pre {
+  padding: 12px 18px !important;
+  margin-block: 1rem 1.35rem !important;
+  line-height: 1.5;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+html[data-theme] .wiki-sheet .content pre + p {
+  margin-top: 1.35rem !important;
+}
