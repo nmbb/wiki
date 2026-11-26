@@ -154,3 +154,14 @@ html[data-theme="hercules"] header.bar nav details.wiki-menu .wiki-submenu{backg
 html[data-theme="hercules"] header.bar nav details.wiki-menu .wiki-submenu a{background:transparent!important;color:#ffce79!important;-webkit-text-fill-color:#ffce79!important;text-shadow:none!important;opacity:1!important;}
 html[data-theme="hercules"] header.bar nav details.wiki-menu .wiki-submenu a:is(:hover,:focus-visible,:active,.cur,[aria-current="page"]){background:#ffc15a!important;color:#211404!important;-webkit-text-fill-color:#211404!important;}
 html[data-theme="hercules"] header.bar nav details.wiki-menu .wiki-submenu a:focus-visible{outline:2px solid #896027!important;outline-offset:-2px;}
+
+/* 2026-11-26 — contraste da cronologia, sem alterar layout. */
+html[data-theme="hercules"] body main.timeline-page :is(.timeline-detail,.hex-timeline .note){background:#20180a!important;color:#ffce79!important;-webkit-text-fill-color:#ffce79!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="hercules"] body main.timeline-page :is(.timeline-detail,.hex-timeline .note) :is(h2,h3,h4,strong,b,em,span,p,small,li){color:#ffce79!important;-webkit-text-fill-color:#ffce79!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="hercules"] body main.timeline-page .timeline-detail p{color:#e4b86d!important;-webkit-text-fill-color:#e4b86d!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="hercules"] body main.timeline-page .timeline-detail .time-label{color:#ffe0a3!important;-webkit-text-fill-color:#ffe0a3!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="hercules"] body main.timeline-page :is(.timeline-detail,.hex-timeline .note) a{color:#ffc15a!important;-webkit-text-fill-color:#ffc15a!important;opacity:1!important;text-shadow:none!important;text-decoration:underline!important;}
+html[data-theme="hercules"] body main.timeline-page :is(.timeline-detail,.hex-timeline .note) a:is(:hover,:focus-visible,:active,:visited){color:#ffc15a!important;-webkit-text-fill-color:#ffc15a!important;opacity:1!important;text-shadow:none!important;text-decoration:underline!important;}
+html[data-theme="hercules"] body main.timeline-page :is(.timeline-detail,.hex-timeline .note) a:focus-visible{outline:2px solid #ffc15a!important;outline-offset:3px;}
+html[data-theme="hercules"] body main.timeline-page :is(.timeline-references,.timeline-references p,.timeline-references span,.timeline-intro p,.timeline-intro em){color:#ffce79!important;-webkit-text-fill-color:#ffce79!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="hercules"] body main.timeline-page .timeline-references a{color:#ffc15a!important;-webkit-text-fill-color:#ffc15a!important;opacity:1!important;text-shadow:none!important;text-decoration:underline;}

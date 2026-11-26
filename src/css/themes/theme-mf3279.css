@@ -228,3 +228,23 @@ html[data-theme="mf3279"] .wiki-sheet .content .note code:not(pre code) {
   padding: .08em .25em;
   text-shadow: none !important;
 }
+
+/* 2026-11-26 — contraste da cronologia, sem alterar layout. */
+html[data-theme="mf3279"] body main.timeline-page :is(.timeline-detail,.hex-timeline .note){background:#10202d!important;color:#dbe8f4!important;-webkit-text-fill-color:#dbe8f4!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3279"] body main.timeline-page :is(.timeline-detail,.hex-timeline .note) :is(h2,h3,h4,strong,b,em,span,p,small,li){color:#dbe8f4!important;-webkit-text-fill-color:#dbe8f4!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3279"] body main.timeline-page .timeline-detail p{color:#b9d1e4!important;-webkit-text-fill-color:#b9d1e4!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3279"] body main.timeline-page .timeline-detail .time-label{color:#f2d36e!important;-webkit-text-fill-color:#f2d36e!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3279"] body main.timeline-page :is(.timeline-detail,.hex-timeline .note) a{color:#ffe189!important;-webkit-text-fill-color:#ffe189!important;opacity:1!important;text-shadow:none!important;text-decoration:underline!important;}
+html[data-theme="mf3279"] body main.timeline-page :is(.timeline-detail,.hex-timeline .note) a:is(:hover,:focus-visible,:active,:visited){color:#ffe189!important;-webkit-text-fill-color:#ffe189!important;opacity:1!important;text-shadow:none!important;text-decoration:underline!important;}
+html[data-theme="mf3279"] body main.timeline-page :is(.timeline-detail,.hex-timeline .note) a:focus-visible{outline:2px solid #ffe189!important;outline-offset:3px;}
+html[data-theme="mf3279"] body main.timeline-page :is(.timeline-references,.timeline-references p,.timeline-references span,.timeline-intro p,.timeline-intro em){color:#dbe8f4!important;-webkit-text-fill-color:#dbe8f4!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3279"] body main.timeline-page .timeline-references a{color:#ffe189!important;-webkit-text-fill-color:#ffe189!important;opacity:1!important;text-shadow:none!important;text-decoration:underline;}
+html[data-theme="mf3279"] body main.timeline-page .hex-timeline :is(.filters,.navigation) button{background:#f7fafb!important;color:#243c4a!important;-webkit-text-fill-color:#243c4a!important;opacity:1!important;text-shadow:none!important;border-color:#879ba7!important;}
+html[data-theme="mf3279"] body main.timeline-page .hex-timeline :is(.filters,.navigation) button:is(:hover,:focus-visible,:active,[aria-pressed=true]){background:#234b65!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important;text-shadow:none!important;border-color:#234b65!important;}
+html[data-theme="mf3279"] body main.timeline-page .hex-timeline .moment .markers .platform{background:#e5edf1!important;color:#243c4a!important;-webkit-text-fill-color:#243c4a!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3279"] body main.timeline-page .hex-timeline .moment[data-state=ok] .markers .state{background:#206645!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3279"] body main.timeline-page .hex-timeline .moment[data-state=test] .markers .state{background:#f0c36a!important;color:#382700!important;-webkit-text-fill-color:#382700!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3279"] body main.timeline-page .hex-timeline .moment[data-state=fail] .markers .state{background:#a53a3a!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3279"] body main.timeline-page .hex-timeline .moment .year span{color:#14232b!important;-webkit-text-fill-color:#14232b!important;opacity:1!important;text-shadow:none!important;}
+
+html[data-theme="mf3279"] body main.timeline-page .hex-timeline .moment:nth-child(6n+4) .year span{color:#fff!important;-webkit-text-fill-color:#fff!important;}
