@@ -8,8 +8,9 @@ INFRA=[('homelab','Home Lab'),('redes','Redes e VLANs'),('pfsense','pfSense'),('
 SERV=[('banana-pi-m5','Banana Pi M5'),('home-assistant','Home Assistant'),('homarr','Homarr'),('monitorizacao','Monitorização')]
 CASOS=[('banana-pi-docker-rede','Docker arrancou antes da rede')]
 LAB=[('projetos','Coleção do museu'),('ferranti','1951 · Ferranti Mark I'),('ibm701','1952 · IBM 701'),('ibm650','1954 · IBM 650'),('norc','1954 · IBM NORC'),('hp2100','1966–1981 · Hewlett-Packard'),('os360','1972 · IBM OS/360 MFT'),('retro-simh','1977–1982 · Retro-SIMH'),('mainframes','1981 · IBM MVS 3.8j TK4-'),('86box','1981–1988 · 86Box'),('dos','1982–1994 · MS-DOS'),('windows-antigos','1985–1993 · Windows sobre DOS'),('windows-nt','1993–2009 · Windows NT'),('redhat-samba','2001 · Red Hat 7.1 + Samba'),('suse9','2003 · SuSE Linux 9.0'),('pxe-iventoy','PXE e iVentoy'),('fog','FOG Project')]
+ELET=[('eletronica','Montagens práticas'),('relay-computer','Relay Computer — MK I')]
 TOP=[('index','Início'),('artigos','Biblioteca'),('linha-do-tempo','Timeline retro'),('sobre','Sobre')]
-ORDER=[k for k,_ in INFRA+SERV+CASOS+LAB if '#' not in k]; TITLES=dict(INFRA+SERV+CASOS+LAB)
+ORDER=[k for k,_ in INFRA+SERV+CASOS+LAB+ELET if '#' not in k]; TITLES=dict(INFRA+SERV+CASOS+LAB+ELET)
 CSS=['legacy/wiki.css','legacy/wiki-unified.css','legacy/archive-2026.css','legacy/gallery-modal-20261113.css','legacy/wiki-sidebar-v2.css','theme.css']
 rd=lambda p:open(p,encoding='utf-8').read()
 def put(p,t):
@@ -22,10 +23,10 @@ def header(cur):
     top=lambda k,t:'<a href="%s.html"%s>%s</a>'%(k,' aria-current="page"' if k==cur else '',t)
     menu=lambda t,L:'<details class="wiki-menu"><summary>%s</summary><div class="wiki-submenu">%s</div></details>'%(t,''.join(link(i,cur) for i in L))
     return ('<header class="bar"><div class="wrap"><a class="brand" href="index.html">◈  ARQUIVO / MUSEU</a><nav aria-label="Navegação principal">'
-        +top('index','Início')+menu('Infraestrutura',INFRA)+menu('Serviços e casos',SERV+CASOS)+menu('Coleção',LAB)+top('artigos','Biblioteca')+top('linha-do-tempo','Timeline retro')+top('sobre','Sobre')+'</nav></div></header>')
+        +top('index','Início')+menu('Infraestrutura',INFRA)+menu('Serviços e casos',SERV+CASOS)+menu('Coleção',LAB)+menu('Eletrónica',ELET)+top('artigos','Biblioteca')+top('linha-do-tempo','Timeline retro')+top('sobre','Sobre')+'</nav></div></header>')
 def sidebar(cur):
     g=lambda t,L:'<div class="wiki-side-group"><span class="wiki-side-title">%s</span>%s</div>'%(t,''.join(link(i,cur) for i in L))
-    return g('PRINCIPAL',[('artigos','Biblioteca'),('linha-do-tempo','Timeline retro')])+g('INFRAESTRUTURA',INFRA)+g('SERVIÇOS E AUTOMAÇÃO',SERV)+g('CASOS PRÁTICOS',CASOS)+g('LABORATÓRIO RETRO',LAB)
+    return g('PRINCIPAL',[('artigos','Biblioteca'),('linha-do-tempo','Timeline retro')])+g('INFRAESTRUTURA',INFRA)+g('SERVIÇOS E AUTOMAÇÃO',SERV)+g('CASOS PRÁTICOS',CASOS)+g('LABORATÓRIO RETRO',LAB)+g('ELETRÓNICA',ELET)
 def parse(p):
     t=rd(p); m=re.match(r'---\n(.*?)\n---\n',t,re.S)
     return dict(l.split(': ',1) for l in m.group(1).split('\n') if ': ' in l),t[m.end():]

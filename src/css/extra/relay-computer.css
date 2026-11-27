@@ -1,0 +1,8 @@
+/* Scoped article layout; inherits the active Wiki palette. */
+.relay-article .relay-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:16px 0}
+.relay-article .relay-panel{border:1px solid currentColor;border-radius:10px;padding:14px;min-width:0}
+.relay-article .relay-panel h3{margin-top:0}.relay-article .relay-examples figure{margin:0}.relay-article .relay-examples img{width:100%;height:auto;aspect-ratio:965/308;object-fit:contain;background:#f1f2f3}
+.relay-article .relay-scroll{overflow-x:auto;max-width:100%}.relay-article .relay-truth{min-width:480px;width:100%;font-variant-numeric:tabular-nums}.relay-article .relay-truth th,.relay-article .relay-truth td{text-align:center}
+.relay-article .relay-led{display:inline-block;width:17px;height:17px;border-radius:50%;vertical-align:middle;border:1px solid #87978c;background:#35433e}.relay-article .relay-led.on{background:#38ce59;border-color:#1a7830;box-shadow:0 0 6px #38ce5966}.relay-article .relay-led.off{background:#35433e}
+.relay-article .relay-legend{display:flex;flex-wrap:wrap;gap:18px;margin:15px 0}.relay-article .relay-formula{font-family:ui-monospace,monospace;line-height:1.9;border:1px solid currentColor;padding:14px;border-radius:8px;overflow-wrap:anywhere}.relay-article figure img{max-width:100%;height:auto}
+@media(max-width:680px){.relay-article .relay-grid{grid-template-columns:1fr}}
