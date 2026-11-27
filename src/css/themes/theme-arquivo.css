@@ -70,3 +70,33 @@ html[data-theme="arquivo"] body main.timeline-page .hex-timeline .moment .year s
 html[data-theme="arquivo"] body main.timeline-page .hex-timeline .moment .symbol-inside span{color:#243c4a!important;-webkit-text-fill-color:#243c4a!important;}
 
 html[data-theme="arquivo"] body main.timeline-page .hex-timeline .moment:nth-child(6n+4) .year span{color:#fff!important;-webkit-text-fill-color:#fff!important;}
+
+/* Arquivo — revisão de superfícies claras e escuras (2026-11-27). */
+html[data-theme="arquivo"] body .museum-home{color:#f2efe7!important;}
+html[data-theme="arquivo"] body .museum-home :is(h1,h2,h3,.museum-lead,.museum-label,p,.museum-eras button,.museum-eras small){color:#e4eee6!important;-webkit-text-fill-color:#e4eee6!important;}
+html[data-theme="arquivo"] body .museum-home :is(.museum-card,.museum-feature,.museum-room){color:#20312f!important;background:#faf8f1!important;}
+html[data-theme="arquivo"] body .museum-home :is(.museum-card,.museum-feature,.museum-room) :is(h2,h3,p,span){color:#20312f!important;-webkit-text-fill-color:#20312f!important;}
+html[data-theme="arquivo"] body .museum-home .museum-eras button:is(:hover,:focus-visible,[aria-pressed=true]){background:#28443d!important;color:#fff!important;}
+html[data-theme="arquivo"] body .wiki-sheet :is(.eyebrow,.breadcrumb,.breadcrumb span,.top .lead){color:#405e53!important;-webkit-text-fill-color:#405e53!important;}
+html[data-theme="arquivo"] body .wiki-sheet :is(.content,.footer-nav) a:not(.button):not(.card){color:#15574a!important;-webkit-text-fill-color:#15574a!important;}
+html[data-theme="arquivo"] body .wiki-sheet :is(.content,.footer-nav) a:not(.button):not(.card):is(:hover,:focus-visible){color:#123d34!important;-webkit-text-fill-color:#123d34!important;text-decoration:underline;}
+html[data-theme="arquivo"] body .wiki-sheet .content :is(.note,.panel,.card,.glossary-grid>div,.incident-hero) a:not(.button){color:#c6e7c9!important;-webkit-text-fill-color:#c6e7c9!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content :is(.note,.panel,.card,.glossary-grid>div,.incident-hero) a:not(.button):is(:hover,:focus-visible){color:#fff!important;-webkit-text-fill-color:#fff!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content :is(.retro-safety-note,.dos-note) a:not(.button){color:#15574a!important;-webkit-text-fill-color:#15574a!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content .note strong,html[data-theme="arquivo"] body .wiki-sheet .content .incident-hero h2{color:#f2efe7!important;-webkit-text-fill-color:#f2efe7!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content .callout strong{color:#243e35!important;-webkit-text-fill-color:#243e35!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content :is(.retro-safety-note,.dos-note) strong{color:#243e35!important;-webkit-text-fill-color:#243e35!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content :is(.diagram-network span,.banana-no,.fog-flow-node span,.fog-flow-arrow,.hosting-flow b),html[data-theme="arquivo"] body .wiki-sheet .card-topic-tags .tag{color:#36594e!important;-webkit-text-fill-color:#36594e!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content :is(.note,.panel,.card) code{color:#f2efe7!important;-webkit-text-fill-color:#f2efe7!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content em{color:inherit!important;-webkit-text-fill-color:currentColor!important;}
+html[data-theme="arquivo"] body .wiki-sheet .home-timeline-callout{background:#21353b!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content .button.alt{color:#15574a!important;-webkit-text-fill-color:#15574a!important;background:#f7faf7!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content .button.alt:is(:hover,:focus-visible){background:#dcece3!important;}
+html[data-theme="arquivo"] body .wiki-sheet .footer-nav small{opacity:1!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content .banana-conclusion a:not(.button){color:#d5f1df!important;-webkit-text-fill-color:#d5f1df!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content .nt4-direct-link a:not(.button){color:#fff!important;-webkit-text-fill-color:#fff!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content figcaption code{background:#e5eee8!important;color:#233f36!important;-webkit-text-fill-color:#233f36!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content .hosting-flow span,html[data-theme="arquivo"] body .wiki-sheet .project-feature p{color:#36594e!important;-webkit-text-fill-color:#36594e!important;}
+html[data-theme="arquivo"] body .wiki-sheet :is(.pn-prev,.pn-next) small{opacity:1!important; color:#15574a!important;-webkit-text-fill-color:#15574a!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content figure figcaption code{background:#e5eee8!important;color:#233f36!important;-webkit-text-fill-color:#233f36!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content :is(#retro,#linux-retro) .retro-uniform-shots figcaption code{background:#e5eee8!important;color:#233f36!important;-webkit-text-fill-color:#233f36!important;}
