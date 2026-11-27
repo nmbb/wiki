@@ -2,6 +2,17 @@
 """Gerador da wiki (só biblioteca standard). Uso: python3 build.py [pasta-de-saida]
 Sem argumentos, regenera as páginas na raiz do repositório. Fontes: src/pages, src/css, assets/."""
 import re,os,sys,shutil,hashlib,json
+from html.parser import HTMLParser
+class ThemeStructure(HTMLParser):
+    def __init__(self): super().__init__(); self.stack=[]; self.errors=[]
+    def handle_starttag(self,tag,attrs):
+        cls=dict(attrs).get("class", "").split()
+        if ((tag=="main" and "content" in cls) or (tag=="aside" and "wiki-sidebar-v2" in cls)) and not any("wiki-sheet" in c for _,c in self.stack): self.errors.append(tag)
+        if tag not in {"area","base","br","col","embed","hr","img","input","link","meta","param","source","track","wbr"}: self.stack.append((tag,cls))
+    def handle_startendtag(self,tag,attrs): pass
+    def handle_endtag(self,tag):
+        for i in range(len(self.stack)-1,-1,-1):
+            if self.stack[i][0]==tag: del self.stack[i:]; break
 ROOT=os.path.dirname(os.path.abspath(__file__)); OUT=os.path.abspath(sys.argv[1]) if len(sys.argv)>1 else ROOT
 BASE='https://nmbb.github.io/wiki/'
 INFRA=[('homelab','Home Lab'),('redes','Redes e VLANs'),('pfsense','pfSense'),('proxmox','Proxmox'),('tailscale','Tailscale'),('cloudflare','Cloudflare e alojamento')]
@@ -47,6 +58,8 @@ index=[];esc=lambda s:s.replace('&','&amp;').replace('"','&quot;')
 strip=lambda s:re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',s)).strip()
 for f in sorted(os.listdir(ROOT+'/src/pages')):
     slug=f[:-5]; fm,body=parse(ROOT+'/src/pages/'+f)
+    audit=ThemeStructure(); audit.feed(body)
+    if audit.errors: raise ValueError(f'{slug}: conteúdo/barra lateral fora de .wiki-sheet: {audit.errors}')
     body=re.sub(r'(<aside[^>]*wiki-sidebar-v2[^>]*>).*?(</aside>)',lambda m:m.group(1)+sidebar(slug)+m.group(2),body,flags=re.S)
     body=body.replace('{{N_ARTIGOS}}',str(len(ORDER))).replace('{{ATUALIZADO}}',HOJE)
     body=re.sub(r'<main(?![^>]*\bid=)([^>]*)>',r'<main id="conteudo"\1>',body,count=1)
@@ -62,7 +75,7 @@ for f in sorted(os.listdir(ROOT+'/src/pages')):
       +('<meta property="og:image" content="%sassets/img/og.png"><meta name="twitter:card" content="summary_large_image">'%BASE if og else '')
       +'<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><script>try{var t=localStorage.getItem("wiki-theme");if([\"arquivo\",\"verde\",\"hercules\",\"mf3270\",\"mf3279\",\"nextstep\",\"os2warp\",\"solaris\"].indexOf(t)!==-1)document.documentElement.dataset.theme=t}catch(e){}</script>'
       '<link rel="stylesheet" href="assets/css/site.css?v=%s">'%V['css/site.css']
-      +''.join('<link rel="stylesheet" href="assets/css/%s">'%c for c in fm.get('css','').split(',') if c)+"<script>(function(){var names=['arquivo', 'verde', 'hercules', 'mf3270', 'mf3279', 'nextstep', 'os2warp', 'solaris'];function apply(){var t=document.documentElement.dataset.theme||'arquivo';if(names.indexOf(t)<0)t='arquivo';var l=document.getElementById('active-wiki-theme');if(!l){l=document.createElement('link');l.rel='stylesheet';l.id='active-wiki-theme';document.head.appendChild(l)}var h='assets/css/theme-'+t+'.css?v=20261127-contrast-v4';if(l.getAttribute('href')!==h)l.setAttribute('href',h)}apply();new MutationObserver(apply).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']})})();</script>"+'</head>')
+      +''.join('<link rel="stylesheet" href="assets/css/%s">'%c for c in fm.get('css','').split(',') if c)+"<script>(function(){var names=['arquivo', 'verde', 'hercules', 'mf3270', 'mf3279', 'nextstep', 'os2warp', 'solaris'];function apply(){var t=document.documentElement.dataset.theme||'arquivo';if(names.indexOf(t)<0)t='arquivo';var l=document.getElementById('active-wiki-theme');if(!l){l=document.createElement('link');l.rel='stylesheet';l.id='active-wiki-theme';document.head.appendChild(l)}var h='assets/css/theme-'+t+'.css?v=20261127-footer-v6';if(l.getAttribute('href')!==h)l.setAttribute('href',h)}apply();new MutationObserver(apply).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']})})();</script>"+'</head>')
     js=''.join('<script defer src="assets/js/%s"></script>'%j for j in fm.get('js','').split(',') if j)
     tail=('<div class="crt-tint" aria-hidden="true"></div><div class="crt-lines" aria-hidden="true"></div>'
       '<script defer src="assets/js/search-index.js"></script><script defer src="assets/js/site.js?v=%s"></script><script defer src="assets/js/wiki-nav.js?v=%s"></script><script defer src="assets/js/gallery-modal-20261113.js?v=%s"></script>%s</body></html>'%(V['js/site.js'],V['js/wiki-nav.js'],V['js/gallery-modal-20261113.js'],js))

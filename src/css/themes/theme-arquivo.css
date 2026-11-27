@@ -104,3 +104,29 @@ html[data-theme="arquivo"] body .wiki-sheet .content :is(#retro,#linux-retro) .r
 /* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
 html[data-theme="arquivo"] body .skip-link{color:#172f29!important;-webkit-text-fill-color:#172f29!important;opacity:1!important;text-shadow:none!important;background:#f2efe7!important;}
 html[data-theme="arquivo"] body .skip-link:is(:focus,:focus-visible){color:#172f29!important;-webkit-text-fill-color:#172f29!important;opacity:1!important;text-shadow:none!important;background:#f2efe7!important;}
+
+/* Botão primário: texto escuro sobre o fundo claro. */
+html[data-theme="arquivo"] body .wiki-sheet .content a.button:not(.alt){background:#b6d7bd!important;color:#172f29!important;-webkit-text-fill-color:#172f29!important;opacity:1!important;}
+html[data-theme="arquivo"] body .wiki-sheet .content a.button:not(.alt):is(:hover,:focus-visible){background:#d7e9d8!important;color:#172f29!important;-webkit-text-fill-color:#172f29!important;}
+
+/* Rodapé comum: mesma superfície de fundo do tema, sem faixa de outro tema. */
+html[data-theme="arquivo"] body #crt :is(footer,.site-footer,.home-footer) {
+  background:var(--footer-center)!important; color:var(--footer-text)!important;
+  -webkit-text-fill-color:var(--footer-text)!important; border:0!important;
+  box-shadow:none!important; text-shadow:none!important; opacity:1!important;
+  box-sizing:border-box!important; width:min(1200px,calc(100% - 42px))!important;
+  max-width:100%!important; margin:clamp(12px,2vw,28px) auto 0!important;
+  padding:16px 0!important; min-height:0!important; height:auto!important;
+  font-size:12px!important; line-height:1.55!important;
+  display:flex!important; flex-wrap:wrap!important; justify-content:space-between!important; align-items:center!important; gap:8px 20px!important;
+}
+html[data-theme="arquivo"] body #crt :is(footer,.site-footer,.home-footer) .wrap {
+  background:transparent!important; width:100%!important; max-width:none!important; padding:0!important; margin:0!important; display:flex!important; flex-wrap:wrap!important; justify-content:space-between!important; gap:8px 20px!important;
+}
+html[data-theme="arquivo"] body #crt :is(footer,.site-footer,.home-footer) :is(span,small,p,div) {color:var(--footer-text)!important;-webkit-text-fill-color:var(--footer-text)!important;background:transparent!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="arquivo"] body #crt :is(footer,.site-footer,.home-footer) a:any-link {color:var(--footer-link)!important;-webkit-text-fill-color:var(--footer-link)!important;background:transparent!important;opacity:1!important;text-shadow:none!important;text-decoration:underline!important;}
+html[data-theme="arquivo"] body #crt :is(footer,.site-footer,.home-footer) a:is(:hover,:focus-visible) {color:var(--footer-text)!important;-webkit-text-fill-color:var(--footer-text)!important;background:transparent!important;text-decoration:underline!important;}
+html[data-theme="arquivo"] body #crt :is(footer,.site-footer,.home-footer) a:focus-visible {outline:2px solid var(--footer-link)!important;outline-offset:3px;}
+html[data-theme="arquivo"] body #crt .relay-article table :is(th,td) {padding:8px 12px!important;}
+html[data-theme="arquivo"] body #crt .relay-article table:not(.relay-truth) {width:auto;max-width:100%;border-collapse:collapse;}
+@media(max-width:600px){html[data-theme="arquivo"] body #crt :is(footer,.site-footer,.home-footer){width:calc(100% - 32px)!important;}}
