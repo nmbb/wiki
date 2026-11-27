@@ -2769,3 +2769,19 @@ html[data-theme] .wiki-sheet .content pre {
 html[data-theme] .wiki-sheet .content pre + p {
   margin-top: 1.35rem !important;
 }
+
+/* 2026-11-27 — margem inferior e contorno contínuo das páginas de artigo.
+   O contorno é desenhado como borda real, não como sombra interior que
+   pode ficar tapada pelos fundos opacos dos elementos filhos. */
+html[data-theme] body .wiki-sheet:has(> .wrap > .layout) {
+  box-sizing: border-box;
+  border: 1px solid var(--line) !important;
+  padding-bottom: 24px !important;
+}
+html[data-theme] body .wiki-sheet > .wrap > .layout > .sidebar.wiki-sidebar-v2 {
+  margin-bottom: 12px !important;
+}
+@media (max-width: 900px) {
+  html[data-theme] body .wiki-sheet:has(> .wrap > .layout) { padding-bottom: 16px !important; }
+  html[data-theme] body .wiki-sheet > .wrap > .layout > .sidebar.wiki-sidebar-v2 { margin-bottom: 0 !important; }
+}
