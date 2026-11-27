@@ -143,3 +143,23 @@ html[data-theme="nextstep"] body main.timeline-page .hex-timeline .moment-link :
 html[data-theme="nextstep"] body main.timeline-page .hex-timeline .moment-link:hover :is(h3,p),html[data-theme="nextstep"] body main.timeline-page .hex-timeline .moment-link:focus-visible :is(h3,p){color:#243c4a!important;-webkit-text-fill-color:#243c4a!important;opacity:1!important;text-shadow:none!important;}
 
 html[data-theme="nextstep"] body main.timeline-page .hex-timeline .moment:nth-child(6n+4) .year span{color:#fff!important;-webkit-text-fill-color:#fff!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="nextstep"] body .wiki-sheet .pn a small{color:#252525!important;-webkit-text-fill-color:#252525!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="nextstep"] body .wiki-sheet .content :is(.status-legend>div,.incident-hero,.banana-conclusion,.banana-flow,.nt4-direct-link) :is(h2,h3,p,strong,span,small,b,a){color:#f6f6f6!important;-webkit-text-fill-color:#f6f6f6!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="nextstep"] body .wiki-sheet .content .banana-flow :is(b,span){color:#f6f6f6!important;-webkit-text-fill-color:#f6f6f6!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="nextstep"] body main.page:has(> .about-hero) .three .card :is(h3,p,.card-icon,a){color:#f6f6f6!important;-webkit-text-fill-color:#f6f6f6!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="nextstep"] body main.page .cta a.pill{color:#f6f6f6!important;-webkit-text-fill-color:#f6f6f6!important;opacity:1!important;text-shadow:none!important;background:#252525!important;}
+html[data-theme="nextstep"] body .wiki-sheet .content code:not(pre code){color:#252525!important;-webkit-text-fill-color:#252525!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="nextstep"] body .wiki-sheet .content :is(.banana-conclusion,.nt4-direct-link) a:is(:hover,:focus-visible){color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important;text-shadow:none!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="nextstep"] body .skip-link{color:#202020!important;-webkit-text-fill-color:#202020!important;opacity:1!important;text-shadow:none!important;background:#e5e5e5!important;}
+html[data-theme="nextstep"] body .skip-link:is(:focus,:focus-visible){color:#202020!important;-webkit-text-fill-color:#202020!important;opacity:1!important;text-shadow:none!important;background:#e5e5e5!important;}
+
+/* Revisão complementar — componentes partilhados e estados. */
+html[data-theme="nextstep"] body .wiki-sheet .content .status-legend .project-status{color:#252525!important;-webkit-text-fill-color:#252525!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="nextstep"] body .wiki-sheet .content figure figcaption code:not(pre code){color:#252525!important;-webkit-text-fill-color:#252525!important;opacity:1!important;text-shadow:none!important;}
+
+/* Legendas e componentes com regras locais de maior especificidade. */
+html[data-theme="nextstep"] body .wiki-sheet .content :is(#retro,#linux-retro) .retro-uniform-shots figcaption code{color:#252525!important;-webkit-text-fill-color:#252525!important;opacity:1!important;text-shadow:none!important;background:#d0d0d0!important;}

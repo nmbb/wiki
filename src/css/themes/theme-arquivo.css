@@ -100,3 +100,7 @@ html[data-theme="arquivo"] body .wiki-sheet .content .hosting-flow span,html[dat
 html[data-theme="arquivo"] body .wiki-sheet :is(.pn-prev,.pn-next) small{opacity:1!important; color:#15574a!important;-webkit-text-fill-color:#15574a!important;}
 html[data-theme="arquivo"] body .wiki-sheet .content figure figcaption code{background:#e5eee8!important;color:#233f36!important;-webkit-text-fill-color:#233f36!important;}
 html[data-theme="arquivo"] body .wiki-sheet .content :is(#retro,#linux-retro) .retro-uniform-shots figcaption code{background:#e5eee8!important;color:#233f36!important;-webkit-text-fill-color:#233f36!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="arquivo"] body .skip-link{color:#172f29!important;-webkit-text-fill-color:#172f29!important;opacity:1!important;text-shadow:none!important;background:#f2efe7!important;}
+html[data-theme="arquivo"] body .skip-link:is(:focus,:focus-visible){color:#172f29!important;-webkit-text-fill-color:#172f29!important;opacity:1!important;text-shadow:none!important;background:#f2efe7!important;}

@@ -143,3 +143,23 @@ html[data-theme="os2warp"] body main.timeline-page .hex-timeline .moment-link :i
 html[data-theme="os2warp"] body main.timeline-page .hex-timeline .moment-link:hover :is(h3,p),html[data-theme="os2warp"] body main.timeline-page .hex-timeline .moment-link:focus-visible :is(h3,p){color:#243c4a!important;-webkit-text-fill-color:#243c4a!important;opacity:1!important;text-shadow:none!important;}
 
 html[data-theme="os2warp"] body main.timeline-page .hex-timeline .moment:nth-child(6n+4) .year span{color:#fff!important;-webkit-text-fill-color:#fff!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="os2warp"] body .wiki-sheet .pn a small{color:#152d43!important;-webkit-text-fill-color:#152d43!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="os2warp"] body .wiki-sheet .content :is(.status-legend>div,.incident-hero,.banana-conclusion,.banana-flow,.nt4-direct-link) :is(h2,h3,p,strong,span,small,b,a){color:#e9f4ff!important;-webkit-text-fill-color:#e9f4ff!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="os2warp"] body .wiki-sheet .content .banana-flow :is(b,span){color:#e9f4ff!important;-webkit-text-fill-color:#e9f4ff!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="os2warp"] body main.page:has(> .about-hero) .three .card :is(h3,p,.card-icon,a){color:#e9f4ff!important;-webkit-text-fill-color:#e9f4ff!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="os2warp"] body main.page .cta a.pill{color:#e9f4ff!important;-webkit-text-fill-color:#e9f4ff!important;opacity:1!important;text-shadow:none!important;background:#152d43!important;}
+html[data-theme="os2warp"] body .wiki-sheet .content code:not(pre code){color:#152d43!important;-webkit-text-fill-color:#152d43!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="os2warp"] body .wiki-sheet .content :is(.banana-conclusion,.nt4-direct-link) a:is(:hover,:focus-visible){color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important;text-shadow:none!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="os2warp"] body .skip-link{color:#152d43!important;-webkit-text-fill-color:#152d43!important;opacity:1!important;text-shadow:none!important;background:#e7edf2!important;}
+html[data-theme="os2warp"] body .skip-link:is(:focus,:focus-visible){color:#152d43!important;-webkit-text-fill-color:#152d43!important;opacity:1!important;text-shadow:none!important;background:#e7edf2!important;}
+
+/* Revisão complementar — componentes partilhados e estados. */
+html[data-theme="os2warp"] body .wiki-sheet .content .status-legend .project-status{color:#152d43!important;-webkit-text-fill-color:#152d43!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="os2warp"] body .wiki-sheet .content figure figcaption code:not(pre code){color:#152d43!important;-webkit-text-fill-color:#152d43!important;opacity:1!important;text-shadow:none!important;}
+
+/* Legendas e componentes com regras locais de maior especificidade. */
+html[data-theme="os2warp"] body .wiki-sheet .content :is(#retro,#linux-retro) .retro-uniform-shots figcaption code{color:#152d43!important;-webkit-text-fill-color:#152d43!important;opacity:1!important;text-shadow:none!important;background:#cbdbe6!important;}

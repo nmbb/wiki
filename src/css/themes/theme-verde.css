@@ -85,3 +85,40 @@ html[data-theme="verde"] body main.timeline-page .hex-timeline .moment[data-stat
 html[data-theme="verde"] body main.timeline-page .hex-timeline .moment .year span{color:#14232b!important;-webkit-text-fill-color:#14232b!important;opacity:1!important;text-shadow:none!important;}
 
 html[data-theme="verde"] body main.timeline-page .hex-timeline .moment:nth-child(6n+4) .year span{color:#fff!important;-webkit-text-fill-color:#fff!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="verde"] body .wiki-sheet :is(.eyebrow,.breadcrumb,.breadcrumb span,.top .lead){color:#365449!important;-webkit-text-fill-color:#365449!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet :is(.content,.footer-nav) a:not(.button):not(.card){color:#154a34!important;-webkit-text-fill-color:#154a34!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet :is(.content,.footer-nav) a:not(.button):not(.card):is(:hover,:focus-visible){color:#103322!important;-webkit-text-fill-color:#103322!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content :is(.note,.panel,.card,.glossary-grid>div,.incident-hero) a:not(.button){color:#d7f0dd!important;-webkit-text-fill-color:#d7f0dd!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content :is(.note,.panel,.card,.glossary-grid>div,.incident-hero) a:not(.button):is(:hover,:focus-visible){color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content :is(.retro-safety-note,.dos-note) a:not(.button){color:#174831!important;-webkit-text-fill-color:#174831!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content :is(.note strong,.incident-hero h2,.note code,.panel code,.card code){color:#e7f4e8!important;-webkit-text-fill-color:#e7f4e8!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content .callout strong{color:#243e35!important;-webkit-text-fill-color:#243e35!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content :is(.retro-safety-note,.dos-note) strong{color:#243e35!important;-webkit-text-fill-color:#243e35!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content :is(.diagram-network span,.banana-no,.fog-flow-node span,.fog-flow-arrow,.hosting-flow b,.hosting-node span){color:#36594e!important;-webkit-text-fill-color:#36594e!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .card-topic-tags .tag{color:#36594e!important;-webkit-text-fill-color:#36594e!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content em{color:inherit!important;-webkit-text-fill-color:inherit!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content .button.alt{color:#174831!important;-webkit-text-fill-color:#174831!important;opacity:1!important;text-shadow:none!important;background:#f7faf7!important;}
+html[data-theme="verde"] body .wiki-sheet .content .button.alt:is(:hover,:focus-visible){color:#174831!important;-webkit-text-fill-color:#174831!important;opacity:1!important;text-shadow:none!important;background:#dcece3!important;}
+html[data-theme="verde"] body .wiki-sheet .home-timeline-callout{color:#d0ffdc!important;-webkit-text-fill-color:#d0ffdc!important;opacity:1!important;text-shadow:none!important;background:#172a20!important;}
+html[data-theme="verde"] body .wiki-sheet .content .home-timeline-callout :is(h2,p,.section-kicker){color:#d0ffdc!important;-webkit-text-fill-color:#d0ffdc!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content .home-timeline-callout a:not(.button){color:#d2ffe0!important;-webkit-text-fill-color:#d2ffe0!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content .home-timeline-callout a:not(.button):is(:hover,:focus-visible){color:#fff!important;-webkit-text-fill-color:#fff!important;opacity:1!important;text-shadow:none!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="verde"] body .skip-link{color:#173c27!important;-webkit-text-fill-color:#173c27!important;opacity:1!important;text-shadow:none!important;background:#e6f4e8!important;}
+html[data-theme="verde"] body .skip-link:is(:focus,:focus-visible){color:#173c27!important;-webkit-text-fill-color:#173c27!important;opacity:1!important;text-shadow:none!important;background:#e6f4e8!important;}
+
+/* Revisão complementar — componentes partilhados e estados. */
+html[data-theme="verde"] body .wiki-sheet .pn a small{color:#174831!important;-webkit-text-fill-color:#174831!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content .hosting-flow>div>span{color:#36594e!important;-webkit-text-fill-color:#36594e!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content .project-feature p{color:#36594e!important;-webkit-text-fill-color:#36594e!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content :is(.banana-conclusion,.nt4-direct-link) a:not(.button){color:#e1f6e5!important;-webkit-text-fill-color:#e1f6e5!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content :is(.banana-conclusion,.nt4-direct-link) a:not(.button):is(:hover,:focus-visible){color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="verde"] body .wiki-sheet .content .home-timeline-callout a.home-btn:not(.button){color:#e1f6e5!important;-webkit-text-fill-color:#e1f6e5!important;opacity:1!important;text-shadow:none!important;background:#214c32!important;}
+html[data-theme="verde"] body .wiki-sheet .content .home-timeline-callout a.home-btn:not(.button):is(:hover,:focus-visible){color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important;text-shadow:none!important;background:#17402a!important;}
+
+/* Legendas e componentes com regras locais de maior especificidade. */
+html[data-theme="verde"] body .wiki-sheet .content #dos622 p code{color:#193c2a!important;-webkit-text-fill-color:#193c2a!important;opacity:1!important;text-shadow:none!important;background:#e1f0e5!important;}
+html[data-theme="verde"] body .wiki-sheet .content #dos622 .dos-shot figcaption code{color:#193c2a!important;-webkit-text-fill-color:#193c2a!important;background:#e1f0e5!important;}

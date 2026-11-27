@@ -143,3 +143,32 @@ html[data-theme="solaris"] body main.timeline-page .hex-timeline .moment-link :i
 html[data-theme="solaris"] body main.timeline-page .hex-timeline .moment-link:hover :is(h3,p),html[data-theme="solaris"] body main.timeline-page .hex-timeline .moment-link:focus-visible :is(h3,p){color:#243c4a!important;-webkit-text-fill-color:#243c4a!important;opacity:1!important;text-shadow:none!important;}
 
 html[data-theme="solaris"] body main.timeline-page .hex-timeline .moment:nth-child(6n+4) .year span{color:#fff!important;-webkit-text-fill-color:#fff!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="solaris"] body .wiki-sheet .pn a small{color:#29373b!important;-webkit-text-fill-color:#29373b!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="solaris"] body .wiki-sheet .content :is(.status-legend>div,.incident-hero,.banana-conclusion,.banana-flow,.nt4-direct-link) :is(h2,h3,p,strong,span,small,b,a){color:#fff7e2!important;-webkit-text-fill-color:#fff7e2!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="solaris"] body .wiki-sheet .content .banana-flow :is(b,span){color:#fff7e2!important;-webkit-text-fill-color:#fff7e2!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="solaris"] body main.page:has(> .about-hero) .three .card :is(h3,p,.card-icon,a){color:#fff7e2!important;-webkit-text-fill-color:#fff7e2!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="solaris"] body main.page .cta a.pill{color:#fff7e2!important;-webkit-text-fill-color:#fff7e2!important;opacity:1!important;text-shadow:none!important;background:#29373b!important;}
+html[data-theme="solaris"] body .wiki-sheet .content code:not(pre code){color:#29373b!important;-webkit-text-fill-color:#29373b!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="solaris"] body .wiki-sheet .content :is(.banana-conclusion,.nt4-direct-link) a:is(:hover,:focus-visible){color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="solaris"] body .redesign-strip a{color:#203d49!important;-webkit-text-fill-color:#203d49!important;opacity:1!important;text-shadow:none!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="solaris"] body .skip-link{color:#29373b!important;-webkit-text-fill-color:#29373b!important;opacity:1!important;text-shadow:none!important;background:#e8e3d4!important;}
+html[data-theme="solaris"] body .skip-link:is(:focus,:focus-visible){color:#29373b!important;-webkit-text-fill-color:#29373b!important;opacity:1!important;text-shadow:none!important;background:#e8e3d4!important;}
+
+/* Revisão complementar — componentes partilhados e estados. */
+html[data-theme="solaris"] body .wiki-sheet .content .status-legend .project-status{color:#29373b!important;-webkit-text-fill-color:#29373b!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="solaris"] body .wiki-sheet .content figure figcaption code:not(pre code){color:#29373b!important;-webkit-text-fill-color:#29373b!important;opacity:1!important;text-shadow:none!important;}
+
+/* Revisão complementar — componentes partilhados e estados. */
+html[data-theme="solaris"] body header.bar nav>a:not([aria-current]):not(:hover):not(:focus-visible){color:#203d49!important;-webkit-text-fill-color:#203d49!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="solaris"] body main.page .breadcrumb a{color:#203d49!important;-webkit-text-fill-color:#203d49!important;opacity:1!important;text-shadow:none!important;}
+
+/* Legendas e componentes com regras locais de maior especificidade. */
+html[data-theme="solaris"] body .wiki-sheet .content :is(#retro,#linux-retro) .retro-uniform-shots figcaption code{color:#29373b!important;-webkit-text-fill-color:#29373b!important;opacity:1!important;text-shadow:none!important;background:#d3cbbb!important;}
+
+/* Legendas e componentes com regras locais de maior especificidade. */
+html[data-theme="solaris"] body footer.footer a:not(:hover):not(:focus-visible){color:#203d49!important;-webkit-text-fill-color:#203d49!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="solaris"] body footer.footer a:is(:hover,:focus-visible){color:#122d39!important;-webkit-text-fill-color:#122d39!important;opacity:1!important;text-shadow:none!important;}

@@ -103,3 +103,33 @@ html[data-theme="mf3270"] body main.timeline-page .hex-timeline .moment[data-sta
 html[data-theme="mf3270"] body main.timeline-page .hex-timeline .moment .year span{color:#14232b!important;-webkit-text-fill-color:#14232b!important;opacity:1!important;text-shadow:none!important;}
 
 html[data-theme="mf3270"] body main.timeline-page .hex-timeline .moment:nth-child(6n+4) .year span{color:#fff!important;-webkit-text-fill-color:#fff!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="mf3270"] body .wiki-sheet :is(.wiki-side-title,.article-period) {color:#c8f4ce!important;-webkit-text-fill-color:#c8f4ce!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3270"] body .wiki-sheet .content :is(summary,.incident-flow b,.note strong,.incident-hero .small){color:#c8f4ce!important;-webkit-text-fill-color:#c8f4ce!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3270"] body .wiki-sheet .content :is(.banana-no,.reference-links a,.card-topic-tags .tag){color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3270"] body .wiki-sheet .content code:not(pre code){color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;background:#d9e8df!important;}
+html[data-theme="mf3270"] body .wiki-sheet .content :is(.explainer-label){color:#c8f4ce!important;-webkit-text-fill-color:#c8f4ce!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3270"] body .wiki-sheet .content .nt-domain-case .explainer-label{color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3270"] body .wiki-sheet .content .hosting-flow b{color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3270"] body .wiki-sheet .content .fog-flow-node span{color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3270"] body .wiki-sheet .content :is(.callout strong,.diagram-network span){color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3270"] body main.page .cta a.pill{color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;background:#c5e8cc!important;}
+
+/* 2026-11-27 — superfícies, etiquetas e texto (auditoria de todas as páginas). */
+html[data-theme="mf3270"] body .skip-link{color:#c8f4ce!important;-webkit-text-fill-color:#c8f4ce!important;opacity:1!important;text-shadow:none!important;background:#162019!important;}
+html[data-theme="mf3270"] body .skip-link:is(:focus,:focus-visible){color:#c8f4ce!important;-webkit-text-fill-color:#c8f4ce!important;opacity:1!important;text-shadow:none!important;background:#162019!important;}
+
+/* Revisão complementar — componentes partilhados e estados. */
+html[data-theme="mf3270"] body .wiki-sheet .content .retro-safety-note strong{color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3270"] body .wiki-sheet .content figure figcaption code:not(pre code){color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;background:#d9e8df!important;}
+
+/* Revisão complementar — componentes partilhados e estados. */
+html[data-theme="mf3270"] body .wiki-sheet .content .project-feature a:not(.button){color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;}
+html[data-theme="mf3270"] body .wiki-sheet .content .project-feature a:not(.button):is(:hover,:focus-visible){color:#122d1b!important;-webkit-text-fill-color:#122d1b!important;opacity:1!important;text-shadow:none!important;}
+
+/* Legendas e componentes com regras locais de maior especificidade. */
+html[data-theme="mf3270"] body .wiki-sheet .content :is(#retro,#linux-retro) .retro-uniform-shots figcaption code{color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;background:#d9e8df!important;}
+
+/* Legendas e componentes com regras locais de maior especificidade. */
+html[data-theme="mf3270"] body .wiki-sheet .content #retro .retro-safety-note strong{color:#21462a!important;-webkit-text-fill-color:#21462a!important;opacity:1!important;text-shadow:none!important;}
