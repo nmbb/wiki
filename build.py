@@ -19,7 +19,7 @@ INFRA=[('homelab','Home Lab'),('redes','Redes e VLANs'),('pfsense','pfSense'),('
 SERV=[('banana-pi-m5','Banana Pi M5'),('home-assistant','Home Assistant'),('homarr','Homarr'),('monitorizacao','Monitorização')]
 CASOS=[('banana-pi-docker-rede','Docker arrancou antes da rede')]
 LAB=[('projetos','Coleção do museu'),('ferranti','1951 · Ferranti Mark I'),('ibm701','1952 · IBM 701'),('ibm650','1954 · IBM 650'),('norc','1954 · IBM NORC'),('hp2100','1966–1981 · Hewlett-Packard'),('os360','1972 · IBM OS/360 MFT'),('retro-simh','1977–1982 · Retro-SIMH'),('mainframes','1981 · IBM MVS 3.8j TK4-'),('86box','1981–1988 · 86Box'),('dos','1982–1994 · MS-DOS'),('windows-antigos','1985–1993 · Windows sobre DOS'),('windows-nt','1993–2009 · Windows NT'),('redhat-samba','2001 · Red Hat 7.1 + Samba'),('suse9','2003 · SuSE Linux 9.0'),('pxe-iventoy','PXE e iVentoy'),('fog','FOG Project')]
-ELET=[('eletronica','Montagens práticas'),('relay-computer','Relay Computer — MK I'),('somador-1bit-transistores','Somador de 1 bit com transístores')]
+ELET=[('eletronica','Montagens práticas'),('relay-computer','Somador com relés — MK I'),('somador-1bit-transistores','Somador com transístores — MK I')]
 TOP=[('index','Início'),('artigos','Biblioteca'),('linha-do-tempo','Timeline retro'),('sobre','Sobre')]
 ORDER=[k for k,_ in INFRA+SERV+CASOS+LAB+ELET if '#' not in k]; TITLES=dict(INFRA+SERV+CASOS+LAB+ELET)
 CSS=['legacy/wiki.css','legacy/wiki-unified.css','legacy/archive-2026.css','legacy/gallery-modal-20261113.css','legacy/wiki-sidebar-v2.css','theme.css']

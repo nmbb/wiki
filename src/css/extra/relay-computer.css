@@ -6,3 +6,5 @@
 .relay-article .relay-led{display:inline-block;width:17px;height:17px;border-radius:50%;vertical-align:middle;border:1px solid #87978c;background:#35433e}.relay-article .relay-led.on{background:#38ce59;border-color:#1a7830;box-shadow:0 0 6px #38ce5966}.relay-article .relay-led.off{background:#35433e}
 .relay-article .relay-legend{display:flex;flex-wrap:wrap;gap:18px;margin:15px 0}.relay-article .relay-formula{font-family:ui-monospace,monospace;line-height:1.9;border:1px solid currentColor;padding:14px;border-radius:8px;overflow-wrap:anywhere}.relay-article figure img{max-width:100%;height:auto}
 @media(max-width:680px){.relay-article .relay-grid{grid-template-columns:1fr}}
+
+.relay-article .relay-led.on.carry{background:#e94343;border-color:#a72525;box-shadow:0 0 6px #e9434366}.relay-article .transistor-examples img{aspect-ratio:auto;background:transparent}
