@@ -2785,3 +2785,10 @@ html[data-theme] body .wiki-sheet > .wrap > .layout > .sidebar.wiki-sidebar-v2 {
   html[data-theme] body .wiki-sheet:has(> .wrap > .layout) { padding-bottom: 16px !important; }
   html[data-theme] body .wiki-sheet > .wrap > .layout > .sidebar.wiki-sidebar-v2 { margin-bottom: 0 !important; }
 }
+
+/* Eletrónica: ligação direta e seletor independente */
+html header.bar nav > a.wiki-split-link {margin-right:0!important;padding-right:3px!important;}
+html header.bar nav > details.wiki-split-menu {margin-left:-3px!important;}
+html header.bar nav > details.wiki-split-menu > summary {padding-inline:6px!important;min-width:24px;text-align:center;}
+html header.bar nav > details.wiki-split-menu > summary::after {padding-left:0!important;color:currentColor!important;}
+html header.bar nav > details.wiki-split-menu:not([open]) > .wiki-submenu {display:none!important;}

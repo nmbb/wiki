@@ -39,7 +39,7 @@ def header(cur):
     top=lambda k,t:'<a href="%s.html"%s>%s</a>'%(k,' aria-current="page"' if k==cur else '',t)
     menu=lambda t,L:'<details class="wiki-menu"><summary>%s</summary><div class="wiki-submenu">%s</div></details>'%(t,''.join(link(i,cur) for i in L))
     return ('<header class="bar"><div class="wrap"><a class="brand" href="index.html">◈  ARQUIVO / MUSEU</a><nav aria-label="Navegação principal">'
-        +top('index','Início')+menu('Infraestrutura',INFRA)+menu('Serviços e casos',SERV+CASOS)+menu('Coleção',LAB)+menu('Eletrónica',ELET)+top('artigos','Biblioteca')+top('linha-do-tempo','Timeline retro')+top('sobre','Sobre')+'</nav></div></header>')
+        +top('index','Início')+menu('Infraestrutura',INFRA)+menu('Serviços e casos',SERV+CASOS)+menu('Coleção',LAB)+top('eletronica','Eletrónica') .replace('<a ', '<a class="wiki-split-link" ',1)+ '<details class="wiki-menu wiki-split-menu"><summary aria-label="Escolher montagem de eletrónica" title="Escolher montagem de eletrónica"></summary><div class="wiki-submenu">'+''.join(link(i,cur) for i in ELET[1:])+'</div></details>'+top('artigos','Biblioteca')+top('linha-do-tempo','Timeline retro')+top('sobre','Sobre')+'</nav></div></header>')
 def sidebar(cur):
     g=lambda t,L:'<div class="wiki-side-group"><span class="wiki-side-title">%s</span>%s</div>'%(t,''.join(link(i,cur) for i in L))
     return g('PRINCIPAL',[('artigos','Biblioteca'),('linha-do-tempo','Timeline retro')])+g('INFRAESTRUTURA',INFRA)+g('SERVIÇOS E AUTOMAÇÃO',SERV)+g('CASOS PRÁTICOS',CASOS)+g('LABORATÓRIO RETRO',LAB)+g('ELETRÓNICA',ELET)
