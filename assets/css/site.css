@@ -2792,3 +2792,30 @@ html header.bar nav > details.wiki-split-menu {margin-left:-3px!important;}
 html header.bar nav > details.wiki-split-menu > summary {padding-inline:6px!important;min-width:24px;text-align:center;}
 html header.bar nav > details.wiki-split-menu > summary::after {padding-left:0!important;color:currentColor!important;}
 html header.bar nav > details.wiki-split-menu:not([open]) > .wiki-submenu {display:none!important;}
+
+/* 2026-11-28 — acabamento comum aos oito temas. */
+html[data-theme] body header.bar nav .wiki-menu > .wiki-submenu {
+  top:calc(100% + 0px)!important;
+}
+html[data-theme] body .wiki-sheet:has(> .wrap > .layout) {
+  border-radius:16px!important;
+  padding-bottom:12px!important;
+}
+html[data-theme] body .wiki-sheet > .wrap > .layout > main.content {
+  padding-bottom:0!important;
+}
+html[data-theme] body .wiki-sheet > .wrap > .layout > main.content > section:last-child {
+  margin-bottom:12px!important;
+}
+html[data-theme] body .wiki-sheet > .wrap > .layout > main.content > .pn {
+  margin:24px 0 0!important;
+}
+html[data-theme] body .wiki-sheet > .wrap > .layout > main.content > section:has(+ .pn) {
+  margin-bottom:12px!important;
+}
+html[data-theme] body .wiki-sheet > .wrap > .layout > .sidebar.wiki-sidebar-v2 {
+  margin-bottom:0!important;
+}
+@media(max-width:600px){
+  html[data-theme] body .wiki-sheet:has(> .wrap > .layout){border-radius:12px!important;padding-bottom:10px!important;}
+}

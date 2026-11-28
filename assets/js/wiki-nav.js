@@ -6,9 +6,15 @@
       if(!item.open)return;
       details.forEach(function(other){if(other!==item)other.open=false;});
       const pop=item.querySelector('.wiki-submenu');
-      if(pop){pop.style.left='';pop.style.right='';
-        const box=pop.getBoundingClientRect();
-        if(box.right>window.innerWidth-12){pop.style.left='auto';pop.style.right='0';}
+      if(pop){
+        pop.style.removeProperty('left');pop.style.removeProperty('right');
+        const parent=item.getBoundingClientRect();
+        const label=item.classList.contains('wiki-split-menu') ? item.previousElementSibling : null;
+        let left=label && label.classList.contains('wiki-split-link') ? label.getBoundingClientRect().left : parent.left;
+        const width=pop.getBoundingClientRect().width;
+        left=Math.max(12,Math.min(left,window.innerWidth-12-width));
+        pop.style.setProperty('left',(left-parent.left)+'px','important');
+        pop.style.setProperty('right','auto','important');
       }
     });
   });
