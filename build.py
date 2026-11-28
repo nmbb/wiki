@@ -22,6 +22,11 @@ LAB=[('projetos','Coleção do museu'),('ferranti','1951 · Ferranti Mark I'),('
 ELET=[('eletronica','Montagens práticas'),('relay-computer','Somador com relés — MK I'),('somador-1bit-transistores','Somador com transístores — MK I')]
 TOP=[('index','Início'),('artigos','Biblioteca'),('linha-do-tempo','Timeline retro'),('sobre','Sobre')]
 ORDER=[k for k,_ in INFRA+SERV+CASOS+LAB+ELET if '#' not in k]; TITLES=dict(INFRA+SERV+CASOS+LAB+ELET)
+INDEX_PAGES={'index','artigos','linha-do-tempo','sobre','homelab','projetos','eletronica'}
+ARTICLE_GROUPS=[[k for k,_ in group if '#' not in k and k not in INDEX_PAGES] for group in (INFRA,SERV,CASOS,LAB,ELET)]
+# O guia de instalação pertence à sequência de artigos retro, após o 86Box.
+ARTICLE_GROUPS[3].insert(ARTICLE_GROUPS[3].index('86box')+1,'86box-instalacao')
+TITLES['86box-instalacao']='Instalação do 86Box'
 CSS=['legacy/wiki.css','legacy/wiki-unified.css','legacy/archive-2026.css','legacy/gallery-modal-20261113.css','legacy/wiki-sidebar-v2.css','theme.css']
 rd=lambda p:open(p,encoding='utf-8').read()
 def put(p,t):
@@ -63,10 +68,11 @@ for f in sorted(os.listdir(ROOT+'/src/pages')):
     body=re.sub(r'(<aside[^>]*wiki-sidebar-v2[^>]*>).*?(</aside>)',lambda m:m.group(1)+sidebar(slug)+m.group(2),body,flags=re.S)
     body=body.replace('{{N_ARTIGOS}}',str(len(ORDER))).replace('{{ATUALIZADO}}',HOJE)
     body=re.sub(r'<main(?![^>]*\bid=)([^>]*)>',r'<main id="conteudo"\1>',body,count=1)
-    if slug in ORDER and 'class="content"' in body:
-        i=ORDER.index(slug); pn=''
-        if i>0: pn+='<a class="pn-prev" href="%s.html"><small>← Anterior</small>%s</a>'%(ORDER[i-1],TITLES[ORDER[i-1]])
-        if i<len(ORDER)-1: pn+='<a class="pn-next" href="%s.html"><small>Seguinte →</small>%s</a>'%(ORDER[i+1],TITLES[ORDER[i+1]])
+    sequence=next((group for group in ARTICLE_GROUPS if slug in group), [])
+    if len(sequence)>1 and re.search(r'<main\b[^>]*class="[^"\n]*\bcontent\b',body):
+        i=sequence.index(slug); pn=''
+        if i>0: pn+='<a class="pn-prev" href="%s.html"><small>← Anterior</small>%s</a>'%(sequence[i-1],TITLES[sequence[i-1]])
+        if i<len(sequence)-1: pn+='<a class="pn-next" href="%s.html"><small>Seguinte →</small>%s</a>'%(sequence[i+1],TITLES[sequence[i+1]])
         k=body.rfind('</main>'); body=body[:k]+'<nav class="pn" aria-label="Artigos vizinhos">'+pn+'</nav>'+body[k:]
     title,desc=fm['title'],fm['description']
     og=os.path.exists(OUT+'/assets/img/og.png')
